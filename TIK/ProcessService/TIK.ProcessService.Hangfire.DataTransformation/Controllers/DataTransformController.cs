@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Hangfire;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Net.Http.Headers;
 using TIK.Applications.DataTransformation.Commands.FixedLength;
 
 namespace TIK.ProcessService.Hangfire.DataTransformation.Controllers
@@ -16,10 +22,9 @@ namespace TIK.ProcessService.Hangfire.DataTransformation.Controllers
         }
 
         [Route("Transform/{template}")]
+        //[ValidateAntiForgeryToken]
         public HttpResponseMessage Transform(string template)
         {
-
- 
             try
             {
                 var req = new FixedLengthDto() { FileName = template };
@@ -45,5 +50,7 @@ namespace TIK.ProcessService.Hangfire.DataTransformation.Controllers
             response.StatusCode = HttpStatusCode.Created;
             return response;
         }
+
+      
     }
 }

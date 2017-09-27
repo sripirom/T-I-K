@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TIK.Common.Logging
+namespace TIK.ProcessService.WebApi
 {
     public class Class1
     {

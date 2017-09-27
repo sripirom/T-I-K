@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DataTransform\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Applications\TIK.Applications\TIK.Applications.csproj" />
+    <ProjectReference Include="..\..\Applications\TIK.Applications.DataTransformation\TIK.Applications.DataTransformation.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="1.0.0-alpha2-27136" />
+  </ItemGroup>
+</Project>

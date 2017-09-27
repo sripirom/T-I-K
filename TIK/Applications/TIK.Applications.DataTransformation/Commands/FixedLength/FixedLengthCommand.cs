@@ -8,6 +8,7 @@ namespace TIK.Applications.DataTransformation.Commands.FixedLength
     public class FixedLengthCommand : IFixedLengthCommand
     {
         private readonly IDataTransformPublisher _dataTransformPublisher;
+
         public FixedLengthCommand(IDataTransformPublisher dataTransformPublisher)
         {
             _dataTransformPublisher = dataTransformPublisher;
