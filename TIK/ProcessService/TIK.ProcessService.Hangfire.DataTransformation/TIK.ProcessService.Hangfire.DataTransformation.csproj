@@ -8,6 +8,7 @@
     <Folder Include="wwwroot\" />
     <Folder Include="Helpers\" />
     <Folder Include="Hubs\" />
+    <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +17,7 @@
     <PackageReference Include="Swashbuckle" Version="6.0.0-beta902" />
     <PackageReference Include="Hangfire.Core" Version="1.6.17" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.0.0-alpha2-27136" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="1.0.0-alpha2-27174" />
   </ItemGroup>
 
   <ItemGroup>

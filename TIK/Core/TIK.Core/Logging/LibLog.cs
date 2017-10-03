@@ -40,23 +40,23 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "TIK.Common.Logging")]
-[assembly: SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Scope = "member", Target = "TIK.Common.Logging.Logger.#Invoke(TIK.Common.Logging.LogLevel,System.Func`1<System.String>,System.Exception,System.Object[])")]
+[assembly: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "TIK.Core.Logging")]
+[assembly: SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Scope = "member", Target = "TIK.Core.Logging.Logger.#Invoke(TIK.Core.Logging.LogLevel,System.Func`1<System.String>,System.Exception,System.Object[])")]
 
-// If you copied this file manually, you need to change all "TIK.Common" so not to clash with other libraries
+// If you copied this file manually, you need to change all "TIK.Core" so not to clash with other libraries
 // that use LibLog
 #if LIBLOG_PROVIDERS_ONLY
-namespace TIK.Common.LibLog
+namespace TIK.Core.LibLog
 #else
-namespace TIK.Common.Logging
+namespace TIK.Core.Logging
 #endif
 {
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
 #if LIBLOG_PROVIDERS_ONLY
-    using TIK.Common.LibLog.LogProviders;
+    using TIK.Core.LibLog.LogProviders;
 #else
-    using TIK.Common.Logging.LogProviders;
+    using TIK.Core.Logging.LogProviders;
 #endif
     using System;
 #if !LIBLOG_PROVIDERS_ONLY
@@ -726,9 +726,9 @@ namespace TIK.Common.Logging
 }
 
 #if LIBLOG_PROVIDERS_ONLY
-namespace TIK.Common.LibLog.LogProviders
+namespace TIK.Core.LibLog.LogProviders
 #else
-namespace TIK.Common.Logging.LogProviders
+namespace TIK.Core.Logging.LogProviders
 #endif
 {
     using System;

@@ -9,6 +9,7 @@ using Autofac;
 using Hangfire;
 using TIK.Applications.DataTransformation.Commands.FixedLength;
 using Autofac.Extensions.DependencyInjection;
+using TIK.Core.Container;
 
 namespace TIK.Governance
 {

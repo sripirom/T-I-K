@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using TIK.Applications.DataTransformation.Integration;
+using TIK.Core.Application;
 
 namespace TIK.Applications.DataTransformation.Commands.FixedLength
 {
-    public class FixedLengthCommand : IFixedLengthCommand
+    public class FixedLengthCommand : BaseAppService, IFixedLengthCommand
     {
         private readonly IDataTransformPublisher _dataTransformPublisher;
 
@@ -13,14 +13,19 @@ namespace TIK.Applications.DataTransformation.Commands.FixedLength
         {
             _dataTransformPublisher = dataTransformPublisher;
         }
+
         public void Transform(FixedLengthDto data)
         {
             try
             {
-                using (MemoryStream ms = new MemoryStream(data.DataStream))
-                {
-                    data.DataResult = ReadFully(ms);
+                if(data.DataStream != null){
+                    using (MemoryStream ms = new MemoryStream(data.DataStream))
+                    {
+                        data.DataResult = ReadFully(ms);
+                    }
+
                 }
+            
             }
             catch (IOException ex)
             {
@@ -28,6 +33,7 @@ namespace TIK.Applications.DataTransformation.Commands.FixedLength
             }
 
         }
+
         private byte[] ReadFully(Stream input)
         {
             using (MemoryStream ms = new MemoryStream())
@@ -36,6 +42,7 @@ namespace TIK.Applications.DataTransformation.Commands.FixedLength
                 return ms.ToArray();
             }
         }
+
         public async Task CallBack(FixedLengthDto data)
         {
             await _dataTransformPublisher.CallBackResult(data.FileName, "Success", data.DataStream);

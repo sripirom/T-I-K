@@ -4,10 +4,10 @@ using System.Linq;
 using System.Reflection;
 using Autofac;
 using Autofac.Core;
-using TIK.Applications;
-using TIK.Common.Logging;
+using TIK.Core.Application;
+using TIK.Core.Logging;
 
-namespace TIK.Computation.ServiceNode.Hangfire
+namespace TIK.Core.Container
 {
     public class DelegateModule : Autofac.Module
     {

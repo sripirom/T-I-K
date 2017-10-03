@@ -5,8 +5,11 @@ using Autofac;
 using CommandLine;
 using Serilog;
 using Hangfire;
-using TIK.Common.Logging;
 using TIK.Applications.DataTransformation.Commands.FixedLength;
+using TIK.Core.Logging;
+using TIK.Core.Container;
+using TIK.Applications.DataTransformation;
+using TIK.Integration.SignalR.DataTransform;
 
 namespace TIK.Computation.ServiceNode.Hangfire
 {
@@ -77,6 +80,10 @@ namespace TIK.Computation.ServiceNode.Hangfire
         private static void UseAutofac()
         {
             var builder = new ContainerBuilder();
+
+            builder.RegisterType<DataTransformPublisher>()
+                   .As<IDataTransformPublisher>();
+
 
             builder.RegisterModule(new DelegateModule(() => new Assembly[]
             {

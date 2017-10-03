@@ -1,5 +1,5 @@
 ﻿using System;
-namespace TIK.Applications
+namespace TIK.Core.Application
 {
     public interface IDependency
     {

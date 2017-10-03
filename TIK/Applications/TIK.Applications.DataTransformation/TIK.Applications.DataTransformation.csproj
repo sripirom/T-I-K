@@ -8,6 +8,9 @@
     <Folder Include="Commands\" />
     <Folder Include="Commands\Delimited\" />
     <Folder Include="Commands\FixedLength\" />
-    <Folder Include="Integration\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
+    <ProjectReference Include="..\TIK.Applications\TIK.Applications.csproj" />
   </ItemGroup>
 </Project>

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
+using TIK.Core.Application;
 
 namespace TIK.Applications.DataTransformation.Commands.FixedLength
 {
-    public interface IFixedLengthCommand
+    public interface IFixedLengthCommand : IAppService
     {
         void Transform(FixedLengthDto data);
 

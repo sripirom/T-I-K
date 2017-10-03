@@ -8,4 +8,7 @@
     <Folder Include="Commands\" />
     <Folder Include="Queries\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
+  </ItemGroup>
 </Project>
