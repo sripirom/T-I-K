@@ -14,7 +14,7 @@ namespace TIK.Applications.DataTransformation.Commands.FixedLength
             _dataTransformPublisher = dataTransformPublisher;
         }
 
-        public void Transform(FixedLengthDto data)
+        public Stream Transform(FixedLengthDto data)
         {
             try
             {
@@ -31,6 +31,8 @@ namespace TIK.Applications.DataTransformation.Commands.FixedLength
             {
                 throw new ArgumentException("", ex);
             }
+
+            return new MemoryStream(data.DataResult);
 
         }
 

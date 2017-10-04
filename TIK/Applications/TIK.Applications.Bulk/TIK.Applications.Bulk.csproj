@@ -7,8 +7,15 @@
   <ItemGroup>
     <Folder Include="Commands\" />
     <Folder Include="Queries\" />
+    <Folder Include="Commands\DirectCredit\" />
+    <Folder Include="Commands\DirectDebit\" />
+    <Folder Include="Messages\" />
+    <Folder Include="Commands\CreateJob\" />
+    <Folder Include="Commands\LoadContent\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
+    <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
+    <ProjectReference Include="..\TIK.Applications\TIK.Applications.csproj" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TIK.Domain
+namespace TIK.Applications.Single
 {
     public class Class1
     {

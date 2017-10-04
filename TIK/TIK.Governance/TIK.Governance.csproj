@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Common\TIK.Common.Logging\TIK.Common.Logging.csproj" />
     <ProjectReference Include="..\Applications\TIK.Applications\TIK.Applications.csproj" />
     <ProjectReference Include="..\Applications\TIK.Applications.DataTransformation\TIK.Applications.DataTransformation.csproj" />
     <ProjectReference Include="..\Core\TIK.Core\TIK.Core.csproj" />

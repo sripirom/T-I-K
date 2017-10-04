@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using TIK.Core.Application;
 
@@ -6,7 +7,7 @@ namespace TIK.Applications.DataTransformation.Commands.FixedLength
 {
     public interface IFixedLengthCommand : IAppService
     {
-        void Transform(FixedLengthDto data);
+        Stream Transform(FixedLengthDto data);
 
         Task CallBack(FixedLengthDto data);
     }
