@@ -10,9 +10,10 @@ namespace TIK.WebPortal.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+   
+        public ActionResult Index()
         {
-            return View();
+            return View("CourseViewer");
         }
 
         public IActionResult About()
@@ -33,5 +34,7 @@ namespace TIK.WebPortal.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
     }
 }
