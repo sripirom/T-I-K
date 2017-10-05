@@ -14,5 +14,13 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\app\" />
+    <Folder Include="wwwroot\app\transaction-mornitor\" />
+    <Folder Include="wwwroot\app\transaction-mornitor\bulk\" />
+    <Folder Include="wwwroot\app\transaction-mornitor\single\" />
+    <Folder Include="wwwroot\app\user-activity\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Controllers\EmptyTextFile.txt" />
   </ItemGroup>
 </Project>

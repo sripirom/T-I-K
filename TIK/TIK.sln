@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Applications.Single", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.WebPortal", "TIK.WebPortal\TIK.WebPortal.csproj", "{39FD8CE0-442E-49BF-B77B-D194C20CF036}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.UnitTests", "TIK.UnitTests\TIK.UnitTests.csproj", "{723F4A61-8950-4BC9-B073-4569361420B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -133,6 +135,10 @@ Global
 		{39FD8CE0-442E-49BF-B77B-D194C20CF036}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39FD8CE0-442E-49BF-B77B-D194C20CF036}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39FD8CE0-442E-49BF-B77B-D194C20CF036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{723F4A61-8950-4BC9-B073-4569361420B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{723F4A61-8950-4BC9-B073-4569361420B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{723F4A61-8950-4BC9-B073-4569361420B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{723F4A61-8950-4BC9-B073-4569361420B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5C41885A-3E8E-4C3B-A3D6-13AA9D2328E0} = {2AD75841-2250-4DB1-8517-D67E9B45EC68}

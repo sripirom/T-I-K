@@ -21,5 +21,7 @@ namespace TIK.WebPortal
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
+
+              
     }
 }
