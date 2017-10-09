@@ -20,9 +20,6 @@ namespace TIK.WebPortal
     {
         const string TokenAudience = "ExampleAudience";
         const string TokenIssuer = "ExampleIssuer";
-        private RsaSecurityKey key;
-        private TokenAuthOptions tokenOptions;
-
 
         public Startup(IConfiguration configuration)
         {

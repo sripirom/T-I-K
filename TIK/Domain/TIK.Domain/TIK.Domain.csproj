@@ -8,5 +8,6 @@
     <Folder Include="Transaction\" />
     <Folder Include="Transaction\Bulk\" />
     <Folder Include="Transaction\Single\" />
+    <Folder Include="Member\" />
   </ItemGroup>
 </Project>
