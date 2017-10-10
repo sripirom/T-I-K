@@ -6,6 +6,11 @@ namespace TIK.Domain.Member
         public UserAccount()
         {
         }
+        public Guid Id
+        {
+            get;
+            set;
+        }
         public string FirstName
         {
             get;

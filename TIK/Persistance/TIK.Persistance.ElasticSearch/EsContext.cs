@@ -12,7 +12,7 @@ namespace TIK.Persistance.ElasticSearch
   
         }
 
-        private IElasticClient CreateClient()
+        public IElasticClient CreateClient()
         {
             return _elastiSearchServerUrl != null ?
                 new ElasticClient(new ConnectionSettings(_elastiSearchServerUrl))
