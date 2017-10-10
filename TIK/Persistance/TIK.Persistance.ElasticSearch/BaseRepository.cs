@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Nest;
 
-namespace TIK.Persistance.ElasticSearch.Repository
+namespace TIK.Persistance.ElasticSearch
 {
  
     public abstract class BaseRepository

@@ -6,12 +6,15 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TIK.Persistance\TIK.Persistance.csproj" />
+    <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
+    <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NEST" Version="5.5.0" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repository\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Core\" />
   </ItemGroup>
 </Project>

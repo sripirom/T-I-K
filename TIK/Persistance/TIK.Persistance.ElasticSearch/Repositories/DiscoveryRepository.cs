@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Nest;
 
-namespace TIK.Persistance.ElasticSearch.Repository
+namespace TIK.Persistance.ElasticSearch
 {
     public class DiscoveryRepository : BaseRepository
     {

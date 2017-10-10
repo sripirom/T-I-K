@@ -2,7 +2,7 @@
 using Nest;
 
 
-namespace TIK.Persistance.ElasticSearch.Repository
+namespace TIK.Persistance.ElasticSearch
 {
     public class IndexRepository : BaseRepository
     {

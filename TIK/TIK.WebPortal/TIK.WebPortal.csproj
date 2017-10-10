@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Autofac" Version="4.6.1" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,5 +24,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Controllers\EmptyTextFile.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Applications\TIK.Applications\TIK.Applications.csproj" />
+    <ProjectReference Include="..\Applications\TIK.Applications.Membership\TIK.Applications.Membership.csproj" />
+    <ProjectReference Include="..\Core\TIK.Core\TIK.Core.csproj" />
+    <ProjectReference Include="..\Domain\TIK.Domain\TIK.Domain.csproj" />
+    <ProjectReference Include="..\Persistance\TIK.Persistance\TIK.Persistance.csproj" />
+    <ProjectReference Include="..\Persistance\TIK.Persistance.ElasticSearch\TIK.Persistance.ElasticSearch.csproj" />
   </ItemGroup>
 </Project>

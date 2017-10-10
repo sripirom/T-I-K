@@ -10,4 +10,7 @@
     <Folder Include="Transaction\Single\" />
     <Folder Include="Member\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
+  </ItemGroup>
 </Project>

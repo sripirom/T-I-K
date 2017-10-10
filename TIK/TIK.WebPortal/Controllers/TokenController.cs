@@ -9,18 +9,23 @@ using Microsoft.AspNetCore.Authorization;
 using TIK.WebPortal.Helpers;
 using TIK.WebPortal.Models;
 using System.Collections.Generic;
+using TIK.Applications.Membership.Queries;
 
 namespace TIK.WebPortal.Controllers
 {
     [Route("api/[controller]")]
     public class TokenController : Controller
     {
-
+        private readonly IUserAccountQuery _userAccountQuery;
+        public TokenController(IUserAccountQuery userAccountQuery)
+        {
+            _userAccountQuery = userAccountQuery;
+        }
 
         [HttpPost]
         public IActionResult Create([FromBody]LoginInputModel inputModel)
         {
-            if (inputModel.Username != "james" && inputModel.Password != "bond")
+            if (_userAccountQuery.GetUser(inputModel.Username, inputModel.Password) == null)
                 return Unauthorized();
 
             var token = new JwtTokenBuilder()

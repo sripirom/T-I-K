@@ -13,6 +13,12 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using TIK.Persistance.ElasticSearch.Repositories;
+using TIK.Domain.Member;
+using TIK.Applications.Membership.Queries;
+using Nest;
 
 namespace TIK.WebPortal
 {
@@ -29,7 +35,7 @@ namespace TIK.WebPortal
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
          .AddJwtBearer(options => {
@@ -68,6 +74,21 @@ namespace TIK.WebPortal
         
 
             services.AddMvc();
+
+
+    //Now register our services with Autofac container
+
+   
+            var builder = new ContainerBuilder();
+            builder.RegisterType<UserAccountRepository>().As<IUserAccountRepository>();
+            builder.RegisterType<UserAccountQuery>().As<IUserAccountQuery>();
+            builder.RegisterInstance(new ElasticClient(new ConnectionSettings(new Uri("http://192.168.99.100:32809"))
+                          .DefaultIndex("member"))).As<IElasticClient>();
+            
+            builder.Populate(services);
+            var container = builder.Build();
+            //Create the IServiceProvider based on the container.
+            return new AutofacServiceProvider(container);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -134,6 +155,7 @@ namespace TIK.WebPortal
             });
         }
     }
+
 
     public static class JwtSecurityKey
     {

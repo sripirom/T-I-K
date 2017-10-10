@@ -39,9 +39,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Persistance.ElasticSear
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Persistance.Redis", "Persistance\TIK.Persistance.Redis\TIK.Persistance.Redis.csproj", "{38A3EEFB-50C1-478F-804D-AF6387BA2298}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "TIK.Applications", "Applications\TIK.Applications\TIK.Applications.csproj", "{8C3CF5D6-E242-440C-B84C-67BB4B7919C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Applications", "Applications\TIK.Applications\TIK.Applications.csproj", "{8C3CF5D6-E242-440C-B84C-67BB4B7919C4}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "TIK.Applications.Bulk", "Applications\TIK.Applications.Bulk\TIK.Applications.Bulk.csproj", "{6D82349C-25DC-4E1E-999D-ADF7D0DF80AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Applications.Bulk", "Applications\TIK.Applications.Bulk\TIK.Applications.Bulk.csproj", "{6D82349C-25DC-4E1E-999D-ADF7D0DF80AC}"
 EndProject
 Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "TIK.Applications.DataTransformation", "Applications\TIK.Applications.DataTransformation\TIK.Applications.DataTransformation.csproj", "{66071F3E-4A55-4AC3-8DBB-A23A9A1EA451}"
 EndProject
@@ -62,6 +62,8 @@ EndProject
 Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "TIK.Specification", "Specification\TIK.Specification\TIK.Specification.csproj", "{540028E2-BCCC-4BD0-9C28-077E6ACADE7E}"
 EndProject
 Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "TIK.Governance", "TIK.Governance\TIK.Governance.csproj", "{48BA6C3F-376E-4551-B3B4-85A619FAEFCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Applications.Membership", "Applications\TIK.Applications.Membership\TIK.Applications.Membership.csproj", "{C5067687-A47D-4962-8905-8A420F8DE090}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -157,6 +159,10 @@ Global
 		{48BA6C3F-376E-4551-B3B4-85A619FAEFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48BA6C3F-376E-4551-B3B4-85A619FAEFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48BA6C3F-376E-4551-B3B4-85A619FAEFCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5067687-A47D-4962-8905-8A420F8DE090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5067687-A47D-4962-8905-8A420F8DE090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5067687-A47D-4962-8905-8A420F8DE090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5067687-A47D-4962-8905-8A420F8DE090}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7EBBC8E7-E068-48AC-814C-77AE569AD3F2} = {53FF32E7-2AEB-4A2E-A832-AA0F2474E909}
@@ -178,5 +184,6 @@ Global
 		{44E9D2E7-FAA2-4857-9ADC-93C8562ECDED} = {68C19CB6-44C2-46BC-BD76-E142CF471566}
 		{46C1960A-7B75-43CF-808A-3BC0B54F92D0} = {43033647-555C-42BA-B466-B21EE21154FC}
 		{540028E2-BCCC-4BD0-9C28-077E6ACADE7E} = {3BDEB90B-3340-4E27-82CF-55950769C175}
+		{C5067687-A47D-4962-8905-8A420F8DE090} = {2AD75841-2250-4DB1-8517-D67E9B45EC68}
 	EndGlobalSection
 EndGlobal
