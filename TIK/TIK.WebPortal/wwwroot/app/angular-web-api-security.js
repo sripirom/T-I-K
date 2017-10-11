@@ -3,21 +3,23 @@
 
     var securityModule = angular.module('securityModule', []);
 
-    securityModule.value('baseAddress', 'http://localhost:5001/');
-    //securityModule.value('baseAddress', 'http://pluralsightcourseviewer.azurewebsites.net/');
+    securityModule.value('authenAddress', 'http://localhost:5000/');
+    securityModule.value('baseAddress', 'http://pluralsightcourseviewer.azurewebsites.net/');
 
-    securityModule.factory('authenticationService', function ($http, baseAddress) {
+    securityModule.factory('authenticationService', function ($http, authenAddress) {
 
         var self = this;
         
-        var apiAccountBase = baseAddress + 'api/Account/';
+        var apiAccountBase = authenAddress + 'api/Account/';
 
         self.userName = (localStorage['userName'] ? localStorage['userName'] : '');
         self.loggedIn = (localStorage['login'] && self.userName != '' ? true : false);
 
         self.register = function (registerModel) {
             return $http.post(apiAccountBase + 'Register', registerModel)
-                .then(function (result) {
+                .then(function (result) 
+                {
+                    console.info(result);
                     var userModel = {
                         UserName: registerModel.Email,
                         FirstName: registerModel.FirstName,
@@ -28,10 +30,9 @@
         }
 
         self.login = function (userName, password) {
-            var payload = 'password=' + encodeURIComponent(password) 
-                + '&grant_type=password&username=' + encodeURIComponent(userName);
+            var payload = 'password=' + encodeURIComponent(password) + '&grant_type=password&username=' + encodeURIComponent(userName);
             return $http({
-                    url: baseAddress + 'Token',
+                    url: authenAddress + 'Token',
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
                     data: payload
@@ -204,6 +205,15 @@
                 email: '',
                 password: ''
             };
+
+            var loginAfter = function () {
+                if (vm.loginAfterRegister) {
+                    authenticationService.login(vm.regInfo.email, vm.regInfo.password).then(function (loginResponse) {
+                        if (vm.postLogin)
+                            vm.postLogin()(loginResponse);
+                    });
+                }
+            }
             
             vm.register = function () {
                 var registerModel = {
@@ -218,19 +228,13 @@
                         vm.postRegister()(registerResponse, function () {
                             loginAfter();
                         });
-                    else
+                    else{
                         loginAfter();
+                    }
                 });
             }
 
-            var loginAfter = function () {
-                if (vm.loginAfterRegister) {
-                    authenticationService.login(vm.regInfo.email, vm.regInfo.password).then(function (loginResponse) {
-                        if (vm.postLogin)
-                            vm.postLogin()(loginResponse);
-                    });
-                }
-            }
+  
         },
         template: '' +
                 '<form class="form-horizontal">' +

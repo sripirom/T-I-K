@@ -6,6 +6,12 @@
         controller: function (userAccountService, authenticationService) {
             var vm = this;
 
+            var getUser = function (userName) {
+                userAccountService.getUser(userName).then(function (user) {
+                    vm.userFullName = user.FirstName + ' ' + user.LastName;
+                });
+            }
+            
             vm.$onInit = function () {
                 if (authenticationService.loggedIn) {
                     getUser(authenticationService.userName);
@@ -23,11 +29,7 @@
                 getUser(loginResponse);
             }
 
-            var getUser = function (userName) {
-                userAccountService.getUser(userName).then(function (user) {
-                    vm.userFullName = user.FirstName + ' ' + user.LastName;
-                });
-            }
+ 
         },
         templateUrl: 'App/course-viewer/user-status.component.html'
     });

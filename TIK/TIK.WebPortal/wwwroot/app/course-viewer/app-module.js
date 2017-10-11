@@ -3,8 +3,8 @@
 
     var appModule = angular.module('courseViewer', ['securityModule', 'ui.router']);
 
-    //appModule.value('apiBase', 'http://pluralsightcourseviewer.azurewebsites.net/api/courseviewer/');
-    appModule.value('apiBase', ''http://localhost:5001/api/courseviewer/');
+    appModule.value('apiBase', 'http://pluralsightcourseviewer.azurewebsites.net/api/courseviewer/');
+    //appModule.value('apiBase', ''http://localhost:5001/api/courseviewer/');
     appModule.value('componentBorders', true);
 
     appModule.run(function (componentBorders) {

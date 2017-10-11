@@ -13,7 +13,7 @@ using TIK.Applications.Membership.Queries;
 
 namespace TIK.WebPortal.Controllers
 {
-    [Route("api/[controller]")]
+
     public class TokenController : Controller
     {
         private readonly IUserAccountQuery _userAccountQuery;
@@ -22,6 +22,24 @@ namespace TIK.WebPortal.Controllers
             _userAccountQuery = userAccountQuery;
         }
 
+        [HttpPost]
+        [Route("Token")]
+        public IActionResult Token(string password, string grant_type, string username)
+        {
+            if (_userAccountQuery.GetUser(username, password) == null)
+                return Unauthorized();
+
+            var token = new JwtTokenBuilder()
+                .AddSecurityKey(JwtSecurityKey.Create("fiver-secret-key"))
+                                .AddSubject("james bond")
+                                .AddIssuer("Fiver.Security.Bearer")
+                                .AddAudience("Fiver.Security.Bearer")
+                                .AddClaim("MembershipId", "111")
+                                .AddExpiry(1)
+                                .Build();
+
+            return Ok(token.Value);
+        }
         [HttpPost]
         public IActionResult Create([FromBody]LoginInputModel inputModel)
         {

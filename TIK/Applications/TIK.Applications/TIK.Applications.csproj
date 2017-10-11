@@ -8,6 +8,7 @@
     <Folder Include="DataTransform\" />
     <Folder Include="Integration\" />
     <Folder Include="Repositories\" />
+    <Folder Include="Messaging\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
