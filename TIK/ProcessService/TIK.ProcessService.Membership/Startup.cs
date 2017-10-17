@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TIK.ProcessService.Authentication;
+using TIK.Applications.Membership.Jobs;
+using TIK.Applications.Membership.JobSlots;
 
 namespace TIK.ProcessService.Membership
 {
@@ -31,6 +33,9 @@ namespace TIK.ProcessService.Membership
                     .AddJsonFormatters();
 
             services.AddSingleton<ActorSystem>(_ => ActorSystem.Create("MembershipService"));
+
+            services.AddJobServices();
+            services.AddJobSlotServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

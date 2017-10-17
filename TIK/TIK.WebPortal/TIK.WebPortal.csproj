@@ -21,6 +21,7 @@
     <Folder Include="wwwroot\app\transaction-mornitor\single\" />
     <Folder Include="wwwroot\app\user-activity\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Controllers\EmptyTextFile.txt" />

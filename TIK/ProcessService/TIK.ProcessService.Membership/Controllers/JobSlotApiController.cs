@@ -1,8 +1,10 @@
 using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TIK.Applications.Membership.JobSlots;
+using TIK.Applications.Membership.JobSlots.Routes;
 
-namespace TIK.Applications.Membership.JobSlots.Routes
+namespace TIK.ProcessService.Membership.Controllers
 {
    [Route("/api/jobSlot")]
    public class JobSlotApiController

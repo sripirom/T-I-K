@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using TIK.Applications.Membership.Jobs.Routes;
+using TIK.Applications.Membership.Jobs;
 
-namespace TIK.Applications.Membership.Jobs.Routes
+namespace TIK.ProcessService.Membership
 {
    [Route("/api/jobs")]
    public class JobApiController
