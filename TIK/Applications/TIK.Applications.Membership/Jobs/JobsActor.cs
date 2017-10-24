@@ -13,10 +13,10 @@ namespace TIK.Applications.Membership.Jobs
             this.Jobs = jobs;
 
             Receive<GetAllJobs>(_ => Sender.Tell(new ReadOnlyCollection<Job>(this.Jobs)));
-            Receive<UpdateStock>(m => Sender.Tell(UpdateStockAction(m)));
+            Receive<UpdateJob>(m => Sender.Tell(UpdateStockAction(m)));
         }
 
-        public JobEvent UpdateStockAction(UpdateStock message)
+        public JobEvent UpdateStockAction(UpdateJob message)
         {
             var job = this.Jobs
                 .FirstOrDefault(p => p.Id == message.JobId);
@@ -26,7 +26,7 @@ namespace TIK.Applications.Membership.Jobs
                 if (job.InStock + message.AmountChanged >= 0)
                 {
                     job.InStock += message.AmountChanged;
-                    return new StockUpdated(job);
+                    return new JobUpdated(job);
                 }
                 else
                 {

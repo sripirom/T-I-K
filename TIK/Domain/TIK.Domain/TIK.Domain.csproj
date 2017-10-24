@@ -9,6 +9,9 @@
     <Folder Include="Transaction\Bulk\" />
     <Folder Include="Transaction\Single\" />
     <Folder Include="Member\" />
+    <Folder Include="UserAccounts\" />
+    <Folder Include="SearchNews\" />
+    <Folder Include="Notifications\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />

@@ -23,8 +23,8 @@ namespace TIK.ProcessService.Authentication
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
 
-                    ValidIssuer = configuration["processService.authen.validIssuer"],// "Fiver.Security.Bearer",
-                    ValidAudience = configuration["processService.authen.validAudience"],//"Fiver.Security.Bearer",
+                    ValidIssuer = configuration["processService.authen.validIssuer"],
+                    ValidAudience = configuration["processService.authen.validAudience"],
                     IssuerSigningKey = JwtSecurityKey.Create(configuration["processService.authen.issuerSigningKey"])
                 };
 

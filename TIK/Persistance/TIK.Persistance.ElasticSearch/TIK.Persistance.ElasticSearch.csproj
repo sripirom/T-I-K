@@ -16,5 +16,6 @@
   <ItemGroup>
     <Folder Include="Repositories\" />
     <Folder Include="Core\" />
+    <Folder Include="Mocks\" />
   </ItemGroup>
 </Project>

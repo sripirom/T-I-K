@@ -17,10 +17,11 @@ namespace TIK.Persistance.ElasticSearch
 
         }
 
-        public string Save(T entry)
+        public TId Save(T entry)
         {
             var result = Client.Index<T>(entry, c => c.Index(_indexName));
-            return result.Id;
+            var id= (TId)Convert.ChangeType(result.Id, typeof(TId));
+            return id;
         }
 
 

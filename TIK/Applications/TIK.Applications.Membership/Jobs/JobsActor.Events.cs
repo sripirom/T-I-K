@@ -14,11 +14,11 @@ namespace TIK.Applications.Membership.Jobs
         }
 
         public class JobNotFound : JobEvent {}
-        public class StockUpdated : JobEvent
+        public class JobUpdated : JobEvent
         {
             public readonly Job Job;
 
-            public StockUpdated(Job job)
+            public JobUpdated(Job job)
             {
                 this.Job = job;
             }

@@ -1,7 +1,7 @@
 ﻿using System;
-using TIK.Domain.Member;
+using TIK.Domain.UserAccounts;
 
-namespace TIK.Applications.Membership.Queries
+namespace TIK.Applications.Authentication.Queries
 {
     public interface IUserAccountQuery
     {

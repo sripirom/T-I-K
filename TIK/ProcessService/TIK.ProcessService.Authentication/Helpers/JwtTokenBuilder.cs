@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.IO;
 using System.Linq;
 using System.Security.Claims;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace TIK.WebPortal.Helpers
+namespace TIK.ProcessService.Authentication.Helpers
 {
     public sealed class JwtTokenBuilder
     {
@@ -15,6 +17,24 @@ namespace TIK.WebPortal.Helpers
         private string audience = "";
         private Dictionary<string, string> claims = new Dictionary<string, string>();
         private int expiryInMinutes = 5;
+
+        public JwtTokenBuilder AddConfiguration(string subject)
+        {
+            var builder = new ConfigurationBuilder()
+             .SetBasePath(Directory.GetCurrentDirectory())
+             .AddJsonFile("appsettings.json");
+            var configuration = builder.Build();
+
+            this.securityKey = JwtSecurityKey.Create(configuration);
+            this.subject = subject;
+            this.issuer = configuration["processService.authen.validIssuer"];
+            this.audience = configuration["processService.authen.validAudience"];
+            this.expiryInMinutes = Convert.ToInt32(configuration["processService.authen.expiryInMinutes"]);
+
+
+            return this;
+        }
+
 
         public JwtTokenBuilder AddSecurityKey(SecurityKey securityKey)
         {

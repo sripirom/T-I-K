@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Queries\" />
+    <Folder Include="Commands\Emails\" />
+    <Folder Include="Commands\Sms\" />
+    <Folder Include="Commands\Socket\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TIK.Applications\TIK.Applications.csproj" />
+    <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
+    <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
+  </ItemGroup>
+</Project>

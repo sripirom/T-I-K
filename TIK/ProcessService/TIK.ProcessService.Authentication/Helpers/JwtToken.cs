@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IdentityModel.Tokens.Jwt;
 
-namespace TIK.WebPortal.Helpers
+namespace TIK.ProcessService.Authentication.Helpers
 {
     public sealed class JwtToken
     {

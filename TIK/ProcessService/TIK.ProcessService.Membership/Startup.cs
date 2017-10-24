@@ -12,6 +12,10 @@ using Microsoft.Extensions.Options;
 using TIK.ProcessService.Authentication;
 using TIK.Applications.Membership.Jobs;
 using TIK.Applications.Membership.JobSlots;
+using TIK.Applications.Membership.Members;
+using TIK.Domain.Member;
+using Autofac;
+using TIK.ProcessService.Membership.Mock;
 
 namespace TIK.ProcessService.Membership
 {
@@ -24,18 +28,25 @@ namespace TIK.ProcessService.Membership
 
         public IConfiguration Configuration { get; }
 
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.JwtBearerAuthentication(Configuration);
+            
 
             services.AddMvcCore()
                     .AddJsonFormatters();
 
-            services.AddSingleton<ActorSystem>(_ => ActorSystem.Create("MembershipService"));
+            var actorSystem = ActorSystem.Create("MembershipService");
+            services.AddSingleton<ActorSystem>(_ => actorSystem);
 
             services.AddJobServices();
             services.AddJobSlotServices();
+            services.AddMemberControllerServices();
+            services.AddRepositories();
+
+            services.JwtBearerAuthentication(Configuration);
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

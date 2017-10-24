@@ -1,5 +1,5 @@
 using System;
-using TIK.Domain.Member;
+using TIK.Domain.UserAccounts;
 using TIK.Persistance.ElasticSearch.Tests.Repositories;
 using Xunit;
 using System.Linq;
@@ -63,11 +63,9 @@ namespace TIK.Persistance.ElasticSearch.Tests
         {
             try
             {
-                var userAccount = new Domain.Member.UserAccount()
+                var userAccount = new Domain.UserAccounts.UserAccount()
                 {
-                    Id  = Guid.NewGuid(),
-                    FirstName = "Pichit",
-                    LastName = "Sripirom",
+                    Id  = 1,
                     Password = "password",
                     UserName = "pichit.sri"
                 };
@@ -80,7 +78,7 @@ namespace TIK.Persistance.ElasticSearch.Tests
                 var repo = new UserAccountRepository(context.CreateClient());
 
                 var id = repo.Save(userAccount);
-                var key = new Guid(id);
+                var key = id;
                 var user = repo.Get(key);
 
                 Assert.Equal(key, user.Id);
@@ -100,6 +98,70 @@ namespace TIK.Persistance.ElasticSearch.Tests
             }
       
 
+        }
+
+        [Fact]
+        public void TestMockRepository()
+        {
+            IList<Tuple<Expression<Func<UserAccount, object>>, object>> paramValue =
+                new List<Tuple<Expression<Func<UserAccount, object>>, object>>()
+            {
+                new Tuple<Expression<Func<UserAccount, object>>, object>(q=>q.UserName, "user"),
+                new Tuple<Expression<Func<UserAccount, object>>, object>(q=>q.Password, "password")
+            };
+
+            var repo = new Mocks.MockUserAccountRepository();
+
+            var result = repo.Search(paramValue);
+
+            Assert.Equal(1, result.Count());
+
+            var member = result.FirstOrDefault(a=>a.UserName=="user");
+
+            Assert.NotNull(member);
+        }
+
+        [Fact]
+        public void TestCollectionSearch()
+        {
+            IList<Tuple<Expression<Func<UserAccount, object>>, object>> paramValue =
+                new List<Tuple<Expression<Func<UserAccount, object>>, object>>()
+            {
+                new Tuple<Expression<Func<UserAccount, object>>, object>(q=>q.UserName, "user2"),
+                new Tuple<Expression<Func<UserAccount, object>>, object>(q=>q.Password, "password")
+            };
+
+            var collection = new List<UserAccount> {
+                new UserAccount{
+                        Id = 1,
+                        TokenId = "",
+                        UserName="user1",
+                        Password="password"
+                },
+                new UserAccount{
+                        Id = 2,
+                        TokenId = "",
+                        UserName="user2",
+                        Password="password"
+                },
+                new UserAccount{
+                        Id = 3,
+                        TokenId = "",
+                        UserName="user3",
+                        Password="password"
+                }
+            };
+
+            IEnumerable<UserAccount> results = collection;
+            foreach (var predicate in paramValue)
+            {
+                results = results.Where(a => predicate.Item1.Compile().Invoke(a) == predicate.Item2).ToList();
+            }
+
+            Assert.Equal(1, results.Count());
+            var member = results.FirstOrDefault();
+
+            Assert.NotNull(member);
         }
     }
 }

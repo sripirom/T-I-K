@@ -28,7 +28,6 @@ namespace TIK.ProcessService.Hangfire.Bulk
         {
    
             services.JwtBearerAuthentication(Configuration);
-
             services.AddMvc();
         }
 

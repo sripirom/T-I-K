@@ -20,7 +20,6 @@
     <Folder Include="wwwroot\app\transaction-mornitor\bulk\" />
     <Folder Include="wwwroot\app\transaction-mornitor\single\" />
     <Folder Include="wwwroot\app\user-activity\" />
-    <Folder Include="Helpers\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>

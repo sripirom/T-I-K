@@ -11,14 +11,14 @@ namespace TIK.ProcessService
         public static ServiceSettings Instance => _instance.Value;
 
         public IConfigurationRoot Configuration { get; }
-           
-        private ServiceSettings()
+
+        public ServiceSettings()
         {
             var builder = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
             Configuration = builder.Build();
-        } 
+        }
 
         /// <summary>
         /// Windows ServiceName
@@ -63,6 +63,21 @@ namespace TIK.ProcessService
         public string AuthenClaimMembershipId => Configuration["processService.authen.claimMembershipId"];
 
         /// <summary>
+        /// App WebSite
+        /// </summary>
+        public string AuthenClaimTokenId => Configuration["processService.authen.claimTokenId"];
+
+        /// <summary>
+        /// App WebSite
+        /// </summary>
+        public string AuthenClaimUserName => Configuration["processService.authen.claimUserName"];
+
+        /// <summary>
+        /// App WebSite
+        /// </summary>
+        public string AuthenClaimExpire => Configuration["processService.authen.claimExpire"];
+
+        /// <summary>
         /// Hangfire sql server connectionstring
         /// </summary>
         public string HangfireSqlserverConnectionString => Configuration.GetConnectionString("hangfire.sqlserver");
@@ -71,7 +86,7 @@ namespace TIK.ProcessService
         ///  Hangfire redis server connectionstring
         /// </summary>
         public string HangfireRedisConnectionString => Configuration.GetConnectionString("hangfire.redis");
-    
+
 
 
     }

@@ -10,11 +10,11 @@
     <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="Queries\" />
     <Folder Include="Actors\" />
     <Folder Include="Jobs\" />
     <Folder Include="JobSlots\" />
+    <Folder Include="Members\" />
+    <Folder Include="Members\Routes\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Akka" Version="1.3.1" />

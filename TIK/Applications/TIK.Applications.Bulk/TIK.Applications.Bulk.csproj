@@ -9,7 +9,6 @@
     <Folder Include="Queries\" />
     <Folder Include="Commands\DirectCredit\" />
     <Folder Include="Commands\DirectDebit\" />
-    <Folder Include="Messages\" />
     <Folder Include="Commands\CreateJob\" />
     <Folder Include="Commands\LoadContent\" />
   </ItemGroup>

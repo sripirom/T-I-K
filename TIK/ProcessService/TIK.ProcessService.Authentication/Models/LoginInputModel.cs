@@ -1,5 +1,5 @@
 ﻿using System;
-namespace TIK.WebPortal.Models
+namespace TIK.ProcessService.Authentication.Models
 {
     public class LoginInputModel
     {

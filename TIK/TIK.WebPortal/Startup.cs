@@ -16,8 +16,6 @@ using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using TIK.Persistance.ElasticSearch.Repositories;
-using TIK.Domain.Member;
-using TIK.Applications.Membership.Queries;
 using Nest;
 
 namespace TIK.WebPortal
@@ -38,33 +36,33 @@ namespace TIK.WebPortal
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-         .AddJwtBearer(options => {
-             options.TokenValidationParameters = new TokenValidationParameters
-             {
-                 ValidateIssuer = true,
-                 ValidateAudience = true,
-                 ValidateLifetime = true,
-                 ValidateIssuerSigningKey = true,
-
-                 ValidIssuer = "Fiver.Security.Bearer",
-                 ValidAudience = "Fiver.Security.Bearer",
-                 IssuerSigningKey = JwtSecurityKey.Create("fiver-secret-key")
-             };
-
-             options.Events = new JwtBearerEvents
-             {
-                 OnAuthenticationFailed = context =>
+             .AddJwtBearer(options => {
+                 options.TokenValidationParameters = new TokenValidationParameters
                  {
-                     Console.WriteLine("OnAuthenticationFailed: " + context.Exception.Message);
-                     return Task.CompletedTask;
-                 },
-                 OnTokenValidated = context =>
+                     ValidateIssuer = true,
+                     ValidateAudience = true,
+                     ValidateLifetime = true,
+                     ValidateIssuerSigningKey = true,
+
+                     ValidIssuer = "Fiver.Security.Bearer",
+                     ValidAudience = "Fiver.Security.Bearer",
+                     IssuerSigningKey = JwtSecurityKey.Create("fiver-secret-key")
+                 };
+
+                 options.Events = new JwtBearerEvents
                  {
-                     Console.WriteLine("OnTokenValidated: " + context.SecurityToken);
-                     return Task.CompletedTask;
-                 }
-             };
-         });
+                     OnAuthenticationFailed = context =>
+                     {
+                         Console.WriteLine("OnAuthenticationFailed: " + context.Exception.Message);
+                         return Task.CompletedTask;
+                     },
+                     OnTokenValidated = context =>
+                     {
+                         Console.WriteLine("OnTokenValidated: " + context.SecurityToken);
+                         return Task.CompletedTask;
+                     }
+                 };
+             });
 
             services.AddAuthorization(options =>
             {
@@ -80,8 +78,8 @@ namespace TIK.WebPortal
 
    
             var builder = new ContainerBuilder();
-            builder.RegisterType<UserAccountRepository>().As<IUserAccountRepository>();
-            builder.RegisterType<UserAccountQuery>().As<IUserAccountQuery>();
+            //builder.RegisterType<UserAccountRepository>().As<IUserAccountRepository>();
+            //builder.RegisterType<UserAccountQuery>().As<IUserAccountQuery>();
             builder.RegisterInstance(new ElasticClient(new ConnectionSettings(new Uri("http://192.168.99.100:32809"))
                           .DefaultIndex("member"))).As<IElasticClient>();
             
