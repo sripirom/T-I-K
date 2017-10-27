@@ -4,16 +4,20 @@ namespace TIK.Applications.Membership.Jobs
     {
         public class GetAllJobs {}
 
-        public class UpdateJob
+        public class RequestJob
         {
-            public readonly int JobId;
-            public readonly int AmountChanged;
+            public readonly string JobId;
+            public readonly string Application;
+            public readonly string Procedure;
 
-            public UpdateJob(int jobId = 0, int amountChanged = 0)
+            public RequestJob(string jobId = "", string application = "", 
+                            string procedure = "")
             {
                 this.JobId = jobId;
-                this.AmountChanged = amountChanged;
+                this.Application = application;
+                this.Procedure = procedure;
             }
         }
+
     }
 }

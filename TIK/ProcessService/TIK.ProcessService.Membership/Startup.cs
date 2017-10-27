@@ -10,12 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TIK.ProcessService.Authentication;
-using TIK.Applications.Membership.Jobs;
-using TIK.Applications.Membership.JobSlots;
-using TIK.Applications.Membership.Members;
-using TIK.Domain.Member;
-using Autofac;
-using TIK.ProcessService.Membership.Mock;
+using TIK.Applications.Membership;
 
 namespace TIK.ProcessService.Membership
 {
@@ -40,9 +35,8 @@ namespace TIK.ProcessService.Membership
             var actorSystem = ActorSystem.Create("MembershipService");
             services.AddSingleton<ActorSystem>(_ => actorSystem);
 
-            services.AddJobServices();
-            services.AddJobSlotServices();
-            services.AddMemberControllerServices();
+
+            services.AddMembershipServices();
             services.AddRepositories();
 
             services.JwtBearerAuthentication(Configuration);

@@ -6,12 +6,13 @@
 
   <ItemGroup>
     <Folder Include="DataTransform\" />
+    <Folder Include="Notification\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Applications\TIK.Applications\TIK.Applications.csproj" />
     <ProjectReference Include="..\..\Applications\TIK.Applications.DataTransformation\TIK.Applications.DataTransformation.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="1.0.0-alpha2-27136" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="1.0.0-alpha2-final" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System;
 using Nest;
-using TIK.Domain.Member;
+using TIK.Domain.Membership;
 
 namespace TIK.Persistance.ElasticSearch.Repositories
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using TIK.Domain.Member;
+using TIK.Domain.Membership;
 using System.Linq;
 using TIK.Core.Domain;
 

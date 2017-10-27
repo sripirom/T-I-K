@@ -2,29 +2,45 @@
 using Akka.Actor;
 using TIK.Applications.Membership.JobSlots;
 using TIK.Applications.Messaging;
-using TIK.Domain.Member;
+using TIK.Domain.Membership;
 
 namespace TIK.Applications.Membership.Members
 {
     public partial class MemberActor : ReceiveActor
     {
-        private Member _memberInfo;
-        public MemberActor(Member memberInfo)
+        private IActorRef JobSlotsActor { get; }
+
+        private Member _memberInfo { get; }
+        public MemberActor(Member memberInfo, IActorRef jobSlotsActor)
         {
             _memberInfo = memberInfo;
+            JobSlotsActor = jobSlotsActor;
 
-            Receive<ActiveMember>(message => {
+            ReceiveAny(m => {
 
-                var result = new Member
+                if (m is MemberActor.ActiveMember)
+                {
+                    var result = new Member
                     {
                         Id = _memberInfo.Id,
                         Name = new Name { FirstName = _memberInfo.Name.FirstName, LastName = _memberInfo.Name.FirstName },
                         ContactInfo = new ContactInfo { Email = _memberInfo.ContactInfo.Email, Phone = _memberInfo.ContactInfo.Phone },
                         IsActive = true
-                    }; 
+                    };
+
+                    Sender.Tell(result);
+                }
+                else
+                {
+                    JobSlotsActor.Forward(m);
+                }
 
 
-                Sender.Tell(result);
+            });
+            /*
+            Receive<ActiveMember>(message => {
+
+
             });
 
 
@@ -41,10 +57,12 @@ namespace TIK.Applications.Membership.Members
                 {
                     //Sender.Tell(new PlayerStatusMessage(_playerName, _health));
                 });
+
+             */
         }
 
 
-        public static Props Props(ActiveMember member)
+        public static Props Props(ActiveMember member, IActorRef jobSlotsActor)
         {
             var memberInfo = new Member
                     {
@@ -53,7 +71,7 @@ namespace TIK.Applications.Membership.Members
                         ContactInfo = new ContactInfo { Email = member.Email, Phone = member.Phone },
                         IsActive = false
                     }; 
-            return Akka.Actor.Props.Create(() => new MemberActor(memberInfo));
+            return Akka.Actor.Props.Create(() => new MemberActor(memberInfo, jobSlotsActor));
         }
 
     }

@@ -1,3 +1,5 @@
+using TIK.Domain.Membership;
+
 namespace TIK.Applications.Membership.Jobs
 {
     public partial class JobsActor

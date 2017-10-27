@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TIK.Domain.Membership;
 
 namespace TIK.Applications.Membership.JobSlots 
 {

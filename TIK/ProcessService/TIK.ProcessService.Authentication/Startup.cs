@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Http;
 using TIK.Applications.Authentication.Queries;
-using TIK.Domain.Member;
+using TIK.Domain.Membership;
 using TIK.Persistance.ElasticSearch.Mocks;
 using TIK.Domain.UserAccounts;
 

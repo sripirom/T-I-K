@@ -8,5 +8,7 @@ namespace TIK.Domain.Notifications
         public SignalRCommand()
         {
         }
+
+        public string Message { get; set; }
     }
 }

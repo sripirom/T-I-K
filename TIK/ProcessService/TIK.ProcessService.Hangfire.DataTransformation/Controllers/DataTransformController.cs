@@ -22,7 +22,7 @@ namespace TIK.ProcessService.Hangfire.DataTransformation.Controllers
         }
 
         [Route("Transform/{template}")]
-        //[ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
         public HttpResponseMessage Transform(string template)
         {
             try

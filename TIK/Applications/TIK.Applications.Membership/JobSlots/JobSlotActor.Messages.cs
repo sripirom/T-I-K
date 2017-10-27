@@ -10,13 +10,17 @@ namespace TIK.Applications.Membership.JobSlots
         }
 
         public class AddItemToJobSlot : MessageWithMemberId {
-            public readonly int JobId;
-            public readonly int Amount;
+            public readonly string JobId;
+            public readonly string Application;
+            public readonly string Procedure;
 
-            public AddItemToJobSlot(int memberId = 0, int jobId = 0, int amount = 0) : base(memberId)
+            public AddItemToJobSlot(int memberId = 0, string jobId = "", string application = "",
+                                   string procedure = "") 
+                : base(memberId)
             {
                 this.JobId = jobId;
-                this.Amount = amount;
+                this.Application = application;
+                this.Procedure = procedure;
             }
         }
 

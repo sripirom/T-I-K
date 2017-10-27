@@ -1,6 +1,6 @@
 ﻿using System;
 using TIK.Applications.Messaging;
-using TIK.Domain.Member;
+using TIK.Domain.Membership;
 
 namespace TIK.Applications.Membership.Members
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
-using TIK.Domain.Member;
+using TIK.Domain.Membership;
 using TIK.Persistance.ElasticSearch.Repositories;
 using TIK.ProcessService.Membership.Mock;
 

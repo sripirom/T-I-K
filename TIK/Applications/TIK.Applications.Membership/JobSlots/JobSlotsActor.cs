@@ -6,20 +6,20 @@ namespace TIK.Applications.Membership.JobSlots
 {
     public class JobSlotsActor : ReceiveActor
     {
-        private IActorRef JobActor { get; }
+        private IActorRef JobsActor { get; }
 
-        public JobSlotsActor(IActorRef jobActor)
+        public JobSlotsActor(IActorRef jobsActor)
         {
-            this.JobActor = jobActor;
+            this.JobsActor = jobsActor;
 
             ReceiveAny(m => {
                 if (m is MessageWithMemberId)
                 {
                     var envelope = m as MessageWithMemberId;
-                    var basketActor = Context.Child(envelope.MemberId.ToString()) is Nobody ?
-                        Context.ActorOf(JobSlotActor.Props(this.JobActor), envelope.MemberId.ToString()) :
+                    var jobSlotActor = Context.Child(envelope.MemberId.ToString()) is Nobody ?
+                        Context.ActorOf(JobSlotActor.Props(this.JobsActor), envelope.MemberId.ToString()) :
                         Context.Child(envelope.MemberId.ToString());
-                    basketActor.Forward(m);
+                    jobSlotActor.Forward(m);
                 }
             });
         }

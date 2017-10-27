@@ -23,5 +23,18 @@ namespace TIK.ProcessService.Authentication
 
             return user;
         }
+        public static int GetMemberId(this HttpContext httpContext)
+        {
+
+            var memberIdClaim = httpContext.User.Claims.FirstOrDefault(c=> c.Type==ServiceSettings.Instance.AuthenClaimMembershipId);
+
+            if(memberIdClaim != null){
+
+                return Convert.ToInt32(memberIdClaim.Value);
+            }else{
+                return 0;
+            }
+
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Akka.Actor;
 
 using TIK.Applications.Membership.Jobs;
+using TIK.Domain.Membership;
 
 namespace TIK.Applications.Membership.JobSlots
 {
@@ -17,7 +18,7 @@ namespace TIK.Applications.Membership.JobSlots
             this.JobsActorRef = jobsActor;
 
             Receive<GetJobSlot>(_ => Sender.Tell(this.JobSlotState));
-            ReceiveAsync<AddItemToJobSlot>(m => AddItemToJobSlotAction(m).PipeTo(Sender), m => m.Amount > 0);
+            ReceiveAsync<AddItemToJobSlot>(m => AddItemToJobSlotAction(m).PipeTo(Sender), m => m.Application != "");
             Receive<RemoveItemFromJobSlot>(m => Sender.Tell(RemoveItemToJobSlotAction(m)));
         }
 
@@ -29,17 +30,19 @@ namespace TIK.Applications.Membership.JobSlots
         public async Task<JobSlotEvent> AddItemToJobSlotAction(AddItemToJobSlot message)
         {
             var jobActorResult = await this.JobsActorRef.Ask<JobsActor.JobEvent>(
-                new JobsActor.UpdateJob
+                new JobsActor.RequestJob
                 (
-                    jobId: message.JobId,
-                    amountChanged: -message.Amount
+                    jobId: message.JobId ,
+                    application: message.Application,
+                    procedure: message.Procedure
+                  
                 )
             );
 
             if (jobActorResult is JobsActor.JobUpdated)
             {
                 var job = ((JobsActor.JobUpdated)jobActorResult).Job;
-                return AddToJobSlot(job, message.Amount) as ItemAdded;
+                return AddToJobSlot(job, message.Application) as ItemAdded;
             }
             else if (jobActorResult is JobsActor.JobNotFound)
             {
@@ -69,32 +72,22 @@ namespace TIK.Applications.Membership.JobSlots
             }
         }
 
-        private ItemAdded AddToJobSlot(Job jobToAdd, int amount)
+        private ItemAdded AddToJobSlot(Job jobToAdd, string application)
         {
-            var existingJobSlotItemWithJob = this.JobSlotState.Items.Find(item => item.JobId == jobToAdd.Id);
-            if (existingJobSlotItemWithJob is JobItem)
-            {
-                // Add to existing basket item
-                existingJobSlotItemWithJob.Amount += amount;
-                return new ItemAdded(
-                    jobSlotItemId: existingJobSlotItemWithJob.Id
-                );
-            }
-            else
-            {
-                // Create a new basket item
-                var jobItemId = Guid.NewGuid();
-                this.JobSlotState.Items.Add(new JobItem {
-                    Id = jobItemId,
-                    JobId = jobToAdd.Id,
-                    Title = jobToAdd.Title,
-                    Brand = jobToAdd.Brand,
-                    PricePerUnit = jobToAdd.PricePerUnit,
-                    Amount = amount
-                });
+            //var existingJobSlotItemWithJob = this.JobSlotState.Items.Find(item => item.JobId == jobToAdd.Id);
 
-                return new ItemAdded(jobItemId);
-            }
+            // Create a new job item
+            var jobItemId = Guid.NewGuid();
+            this.JobSlotState.Items.Add(new JobItem {
+                Id = jobItemId,
+                JobId = jobToAdd.Id,
+                Application = jobToAdd.Application,
+                Procedure = jobToAdd.Procedure,
+                Created = jobToAdd.Created
+            });
+
+            return new ItemAdded(jobItemId);
+
         }
     }
 }

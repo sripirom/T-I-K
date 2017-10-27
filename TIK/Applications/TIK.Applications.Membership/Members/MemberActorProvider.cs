@@ -1,6 +1,7 @@
 ﻿using System;
 using Akka.Actor;
-using TIK.Domain.Member;
+using TIK.Applications.Membership.JobSlots;
+using TIK.Domain.Membership;
 
 namespace TIK.Applications.Membership.Members
 {
@@ -9,9 +10,9 @@ namespace TIK.Applications.Membership.Members
 
         private IActorRef MemberControllerActorInstance { get; set; }
 
-        public MemberActorProvider(ActorSystem actorSystem, IMemberRepository repository)
+        public MemberActorProvider(ActorSystem actorSystem, JobSlotsActorProvider provider)
         {
-            this.MemberControllerActorInstance = actorSystem.ActorOf(MemberControllerActor.SelfProps(repository), "MemberController");
+            this.MemberControllerActorInstance = actorSystem.ActorOf(MemberControllerActor.SelfProps(provider), "MemberController");
         }
 
         public IActorRef Get()

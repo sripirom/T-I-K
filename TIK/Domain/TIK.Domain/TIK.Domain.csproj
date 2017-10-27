@@ -8,7 +8,7 @@
     <Folder Include="Transaction\" />
     <Folder Include="Transaction\Bulk\" />
     <Folder Include="Transaction\Single\" />
-    <Folder Include="Member\" />
+    <Folder Include="Membership\" />
     <Folder Include="UserAccounts\" />
     <Folder Include="SearchNews\" />
     <Folder Include="Notifications\" />

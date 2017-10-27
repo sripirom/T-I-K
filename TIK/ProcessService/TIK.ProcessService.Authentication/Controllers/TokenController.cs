@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using System.Collections.Generic;
 using TIK.ProcessService.Authentication.Helpers;
-using TIK.Domain.Member;
+using TIK.Domain.Membership;
 using TIK.ProcessService.Authentication.Models;
 using TIK.Applications.Authentication.Queries;
 namespace TIK.ProcessService.Authentication.Controllers

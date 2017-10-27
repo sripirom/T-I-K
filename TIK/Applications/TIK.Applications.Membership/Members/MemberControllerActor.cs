@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using Akka.Actor;
 using TIK.Applications.Membership.JobSlots;
 using TIK.Applications.Messaging;
-using TIK.Domain.Member;
+using TIK.Domain.Membership;
 
 namespace TIK.Applications.Membership.Members
 {
     public class MemberControllerActor : ReceiveActor
     {
         //private readonly Dictionary<int, IActorRef> _memberActives;
-        private readonly IMemberRepository _memberRepository;
-        public MemberControllerActor(IMemberRepository memberRepository)
+        private JobSlotsActorProvider JobSlotsActorProvider { get; }
+
+        private IActorRef JobSlotsActor { get; set; }
+        public MemberControllerActor(JobSlotsActorProvider provider)
         {
-            _memberRepository = memberRepository;
+            JobSlotsActorProvider = provider;
             /*
             _memberActives = new Dictionary<int, IActorRef>();
 
@@ -27,14 +29,19 @@ namespace TIK.Applications.Membership.Members
 */
             ReceiveAny(m => 
             {
-                if (m is MemberActor.ActiveMember)
+                if (m is MessageWithMemberId)
                 {
-                    var envelope = m as MemberActor.ActiveMember;
-                    var memberActor = Context.Child(envelope.MemberId.ToString()) is Nobody ?
-                        Context.ActorOf(MemberActor.Props(envelope), envelope.MemberId.ToString()) :
-                        Context.Child(envelope.MemberId.ToString());
-                    
-                    memberActor.Forward(m);
+                    if(m is MemberActor.ActiveMember){
+                        var envelope = m as MemberActor.ActiveMember;
+                        var memberActor = Context.Child(envelope.MemberId.ToString()) is Nobody ?
+                            Context.ActorOf(MemberActor.Props(envelope, JobSlotsActorProvider.Get()), envelope.MemberId.ToString()) :
+                            Context.Child(envelope.MemberId.ToString());  
+                        memberActor.Forward(m);
+                    }else{
+                        var envelope = m as MessageWithMemberId;
+                        var memberActor = Context.Child(envelope.MemberId.ToString());
+                        memberActor.Forward(m);
+                    }
                 }
             });
         }
@@ -61,9 +68,9 @@ namespace TIK.Applications.Membership.Members
 
         }
 */
-        public static Props SelfProps(IMemberRepository repository)
+        public static Props SelfProps(JobSlotsActorProvider provider)
         {
-            return Akka.Actor.Props.Create(() => new MemberControllerActor(repository));
+            return Akka.Actor.Props.Create(typeof(MemberControllerActor), provider);
         }
     }
 }
