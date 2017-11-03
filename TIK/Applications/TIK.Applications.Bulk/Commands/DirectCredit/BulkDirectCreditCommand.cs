@@ -1,6 +1,6 @@
 ﻿using System;
 using TIK.Core.Logging;
-using TIK.Applications.Integration;
+using TIK.Integration.Bulk;
 using TIK.Core.Application;
 using TIK.Domain.Transaction.Bulk;
 

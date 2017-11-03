@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Sockets.Client;
 using System.Threading;
 using System.Text;
+using TIK.Integration.DataTransformation;
 
 namespace TIK.Integration.SignalR.DataTransform
 {
@@ -19,7 +20,7 @@ namespace TIK.Integration.SignalR.DataTransform
 
         public async Task CallBackResult(string filename, string state, byte[] dataStream)
         {
-            string baseUrl = "http://localhost:5000/hangfireSR/DataTransformation";
+            string baseUrl = "http://localhost:5103/hangfireSR/DataTransformation";
 
             var loggerFactory = new LoggerFactory();
             var logger = loggerFactory.CreateLogger<DataTransformPublisher>();

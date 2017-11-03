@@ -10,6 +10,8 @@ using TIK.Core.Logging;
 using TIK.Core.Container;
 using TIK.Applications.DataTransformation;
 using TIK.Integration.SignalR.DataTransform;
+using TIK.Applications.Batch.Commands.SearchNews;
+using TIK.Integration.DataTransformation;
 
 namespace TIK.Computation.ServiceNode.Hangfire
 {
@@ -87,7 +89,8 @@ namespace TIK.Computation.ServiceNode.Hangfire
 
             builder.RegisterModule(new DelegateModule(() => new Assembly[]
             {
-               typeof(IFixedLengthCommand).GetTypeInfo().Assembly
+                typeof(IFixedLengthCommand).GetTypeInfo().Assembly,
+                typeof(ISearchNewsCommand).GetTypeInfo().Assembly
             }));
 
             var container = builder.Build();

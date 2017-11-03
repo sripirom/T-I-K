@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Batch\" />
+    <Folder Include="Notification\" />
+    <Folder Include="DataTransformation\" />
+    <Folder Include="Bulk\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
+    <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
+  </ItemGroup>
 </Project>

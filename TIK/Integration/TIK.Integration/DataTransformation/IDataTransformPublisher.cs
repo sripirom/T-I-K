@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace TIK.Applications.DataTransformation
+namespace TIK.Integration.DataTransformation
 {
     public interface IDataTransformPublisher 
     {

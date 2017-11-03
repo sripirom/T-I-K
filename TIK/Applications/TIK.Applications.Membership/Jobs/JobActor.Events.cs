@@ -2,7 +2,7 @@ using TIK.Domain.Membership;
 
 namespace TIK.Applications.Membership.Jobs
 {
-    public partial class JobsActor
+    public partial class JobActor
     {
         public abstract class JobEvent {}
         public class JobFound : JobEvent

@@ -1,16 +1,16 @@
 using Akka.Actor;
-using TIK.Applications.Integration;
+using TIK.Integration.Batch;
 using TIK.Applications.Membership.Mocks;
 
 namespace TIK.Applications.Membership.Jobs
 {
-    public class JobsActorProvider
+    public class JobActorProvider
     {
         private IActorRef JobsActor { get; set; }
 
-        public JobsActorProvider(ActorSystem actorSystem, IBatchPublisher batchPublisher)
+        public JobActorProvider(ActorSystem actorSystem, IBatchPublisher batchPublisher)
         {
-            this.JobsActor = actorSystem.ActorOf(Props.Create<JobsActor>(batchPublisher), "jobs");
+            this.JobsActor = actorSystem.ActorOf(Props.Create<JobActor>(batchPublisher), "jobs");
         }
 
         public IActorRef Get()

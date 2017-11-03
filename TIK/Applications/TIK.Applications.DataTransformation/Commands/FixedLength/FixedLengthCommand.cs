@@ -2,6 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 using TIK.Core.Application;
+using TIK.Integration.DataTransformation;
 
 namespace TIK.Applications.DataTransformation.Commands.FixedLength
 {
@@ -47,7 +48,7 @@ namespace TIK.Applications.DataTransformation.Commands.FixedLength
 
         public async Task CallBack(FixedLengthDto data)
         {
-            await _dataTransformPublisher.CallBackResult(data.FileName, "Success", data.DataStream);
+            await Task.CompletedTask;// _dataTransformPublisher.CallBackResult(data.FileName, "Success", data.DataStream);
         }
 
 

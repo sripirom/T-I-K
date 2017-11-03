@@ -1,7 +1,7 @@
 ﻿using System;
 using TIK.Domain.Transaction.Bulk;
 
-namespace TIK.Applications.Integration
+namespace TIK.Integration.Bulk
 {
     public interface IBulkStorageService
     {

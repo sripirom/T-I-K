@@ -14,7 +14,16 @@ namespace TIK.ProcessService.Membership
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            try
+            {
+                Task.Delay(5000).Wait();
+                BuildWebHost(args).Run();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+          
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

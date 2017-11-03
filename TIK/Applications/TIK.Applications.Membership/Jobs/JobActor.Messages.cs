@@ -1,8 +1,10 @@
 namespace TIK.Applications.Membership.Jobs
 {
-    public partial class JobsActor
+    public partial class JobActor
     {
         public class GetAllJobs {}
+
+        public class StatusJob {}
 
         public class RequestJob
         {

@@ -1,5 +1,5 @@
 ﻿using System;
-using TIK.Applications.Integration;
+using TIK.Integration.Bulk;
 using TIK.Core.Application;
 using TIK.Core.Logging;
 using TIK.Domain.Transaction.Bulk;

@@ -11,11 +11,12 @@ namespace TIK.Applications.Membership.Members
     {
         //private readonly Dictionary<int, IActorRef> _memberActives;
         private JobSlotsActorProvider JobSlotsActorProvider { get; }
-
+        private readonly Dictionary<string, IActorRef> _members;
         private IActorRef JobSlotsActor { get; set; }
         public MemberControllerActor(JobSlotsActorProvider provider)
         {
             JobSlotsActorProvider = provider;
+            _members = new Dictionary<string, IActorRef>();
             /*
             _memberActives = new Dictionary<int, IActorRef>();
 
@@ -35,11 +36,15 @@ namespace TIK.Applications.Membership.Members
                         var envelope = m as MemberActor.ActiveMember;
                         var memberActor = Context.Child(envelope.MemberId.ToString()) is Nobody ?
                             Context.ActorOf(MemberActor.Props(envelope, JobSlotsActorProvider.Get()), envelope.MemberId.ToString()) :
-                            Context.Child(envelope.MemberId.ToString());  
+                            Context.Child(envelope.MemberId.ToString()); 
+                        _members.Add(envelope.MemberId.ToString(), memberActor);
                         memberActor.Forward(m);
-                    }else{
+                    }else
+                    {
                         var envelope = m as MessageWithMemberId;
-                        var memberActor = Context.Child(envelope.MemberId.ToString());
+                        //var memberActor = Context.Child(envelope.MemberId.ToString());
+                        IActorRef memberActor;
+                        _members.TryGetValue(envelope.MemberId.ToString(), out memberActor);
                         memberActor.Forward(m);
                     }
                 }

@@ -8,13 +8,13 @@ namespace TIK.Applications.Membership.Members
     {
         public class ActiveMember : MessageWithMemberId
         {
-            public ActiveMember(Member member)
-                : base(member.Id)
+            public ActiveMember(int memberId, string firstName, string lastName, string email, string phone)
+                : base(memberId)
             {
-                FirstName = member.Name.FirstName;
-                LastName = member.Name.LastName;
-                Email = member.ContactInfo.Email;
-                Phone = member.ContactInfo.Phone;
+                FirstName = firstName;
+                LastName = lastName;
+                Email = email;
+                Phone = phone;
             }
 
             public string FirstName { get; private set; }

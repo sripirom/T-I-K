@@ -10,18 +10,18 @@ namespace TIK.Applications.Membership.Routes
 {
     public class AddItemToJobSlot
     {
-        private ILogger<JobSlotActor.GetJobSlot> Logger { get; set; }
+        //private ILogger<JobSlotActor.GetJobSlot> Logger { get; set; }
         private IActorRef MemberControllerActor { get; set; }
 
-        public AddItemToJobSlot(MemberActorProvider provider, ILogger<JobSlotActor.GetJobSlot> logger)
+        public AddItemToJobSlot(MemberActorProvider provider)
         {
-            this.Logger = logger;
+            //this.Logger = logger;
             this.MemberControllerActor = provider.Get();
         }
 
         public async Task<IActionResult> Execute(int memberId, string jobId, string application)
         {
-            Logger.LogInformation($"Adding {application} of job '{jobId}' to basket for member '{memberId}'");
+            //Logger.LogInformation($"Adding {application} of job '{jobId}' to basket for member '{memberId}'");
             var result = await this.MemberControllerActor.Ask<JobSlotActor.JobSlotEvent>(new JobSlotActor.AddItemToJobSlot(
                 memberId,
                 jobId,

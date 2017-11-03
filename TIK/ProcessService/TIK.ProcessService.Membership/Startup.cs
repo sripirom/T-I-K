@@ -11,6 +11,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TIK.ProcessService.Authentication;
 using TIK.Applications.Membership;
+using TIK.ProcessService.Membership.ActorSystems;
+using System.IO;
 
 namespace TIK.ProcessService.Membership
 {
@@ -31,8 +33,19 @@ namespace TIK.ProcessService.Membership
 
             services.AddMvcCore()
                     .AddJsonFormatters();
+            
+            var huconConfig = Path.Combine(Directory.GetCurrentDirectory(), "Hucon.txt");
+            var config = HoconLoader.FromFile(huconConfig); 
+            var actorSystem = ActorSystem.Create("MembershipSystem", config);
+ 
+            var memberController =
+                actorSystem.ActorSelection("akka.tcp://MembershipSystem@127.0.0.1:5301/user/MemberController")
+                    .ResolveOne(TimeSpan.FromSeconds(3))
+                    .Result;
 
-            var actorSystem = ActorSystem.Create("MembershipService");
+
+
+
             services.AddSingleton<ActorSystem>(_ => actorSystem);
 
 

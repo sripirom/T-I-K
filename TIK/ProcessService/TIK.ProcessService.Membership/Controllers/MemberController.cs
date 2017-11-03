@@ -46,7 +46,7 @@ namespace TIK.ProcessService.Membership.Controllers
             var member = MemberRepository.Get(user.Id);
             if(member!=null)
             {
-                result = await this.ActiveMember.Execute(member); 
+                result = await this.ActiveMember.Execute(member, user.Id); 
             }else
             {
                 

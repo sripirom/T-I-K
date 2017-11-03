@@ -22,6 +22,8 @@
     <ProjectReference Include="..\..\Applications\TIK.Applications.DataTransformation\TIK.Applications.DataTransformation.csproj" />
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
     <ProjectReference Include="..\..\Integration\TIK.Integration.SignalR\TIK.Integration.SignalR.csproj" />
+    <ProjectReference Include="..\..\Applications\TIK.Applications.Batch\TIK.Applications.Batch.csproj" />
+    <ProjectReference Include="..\..\Integration\TIK.Integration\TIK.Integration.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Integration\" />

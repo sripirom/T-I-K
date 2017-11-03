@@ -12,7 +12,7 @@ namespace TIK.Applications.Membership.Routes
         private ILogger<GetAllJobs> Logger { get; set; }
         private IActorRef JobsActor { get; set; }
 
-        public GetAllJobs(JobsActorProvider provider, ILogger<GetAllJobs> logger)
+        public GetAllJobs(JobActorProvider provider, ILogger<GetAllJobs> logger)
         {
             this.Logger = logger;
             this.JobsActor = provider.Get();
@@ -21,7 +21,7 @@ namespace TIK.Applications.Membership.Routes
         public async Task<IEnumerable<Job>> Execute() {
             Logger.LogInformation("Requesting all jobs");
             return await this.JobsActor.Ask<IEnumerable<Job>>(
-                new JobsActor.GetAllJobs()
+                new JobActor.GetAllJobs()
             );
         }
     }

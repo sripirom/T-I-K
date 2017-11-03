@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
-using TIK.Applications.Integration;
+using TIK.Integration.Batch;
 using TIK.Applications.Membership.Jobs;
 using TIK.Applications.Membership.JobSlots;
 using TIK.Applications.Membership.Members;
@@ -23,8 +23,8 @@ namespace TIK.Applications.Membership
             services.AddSingleton<Routes.RemoveItemFromJobSlot>();
        
         
-            services.AddTransient<IBatchPublisher, MockBatchPublisher>();
-            services.AddSingleton<JobsActorProvider>();
+           
+            services.AddSingleton<JobActorProvider>();
             services.AddSingleton<Routes.GetAllJobs>();
         }
     }

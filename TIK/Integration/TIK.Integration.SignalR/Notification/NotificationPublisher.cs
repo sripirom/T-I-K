@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using TIK.Applications.Integration;
+using TIK.Integration.Notification;
 
 namespace TIK.Integration.SignalR.Notification
 {

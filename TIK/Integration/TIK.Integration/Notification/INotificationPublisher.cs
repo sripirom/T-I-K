@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace TIK.Applications.Integration
+namespace TIK.Integration.Notification
 {
     public interface INotificationPublisher
     {

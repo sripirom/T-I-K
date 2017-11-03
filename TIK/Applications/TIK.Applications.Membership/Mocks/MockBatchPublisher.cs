@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using TIK.Applications.Integration;
+using TIK.Integration.Batch;
 using TIK.Domain.Membership;
 using TIK.Domain.SearchNews;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace TIK.Applications.Membership.Mocks
 {
@@ -17,12 +18,12 @@ namespace TIK.Applications.Membership.Mocks
 
         } 
 
-        public IEnumerable<Job> GetAllJobs()
+        public Task<IEnumerable<Job>> GetAllJobs()
         {
-            return _jobs;
+            return Task.FromResult<IEnumerable<Job>>(_jobs);
         }
 
-        public Job SearchNews(CriteriaSearchNews criteria)
+        public Task<Job> SearchNews(CriteriaSearchNews criteria)
         {
             var job = new Job
             {
@@ -34,7 +35,7 @@ namespace TIK.Applications.Membership.Mocks
             };
             _jobs.Add(job);
 
-            return job;
+            return Task.FromResult<Job>(job);
         }
     }
 }

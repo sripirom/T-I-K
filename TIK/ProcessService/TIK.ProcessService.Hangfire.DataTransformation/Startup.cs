@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.PlatformAbstractions;
-using Swashbuckle.Swagger.Model;
+using Swashbuckle.AspNetCore.Swagger;
 using TIK.ProcessService.Hangfire.DataTransformation.Hubs;
 
 namespace TIK.ProcessService.Hangfire.DataTransformation
@@ -29,7 +29,7 @@ namespace TIK.ProcessService.Hangfire.DataTransformation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            //services.AddMvc();
 
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
@@ -41,13 +41,16 @@ namespace TIK.ProcessService.Hangfire.DataTransformation
             var connectionString = Configuration.GetConnectionString("hangfire.redis");
             GlobalConfiguration.Configuration.UseRedisStorage(connectionString);
 
-            services.AddSwaggerGen();
+   
 
-            var xmlPath = GetXmlCommentsPath();
+            // Swagger
+            // https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio
+           // var xmlPath = GetXmlCommentsPath();
 
-            services.ConfigureSwaggerGen(options =>
+            // Register the Swagger generator, defining one or more Swagger documents
+            services.AddSwaggerGen(options =>
             {
-                options.SingleApiVersion(new Info
+                options.SwaggerDoc("v1", new Info
                 {
                     Version = "v1",
                     Title = "Hangfire Samples APIs",
@@ -55,11 +58,11 @@ namespace TIK.ProcessService.Hangfire.DataTransformation
                     TermsOfService = "None",
                     Contact = new Contact { Name = "TIK", Url = "https://github.com/sripirom/TIK" }
                 });
-
-                options.IncludeXmlComments(xmlPath);
+                //options.IncludeXmlComments(xmlPath);
 
                 //options.DescribeAllEnumsAsStrings();
             });
+
         }
         private string GetXmlCommentsPath()
         {
@@ -79,6 +82,15 @@ namespace TIK.ProcessService.Hangfire.DataTransformation
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "DataTransformation API V1");
+            });
 
             //app.UseApplicationInsightsExceptionTelemetry();
 

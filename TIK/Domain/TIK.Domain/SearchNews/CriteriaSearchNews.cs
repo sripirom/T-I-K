@@ -3,7 +3,7 @@ using TIK.Core.Domain;
 
 namespace TIK.Domain.SearchNews
 {
-    public class CriteriaSearchNews : BaseModel<String>
+    public class CriteriaSearchNews 
     {
         public CriteriaSearchNews()
         {

@@ -7,7 +7,7 @@ namespace TIK.Applications.Membership.JobSlots
     {
         private IActorRef JobSlotsActorInstance { get; set; }
 
-        public JobSlotsActorProvider(ActorSystem actorSystem, JobsActorProvider provider)
+        public JobSlotsActorProvider(ActorSystem actorSystem, JobActorProvider provider)
         {
             var jobsActor = provider.Get();
             this.JobSlotsActorInstance = actorSystem.ActorOf(JobSlotsActor.Props(jobsActor), "jobSlots");

@@ -29,8 +29,8 @@ namespace TIK.Applications.Membership.JobSlots
 
         public async Task<JobSlotEvent> AddItemToJobSlotAction(AddItemToJobSlot message)
         {
-            var jobActorResult = await this.JobsActorRef.Ask<JobsActor.JobEvent>(
-                new JobsActor.RequestJob
+            var jobActorResult = await this.JobsActorRef.Ask<JobActor.JobEvent>(
+                new JobActor.RequestJob
                 (
                     jobId: message.JobId ,
                     application: message.Application,
@@ -39,16 +39,16 @@ namespace TIK.Applications.Membership.JobSlots
                 )
             );
 
-            if (jobActorResult is JobsActor.JobUpdated)
+            if (jobActorResult is JobActor.JobUpdated)
             {
-                var job = ((JobsActor.JobUpdated)jobActorResult).Job;
+                var job = ((JobActor.JobUpdated)jobActorResult).Job;
                 return AddToJobSlot(job, message.Application) as ItemAdded;
             }
-            else if (jobActorResult is JobsActor.JobNotFound)
+            else if (jobActorResult is JobActor.JobNotFound)
             {
                 return new JobNotFound();
             }
-            else if (jobActorResult is JobsActor.InsuffientStock)
+            else if (jobActorResult is JobActor.InsuffientStock)
             {
                 return new NotInStock();
             }

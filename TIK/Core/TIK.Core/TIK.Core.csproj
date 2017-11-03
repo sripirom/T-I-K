@@ -13,6 +13,7 @@
     <Folder Include="Configure\" />
     <Folder Include="Container\" />
     <Folder Include="Domain\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.0" />

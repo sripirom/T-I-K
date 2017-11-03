@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using TIK.Applications.Membership.Jobs;
 using TIK.Domain.Membership;
-using static TIK.Applications.Membership.Jobs.JobsActor;
+using static TIK.Applications.Membership.Jobs.JobActor;
 
 namespace TIK.ProcessService.Membership
 {

@@ -18,10 +18,12 @@ namespace TIK.Applications.Membership.Routes
             this.MemberControllerActor = provider.Get();
         }
 
-        public async Task<Member> Execute(Member member)
+        public async Task<Member> Execute(Member member, int memberId)
         {
             Logger.LogInformation($"Requesting jobSlot of member '{member.Id}'");
-            return await this.MemberControllerActor.Ask<Member>(new MemberActor.ActiveMember(member));
+            return await this.MemberControllerActor.Ask<Member>
+               (new MemberActor.ActiveMember(memberId, member.Name.FirstName, member.Name.LastName,
+                                         member.ContactInfo.Email, member.ContactInfo.Phone));
         }
 
     }
