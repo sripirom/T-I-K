@@ -7,7 +7,7 @@ namespace TIK.Persistance.ElasticSearch.Repositories
     public class MemberRepository: EsRepository<Member, Int32>, IMemberRepository
     {
         public MemberRepository(IElasticClient elasticClient)
-            :base(elasticClient)
+            :base(elasticClient, "Member")
         {
         }
     }

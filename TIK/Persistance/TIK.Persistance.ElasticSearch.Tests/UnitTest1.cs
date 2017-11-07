@@ -21,7 +21,7 @@ namespace TIK.Persistance.ElasticSearch.Tests
         {
             try
             {
-                var context = new EsContext("member", new Uri("http://192.168.99.100:32809"));
+                var context = new EsContext( new Uri("http://192.168.99.100:32809"), "member");
 
                 //var repoIndex = new IndexRepository(context.CreateClient());
                 //repoIndex.IndexData<UserAccount>(userAccount, "member", "userAccount");
@@ -70,7 +70,7 @@ namespace TIK.Persistance.ElasticSearch.Tests
                     UserName = "pichit.sri"
                 };
 
-                var context = new EsContext("member", new Uri("http://192.168.99.100:32809"));
+                var context = new EsContext(new Uri("http://192.168.99.100:32809"), "member");
 
                 //var repoIndex = new IndexRepository(context.CreateClient());
                 //repoIndex.IndexData<UserAccount>(userAccount, "member", "userAccount");

@@ -43,9 +43,6 @@ namespace TIK.ProcessService.Membership
                     .ResolveOne(TimeSpan.FromSeconds(3))
                     .Result;
 
-
-
-
             services.AddSingleton<ActorSystem>(_ => actorSystem);
 
 

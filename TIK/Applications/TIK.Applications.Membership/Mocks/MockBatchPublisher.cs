@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using TIK.Integration.Batch;
-using TIK.Domain.Membership;
+using TIK.Domain.Jobs;
 using TIK.Domain.SearchNews;
 using System.Linq;
 using System.Threading.Tasks;
@@ -27,11 +27,10 @@ namespace TIK.Applications.Membership.Mocks
         {
             var job = new Job
             {
-                Id = (_jobs.Max(a => Convert.ToInt32(a.Id)) + 1).ToString(),
+                Id = (_jobs.Max(a => a.Id) + 1),
                 Application = criteria.Target,
-                Procedure = "SearchNews",
-                Status = "000",
-                Created = DateTime.Now
+                Procedure = "SearchNews"
+
             };
             _jobs.Add(job);
 

@@ -6,12 +6,6 @@ using System.Threading.Tasks;
 using Akka.Actor;
 using CommandLine;
 using Microsoft.AspNetCore.Hosting;
-using Serilog;
-using TIK.Applications.Membership.Jobs;
-using TIK.Applications.Membership.JobSlots;
-using TIK.Applications.Membership.Members;
-using TIK.Core.Logging;
-using TIK.Integration.WebApi.Batch;
 
 namespace TIK.Computation.AkkaService
 {

@@ -2,24 +2,33 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using Nest;
+using TIK.Core.Domain;
 
 namespace TIK.Persistance.ElasticSearch
 {
  
-    public abstract class EsRepository<T, TId> : BaseRepository
-        where T : class, new()
+    public abstract class EsRepository<T, TId> : BaseRepository, IRepository<T, TId>
+        where T : BaseModel<TId>, new()
     {
 
-        private readonly string _indexName = "member";
-        public EsRepository(IElasticClient elasticClient)
+        public EsRepository(IElasticClient elasticClient, string indexName)
             :base(elasticClient)
         {
+            IndexName = indexName;
+        }
 
+        public string IndexName { get; private set; }
+
+        public TId Add(T entry)
+        {
+            var result = Client.Index<T>(entry, c => c.Index(IndexName));
+            var id = (TId)Convert.ChangeType(result.Id, typeof(TId));
+            return id;
         }
 
         public TId Save(T entry)
         {
-            var result = Client.Index<T>(entry, c => c.Index(_indexName));
+            var result = Client.Index<T>(entry, c => c.Index(IndexName));
             var id= (TId)Convert.ChangeType(result.Id, typeof(TId));
             return id;
         }
@@ -28,7 +37,7 @@ namespace TIK.Persistance.ElasticSearch
         public bool Delete(TId id)
         {
             var result = Client.Delete<T>(id.ToString(),
-                                          x => x.Index(_indexName));
+                                          x => x.Index(IndexName));
             return result.Found;
         }
 

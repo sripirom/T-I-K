@@ -21,7 +21,7 @@ namespace TIK.Applications.Membership.JobSlots
             ReceiveAsync<AddItemToJobSlot>(m => AddItemToJobSlotAction(m).PipeTo(Sender), m => m.Application != "");
             Receive<RemoveItemFromJobSlot>(m => Sender.Tell(RemoveItemToJobSlotAction(m)));
         }
-
+       // 11 - 26 huton 
         public static Props Props(IActorRef jobsActor)
         {
             return Akka.Actor.Props.Create(() => new JobSlotActor(jobsActor));

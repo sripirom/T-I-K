@@ -1,5 +1,5 @@
 ﻿using System;
-using TIK.Domain.Membership;
+using TIK.Domain.Jobs;
 using TIK.Domain.SearchNews;
 using System.Collections.Generic;
 using System.Threading.Tasks;

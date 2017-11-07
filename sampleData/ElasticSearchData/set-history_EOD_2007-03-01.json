@@ -1,0 +1,936 @@
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_A"}}
+{"symbol": "A", "eodDate": "2007-03-01T00:00:00", "open": 3.62, "high": 3.64, "low": 3.58, "close": 3.58, "volume": 374900, "id": "20070301_A" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ACC"}}
+{"symbol": "ACC", "eodDate": "2007-03-01T00:00:00", "open": 2.02, "high": 2.04, "low": 1.98, "close": 1.98, "volume": 2351901, "id": "20070301_ACC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ADAM"}}
+{"symbol": "ADAM", "eodDate": "2007-03-01T00:00:00", "open": 2.32, "high": 2.4, "low": 2.32, "close": 2.34, "volume": 4854200, "id": "20070301_ADAM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ADVANC"}}
+{"symbol": "ADVANC", "eodDate": "2007-03-01T00:00:00", "open": 73, "high": 75, "low": 73, "close": 74, "volume": 1078447, "id": "20070301_ADVANC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AEC"}}
+{"symbol": "AEC", "eodDate": "2007-03-01T00:00:00", "open": 5.35, "high": 5.8, "low": 5.35, "close": 5.8, "volume": 15200, "id": "20070301_AEC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AFC"}}
+{"symbol": "AFC", "eodDate": "2007-03-01T00:00:00", "open": 4.6, "high": 4.6, "low": 4.6, "close": 4.6, "volume": 1200, "id": "20070301_AFC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AH"}}
+{"symbol": "AH", "eodDate": "2007-03-01T00:00:00", "open": 15.8, "high": 15.9, "low": 15.7, "close": 15.8, "volume": 931000, "id": "20070301_AH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AHC"}}
+{"symbol": "AHC", "eodDate": "2007-03-01T00:00:00", "open": 88, "high": 90, "low": 88, "close": 90, "volume": 11100, "id": "20070301_AHC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AI"}}
+{"symbol": "AI", "eodDate": "2007-03-01T00:00:00", "open": 6.9, "high": 7, "low": 6.85, "close": 7, "volume": 30701, "id": "20070301_AI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AIT"}}
+{"symbol": "AIT", "eodDate": "2007-03-01T00:00:00", "open": 16.2667, "high": 16.4667, "low": 16.1333, "close": 16.4, "volume": 853050, "id": "20070301_AIT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AJ"}}
+{"symbol": "AJ", "eodDate": "2007-03-01T00:00:00", "open": 2.84, "high": 2.86, "low": 2.84, "close": 2.84, "volume": 114700, "id": "20070301_AJ" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AKR"}}
+{"symbol": "AKR", "eodDate": "2007-03-01T00:00:00", "open": 2.3, "high": 2.36, "low": 2.28, "close": 2.36, "volume": 5434300, "id": "20070301_AKR" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AMANAH"}}
+{"symbol": "AMANAH", "eodDate": "2007-03-01T00:00:00", "open": 0.57, "high": 0.59, "low": 0.57, "close": 0.59, "volume": 1429109, "id": "20070301_AMANAH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AMARIN"}}
+{"symbol": "AMARIN", "eodDate": "2007-03-01T00:00:00", "open": 12.6, "high": 12.6, "low": 12.4, "close": 12.4, "volume": 13200, "id": "20070301_AMARIN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AMATA"}}
+{"symbol": "AMATA", "eodDate": "2007-03-01T00:00:00", "open": 11.4, "high": 11.8, "low": 11.4, "close": 11.7, "volume": 2511600, "id": "20070301_AMATA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AMC"}}
+{"symbol": "AMC", "eodDate": "2007-03-01T00:00:00", "open": 5.4402, "high": 5.638, "low": 5.3908, "close": 5.3908, "volume": 2549512, "id": "20070301_AMC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AOT"}}
+{"symbol": "AOT", "eodDate": "2007-03-01T00:00:00", "open": 60, "high": 61, "low": 60, "close": 60.5, "volume": 1192368, "id": "20070301_AOT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AP"}}
+{"symbol": "AP", "eodDate": "2007-03-01T00:00:00", "open": 4.36, "high": 4.38, "low": 4.34, "close": 4.36, "volume": 3259602, "id": "20070301_AP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_APURE"}}
+{"symbol": "APURE", "eodDate": "2007-03-01T00:00:00", "open": 1.7244, "high": 1.7244, "low": 1.28, "close": 1.3156, "volume": 161975072, "id": "20070301_APURE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AQ"}}
+{"symbol": "AQ", "eodDate": "2007-03-01T00:00:00", "open": 1.22, "high": 1.27, "low": 1.22, "close": 1.26, "volume": 4742500, "id": "20070301_AQ" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ASIA"}}
+{"symbol": "ASIA", "eodDate": "2007-03-01T00:00:00", "open": 57.5, "high": 59, "low": 57, "close": 57.5, "volume": 113303, "id": "20070301_ASIA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ASIAN"}}
+{"symbol": "ASIAN", "eodDate": "2007-03-01T00:00:00", "open": 2.72, "high": 2.74, "low": 2.72, "close": 2.74, "volume": 21702, "id": "20070301_ASIAN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ASIMAR"}}
+{"symbol": "ASIMAR", "eodDate": "2007-03-01T00:00:00", "open": 0.9, "high": 0.93, "low": 0.9, "close": 0.9, "volume": 6593513, "id": "20070301_ASIMAR" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ASK"}}
+{"symbol": "ASK", "eodDate": "2007-03-01T00:00:00", "open": 5.25, "high": 5.35, "low": 5.25, "close": 5.35, "volume": 38000, "id": "20070301_ASK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ASP"}}
+{"symbol": "ASP", "eodDate": "2007-03-01T00:00:00", "open": 2.8, "high": 2.86, "low": 2.78, "close": 2.84, "volume": 7774700, "id": "20070301_ASP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_AYUD"}}
+{"symbol": "AYUD", "eodDate": "2007-03-01T00:00:00", "open": 16.1, "high": 16.1, "low": 16, "close": 16.1, "volume": 1377100, "id": "20070301_AYUD" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BAFS"}}
+{"symbol": "BAFS", "eodDate": "2007-03-01T00:00:00", "open": 9.1635, "high": 9.1635, "low": 9.0802, "close": 9.1635, "volume": 1420580, "id": "20070301_BAFS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BANPU"}}
+{"symbol": "BANPU", "eodDate": "2007-03-01T00:00:00", "open": 188, "high": 190, "low": 186, "close": 188, "volume": 1039200, "id": "20070301_BANPU" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BAT-3K"}}
+{"symbol": "BAT-3K", "eodDate": "2007-03-01T00:00:00", "open": 48, "high": 48, "low": 47.75, "close": 48, "volume": 27900, "id": "20070301_BAT-3K" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BAY"}}
+{"symbol": "BAY", "eodDate": "2007-03-01T00:00:00", "open": 19.8, "high": 20.6, "low": 19.7, "close": 20.4, "volume": 16930776, "id": "20070301_BAY" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BBL"}}
+{"symbol": "BBL", "eodDate": "2007-03-01T00:00:00", "open": 110, "high": 110, "low": 108, "close": 109, "volume": 3666312, "id": "20070301_BBL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BCH"}}
+{"symbol": "BCH", "eodDate": "2007-03-01T00:00:00", "open": 4.8857, "high": 4.9714, "low": 4.8857, "close": 4.9429, "volume": 369600, "id": "20070301_BCH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BCP"}}
+{"symbol": "BCP", "eodDate": "2007-03-01T00:00:00", "open": 8.65, "high": 8.75, "low": 8.6, "close": 8.75, "volume": 46400, "id": "20070301_BCP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BDMS"}}
+{"symbol": "BDMS", "eodDate": "2007-03-01T00:00:00", "open": 36, "high": 36.5, "low": 36, "close": 36.5, "volume": 558900, "id": "20070301_BDMS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BEC"}}
+{"symbol": "BEC", "eodDate": "2007-03-01T00:00:00", "open": 21, "high": 21, "low": 20.9, "close": 21, "volume": 1771700, "id": "20070301_BEC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BFIT"}}
+{"symbol": "BFIT", "eodDate": "2007-03-01T00:00:00", "open": 6.4, "high": 6.4, "low": 6.3, "close": 6.3, "volume": 53500, "id": "20070301_BFIT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BH"}}
+{"symbol": "BH", "eodDate": "2007-03-01T00:00:00", "open": 37.5, "high": 37.5, "low": 37, "close": 37, "volume": 391700, "id": "20070301_BH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BIGC"}}
+{"symbol": "BIGC", "eodDate": "2007-03-01T00:00:00", "open": 47.25, "high": 47.75, "low": 47.25, "close": 47.5, "volume": 126700, "id": "20070301_BIGC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BJC"}}
+{"symbol": "BJC", "eodDate": "2007-03-01T00:00:00", "open": 4.15, "high": 4.15, "low": 4.15, "close": 4.15, "volume": 1000, "id": "20070301_BJC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BKI"}}
+{"symbol": "BKI", "eodDate": "2007-03-01T00:00:00", "open": 149.333, "high": 149.333, "low": 149.333, "close": 149.333, "volume": 750, "id": "20070301_BKI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BLAND"}}
+{"symbol": "BLAND", "eodDate": "2007-03-01T00:00:00", "open": 0.72, "high": 0.74, "low": 0.72, "close": 0.72, "volume": 8863800, "id": "20070301_BLAND" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BLISS"}}
+{"symbol": "BLISS", "eodDate": "2007-03-01T00:00:00", "open": 1.1809, "high": 1.2208, "low": 1.1809, "close": 1.1923, "volume": 1416600, "id": "20070301_BLISS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BOL"}}
+{"symbol": "BOL", "eodDate": "2007-03-01T00:00:00", "open": 0.615, "high": 0.62, "low": 0.615, "close": 0.62, "volume": 25900, "id": "20070301_BOL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BROCK"}}
+{"symbol": "BROCK", "eodDate": "2007-03-01T00:00:00", "open": 0.996, "high": 1.03, "low": 0.996, "close": 1, "volume": 9350500, "id": "20070301_BROCK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BROOK"}}
+{"symbol": "BROOK", "eodDate": "2007-03-01T00:00:00", "open": 1.03, "high": 1.03, "low": 1, "close": 1, "volume": 6367800, "id": "20070301_BROOK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BSBM"}}
+{"symbol": "BSBM", "eodDate": "2007-03-01T00:00:00", "open": 1.28, "high": 1.3, "low": 1.27, "close": 1.3, "volume": 756100, "id": "20070301_BSBM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BTC"}}
+{"symbol": "BTC", "eodDate": "2007-03-01T00:00:00", "open": 0.94, "high": 0.95, "low": 0.92, "close": 0.94, "volume": 272500, "id": "20070301_BTC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BTS"}}
+{"symbol": "BTS", "eodDate": "2007-03-01T00:00:00", "open": 0.9889, "high": 1.0172, "low": 0.9889, "close": 1.0077, "volume": 10230830, "id": "20070301_BTS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CCET"}}
+{"symbol": "CCET", "eodDate": "2007-03-01T00:00:00", "open": 4.7, "high": 4.7, "low": 4.64, "close": 4.64, "volume": 16062704, "id": "20070301_CCET" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CCP"}}
+{"symbol": "CCP", "eodDate": "2007-03-01T00:00:00", "open": 1.38, "high": 1.42, "low": 1.38, "close": 1.39, "volume": 144500, "id": "20070301_CCP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CEN"}}
+{"symbol": "CEN", "eodDate": "2007-03-01T00:00:00", "open": 0.96, "high": 0.98, "low": 0.956, "close": 0.964, "volume": 1664500, "id": "20070301_CEN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CENTEL"}}
+{"symbol": "CENTEL", "eodDate": "2007-03-01T00:00:00", "open": 6.15, "high": 6.25, "low": 6.15, "close": 6.25, "volume": 178000, "id": "20070301_CENTEL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CFRESH"}}
+{"symbol": "CFRESH", "eodDate": "2007-03-01T00:00:00", "open": 2.24, "high": 2.24, "low": 2.2, "close": 2.2, "volume": 35000, "id": "20070301_CFRESH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CGD"}}
+{"symbol": "CGD", "eodDate": "2007-03-01T00:00:00", "open": 0.9569, "high": 1.0162, "low": 0.9569, "close": 0.9993, "volume": 4604375, "id": "20070301_CGD" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CHOTI"}}
+{"symbol": "CHOTI", "eodDate": "2007-03-01T00:00:00", "open": 75, "high": 75, "low": 75, "close": 75, "volume": 100, "id": "20070301_CHOTI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CHUO"}}
+{"symbol": "CHUO", "eodDate": "2007-03-01T00:00:00", "open": 11, "high": 11.4, "low": 11, "close": 11.3, "volume": 76000, "id": "20070301_CHUO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CI"}}
+{"symbol": "CI", "eodDate": "2007-03-01T00:00:00", "open": 4.1, "high": 4.22, "low": 4.1, "close": 4.22, "volume": 83900, "id": "20070301_CI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CIG"}}
+{"symbol": "CIG", "eodDate": "2007-03-01T00:00:00", "open": 1.11, "high": 1.19, "low": 1.1, "close": 1.1, "volume": 57700, "id": "20070301_CIG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CIMBT"}}
+{"symbol": "CIMBT", "eodDate": "2007-03-01T00:00:00", "open": 1.8939, "high": 1.9025, "low": 1.8939, "close": 1.9025, "volume": 107538, "id": "20070301_CIMBT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CITY"}}
+{"symbol": "CITY", "eodDate": "2007-03-01T00:00:00", "open": 2.1, "high": 2.14, "low": 2.1, "close": 2.12, "volume": 188500, "id": "20070301_CITY" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CK"}}
+{"symbol": "CK", "eodDate": "2007-03-01T00:00:00", "open": 7.35, "high": 7.4, "low": 7.25, "close": 7.3, "volume": 8306400, "id": "20070301_CK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CM"}}
+{"symbol": "CM", "eodDate": "2007-03-01T00:00:00", "open": 3.0346, "high": 3.0346, "low": 3.0346, "close": 3.0346, "volume": 11556, "id": "20070301_CM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CMO"}}
+{"symbol": "CMO", "eodDate": "2007-03-01T00:00:00", "open": 2.64, "high": 2.7, "low": 2.64, "close": 2.7, "volume": 703700, "id": "20070301_CMO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CMR"}}
+{"symbol": "CMR", "eodDate": "2007-03-01T00:00:00", "open": 33.54, "high": 33.97, "low": 33.54, "close": 33.54, "volume": 124999, "id": "20070301_CMR" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CNS"}}
+{"symbol": "CNS", "eodDate": "2007-03-01T00:00:00", "open": 26, "high": 26.75, "low": 26, "close": 26.25, "volume": 348700, "id": "20070301_CNS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CNT"}}
+{"symbol": "CNT", "eodDate": "2007-03-01T00:00:00", "open": 2.38, "high": 2.42, "low": 2.38, "close": 2.42, "volume": 91400, "id": "20070301_CNT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CPALL"}}
+{"symbol": "CPALL", "eodDate": "2007-03-01T00:00:00", "open": 5.75, "high": 5.75, "low": 5.65, "close": 5.65, "volume": 7541100, "id": "20070301_CPALL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CPF"}}
+{"symbol": "CPF", "eodDate": "2007-03-01T00:00:00", "open": 4.64, "high": 4.66, "low": 4.62, "close": 4.64, "volume": 11395525, "id": "20070301_CPF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CPH"}}
+{"symbol": "CPH", "eodDate": "2007-03-01T00:00:00", "open": 7.6, "high": 8.45, "low": 6.75, "close": 8.45, "volume": 11900, "id": "20070301_CPH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CPL"}}
+{"symbol": "CPL", "eodDate": "2007-03-01T00:00:00", "open": 17, "high": 17, "low": 16.1, "close": 16.9, "volume": 25910, "id": "20070301_CPL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CPN"}}
+{"symbol": "CPN", "eodDate": "2007-03-01T00:00:00", "open": 24.7, "high": 24.8, "low": 24.6, "close": 24.7, "volume": 735400, "id": "20070301_CPN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CPNRF"}}
+{"symbol": "CPNRF", "eodDate": "2007-03-01T00:00:00", "open": 9.75, "high": 10.2, "low": 9.75, "close": 10.1, "volume": 20920900, "id": "20070301_CPNRF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CPR"}}
+{"symbol": "CPR", "eodDate": "2007-03-01T00:00:00", "open": 1.63, "high": 1.67, "low": 1.61, "close": 1.63, "volume": 4427600, "id": "20070301_CPR" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CSC"}}
+{"symbol": "CSC", "eodDate": "2007-03-01T00:00:00", "open": 14, "high": 14.4, "low": 13.4, "close": 13.7, "volume": 2214500, "id": "20070301_CSC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CSL"}}
+{"symbol": "CSL", "eodDate": "2007-03-01T00:00:00", "open": 3.7, "high": 3.74, "low": 3.7, "close": 3.74, "volume": 107700, "id": "20070301_CSL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CSP"}}
+{"symbol": "CSP", "eodDate": "2007-03-01T00:00:00", "open": 2.4, "high": 2.46, "low": 2.38, "close": 2.38, "volume": 7080700, "id": "20070301_CSP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CTW"}}
+{"symbol": "CTW", "eodDate": "2007-03-01T00:00:00", "open": 9.55, "high": 9.7, "low": 9.45, "close": 9.7, "volume": 704800, "id": "20070301_CTW" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CWT"}}
+{"symbol": "CWT", "eodDate": "2007-03-01T00:00:00", "open": 3.18, "high": 3.18, "low": 3.1, "close": 3.12, "volume": 116800, "id": "20070301_CWT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_DCC"}}
+{"symbol": "DCC", "eodDate": "2007-03-01T00:00:00", "open": 13.5, "high": 13.5, "low": 13.4, "close": 13.5, "volume": 944600, "id": "20070301_DCC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_DCON"}}
+{"symbol": "DCON", "eodDate": "2007-03-01T00:00:00", "open": 2.84, "high": 2.84, "low": 2.84, "close": 2.84, "volume": 801, "id": "20070301_DCON" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_DELTA"}}
+{"symbol": "DELTA", "eodDate": "2007-03-01T00:00:00", "open": 17.5, "high": 17.7, "low": 17.5, "close": 17.5, "volume": 4470550, "id": "20070301_DELTA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_DEMCO"}}
+{"symbol": "DEMCO", "eodDate": "2007-03-01T00:00:00", "open": 2.48, "high": 2.496, "low": 2.464, "close": 2.496, "volume": 263500, "id": "20070301_DEMCO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_DRACO"}}
+{"symbol": "DRACO", "eodDate": "2007-03-01T00:00:00", "open": 1.69, "high": 1.83, "low": 1.69, "close": 1.83, "volume": 600, "id": "20070301_DRACO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_DRT"}}
+{"symbol": "DRT", "eodDate": "2007-03-01T00:00:00", "open": 1.83, "high": 1.84, "low": 1.82, "close": 1.83, "volume": 2505000, "id": "20070301_DRT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_DSGT"}}
+{"symbol": "DSGT", "eodDate": "2007-03-01T00:00:00", "open": 4.84, "high": 4.86, "low": 4.8, "close": 4.82, "volume": 97500, "id": "20070301_DSGT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_DTC"}}
+{"symbol": "DTC", "eodDate": "2007-03-01T00:00:00", "open": 45.75, "high": 45.75, "low": 45.75, "close": 45.75, "volume": 100, "id": "20070301_DTC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_DTCI"}}
+{"symbol": "DTCI", "eodDate": "2007-03-01T00:00:00", "open": 6.5, "high": 6.5, "low": 6.5, "close": 6.5, "volume": 100, "id": "20070301_DTCI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_EASON"}}
+{"symbol": "EASON", "eodDate": "2007-03-01T00:00:00", "open": 3.18, "high": 3.2, "low": 3.02, "close": 3.2, "volume": 91001, "id": "20070301_EASON" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_EASTW"}}
+{"symbol": "EASTW", "eodDate": "2007-03-01T00:00:00", "open": 5, "high": 5.1, "low": 5, "close": 5.05, "volume": 64801, "id": "20070301_EASTW" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ECL"}}
+{"symbol": "ECL", "eodDate": "2007-03-01T00:00:00", "open": 0.67, "high": 0.69, "low": 0.65, "close": 0.67, "volume": 2468319, "id": "20070301_ECL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_EE"}}
+{"symbol": "EE", "eodDate": "2007-03-01T00:00:00", "open": 3.5, "high": 3.5, "low": 3.5, "close": 3.5, "volume": 48002, "id": "20070301_EE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_EGCO"}}
+{"symbol": "EGCO", "eodDate": "2007-03-01T00:00:00", "open": 100, "high": 101, "low": 99.5, "close": 99.5, "volume": 447900, "id": "20070301_EGCO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_EIC"}}
+{"symbol": "EIC", "eodDate": "2007-03-01T00:00:00", "open": 2.8, "high": 2.88, "low": 2.8, "close": 2.88, "volume": 53000, "id": "20070301_EIC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_EMC"}}
+{"symbol": "EMC", "eodDate": "2007-03-01T00:00:00", "open": 2.96, "high": 3.04, "low": 2.92, "close": 3, "volume": 1139370, "id": "20070301_EMC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_EPCO"}}
+{"symbol": "EPCO", "eodDate": "2007-03-01T00:00:00", "open": 1.77, "high": 1.8, "low": 1.74, "close": 1.77, "volume": 11627100, "id": "20070301_EPCO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ERW"}}
+{"symbol": "ERW", "eodDate": "2007-03-01T00:00:00", "open": 3.66, "high": 3.68, "low": 3.66, "close": 3.66, "volume": 90208, "id": "20070301_ERW" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ESTAR"}}
+{"symbol": "ESTAR", "eodDate": "2007-03-01T00:00:00", "open": 0.38, "high": 0.39, "low": 0.37, "close": 0.38, "volume": 1203800, "id": "20070301_ESTAR" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_EVER"}}
+{"symbol": "EVER", "eodDate": "2007-03-01T00:00:00", "open": 2.211, "high": 2.3256, "low": 2.211, "close": 2.2601, "volume": 18491986, "id": "20070301_EVER" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_F&D"}}
+{"symbol": "F&D", "eodDate": "2007-03-01T00:00:00", "open": 7.4, "high": 7.4, "low": 7.4, "close": 7.4, "volume": 1201, "id": "20070301_F&D" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_FANCY"}}
+{"symbol": "FANCY", "eodDate": "2007-03-01T00:00:00", "open": 2.22, "high": 2.26, "low": 2.16, "close": 2.26, "volume": 81100, "id": "20070301_FANCY" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_FC"}}
+{"symbol": "FC", "eodDate": "2007-03-01T00:00:00", "open": 0.5187, "high": 0.5297, "low": 0.515, "close": 0.515, "volume": 110600, "id": "20070301_FC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_FE"}}
+{"symbol": "FE", "eodDate": "2007-03-01T00:00:00", "open": 78, "high": 78, "low": 77, "close": 77, "volume": 2501, "id": "20070301_FE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_FER"}}
+{"symbol": "FER", "eodDate": "2007-03-01T00:00:00", "open": 1.43, "high": 1.46, "low": 1.4, "close": 1.45, "volume": 1445421, "id": "20070301_FER" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_FNS"}}
+{"symbol": "FNS", "eodDate": "2007-03-01T00:00:00", "open": 8.95, "high": 8.95, "low": 8.8, "close": 8.95, "volume": 32500, "id": "20070301_FNS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_FOCUS"}}
+{"symbol": "FOCUS", "eodDate": "2007-03-01T00:00:00", "open": 2.34, "high": 2.34, "low": 2.34, "close": 2.34, "volume": 4000, "id": "20070301_FOCUS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_FORTH"}}
+{"symbol": "FORTH", "eodDate": "2007-03-01T00:00:00", "open": 4, "high": 4.075, "low": 4, "close": 4, "volume": 3087100, "id": "20070301_FORTH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_FSS"}}
+{"symbol": "FSS", "eodDate": "2007-03-01T00:00:00", "open": 2.78, "high": 2.8, "low": 2.74, "close": 2.74, "volume": 1469000, "id": "20070301_FSS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_FUTUREPF"}}
+{"symbol": "FUTUREPF", "eodDate": "2007-03-01T00:00:00", "open": 9.4, "high": 9.6, "low": 9.4, "close": 9.6, "volume": 122752, "id": "20070301_FUTUREPF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GBX"}}
+{"symbol": "GBX", "eodDate": "2007-03-01T00:00:00", "open": 1.6, "high": 1.6, "low": 1.54, "close": 1.55, "volume": 12547800, "id": "20070301_GBX" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GC"}}
+{"symbol": "GC", "eodDate": "2007-03-01T00:00:00", "open": 3, "high": 3.06, "low": 2.98, "close": 2.98, "volume": 4279000, "id": "20070301_GC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GEL"}}
+{"symbol": "GEL", "eodDate": "2007-03-01T00:00:00", "open": 0.9, "high": 0.93, "low": 0.9, "close": 0.92, "volume": 16020800, "id": "20070301_GEL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GENCO"}}
+{"symbol": "GENCO", "eodDate": "2007-03-01T00:00:00", "open": 0.68, "high": 0.69, "low": 0.67, "close": 0.67, "volume": 2569624, "id": "20070301_GENCO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GFPT"}}
+{"symbol": "GFPT", "eodDate": "2007-03-01T00:00:00", "open": 1.14, "high": 1.18, "low": 1.14, "close": 1.18, "volume": 4000, "id": "20070301_GFPT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GJS"}}
+{"symbol": "GJS", "eodDate": "2007-03-01T00:00:00", "open": 0.32, "high": 0.33, "low": 0.32, "close": 0.32, "volume": 6069900, "id": "20070301_GJS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GL"}}
+{"symbol": "GL", "eodDate": "2007-03-01T00:00:00", "open": 10.5243, "high": 10.7247, "low": 10.5243, "close": 10.7247, "volume": 29700, "id": "20070301_GL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GLOW"}}
+{"symbol": "GLOW", "eodDate": "2007-03-01T00:00:00", "open": 34, "high": 34, "low": 33.5, "close": 33.75, "volume": 452500, "id": "20070301_GLOW" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GOLD"}}
+{"symbol": "GOLD", "eodDate": "2007-03-01T00:00:00", "open": 6.3, "high": 6.3, "low": 6.05, "close": 6.2, "volume": 353200, "id": "20070301_GOLD" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GRAMMY"}}
+{"symbol": "GRAMMY", "eodDate": "2007-03-01T00:00:00", "open": 6.8, "high": 6.8, "low": 6.8, "close": 6.8, "volume": 58900, "id": "20070301_GRAMMY" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GREEN"}}
+{"symbol": "GREEN", "eodDate": "2007-03-01T00:00:00", "open": 2.78, "high": 2.96, "low": 2.78, "close": 2.88, "volume": 55200600, "id": "20070301_GREEN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GSTEL"}}
+{"symbol": "GSTEL", "eodDate": "2007-03-01T00:00:00", "open": 0.93, "high": 0.94, "low": 0.93, "close": 0.93, "volume": 36988500, "id": "20070301_GSTEL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_HANA"}}
+{"symbol": "HANA", "eodDate": "2007-03-01T00:00:00", "open": 25.5, "high": 26, "low": 25.5, "close": 26, "volume": 2896400, "id": "20070301_HANA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_HMPRO"}}
+{"symbol": "HMPRO", "eodDate": "2007-03-01T00:00:00", "open": 2.7136, "high": 2.74, "low": 2.7136, "close": 2.7136, "volume": 3658400, "id": "20070301_HMPRO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ICC"}}
+{"symbol": "ICC", "eodDate": "2007-03-01T00:00:00", "open": 40.5, "high": 40.5, "low": 40.5, "close": 40.5, "volume": 2200, "id": "20070301_ICC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_IEC"}}
+{"symbol": "IEC", "eodDate": "2007-03-01T00:00:00", "open": 0.103, "high": 0.105, "low": 0.103, "close": 0.104, "volume": 223738112, "id": "20070301_IEC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_IFEC"}}
+{"symbol": "IFEC", "eodDate": "2007-03-01T00:00:00", "open": 0.53, "high": 0.56, "low": 0.53, "close": 0.56, "volume": 130000, "id": "20070301_IFEC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_IHL"}}
+{"symbol": "IHL", "eodDate": "2007-03-01T00:00:00", "open": 4.06, "high": 4.3, "low": 4.04, "close": 4.28, "volume": 1168900, "id": "20070301_IHL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ILINK"}}
+{"symbol": "ILINK", "eodDate": "2007-03-01T00:00:00", "open": 8.3082, "high": 8.5365, "low": 8.2169, "close": 8.4452, "volume": 215554, "id": "20070301_ILINK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_INET"}}
+{"symbol": "INET", "eodDate": "2007-03-01T00:00:00", "open": 1.57, "high": 1.58, "low": 1.54, "close": 1.56, "volume": 135401, "id": "20070301_INET" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_INOX"}}
+{"symbol": "INOX", "eodDate": "2007-03-01T00:00:00", "open": 1.27, "high": 1.27, "low": 1.24, "close": 1.24, "volume": 1129900, "id": "20070301_INOX" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_INTUCH"}}
+{"symbol": "INTUCH", "eodDate": "2007-03-01T00:00:00", "open": 25, "high": 25, "low": 24.9, "close": 24.9, "volume": 210000, "id": "20070301_INTUCH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_IRCP"}}
+{"symbol": "IRCP", "eodDate": "2007-03-01T00:00:00", "open": 13.9, "high": 14.2, "low": 13.8, "close": 14, "volume": 273779, "id": "20070301_IRCP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_IRPC"}}
+{"symbol": "IRPC", "eodDate": "2007-03-01T00:00:00", "open": 5.85, "high": 6.1, "low": 5.8, "close": 6.05, "volume": 45966700, "id": "20070301_IRPC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_IT"}}
+{"symbol": "IT", "eodDate": "2007-03-01T00:00:00", "open": 8.8, "high": 8.85, "low": 8.8, "close": 8.8, "volume": 447500, "id": "20070301_IT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ITD"}}
+{"symbol": "ITD", "eodDate": "2007-03-01T00:00:00", "open": 5.05, "high": 5.1, "low": 4.98, "close": 5, "volume": 13739238, "id": "20070301_ITD" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_JAS"}}
+{"symbol": "JAS", "eodDate": "2007-03-01T00:00:00", "open": 0.41, "high": 0.41, "low": 0.4, "close": 0.41, "volume": 15582300, "id": "20070301_JAS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_JTS"}}
+{"symbol": "JTS", "eodDate": "2007-03-01T00:00:00", "open": 2.84, "high": 2.9, "low": 2.84, "close": 2.84, "volume": 126401296, "id": "20070301_JTS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_JUTHA"}}
+{"symbol": "JUTHA", "eodDate": "2007-03-01T00:00:00", "open": 8.85, "high": 9.05, "low": 8.8, "close": 9.05, "volume": 368100, "id": "20070301_JUTHA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KAMART"}}
+{"symbol": "KAMART", "eodDate": "2007-03-01T00:00:00", "open": 0.71, "high": 0.79, "low": 0.71, "close": 0.75, "volume": 32719100, "id": "20070301_KAMART" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KASET"}}
+{"symbol": "KASET", "eodDate": "2007-03-01T00:00:00", "open": 1, "high": 1.02, "low": 1, "close": 1, "volume": 1230500, "id": "20070301_KASET" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KBANK"}}
+{"symbol": "KBANK", "eodDate": "2007-03-01T00:00:00", "open": 64.5, "high": 65.5, "low": 64, "close": 64.5, "volume": 6093453, "id": "20070301_KBANK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KC"}}
+{"symbol": "KC", "eodDate": "2007-03-01T00:00:00", "open": 1.07, "high": 1.15, "low": 1.07, "close": 1.12, "volume": 5650700, "id": "20070301_KC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KCAR"}}
+{"symbol": "KCAR", "eodDate": "2007-03-01T00:00:00", "open": 5.3, "high": 5.35, "low": 5.3, "close": 5.3, "volume": 196500, "id": "20070301_KCAR" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KCE"}}
+{"symbol": "KCE", "eodDate": "2007-03-01T00:00:00", "open": 2.9811, "high": 2.9966, "low": 2.9655, "close": 2.9966, "volume": 165271, "id": "20070301_KCE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KGI"}}
+{"symbol": "KGI", "eodDate": "2007-03-01T00:00:00", "open": 1.49, "high": 1.51, "low": 1.49, "close": 1.49, "volume": 1145200, "id": "20070301_KGI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KKC"}}
+{"symbol": "KKC", "eodDate": "2007-03-01T00:00:00", "open": 2.9982, "high": 3.0796, "low": 2.9982, "close": 3.0634, "volume": 5031, "id": "20070301_KKC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KKP"}}
+{"symbol": "KKP", "eodDate": "2007-03-01T00:00:00", "open": 29.75, "high": 30.25, "low": 29.5, "close": 30.25, "volume": 678300, "id": "20070301_KKP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KSL"}}
+{"symbol": "KSL", "eodDate": "2007-03-01T00:00:00", "open": 9.7, "high": 9.75, "low": 9.65, "close": 9.75, "volume": 91000, "id": "20070301_KSL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KTB"}}
+{"symbol": "KTB", "eodDate": "2007-03-01T00:00:00", "open": 11.7, "high": 11.9, "low": 11.7, "close": 11.9, "volume": 13954263, "id": "20070301_KTB" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KTC"}}
+{"symbol": "KTC", "eodDate": "2007-03-01T00:00:00", "open": 25.5, "high": 25.5, "low": 25, "close": 25.25, "volume": 53700, "id": "20070301_KTC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KWG"}}
+{"symbol": "KWG", "eodDate": "2007-03-01T00:00:00", "open": 3.32, "high": 3.42, "low": 3.24, "close": 3.24, "volume": 18479400, "id": "20070301_KWG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KYE"}}
+{"symbol": "KYE", "eodDate": "2007-03-01T00:00:00", "open": 54.5, "high": 55.5, "low": 54.5, "close": 55.5, "volume": 2000, "id": "20070301_KYE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_L&E"}}
+{"symbol": "L&E", "eodDate": "2007-03-01T00:00:00", "open": 10.98, "high": 11.04, "low": 10.98, "close": 11.04, "volume": 16671, "id": "20070301_L&E" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_LALIN"}}
+{"symbol": "LALIN", "eodDate": "2007-03-01T00:00:00", "open": 4.36, "high": 4.46, "low": 4.36, "close": 4.44, "volume": 218901, "id": "20070301_LALIN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_LANNA"}}
+{"symbol": "LANNA", "eodDate": "2007-03-01T00:00:00", "open": 11.2, "high": 11.3, "low": 11.2, "close": 11.3, "volume": 354500, "id": "20070301_LANNA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_LEE"}}
+{"symbol": "LEE", "eodDate": "2007-03-01T00:00:00", "open": 3.5, "high": 3.5, "low": 3.34, "close": 3.46, "volume": 160501, "id": "20070301_LEE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_LH"}}
+{"symbol": "LH", "eodDate": "2007-03-01T00:00:00", "open": 6.35, "high": 6.45, "low": 6.35, "close": 6.4, "volume": 14647800, "id": "20070301_LH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_LOXLEY"}}
+{"symbol": "LOXLEY", "eodDate": "2007-03-01T00:00:00", "open": 1.7, "high": 1.75, "low": 1.68, "close": 1.72, "volume": 15361910, "id": "20070301_LOXLEY" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_LPN"}}
+{"symbol": "LPN", "eodDate": "2007-03-01T00:00:00", "open": 5.6, "high": 5.75, "low": 5.6, "close": 5.75, "volume": 1716000, "id": "20070301_LPN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_LRH"}}
+{"symbol": "LRH", "eodDate": "2007-03-01T00:00:00", "open": 36.5475, "high": 36.5475, "low": 36.5475, "close": 36.5475, "volume": 429, "id": "20070301_LRH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_LST"}}
+{"symbol": "LST", "eodDate": "2007-03-01T00:00:00", "open": 2.16, "high": 2.22, "low": 2.14, "close": 2.18, "volume": 10147304, "id": "20070301_LST" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_LTX"}}
+{"symbol": "LTX", "eodDate": "2007-03-01T00:00:00", "open": 37, "high": 37, "low": 36, "close": 36, "volume": 3100, "id": "20070301_LTX" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_LVT"}}
+{"symbol": "LVT", "eodDate": "2007-03-01T00:00:00", "open": 1.34, "high": 1.39, "low": 1.34, "close": 1.36, "volume": 1168900, "id": "20070301_LVT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_M-CHAI"}}
+{"symbol": "M-CHAI", "eodDate": "2007-03-01T00:00:00", "open": 40, "high": 40, "low": 40, "close": 40, "volume": 101, "id": "20070301_M-CHAI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MACO"}}
+{"symbol": "MACO", "eodDate": "2007-03-01T00:00:00", "open": 3.38, "high": 3.38, "low": 3.38, "close": 3.38, "volume": 40500, "id": "20070301_MACO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MAJOR"}}
+{"symbol": "MAJOR", "eodDate": "2007-03-01T00:00:00", "open": 16.1, "high": 16.4, "low": 16.1, "close": 16.3, "volume": 12685643, "id": "20070301_MAJOR" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MAKRO"}}
+{"symbol": "MAKRO", "eodDate": "2007-03-01T00:00:00", "open": 82.5, "high": 83.5, "low": 82.5, "close": 83, "volume": 15800, "id": "20070301_MAKRO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MALEE"}}
+{"symbol": "MALEE", "eodDate": "2007-03-01T00:00:00", "open": 6.6, "high": 6.6, "low": 6.5, "close": 6.5, "volume": 5000, "id": "20070301_MALEE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MANRIN"}}
+{"symbol": "MANRIN", "eodDate": "2007-03-01T00:00:00", "open": 25.75, "high": 25.75, "low": 25.75, "close": 25.75, "volume": 5001, "id": "20070301_MANRIN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MATCH"}}
+{"symbol": "MATCH", "eodDate": "2007-03-01T00:00:00", "open": 1.45, "high": 1.59, "low": 1.45, "close": 1.45, "volume": 2102, "id": "20070301_MATCH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MBAX"}}
+{"symbol": "MBAX", "eodDate": "2007-03-01T00:00:00", "open": 4.8, "high": 4.8, "low": 4.62, "close": 4.68, "volume": 59100, "id": "20070301_MBAX" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MBK"}}
+{"symbol": "MBK", "eodDate": "2007-03-01T00:00:00", "open": 56, "high": 56, "low": 56, "close": 56, "volume": 1101, "id": "20070301_MBK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MBKET"}}
+{"symbol": "MBKET", "eodDate": "2007-03-01T00:00:00", "open": 16.2, "high": 16.3, "low": 16.1, "close": 16.2, "volume": 3285200, "id": "20070301_MBKET" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MCOT"}}
+{"symbol": "MCOT", "eodDate": "2007-03-01T00:00:00", "open": 24.9, "high": 25.25, "low": 24.9, "close": 25.25, "volume": 2568228, "id": "20070301_MCOT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MCS"}}
+{"symbol": "MCS", "eodDate": "2007-03-01T00:00:00", "open": 3.62, "high": 3.64, "low": 3.6, "close": 3.62, "volume": 2257900, "id": "20070301_MCS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_METCO"}}
+{"symbol": "METCO", "eodDate": "2007-03-01T00:00:00", "open": 190, "high": 193, "low": 190, "close": 191, "volume": 4030, "id": "20070301_METCO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MFEC"}}
+{"symbol": "MFEC", "eodDate": "2007-03-01T00:00:00", "open": 4.8, "high": 4.92, "low": 4.72, "close": 4.74, "volume": 8694700, "id": "20070301_MFEC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MIDA"}}
+{"symbol": "MIDA", "eodDate": "2007-03-01T00:00:00", "open": 1.74, "high": 1.77, "low": 1.71, "close": 1.71, "volume": 6144500, "id": "20070301_MIDA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MINT"}}
+{"symbol": "MINT", "eodDate": "2007-03-01T00:00:00", "open": 10.1818, "high": 10.1818, "low": 10, "close": 10, "volume": 2487100, "id": "20070301_MINT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MK"}}
+{"symbol": "MK", "eodDate": "2007-03-01T00:00:00", "open": 2.64, "high": 2.7, "low": 2.64, "close": 2.7, "volume": 742301, "id": "20070301_MK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MNIT"}}
+{"symbol": "MNIT", "eodDate": "2007-03-01T00:00:00", "open": 10, "high": 10, "low": 10, "close": 10, "volume": 13600, "id": "20070301_MNIT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MODERN"}}
+{"symbol": "MODERN", "eodDate": "2007-03-01T00:00:00", "open": 40, "high": 40, "low": 39.75, "close": 39.75, "volume": 300, "id": "20070301_MODERN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MPG"}}
+{"symbol": "MPG", "eodDate": "2007-03-01T00:00:00", "open": 0.947, "high": 0.9757, "low": 0.8704, "close": 0.8704, "volume": 25550000, "id": "20070301_MPG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_NCH"}}
+{"symbol": "NCH", "eodDate": "2007-03-01T00:00:00", "open": 2.96, "high": 3.02, "low": 2.96, "close": 3.02, "volume": 2072000, "id": "20070301_NCH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_NEP"}}
+{"symbol": "NEP", "eodDate": "2007-03-01T00:00:00", "open": 0.795, "high": 0.805, "low": 0.78, "close": 0.78, "volume": 1138040, "id": "20070301_NEP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_NEW"}}
+{"symbol": "NEW", "eodDate": "2007-03-01T00:00:00", "open": 13.8, "high": 13.8, "low": 13.2, "close": 13.8, "volume": 3400, "id": "20070301_NEW" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_NEWS"}}
+{"symbol": "NEWS", "eodDate": "2007-03-01T00:00:00", "open": 0.28, "high": 0.28, "low": 0.28, "close": 0.28, "volume": 302000, "id": "20070301_NEWS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_NMG"}}
+{"symbol": "NMG", "eodDate": "2007-03-01T00:00:00", "open": 9.75, "high": 9.8, "low": 9.75, "close": 9.8, "volume": 95000, "id": "20070301_NMG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_NNCL"}}
+{"symbol": "NNCL", "eodDate": "2007-03-01T00:00:00", "open": 3.46, "high": 3.48, "low": 3.32, "close": 3.32, "volume": 2398500, "id": "20070301_NNCL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_NOBLE"}}
+{"symbol": "NOBLE", "eodDate": "2007-03-01T00:00:00", "open": 4.48, "high": 4.58, "low": 4.42, "close": 4.56, "volume": 2228100, "id": "20070301_NOBLE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_NSI"}}
+{"symbol": "NSI", "eodDate": "2007-03-01T00:00:00", "open": 18, "high": 18.8, "low": 18, "close": 18.8, "volume": 5500, "id": "20070301_NSI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_NTV"}}
+{"symbol": "NTV", "eodDate": "2007-03-01T00:00:00", "open": 129, "high": 132, "low": 129, "close": 131, "volume": 1600, "id": "20070301_NTV" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_NWR"}}
+{"symbol": "NWR", "eodDate": "2007-03-01T00:00:00", "open": 0.67, "high": 0.69, "low": 0.66, "close": 0.68, "volume": 33180200, "id": "20070301_NWR" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_OGC"}}
+{"symbol": "OGC", "eodDate": "2007-03-01T00:00:00", "open": 47.5, "high": 47.5, "low": 47.5, "close": 47.5, "volume": 100, "id": "20070301_OGC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_OISHI"}}
+{"symbol": "OISHI", "eodDate": "2007-03-01T00:00:00", "open": 20, "high": 20, "low": 19.7, "close": 19.7, "volume": 4000, "id": "20070301_OISHI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PAE"}}
+{"symbol": "PAE", "eodDate": "2007-03-01T00:00:00", "open": 1.54, "high": 1.82, "low": 1.54, "close": 1.7, "volume": 205346896, "id": "20070301_PAE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PAF"}}
+{"symbol": "PAF", "eodDate": "2007-03-01T00:00:00", "open": 3.12, "high": 3.12, "low": 3.06, "close": 3.06, "volume": 660609, "id": "20070301_PAF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PAP"}}
+{"symbol": "PAP", "eodDate": "2007-03-01T00:00:00", "open": 1.48, "high": 1.5, "low": 1.48, "close": 1.48, "volume": 928500, "id": "20070301_PAP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PATO"}}
+{"symbol": "PATO", "eodDate": "2007-03-01T00:00:00", "open": 3.8, "high": 3.8, "low": 3.8, "close": 3.8, "volume": 27000, "id": "20070301_PATO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PB"}}
+{"symbol": "PB", "eodDate": "2007-03-01T00:00:00", "open": 77.5, "high": 78, "low": 77.5, "close": 77.5, "volume": 8600, "id": "20070301_PB" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PDI"}}
+{"symbol": "PDI", "eodDate": "2007-03-01T00:00:00", "open": 40.5, "high": 41, "low": 40.5, "close": 41, "volume": 323801, "id": "20070301_PDI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PE"}}
+{"symbol": "PE", "eodDate": "2007-03-01T00:00:00", "open": 3.38, "high": 3.76, "low": 3.36, "close": 3.5, "volume": 77304600, "id": "20070301_PE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PERM"}}
+{"symbol": "PERM", "eodDate": "2007-03-01T00:00:00", "open": 1.13, "high": 1.14, "low": 1.1, "close": 1.14, "volume": 111900, "id": "20070301_PERM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PF"}}
+{"symbol": "PF", "eodDate": "2007-03-01T00:00:00", "open": 3.3, "high": 3.34, "low": 3.3, "close": 3.32, "volume": 1244700, "id": "20070301_PF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PICO"}}
+{"symbol": "PICO", "eodDate": "2007-03-01T00:00:00", "open": 3.8, "high": 3.8, "low": 3.68, "close": 3.74, "volume": 10100, "id": "20070301_PICO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PK"}}
+{"symbol": "PK", "eodDate": "2007-03-01T00:00:00", "open": 3.6, "high": 3.7, "low": 3.6, "close": 3.7, "volume": 151601, "id": "20070301_PK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PL"}}
+{"symbol": "PL", "eodDate": "2007-03-01T00:00:00", "open": 2.54, "high": 2.54, "low": 2.48, "close": 2.48, "volume": 358300, "id": "20070301_PL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PLE"}}
+{"symbol": "PLE", "eodDate": "2007-03-01T00:00:00", "open": 6.0117, "high": 6.0563, "low": 5.8781, "close": 5.9227, "volume": 3017094, "id": "20070301_PLE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PPM"}}
+{"symbol": "PPM", "eodDate": "2007-03-01T00:00:00", "open": 6.1, "high": 6.3, "low": 5.8, "close": 6.3, "volume": 9948929, "id": "20070301_PPM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PR"}}
+{"symbol": "PR", "eodDate": "2007-03-01T00:00:00", "open": 103, "high": 104, "low": 103, "close": 104, "volume": 2800, "id": "20070301_PR" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PRAKIT"}}
+{"symbol": "PRAKIT", "eodDate": "2007-03-01T00:00:00", "open": 9.9, "high": 9.9, "low": 9.9, "close": 9.9, "volume": 500, "id": "20070301_PRAKIT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PRANDA"}}
+{"symbol": "PRANDA", "eodDate": "2007-03-01T00:00:00", "open": 6.9, "high": 6.9, "low": 6.8, "close": 6.85, "volume": 2113000, "id": "20070301_PRANDA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PREB"}}
+{"symbol": "PREB", "eodDate": "2007-03-01T00:00:00", "open": 1.61, "high": 1.64, "low": 1.59, "close": 1.59, "volume": 711500, "id": "20070301_PREB" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PRECHA"}}
+{"symbol": "PRECHA", "eodDate": "2007-03-01T00:00:00", "open": 0.992, "high": 1, "low": 0.992, "close": 1, "volume": 125250, "id": "20070301_PRECHA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PRIN"}}
+{"symbol": "PRIN", "eodDate": "2007-03-01T00:00:00", "open": 2.8115, "high": 2.8438, "low": 2.7631, "close": 2.8115, "volume": 1269077, "id": "20070301_PRIN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PRINC"}}
+{"symbol": "PRINC", "eodDate": "2007-03-01T00:00:00", "open": 17.2, "high": 17.4, "low": 17.2, "close": 17.3, "volume": 694500, "id": "20070301_PRINC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PRO"}}
+{"symbol": "PRO", "eodDate": "2007-03-01T00:00:00", "open": 1.17, "high": 1.19, "low": 1.15, "close": 1.17, "volume": 686201, "id": "20070301_PRO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PSL"}}
+{"symbol": "PSL", "eodDate": "2007-03-01T00:00:00", "open": 25.5, "high": 26.75, "low": 25.5, "close": 26.75, "volume": 4693400, "id": "20070301_PSL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PT"}}
+{"symbol": "PT", "eodDate": "2007-03-01T00:00:00", "open": 4.1, "high": 4.86, "low": 4.1, "close": 4.82, "volume": 49631300, "id": "20070301_PT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PTL"}}
+{"symbol": "PTL", "eodDate": "2007-03-01T00:00:00", "open": 3.92, "high": 4.02, "low": 3.92, "close": 4.02, "volume": 384701, "id": "20070301_PTL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PTT"}}
+{"symbol": "PTT", "eodDate": "2007-03-01T00:00:00", "open": 210, "high": 212, "low": 208, "close": 210, "volume": 3830974, "id": "20070301_PTT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PTTEP"}}
+{"symbol": "PTTEP", "eodDate": "2007-03-01T00:00:00", "open": 97.5, "high": 98, "low": 96.5, "close": 97, "volume": 3747996, "id": "20070301_PTTEP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PYLON"}}
+{"symbol": "PYLON", "eodDate": "2007-03-01T00:00:00", "open": 2, "high": 2.06, "low": 1.98, "close": 2.04, "volume": 1161200, "id": "20070301_PYLON" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_Q-CON"}}
+{"symbol": "Q-CON", "eodDate": "2007-03-01T00:00:00", "open": 1.95, "high": 1.95, "low": 1.91, "close": 1.91, "volume": 6500, "id": "20070301_Q-CON" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_QH"}}
+{"symbol": "QH", "eodDate": "2007-03-01T00:00:00", "open": 1.21, "high": 1.23, "low": 1.21, "close": 1.21, "volume": 13017200, "id": "20070301_QH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_QHPF"}}
+{"symbol": "QHPF", "eodDate": "2007-03-01T00:00:00", "open": 9.95, "high": 10, "low": 9.95, "close": 10, "volume": 315200, "id": "20070301_QHPF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_RATCH"}}
+{"symbol": "RATCH", "eodDate": "2007-03-01T00:00:00", "open": 44.25, "high": 44.5, "low": 43.75, "close": 44.25, "volume": 490120, "id": "20070301_RATCH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_RCI"}}
+{"symbol": "RCI", "eodDate": "2007-03-01T00:00:00", "open": 2.02, "high": 2.06, "low": 2, "close": 2.04, "volume": 364100, "id": "20070301_RCI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_RCL"}}
+{"symbol": "RCL", "eodDate": "2007-03-01T00:00:00", "open": 23.2, "high": 24, "low": 23, "close": 23.7, "volume": 1601100, "id": "20070301_RCL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_RICH"}}
+{"symbol": "RICH", "eodDate": "2007-03-01T00:00:00", "open": 0.1429, "high": 0.152, "low": 0.1429, "close": 0.1509, "volume": 43802400, "id": "20070301_RICH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_RML"}}
+{"symbol": "RML", "eodDate": "2007-03-01T00:00:00", "open": 1.2, "high": 1.2, "low": 1.17, "close": 1.17, "volume": 591900, "id": "20070301_RML" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ROBINS"}}
+{"symbol": "ROBINS", "eodDate": "2007-03-01T00:00:00", "open": 9.9, "high": 9.9, "low": 9.8, "close": 9.9, "volume": 44000, "id": "20070301_ROBINS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ROCK"}}
+{"symbol": "ROCK", "eodDate": "2007-03-01T00:00:00", "open": 19, "high": 19, "low": 19, "close": 19, "volume": 500, "id": "20070301_ROCK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ROH"}}
+{"symbol": "ROH", "eodDate": "2007-03-01T00:00:00", "open": 41, "high": 41, "low": 41, "close": 41, "volume": 1300, "id": "20070301_ROH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ROJNA"}}
+{"symbol": "ROJNA", "eodDate": "2007-03-01T00:00:00", "open": 12.2, "high": 12.7, "low": 12.2, "close": 12.7, "volume": 679200, "id": "20070301_ROJNA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_RPC"}}
+{"symbol": "RPC", "eodDate": "2007-03-01T00:00:00", "open": 3.72, "high": 3.78, "low": 3.7, "close": 3.72, "volume": 101300, "id": "20070301_RPC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_RS"}}
+{"symbol": "RS", "eodDate": "2007-03-01T00:00:00", "open": 4.72, "high": 4.76, "low": 4.68, "close": 4.7, "volume": 5249002, "id": "20070301_RS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_S&J"}}
+{"symbol": "S&J", "eodDate": "2007-03-01T00:00:00", "open": 13.1, "high": 13.1, "low": 13.1, "close": 13.1, "volume": 2000, "id": "20070301_S&J" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SALEE"}}
+{"symbol": "SALEE", "eodDate": "2007-03-01T00:00:00", "open": 2.72, "high": 2.84, "low": 2.72, "close": 2.74, "volume": 6014294, "id": "20070301_SALEE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SAM"}}
+{"symbol": "SAM", "eodDate": "2007-03-01T00:00:00", "open": 3.6, "high": 3.78, "low": 3.3, "close": 3.62, "volume": 1100, "id": "20070301_SAM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SAMART"}}
+{"symbol": "SAMART", "eodDate": "2007-03-01T00:00:00", "open": 8.9, "high": 9.1, "low": 8.9, "close": 9.1, "volume": 6820100, "id": "20070301_SAMART" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SAMCO"}}
+{"symbol": "SAMCO", "eodDate": "2007-03-01T00:00:00", "open": 2.78, "high": 2.78, "low": 2.66, "close": 2.7, "volume": 21600, "id": "20070301_SAMCO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SAMTEL"}}
+{"symbol": "SAMTEL", "eodDate": "2007-03-01T00:00:00", "open": 8.45, "high": 8.6, "low": 8.45, "close": 8.6, "volume": 57000, "id": "20070301_SAMTEL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SAT"}}
+{"symbol": "SAT", "eodDate": "2007-03-01T00:00:00", "open": 9.5, "high": 10.1, "low": 9.5, "close": 9.95, "volume": 4159700, "id": "20070301_SAT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SAWANG"}}
+{"symbol": "SAWANG", "eodDate": "2007-03-01T00:00:00", "open": 11.1, "high": 11.1, "low": 11, "close": 11, "volume": 2600, "id": "20070301_SAWANG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SC"}}
+{"symbol": "SC", "eodDate": "2007-03-01T00:00:00", "open": 8.8, "high": 9, "low": 8.8, "close": 8.9, "volume": 576100, "id": "20070301_SC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SCB"}}
+{"symbol": "SCB", "eodDate": "2007-03-01T00:00:00", "open": 66, "high": 67.5, "low": 66, "close": 67, "volume": 3790600, "id": "20070301_SCB" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SCC"}}
+{"symbol": "SCC", "eodDate": "2007-03-01T00:00:00", "open": 232, "high": 234, "low": 230, "close": 230, "volume": 1757689, "id": "20070301_SCC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SCCC"}}
+{"symbol": "SCCC", "eodDate": "2007-03-01T00:00:00", "open": 272, "high": 272, "low": 264, "close": 264, "volume": 424620, "id": "20070301_SCCC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SCP"}}
+{"symbol": "SCP", "eodDate": "2007-03-01T00:00:00", "open": 8.7, "high": 9, "low": 8.7, "close": 8.7, "volume": 68400, "id": "20070301_SCP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SE-ED"}}
+{"symbol": "SE-ED", "eodDate": "2007-03-01T00:00:00", "open": 7.55, "high": 7.6, "low": 7.55, "close": 7.6, "volume": 66800, "id": "20070301_SE-ED" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SEAFCO"}}
+{"symbol": "SEAFCO", "eodDate": "2007-03-01T00:00:00", "open": 8.1, "high": 8.1, "low": 8, "close": 8.05, "volume": 1240100, "id": "20070301_SEAFCO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SF"}}
+{"symbol": "SF", "eodDate": "2007-03-01T00:00:00", "open": 5.716, "high": 5.8497, "low": 5.6826, "close": 5.8497, "volume": 37200, "id": "20070301_SF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SHANG"}}
+{"symbol": "SHANG", "eodDate": "2007-03-01T00:00:00", "open": 51, "high": 51, "low": 51, "close": 51, "volume": 700, "id": "20070301_SHANG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SIAM"}}
+{"symbol": "SIAM", "eodDate": "2007-03-01T00:00:00", "open": 4.74, "high": 4.92, "low": 4.74, "close": 4.86, "volume": 444100, "id": "20070301_SIAM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SIM"}}
+{"symbol": "SIM", "eodDate": "2007-03-01T00:00:00", "open": 1.91, "high": 1.91, "low": 1.88, "close": 1.9, "volume": 272600, "id": "20070301_SIM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SINGER"}}
+{"symbol": "SINGER", "eodDate": "2007-03-01T00:00:00", "open": 1.78, "high": 1.78, "low": 1.69, "close": 1.7, "volume": 23000, "id": "20070301_SINGER" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SIRI"}}
+{"symbol": "SIRI", "eodDate": "2007-03-01T00:00:00", "open": 3.02, "high": 3.04, "low": 3, "close": 3.02, "volume": 480170, "id": "20070301_SIRI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SIS"}}
+{"symbol": "SIS", "eodDate": "2007-03-01T00:00:00", "open": 2.56, "high": 2.56, "low": 2.5, "close": 2.5, "volume": 700, "id": "20070301_SIS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SITHAI"}}
+{"symbol": "SITHAI", "eodDate": "2007-03-01T00:00:00", "open": 8.85, "high": 9.05, "low": 8.85, "close": 9, "volume": 595100, "id": "20070301_SITHAI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SKR"}}
+{"symbol": "SKR", "eodDate": "2007-03-01T00:00:00", "open": 10.6, "high": 10.6, "low": 9.95, "close": 10.3, "volume": 296000, "id": "20070301_SKR" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SMIT"}}
+{"symbol": "SMIT", "eodDate": "2007-03-01T00:00:00", "open": 2, "high": 2.04, "low": 1.99, "close": 2, "volume": 929200, "id": "20070301_SMIT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SMK"}}
+{"symbol": "SMK", "eodDate": "2007-03-01T00:00:00", "open": 42.5, "high": 42.5, "low": 42.5, "close": 42.5, "volume": 8200, "id": "20070301_SMK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SMM"}}
+{"symbol": "SMM", "eodDate": "2007-03-01T00:00:00", "open": 0.82, "high": 0.87, "low": 0.81, "close": 0.83, "volume": 3738800, "id": "20070301_SMM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SNC"}}
+{"symbol": "SNC", "eodDate": "2007-03-01T00:00:00", "open": 7.1, "high": 7.3, "low": 7.1, "close": 7.3, "volume": 477300, "id": "20070301_SNC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SNP"}}
+{"symbol": "SNP", "eodDate": "2007-03-01T00:00:00", "open": 31.25, "high": 31.5, "low": 31, "close": 31.5, "volume": 25200, "id": "20070301_SNP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SOLAR"}}
+{"symbol": "SOLAR", "eodDate": "2007-03-01T00:00:00", "open": 3.5, "high": 3.54, "low": 3.42, "close": 3.48, "volume": 1780000, "id": "20070301_SOLAR" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SORKON"}}
+{"symbol": "SORKON", "eodDate": "2007-03-01T00:00:00", "open": 18.9524, "high": 19.5238, "low": 18.9524, "close": 19.5238, "volume": 2939, "id": "20070301_SORKON" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SPACK"}}
+{"symbol": "SPACK", "eodDate": "2007-03-01T00:00:00", "open": 2.8, "high": 2.88, "low": 2.8, "close": 2.8, "volume": 1719400, "id": "20070301_SPACK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SPALI"}}
+{"symbol": "SPALI", "eodDate": "2007-03-01T00:00:00", "open": 3.48, "high": 3.54, "low": 3.48, "close": 3.54, "volume": 4727400, "id": "20070301_SPALI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SPCG"}}
+{"symbol": "SPCG", "eodDate": "2007-03-01T00:00:00", "open": 3.34, "high": 3.44, "low": 3.06, "close": 3.1, "volume": 5221400, "id": "20070301_SPCG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SPF"}}
+{"symbol": "SPF", "eodDate": "2007-03-01T00:00:00", "open": 8.75, "high": 9.2, "low": 8.75, "close": 9.15, "volume": 4159400, "id": "20070301_SPF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SPG"}}
+{"symbol": "SPG", "eodDate": "2007-03-01T00:00:00", "open": 40, "high": 40, "low": 40, "close": 40, "volume": 2700, "id": "20070301_SPG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SPI"}}
+{"symbol": "SPI", "eodDate": "2007-03-01T00:00:00", "open": 21.5, "high": 21.8, "low": 21.5, "close": 21.5, "volume": 144200, "id": "20070301_SPI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SPORT"}}
+{"symbol": "SPORT", "eodDate": "2007-03-01T00:00:00", "open": 2.5, "high": 2.56, "low": 2.5, "close": 2.52, "volume": 400277, "id": "20070301_SPORT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SPPT"}}
+{"symbol": "SPPT", "eodDate": "2007-03-01T00:00:00", "open": 4.16, "high": 4.18, "low": 4.16, "close": 4.18, "volume": 36500, "id": "20070301_SPPT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SSC"}}
+{"symbol": "SSC", "eodDate": "2007-03-01T00:00:00", "open": 18.8, "high": 19, "low": 18.7, "close": 19, "volume": 83300, "id": "20070301_SSC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SSF"}}
+{"symbol": "SSF", "eodDate": "2007-03-01T00:00:00", "open": 2.3, "high": 2.4, "low": 2.3, "close": 2.36, "volume": 331100, "id": "20070301_SSF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SSI"}}
+{"symbol": "SSI", "eodDate": "2007-03-01T00:00:00", "open": 1.1, "high": 1.11, "low": 1.08, "close": 1.11, "volume": 6215800, "id": "20070301_SSI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SSSC"}}
+{"symbol": "SSSC", "eodDate": "2007-03-01T00:00:00", "open": 38, "high": 38, "low": 36.75, "close": 37.25, "volume": 781200, "id": "20070301_SSSC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SST"}}
+{"symbol": "SST", "eodDate": "2007-03-01T00:00:00", "open": 4.84, "high": 4.86, "low": 4.84, "close": 4.86, "volume": 7000, "id": "20070301_SST" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_STA"}}
+{"symbol": "STA", "eodDate": "2007-03-01T00:00:00", "open": 2.86, "high": 2.9, "low": 2.84, "close": 2.88, "volume": 1213000, "id": "20070301_STA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_STANLY"}}
+{"symbol": "STANLY", "eodDate": "2007-03-01T00:00:00", "open": 133, "high": 134, "low": 133, "close": 134, "volume": 56900, "id": "20070301_STANLY" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_STAR"}}
+{"symbol": "STAR", "eodDate": "2007-03-01T00:00:00", "open": 1.61, "high": 1.62, "low": 1.58, "close": 1.58, "volume": 937400, "id": "20070301_STAR" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_STEC"}}
+{"symbol": "STEC", "eodDate": "2007-03-01T00:00:00", "open": 4.5, "high": 4.6, "low": 4.48, "close": 4.58, "volume": 11413700, "id": "20070301_STEC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_STHAI"}}
+{"symbol": "STHAI", "eodDate": "2007-03-01T00:00:00", "open": 1.93, "high": 1.94, "low": 1.91, "close": 1.91, "volume": 60000, "id": "20070301_STHAI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_STPI"}}
+{"symbol": "STPI", "eodDate": "2007-03-01T00:00:00", "open": 4.06, "high": 4.06, "low": 3.76, "close": 3.88, "volume": 16846100, "id": "20070301_STPI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SUC"}}
+{"symbol": "SUC", "eodDate": "2007-03-01T00:00:00", "open": 25.25, "high": 25.25, "low": 24.5, "close": 25, "volume": 907700, "id": "20070301_SUC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SUPER"}}
+{"symbol": "SUPER", "eodDate": "2007-03-01T00:00:00", "open": 1, "high": 1.02, "low": 0.99, "close": 0.99, "volume": 126200, "id": "20070301_SUPER" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SUSCO"}}
+{"symbol": "SUSCO", "eodDate": "2007-03-01T00:00:00", "open": 0.39, "high": 0.4, "low": 0.39, "close": 0.39, "volume": 2593700, "id": "20070301_SUSCO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SVH"}}
+{"symbol": "SVH", "eodDate": "2007-03-01T00:00:00", "open": 39, "high": 39, "low": 39, "close": 39, "volume": 3800, "id": "20070301_SVH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SVI"}}
+{"symbol": "SVI", "eodDate": "2007-03-01T00:00:00", "open": 1.13, "high": 1.13, "low": 1.13, "close": 1.13, "volume": 1328000, "id": "20070301_SVI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SVOA"}}
+{"symbol": "SVOA", "eodDate": "2007-03-01T00:00:00", "open": 1.69, "high": 1.74, "low": 1.68, "close": 1.71, "volume": 4962950, "id": "20070301_SVOA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SWC"}}
+{"symbol": "SWC", "eodDate": "2007-03-01T00:00:00", "open": 3.5, "high": 3.6, "low": 3.5, "close": 3.6, "volume": 7000, "id": "20070301_SWC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SYNTEC"}}
+{"symbol": "SYNTEC", "eodDate": "2007-03-01T00:00:00", "open": 1.01, "high": 1.06, "low": 1.01, "close": 1.04, "volume": 78900200, "id": "20070301_SYNTEC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_T"}}
+{"symbol": "T", "eodDate": "2007-03-01T00:00:00", "open": 2.74, "high": 2.76, "low": 2.74, "close": 2.74, "volume": 77000, "id": "20070301_T" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TAPAC"}}
+{"symbol": "TAPAC", "eodDate": "2007-03-01T00:00:00", "open": 1.63, "high": 1.63, "low": 1.63, "close": 1.63, "volume": 100, "id": "20070301_TAPAC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TASCO"}}
+{"symbol": "TASCO", "eodDate": "2007-03-01T00:00:00", "open": 28.5, "high": 29, "low": 28.25, "close": 29, "volume": 432347, "id": "20070301_TASCO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TC"}}
+{"symbol": "TC", "eodDate": "2007-03-01T00:00:00", "open": 13.4, "high": 14.4, "low": 13.4, "close": 14.4, "volume": 4600, "id": "20070301_TC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TCAP"}}
+{"symbol": "TCAP", "eodDate": "2007-03-01T00:00:00", "open": 12.6, "high": 12.7, "low": 12.4, "close": 12.7, "volume": 3473616, "id": "20070301_TCAP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TCB"}}
+{"symbol": "TCB", "eodDate": "2007-03-01T00:00:00", "open": 19.6, "high": 19.7, "low": 19.5, "close": 19.7, "volume": 45500, "id": "20070301_TCB" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TCC"}}
+{"symbol": "TCC", "eodDate": "2007-03-01T00:00:00", "open": 0.94, "high": 0.97, "low": 0.93, "close": 0.93, "volume": 4821500, "id": "20070301_TCC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TCCC"}}
+{"symbol": "TCCC", "eodDate": "2007-03-01T00:00:00", "open": 6.8, "high": 6.8, "low": 6.15, "close": 6.3, "volume": 50100, "id": "20070301_TCCC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TCJ"}}
+{"symbol": "TCJ", "eodDate": "2007-03-01T00:00:00", "open": 6.9, "high": 7.05, "low": 6.8, "close": 6.85, "volume": 520100, "id": "20070301_TCJ" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TCMC"}}
+{"symbol": "TCMC", "eodDate": "2007-03-01T00:00:00", "open": 8.9858, "high": 9.1936, "low": 8.9339, "close": 9.1416, "volume": 1043006, "id": "20070301_TCMC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TEAM"}}
+{"symbol": "TEAM", "eodDate": "2007-03-01T00:00:00", "open": 4.3441, "high": 4.3441, "low": 4.3174, "close": 4.3174, "volume": 91929, "id": "20070301_TEAM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TFD"}}
+{"symbol": "TFD", "eodDate": "2007-03-01T00:00:00", "open": 0.96, "high": 1, "low": 0.96, "close": 0.99, "volume": 2341800, "id": "20070301_TFD" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TFI"}}
+{"symbol": "TFI", "eodDate": "2007-03-01T00:00:00", "open": 1.364, "high": 1.364, "low": 1.3003, "close": 1.3367, "volume": 755873, "id": "20070301_TFI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TFUND"}}
+{"symbol": "TFUND", "eodDate": "2007-03-01T00:00:00", "open": 9.55, "high": 9.7, "low": 9.55, "close": 9.7, "volume": 148500, "id": "20070301_TFUND" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TGCI"}}
+{"symbol": "TGCI", "eodDate": "2007-03-01T00:00:00", "open": 1.2, "high": 1.31, "low": 1.2, "close": 1.31, "volume": 1750100, "id": "20070301_TGCI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_THAI"}}
+{"symbol": "THAI", "eodDate": "2007-03-01T00:00:00", "open": 42.75, "high": 44.25, "low": 42.75, "close": 43.75, "volume": 1377251, "id": "20070301_THAI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_THANI"}}
+{"symbol": "THANI", "eodDate": "2007-03-01T00:00:00", "open": 0.94, "high": 0.95, "low": 0.93, "close": 0.94, "volume": 31225, "id": "20070301_THANI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_THCOM"}}
+{"symbol": "THCOM", "eodDate": "2007-03-01T00:00:00", "open": 7, "high": 7.25, "low": 7, "close": 7.15, "volume": 2338400, "id": "20070301_THCOM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_THRE"}}
+{"symbol": "THRE", "eodDate": "2007-03-01T00:00:00", "open": 5.4, "high": 5.45, "low": 5.4, "close": 5.45, "volume": 201200, "id": "20070301_THRE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TICON"}}
+{"symbol": "TICON", "eodDate": "2007-03-01T00:00:00", "open": 17, "high": 17.2, "low": 17, "close": 17.2, "volume": 658801, "id": "20070301_TICON" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TIP"}}
+{"symbol": "TIP", "eodDate": "2007-03-01T00:00:00", "open": 16.6, "high": 16.6, "low": 16.5, "close": 16.5, "volume": 9600, "id": "20070301_TIP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TIPCO"}}
+{"symbol": "TIPCO", "eodDate": "2007-03-01T00:00:00", "open": 7.05, "high": 7.05, "low": 7, "close": 7.05, "volume": 56500, "id": "20070301_TIPCO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TISCO"}}
+{"symbol": "TISCO", "eodDate": "2007-03-01T00:00:00", "open": 21.6, "high": 22.3, "low": 21.5, "close": 22.1, "volume": 4518800, "id": "20070301_TISCO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TK"}}
+{"symbol": "TK", "eodDate": "2007-03-01T00:00:00", "open": 3.54, "high": 3.56, "low": 3.54, "close": 3.54, "volume": 265100, "id": "20070301_TK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TKS"}}
+{"symbol": "TKS", "eodDate": "2007-03-01T00:00:00", "open": 3.26, "high": 3.26, "low": 3.2, "close": 3.2, "volume": 141950, "id": "20070301_TKS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TKT"}}
+{"symbol": "TKT", "eodDate": "2007-03-01T00:00:00", "open": 1.35, "high": 1.38, "low": 1.34, "close": 1.38, "volume": 140300, "id": "20070301_TKT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TLUXE"}}
+{"symbol": "TLUXE", "eodDate": "2007-03-01T00:00:00", "open": 3.16, "high": 3.22, "low": 3.16, "close": 3.18, "volume": 678300, "id": "20070301_TLUXE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TMB"}}
+{"symbol": "TMB", "eodDate": "2007-03-01T00:00:00", "open": 1.7984, "high": 1.7984, "low": 1.7793, "close": 1.7888, "volume": 28326412, "id": "20070301_TMB" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TMD"}}
+{"symbol": "TMD", "eodDate": "2007-03-01T00:00:00", "open": 55, "high": 55, "low": 54.5, "close": 54.5, "volume": 2300, "id": "20070301_TMD" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TMT"}}
+{"symbol": "TMT", "eodDate": "2007-03-01T00:00:00", "open": 3.9, "high": 3.9, "low": 3.78, "close": 3.78, "volume": 813500, "id": "20070301_TMT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TMW"}}
+{"symbol": "TMW", "eodDate": "2007-03-01T00:00:00", "open": 15.1, "high": 15.1, "low": 14, "close": 15.1, "volume": 3900, "id": "20070301_TMW" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TNH"}}
+{"symbol": "TNH", "eodDate": "2007-03-01T00:00:00", "open": 8.3, "high": 8.4, "low": 8.1, "close": 8.15, "volume": 478900, "id": "20070301_TNH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TNITY"}}
+{"symbol": "TNITY", "eodDate": "2007-03-01T00:00:00", "open": 4.86, "high": 4.88, "low": 4.86, "close": 4.86, "volume": 147500, "id": "20070301_TNITY" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TNL"}}
+{"symbol": "TNL", "eodDate": "2007-03-01T00:00:00", "open": 19, "high": 19, "low": 19, "close": 19, "volume": 6000, "id": "20070301_TNL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TOG"}}
+{"symbol": "TOG", "eodDate": "2007-03-01T00:00:00", "open": 2.18, "high": 2.18, "low": 2.18, "close": 2.18, "volume": 12000, "id": "20070301_TOG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TOP"}}
+{"symbol": "TOP", "eodDate": "2007-03-01T00:00:00", "open": 56, "high": 56, "low": 55, "close": 56, "volume": 5155750, "id": "20070301_TOP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TOPP"}}
+{"symbol": "TOPP", "eodDate": "2007-03-01T00:00:00", "open": 42.5, "high": 43, "low": 42, "close": 43, "volume": 1200, "id": "20070301_TOPP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TPA"}}
+{"symbol": "TPA", "eodDate": "2007-03-01T00:00:00", "open": 73.5, "high": 74, "low": 71.5, "close": 73, "volume": 20800, "id": "20070301_TPA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TPAC"}}
+{"symbol": "TPAC", "eodDate": "2007-03-01T00:00:00", "open": 3.26, "high": 3.36, "low": 3.24, "close": 3.34, "volume": 308500, "id": "20070301_TPAC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TPC"}}
+{"symbol": "TPC", "eodDate": "2007-03-01T00:00:00", "open": 17.6, "high": 17.6, "low": 17.5, "close": 17.5, "volume": 180000, "id": "20070301_TPC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TPCORP"}}
+{"symbol": "TPCORP", "eodDate": "2007-03-01T00:00:00", "open": 15.2, "high": 15.8, "low": 15, "close": 15.5, "volume": 14000, "id": "20070301_TPCORP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TPIPL"}}
+{"symbol": "TPIPL", "eodDate": "2007-03-01T00:00:00", "open": 12.3, "high": 12.5, "low": 12.2, "close": 12.4, "volume": 6203403, "id": "20070301_TPIPL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TRC"}}
+{"symbol": "TRC", "eodDate": "2007-03-01T00:00:00", "open": 2.2547, "high": 2.2547, "low": 2.1302, "close": 2.1458, "volume": 1610501, "id": "20070301_TRC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TRITN"}}
+{"symbol": "TRITN", "eodDate": "2007-03-01T00:00:00", "open": 0.155, "high": 0.159, "low": 0.155, "close": 0.158, "volume": 26053478, "id": "20070301_TRITN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TRT"}}
+{"symbol": "TRT", "eodDate": "2007-03-01T00:00:00", "open": 4.72, "high": 4.72, "low": 4.68, "close": 4.7, "volume": 35000, "id": "20070301_TRT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TRU"}}
+{"symbol": "TRU", "eodDate": "2007-03-01T00:00:00", "open": 3.44, "high": 3.5, "low": 3.42, "close": 3.44, "volume": 102400, "id": "20070301_TRU" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TRUBB"}}
+{"symbol": "TRUBB", "eodDate": "2007-03-01T00:00:00", "open": 1.0438, "high": 1.0625, "low": 1.0438, "close": 1.0625, "volume": 593600, "id": "20070301_TRUBB" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TRUE"}}
+{"symbol": "TRUE", "eodDate": "2007-03-01T00:00:00", "open": 6.25, "high": 6.25, "low": 5.95, "close": 6, "volume": 31342800, "id": "20070301_TRUE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TSC"}}
+{"symbol": "TSC", "eodDate": "2007-03-01T00:00:00", "open": 8.6, "high": 8.8, "low": 8.6, "close": 8.75, "volume": 160800, "id": "20070301_TSC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TSF"}}
+{"symbol": "TSF", "eodDate": "2007-03-01T00:00:00", "open": 0.56, "high": 0.56, "low": 0.56, "close": 0.56, "volume": 8000, "id": "20070301_TSF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TSTH"}}
+{"symbol": "TSTH", "eodDate": "2007-03-01T00:00:00", "open": 1.15, "high": 1.17, "low": 1.15, "close": 1.15, "volume": 670200, "id": "20070301_TSTH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TTA"}}
+{"symbol": "TTA", "eodDate": "2007-03-01T00:00:00", "open": 25.9151, "high": 26.5971, "low": 25.6878, "close": 26.5971, "volume": 9459044, "id": "20070301_TTA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TU"}}
+{"symbol": "TU", "eodDate": "2007-03-01T00:00:00", "open": 23, "high": 23.3, "low": 22.8, "close": 22.8, "volume": 241300, "id": "20070301_TU" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TU-PF"}}
+{"symbol": "TU-PF", "eodDate": "2007-03-01T00:00:00", "open": 10.1, "high": 10.1, "low": 10.1, "close": 10.1, "volume": 5000, "id": "20070301_TU-PF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TUCC"}}
+{"symbol": "TUCC", "eodDate": "2007-03-01T00:00:00", "open": 3.6262, "high": 3.932, "low": 3.597, "close": 3.932, "volume": 5717800, "id": "20070301_TUCC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TVO"}}
+{"symbol": "TVO", "eodDate": "2007-03-01T00:00:00", "open": 6.64, "high": 6.72, "low": 6.64, "close": 6.72, "volume": 52125, "id": "20070301_TVO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TWP"}}
+{"symbol": "TWP", "eodDate": "2007-03-01T00:00:00", "open": 20.2, "high": 20.7, "low": 20, "close": 20.3, "volume": 1343800, "id": "20070301_TWP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TWZ"}}
+{"symbol": "TWZ", "eodDate": "2007-03-01T00:00:00", "open": 1.7, "high": 1.7, "low": 1.69, "close": 1.7, "volume": 123401, "id": "20070301_TWZ" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TYCN"}}
+{"symbol": "TYCN", "eodDate": "2007-03-01T00:00:00", "open": 5.85, "high": 5.95, "low": 5.75, "close": 5.9, "volume": 17800, "id": "20070301_TYCN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_U"}}
+{"symbol": "U", "eodDate": "2007-03-01T00:00:00", "open": 0.1857, "high": 0.1929, "low": 0.1857, "close": 0.1857, "volume": 5284100, "id": "20070301_U" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_UEC"}}
+{"symbol": "UEC", "eodDate": "2007-03-01T00:00:00", "open": 3.75, "high": 3.75, "low": 3.7, "close": 3.7, "volume": 64300, "id": "20070301_UEC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_UKEM"}}
+{"symbol": "UKEM", "eodDate": "2007-03-01T00:00:00", "open": 0.505, "high": 0.525, "low": 0.505, "close": 0.515, "volume": 14115616, "id": "20070301_UKEM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_UMI"}}
+{"symbol": "UMI", "eodDate": "2007-03-01T00:00:00", "open": 1.03, "high": 1.08, "low": 1.03, "close": 1.06, "volume": 304700, "id": "20070301_UMI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_UMS"}}
+{"symbol": "UMS", "eodDate": "2007-03-01T00:00:00", "open": 8.75, "high": 8.8, "low": 8.75, "close": 8.75, "volume": 321800, "id": "20070301_UMS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_UOBKH"}}
+{"symbol": "UOBKH", "eodDate": "2007-03-01T00:00:00", "open": 4.56, "high": 4.74, "low": 4.56, "close": 4.74, "volume": 430600, "id": "20070301_UOBKH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_UP"}}
+{"symbol": "UP", "eodDate": "2007-03-01T00:00:00", "open": 19.5, "high": 19.5, "low": 19.3, "close": 19.3, "volume": 15305, "id": "20070301_UP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_UTP"}}
+{"symbol": "UTP", "eodDate": "2007-03-01T00:00:00", "open": 4.6, "high": 4.6, "low": 4.48, "close": 4.48, "volume": 515400, "id": "20070301_UTP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_UV"}}
+{"symbol": "UV", "eodDate": "2007-03-01T00:00:00", "open": 2.16, "high": 2.18, "low": 2.12, "close": 2.14, "volume": 3666400, "id": "20070301_UV" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_UVAN"}}
+{"symbol": "UVAN", "eodDate": "2007-03-01T00:00:00", "open": 36, "high": 36, "low": 35.5, "close": 35.5, "volume": 35500, "id": "20070301_UVAN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_VIBHA"}}
+{"symbol": "VIBHA", "eodDate": "2007-03-01T00:00:00", "open": 3.08, "high": 3.08, "low": 3.06, "close": 3.08, "volume": 225300, "id": "20070301_VIBHA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_VNG"}}
+{"symbol": "VNG", "eodDate": "2007-03-01T00:00:00", "open": 4.66, "high": 4.74, "low": 4.64, "close": 4.64, "volume": 1849500, "id": "20070301_VNG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_VNT"}}
+{"symbol": "VNT", "eodDate": "2007-03-01T00:00:00", "open": 7.3, "high": 7.5, "low": 7.3, "close": 7.4, "volume": 173245, "id": "20070301_VNT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_WACOAL"}}
+{"symbol": "WACOAL", "eodDate": "2007-03-01T00:00:00", "open": 34, "high": 34, "low": 34, "close": 34, "volume": 4500, "id": "20070301_WACOAL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_WAVE"}}
+{"symbol": "WAVE", "eodDate": "2007-03-01T00:00:00", "open": 14.6, "high": 15, "low": 14.6, "close": 14.8, "volume": 5401, "id": "20070301_WAVE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_WG"}}
+{"symbol": "WG", "eodDate": "2007-03-01T00:00:00", "open": 45, "high": 45, "low": 44, "close": 44.5, "volume": 23800, "id": "20070301_WG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_WIIK"}}
+{"symbol": "WIIK", "eodDate": "2007-03-01T00:00:00", "open": 1.71, "high": 1.74, "low": 1.64, "close": 1.67, "volume": 2258207, "id": "20070301_WIIK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_WIN"}}
+{"symbol": "WIN", "eodDate": "2007-03-01T00:00:00", "open": 0.99, "high": 1.05, "low": 0.99, "close": 1.02, "volume": 3572300, "id": "20070301_WIN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_WORK"}}
+{"symbol": "WORK", "eodDate": "2007-03-01T00:00:00", "open": 23, "high": 23, "low": 22.8, "close": 23, "volume": 3011589, "id": "20070301_WORK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_YCI"}}
+{"symbol": "YCI", "eodDate": "2007-03-01T00:00:00", "open": 7.9, "high": 7.9, "low": 7.9, "close": 7.9, "volume": 100, "id": "20070301_YCI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_YNP"}}
+{"symbol": "YNP", "eodDate": "2007-03-01T00:00:00", "open": 1, "high": 1.07, "low": 1, "close": 1.06, "volume": 612900, "id": "20070301_YNP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_YUASA"}}
+{"symbol": "YUASA", "eodDate": "2007-03-01T00:00:00", "open": 2.04, "high": 2.12, "low": 2.04, "close": 2.12, "volume": 14100, "id": "20070301_YUASA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ZMICO"}}
+{"symbol": "ZMICO", "eodDate": "2007-03-01T00:00:00", "open": 3.68, "high": 3.74, "low": 3.66, "close": 3.74, "volume": 1349071, "id": "20070301_ZMICO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TISCO-P"}}
+{"symbol": "TISCO-P", "eodDate": "2007-03-01T00:00:00", "open": 22.6, "high": 23.5, "low": 22.6, "close": 23.5, "volume": 50800, "id": "20070301_TISCO-P" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$AGRI"}}
+{"symbol": "$AGRI", "eodDate": "2007-03-01T00:00:00", "open": 58.58, "high": 58.61, "low": 58.37, "close": 58.51, "volume": 1302300, "id": "20070301_$AGRI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$AUTO"}}
+{"symbol": "$AUTO", "eodDate": "2007-03-01T00:00:00", "open": 279.35, "high": 283.85, "low": 279.34, "close": 283.85, "volume": 2017600, "id": "20070301_$AUTO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$BANK"}}
+{"symbol": "$BANK", "eodDate": "2007-03-01T00:00:00", "open": 258.31, "high": 259.84, "low": 257.57, "close": 259.6, "volume": 8213100, "id": "20070301_$BANK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$COMM"}}
+{"symbol": "$COMM", "eodDate": "2007-03-01T00:00:00", "open": 3898.43, "high": 3921.85, "low": 3891.38, "close": 3897.33, "volume": 7076700, "id": "20070301_$COMM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$CONMAT"}}
+{"symbol": "$CONMAT", "eodDate": "2007-03-01T00:00:00", "open": 5991.94, "high": 6011.88, "low": 5936.81, "close": 5936.81, "volume": 10059300, "id": "20070301_$CONMAT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$ENERG"}}
+{"symbol": "$ENERG", "eodDate": "2007-03-01T00:00:00", "open": 13904.7, "high": 13994.2, "low": 13846.6, "close": 13926, "volume": 11015000, "id": "20070301_$ENERG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$ETRON"}}
+{"symbol": "$ETRON", "eodDate": "2007-03-01T00:00:00", "open": 698.92, "high": 703.98, "low": 698.92, "close": 701.56, "volume": 1042100, "id": "20070301_$ETRON" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$FASHION"}}
+{"symbol": "$FASHION", "eodDate": "2007-03-01T00:00:00", "open": 517.29, "high": 517.29, "low": 514.35, "close": 515.06, "volume": 379100, "id": "20070301_$FASHION" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$FIN"}}
+{"symbol": "$FIN", "eodDate": "2007-03-01T00:00:00", "open": 872.48, "high": 878.02, "low": 869.58, "close": 877.84, "volume": 12185300, "id": "20070301_$FIN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$FOOD"}}
+{"symbol": "$FOOD", "eodDate": "2007-03-01T00:00:00", "open": 3921.17, "high": 3921.17, "low": 3874.93, "close": 3874.93, "volume": 15688100, "id": "20070301_$FOOD" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$HELTH"}}
+{"symbol": "$HELTH", "eodDate": "2007-03-01T00:00:00", "open": 922.29, "high": 925.57, "low": 922.11, "close": 925.57, "volume": 196900, "id": "20070301_$HELTH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$HOME"}}
+{"symbol": "$HOME", "eodDate": "2007-03-01T00:00:00", "open": 15.86, "high": 16.08, "low": 15.79, "close": 16.02, "volume": 3620700, "id": "20070301_$HOME" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$ICT"}}
+{"symbol": "$ICT", "eodDate": "2007-03-01T00:00:00", "open": 71.86, "high": 72.78, "low": 71.82, "close": 72.11, "volume": 17009500, "id": "20070301_$ICT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$IMM"}}
+{"symbol": "$IMM", "eodDate": "2007-03-01T00:00:00", "open": 92.02, "high": 92.39, "low": 91.63, "close": 92.21, "volume": 7524500, "id": "20070301_$IMM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$INSUR"}}
+{"symbol": "$INSUR", "eodDate": "2007-03-01T00:00:00", "open": 3893.02, "high": 3895.09, "low": 3878.31, "close": 3885.29, "volume": 164800, "id": "20070301_$INSUR" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$MEDIA"}}
+{"symbol": "$MEDIA", "eodDate": "2007-03-01T00:00:00", "open": 37.71, "high": 37.86, "low": 37.65, "close": 37.83, "volume": 7784900, "id": "20070301_$MEDIA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$MINE"}}
+{"symbol": "$MINE", "eodDate": "2007-03-01T00:00:00", "open": 40.19, "high": 40.69, "low": 40.19, "close": 40.69, "volume": 32300, "id": "20070301_$MINE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$PAPER"}}
+{"symbol": "$PAPER", "eodDate": "2007-03-01T00:00:00", "open": 509.66, "high": 509.66, "low": 491.14, "close": 491.14, "volume": 110800, "id": "20070301_$PAPER" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$PERSON"}}
+{"symbol": "$PERSON", "eodDate": "2007-03-01T00:00:00", "open": 247.31, "high": 251.01, "low": 246.11, "close": 251.01, "volume": 17100, "id": "20070301_$PERSON" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$PETRO"}}
+{"symbol": "$PETRO", "eodDate": "2007-03-01T00:00:00", "open": 473.95, "high": 481.05, "low": 473.27, "close": 479.51, "volume": 908100, "id": "20070301_$PETRO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$PKG"}}
+{"symbol": "$PKG", "eodDate": "2007-03-01T00:00:00", "open": 1438.55, "high": 1445.98, "low": 1436.72, "close": 1445.34, "volume": 523700, "id": "20070301_$PKG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$PROF"}}
+{"symbol": "$PROF", "eodDate": "2007-03-01T00:00:00", "open": 251.31, "high": 257.91, "low": 251.31, "close": 253.8, "volume": 325500, "id": "20070301_$PROF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$PROP"}}
+{"symbol": "$PROP", "eodDate": "2007-03-01T00:00:00", "open": 109.93, "high": 110.54, "low": 109.33, "close": 110.32, "volume": 52191200, "id": "20070301_$PROP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_$TRANS"}}
+{"symbol": "$TRANS", "eodDate": "2007-03-01T00:00:00", "open": 138.51, "high": 141.52, "low": 138.51, "close": 141.1, "volume": 2509300, "id": "20070301_$TRANS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_MAI"}}
+{"symbol": "MAI", "eodDate": "2007-03-01T00:00:00", "open": 194.94, "high": 195.78, "low": 194.78, "close": 194.94, "volume": 53100300, "id": "20070301_MAI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SET"}}
+{"symbol": "SET", "eodDate": "2007-03-01T00:00:00", "open": 678.79, "high": 682.57, "low": 677.84, "close": 680.6, "volume": 2366077440, "id": "20070301_SET" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SET100"}}
+{"symbol": "SET100", "eodDate": "2007-03-01T00:00:00", "open": 1035.37, "high": 1041.26, "low": 1033.6, "close": 1037.78, "volume": 505071808, "id": "20070301_SET100" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SET50"}}
+{"symbol": "SET50", "eodDate": "2007-03-01T00:00:00", "open": 476.94, "high": 479.6, "low": 475.99, "close": 477.85, "volume": 295681312, "id": "20070301_SET50" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ADVANC-F"}}
+{"symbol": "ADVANC-F", "eodDate": "2007-03-01T00:00:00", "open": 75.5, "high": 77, "low": 75.5, "close": 77, "volume": 1047800, "id": "20070301_ADVANC-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BAY-F"}}
+{"symbol": "BAY-F", "eodDate": "2007-03-01T00:00:00", "open": 19.7, "high": 20.5, "low": 19.7, "close": 20.5, "volume": 1401400, "id": "20070301_BAY-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BBL-F"}}
+{"symbol": "BBL-F", "eodDate": "2007-03-01T00:00:00", "open": 113, "high": 114, "low": 112, "close": 113, "volume": 13718027, "id": "20070301_BBL-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CPN-F"}}
+{"symbol": "CPN-F", "eodDate": "2007-03-01T00:00:00", "open": 24.8, "high": 24.8, "low": 24.8, "close": 24.8, "volume": 237200, "id": "20070301_CPN-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ITD-F"}}
+{"symbol": "ITD-F", "eodDate": "2007-03-01T00:00:00", "open": 5.1, "high": 5.1, "low": 5.05, "close": 5.1, "volume": 7469500, "id": "20070301_ITD-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KBANK-F"}}
+{"symbol": "KBANK-F", "eodDate": "2007-03-01T00:00:00", "open": 66, "high": 68, "low": 65.5, "close": 66, "volume": 7696000, "id": "20070301_KBANK-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KTB-F"}}
+{"symbol": "KTB-F", "eodDate": "2007-03-01T00:00:00", "open": 11.7, "high": 12.3, "low": 11.7, "close": 12.1, "volume": 1836000, "id": "20070301_KTB-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_LH-F"}}
+{"symbol": "LH-F", "eodDate": "2007-03-01T00:00:00", "open": 7.1, "high": 7.3, "low": 7.1, "close": 7.3, "volume": 1451200, "id": "20070301_LH-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SCC-F"}}
+{"symbol": "SCC-F", "eodDate": "2007-03-01T00:00:00", "open": 240, "high": 244, "low": 240, "close": 242, "volume": 1058900, "id": "20070301_SCC-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TISCO-F"}}
+{"symbol": "TISCO-F", "eodDate": "2007-03-01T00:00:00", "open": 22, "high": 22, "low": 22, "close": 22, "volume": 56400, "id": "20070301_TISCO-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TOP-F"}}
+{"symbol": "TOP-F", "eodDate": "2007-03-01T00:00:00", "open": 52, "high": 52, "low": 52, "close": 52, "volume": 2000, "id": "20070301_TOP-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ASCON"}}
+{"symbol": "ASCON", "eodDate": "2007-03-01T00:00:00", "open": 8.0718, "high": 8.3601, "low": 7.9998, "close": 8.288, "volume": 1209935, "id": "20070301_ASCON" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BCP-DR1"}}
+{"symbol": "BCP-DR1", "eodDate": "2007-03-01T00:00:00", "open": 9.35, "high": 9.35, "low": 9.35, "close": 9.35, "volume": 148000, "id": "20070301_BCP-DR1" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BECL"}}
+{"symbol": "BECL", "eodDate": "2007-03-01T00:00:00", "open": 23.6, "high": 23.6, "low": 23.5, "close": 23.6, "volume": 574000, "id": "20070301_BECL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BLISS-W1"}}
+{"symbol": "BLISS-W1", "eodDate": "2007-03-01T00:00:00", "open": 0.118, "high": 0.122, "low": 0.117, "close": 0.117, "volume": 7497900, "id": "20070301_BLISS-W1" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BLS"}}
+{"symbol": "BLS", "eodDate": "2007-03-01T00:00:00", "open": 11.9, "high": 12, "low": 11.9, "close": 12, "volume": 211400, "id": "20070301_BLS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_BMCL"}}
+{"symbol": "BMCL", "eodDate": "2007-03-01T00:00:00", "open": 1.02, "high": 1.04, "low": 1.02, "close": 1.03, "volume": 2220400, "id": "20070301_BMCL" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CAWOW"}}
+{"symbol": "CAWOW", "eodDate": "2007-03-01T00:00:00", "open": 6.2, "high": 6.2, "low": 6.2, "close": 6.2, "volume": 11600, "id": "20070301_CAWOW" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CGS"}}
+{"symbol": "CGS", "eodDate": "2007-03-01T00:00:00", "open": 0.9982, "high": 0.9982, "low": 0.9735, "close": 0.9797, "volume": 9565939, "id": "20070301_CGS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CSP-W1"}}
+{"symbol": "CSP-W1", "eodDate": "2007-03-01T00:00:00", "open": 1.09, "high": 1.28, "low": 1.09, "close": 1.28, "volume": 64620000, "id": "20070301_CSP-W1" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_CWT-W1"}}
+{"symbol": "CWT-W1", "eodDate": "2007-03-01T00:00:00", "open": 1.47, "high": 1.47, "low": 1.47, "close": 1.47, "volume": 3700, "id": "20070301_CWT-W1" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ESTAR-W1"}}
+{"symbol": "ESTAR-W1", "eodDate": "2007-03-01T00:00:00", "open": 0.17, "high": 0.18, "low": 0.17, "close": 0.18, "volume": 812000, "id": "20070301_ESTAR-W1" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ETG"}}
+{"symbol": "ETG", "eodDate": "2007-03-01T00:00:00", "open": 5.05, "high": 5.1, "low": 5, "close": 5.05, "volume": 278500, "id": "20070301_ETG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GEN-W1"}}
+{"symbol": "GEN-W1", "eodDate": "2007-03-01T00:00:00", "open": 0.33, "high": 0.35, "low": 0.33, "close": 0.35, "volume": 10998800, "id": "20070301_GEN-W1" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GFM"}}
+{"symbol": "GFM", "eodDate": "2007-03-01T00:00:00", "open": 6.75, "high": 6.8, "low": 6.75, "close": 6.8, "volume": 10001, "id": "20070301_GFM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_GJS-W1"}}
+{"symbol": "GJS-W1", "eodDate": "2007-03-01T00:00:00", "open": 0.1, "high": 0.1, "low": 0.09, "close": 0.09, "volume": 86595504, "id": "20070301_GJS-W1" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_HEMRAJ"}}
+{"symbol": "HEMRAJ", "eodDate": "2007-03-01T00:00:00", "open": 0.86, "high": 0.87, "low": 0.85, "close": 0.87, "volume": 9901100, "id": "20070301_HEMRAJ" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_ICBCT"}}
+{"symbol": "ICBCT", "eodDate": "2007-03-01T00:00:00", "open": 3.88, "high": 3.92, "low": 3.88, "close": 3.88, "volume": 297460, "id": "20070301_ICBCT" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KK-F"}}
+{"symbol": "KK-F", "eodDate": "2007-03-01T00:00:00", "open": 30, "high": 30, "low": 30, "close": 30, "volume": 14500, "id": "20070301_KK-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_KTECH"}}
+{"symbol": "KTECH", "eodDate": "2007-03-01T00:00:00", "open": 1.31, "high": 1.34, "low": 1.31, "close": 1.32, "volume": 939297, "id": "20070301_KTECH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_LHS"}}
+{"symbol": "LHS", "eodDate": "2007-03-01T00:00:00", "open": 1.3, "high": 1.35, "low": 1.28, "close": 1.33, "volume": 376500, "id": "20070301_LHS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_NEP-W1"}}
+{"symbol": "NEP-W1", "eodDate": "2007-03-01T00:00:00", "open": 0.274, "high": 0.29, "low": 0.26, "close": 0.29, "volume": 4658000, "id": "20070301_NEP-W1" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_NNCL-W1"}}
+{"symbol": "NNCL-W1", "eodDate": "2007-03-01T00:00:00", "open": 1.92, "high": 1.96, "low": 1.91, "close": 1.91, "volume": 7979500, "id": "20070301_NNCL-W1" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_OSK"}}
+{"symbol": "OSK", "eodDate": "2007-03-01T00:00:00", "open": 2.72, "high": 2.74, "low": 2.7, "close": 2.74, "volume": 3117200, "id": "20070301_OSK" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PA"}}
+{"symbol": "PA", "eodDate": "2007-03-01T00:00:00", "open": 5.25, "high": 5.25, "low": 4.9, "close": 5.2, "volume": 12300, "id": "20070301_PA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PHATRA"}}
+{"symbol": "PHATRA", "eodDate": "2007-03-01T00:00:00", "open": 30.75, "high": 31.25, "low": 30.75, "close": 31, "volume": 2274000, "id": "20070301_PHATRA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PICNI"}}
+{"symbol": "PICNI", "eodDate": "2007-03-01T00:00:00", "open": 0.33, "high": 0.33, "low": 0.31, "close": 0.32, "volume": 31613018, "id": "20070301_PICNI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PS"}}
+{"symbol": "PS", "eodDate": "2007-03-01T00:00:00", "open": 5.45, "high": 5.6, "low": 5.45, "close": 5.6, "volume": 2466900, "id": "20070301_PS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_PTTCH"}}
+{"symbol": "PTTCH", "eodDate": "2007-03-01T00:00:00", "open": 77.5, "high": 79.5, "low": 77.5, "close": 79, "volume": 1674777, "id": "20070301_PTTCH" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SAFARI"}}
+{"symbol": "SAFARI", "eodDate": "2007-03-01T00:00:00", "open": 2.76, "high": 3, "low": 2.64, "close": 3, "volume": 99163, "id": "20070301_SAFARI" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SCAN"}}
+{"symbol": "SCAN", "eodDate": "2007-03-01T00:00:00", "open": 4.3, "high": 4.4, "low": 4.3, "close": 4.4, "volume": 500, "id": "20070301_SCAN" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SCBLIFE"}}
+{"symbol": "SCBLIFE", "eodDate": "2007-03-01T00:00:00", "open": 80, "high": 80, "low": 80, "close": 80, "volume": 13000, "id": "20070301_SCBLIFE" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SCIB"}}
+{"symbol": "SCIB", "eodDate": "2007-03-01T00:00:00", "open": 18.3, "high": 18.3, "low": 18.1, "close": 18.1, "volume": 5277806, "id": "20070301_SCIB" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SCIB-F"}}
+{"symbol": "SCIB-F", "eodDate": "2007-03-01T00:00:00", "open": 18.3, "high": 18.3, "low": 18.3, "close": 18.3, "volume": 45000, "id": "20070301_SCIB-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SECC"}}
+{"symbol": "SECC", "eodDate": "2007-03-01T00:00:00", "open": 2.94, "high": 3.18, "low": 2.92, "close": 3.18, "volume": 12727400, "id": "20070301_SECC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SGF"}}
+{"symbol": "SGF", "eodDate": "2007-03-01T00:00:00", "open": 0.39, "high": 0.4, "low": 0.39, "close": 0.39, "volume": 204900, "id": "20070301_SGF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SICCO"}}
+{"symbol": "SICCO", "eodDate": "2007-03-01T00:00:00", "open": 4.78, "high": 4.8, "low": 4.76, "close": 4.76, "volume": 210600, "id": "20070301_SICCO" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SINGHA"}}
+{"symbol": "SINGHA", "eodDate": "2007-03-01T00:00:00", "open": 2.72, "high": 2.72, "low": 2.7, "close": 2.7, "volume": 656200, "id": "20070301_SINGHA" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SIRIPF"}}
+{"symbol": "SIRIPF", "eodDate": "2007-03-01T00:00:00", "open": 9.7, "high": 9.75, "low": 9.7, "close": 9.75, "volume": 20100, "id": "20070301_SIRIPF" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SMC"}}
+{"symbol": "SMC", "eodDate": "2007-03-01T00:00:00", "open": 1.76, "high": 1.86, "low": 1.74, "close": 1.84, "volume": 151400, "id": "20070301_SMC" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SMG"}}
+{"symbol": "SMG", "eodDate": "2007-03-01T00:00:00", "open": 41, "high": 41, "low": 39.75, "close": 40, "volume": 30500, "id": "20070301_SMG" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_SPSU"}}
+{"symbol": "SPSU", "eodDate": "2007-03-01T00:00:00", "open": 5, "high": 5, "low": 4.96, "close": 4.96, "volume": 26002, "id": "20070301_SPSU" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TCP"}}
+{"symbol": "TCP", "eodDate": "2007-03-01T00:00:00", "open": 13.5, "high": 13.5, "low": 13.5, "close": 13.5, "volume": 588000, "id": "20070301_TCP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TFD-W1"}}
+{"symbol": "TFD-W1", "eodDate": "2007-03-01T00:00:00", "open": 0.56, "high": 0.58, "low": 0.56, "close": 0.58, "volume": 674600, "id": "20070301_TFD-W1" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TKS-W1"}}
+{"symbol": "TKS-W1", "eodDate": "2007-03-01T00:00:00", "open": 1.56, "high": 1.61, "low": 1.52, "close": 1.52, "volume": 1747890, "id": "20070301_TKS-W1" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TRS"}}
+{"symbol": "TRS", "eodDate": "2007-03-01T00:00:00", "open": 3.8407, "high": 3.8407, "low": 3.6204, "close": 3.6204, "volume": 43201, "id": "20070301_TRS" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TSTH-W1"}}
+{"symbol": "TSTH-W1", "eodDate": "2007-03-01T00:00:00", "open": 0.23, "high": 0.24, "low": 0.23, "close": 0.24, "volume": 265100, "id": "20070301_TSTH-W1" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TSTH-W2"}}
+{"symbol": "TSTH-W2", "eodDate": "2007-03-01T00:00:00", "open": 0.1, "high": 0.1, "low": 0.1, "close": 0.1, "volume": 280000, "id": "20070301_TSTH-W2" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TT&T"}}
+{"symbol": "TT&T", "eodDate": "2007-03-01T00:00:00", "open": 1, "high": 1.04, "low": 1, "close": 1.02, "volume": 11990600, "id": "20070301_TT&T" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TUF-F"}}
+{"symbol": "TUF-F", "eodDate": "2007-03-01T00:00:00", "open": 23, "high": 23, "low": 23, "close": 23, "volume": 340000, "id": "20070301_TUF-F" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_TWFP"}}
+{"symbol": "TWFP", "eodDate": "2007-03-01T00:00:00", "open": 70.5, "high": 70.5, "low": 70.5, "close": 70.5, "volume": 100, "id": "20070301_TWFP" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_UFM"}}
+{"symbol": "UFM", "eodDate": "2007-03-01T00:00:00", "open": 20, "high": 20, "low": 20, "close": 20, "volume": 1500, "id": "20070301_UFM" }
+{"index": {"_index": "set_eod", "_type": "eod", "_id": "20070301_VAYU1"}}
+{"symbol": "VAYU1", "eodDate": "2007-03-01T00:00:00", "open": 8.72, "high": 8.73, "low": 8.71, "close": 8.73, "volume": 102200, "id": "20070301_VAYU1" }

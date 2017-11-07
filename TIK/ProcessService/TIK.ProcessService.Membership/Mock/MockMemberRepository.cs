@@ -43,6 +43,25 @@ namespace TIK.ProcessService.Membership.Mock
             }
 
         }
+
+        public Int32 Add(Member entry)
+        {
+            if (entry.Id == 0)
+            {
+                entry.Id = _members.Max(a => a.Id) + 1;
+            }
+            var member = _members.FirstOrDefault(a => a.Id == entry.Id);
+            if (member == null)
+            {
+                _members.Add(entry);
+            }
+            else
+            {
+                member.Name = entry.Name;
+                member.ContactInfo = entry.ContactInfo;
+            }
+            return entry.Id;
+        }
         public Int32 Save(Member entry)
         {
             if(entry.Id==0){

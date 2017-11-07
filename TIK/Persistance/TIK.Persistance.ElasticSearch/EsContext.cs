@@ -6,19 +6,21 @@ namespace TIK.Persistance.ElasticSearch
     public class EsContext
     {
         private readonly Uri _elastiSearchServerUrl;
-        private readonly string _index;
-        public EsContext(string index, Uri elastiSearchServerUrl = null)
+        private readonly string _indexName;
+        public EsContext(Uri elastiSearchServerUrl = null, string indexName = "")
         {
-            _index = index;
+            _indexName = indexName;
             _elastiSearchServerUrl = elastiSearchServerUrl;
   
         }
+
+        public string IndexName { get { return _indexName; }}
 
         public IElasticClient CreateClient()
         {
             return _elastiSearchServerUrl != null ?
                 new ElasticClient(new ConnectionSettings(_elastiSearchServerUrl)
-                                  .DefaultIndex(_index))
+                                  .DefaultIndex(_indexName))
 
                   : new ElasticClient();
 

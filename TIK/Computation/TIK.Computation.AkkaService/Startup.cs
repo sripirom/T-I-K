@@ -3,11 +3,13 @@ using System.IO;
 using Akka.Actor;
 using Microsoft.AspNetCore.Builder;
 using Serilog;
-using TIK.Applications.Membership.Jobs;
-using TIK.Applications.Membership.JobSlots;
-using TIK.Applications.Membership.Members;
+using TIK.Applications.Online.BackLogs;
+using TIK.Applications.Online.Jobs;
+using TIK.Applications.Online.Members;
 using TIK.Core.Logging;
+using TIK.Domain.Membership;
 using TIK.Integration.WebApi.Batch;
+using TIK.Persistance.ElasticSearch.Mocks;
 
 namespace TIK.Computation.AkkaService
 {
@@ -44,15 +46,16 @@ namespace TIK.Computation.AkkaService
         {
             try
             {
+                string host = @"127.0.0.1:5301";
+
                 var huconConfig = Path.Combine(Directory.GetCurrentDirectory(), "Hucon.txt");
                 var config = HoconLoader.FromFile(huconConfig);
-                ActorSystemInstance = ActorSystem.Create("MembershipSystem", config);
+                ActorSystemInstance = ActorSystem.Create("OnlineSystem", config);
+                IMemberRepository memberRepository = new MockMemberRepository();
 
-                var provider = new JobActorProvider(actorSystem: ActorSystemInstance, batchPublisher: new BatchPublisher(new Uri("http://localhost:5102")));
-                var jobsActor = provider.Get();
-                //var jobSlotsActorInstance = ActorSystemInstance.ActorOf(JobSlotsActor.Props(provider.Get()), "jobSlots");
-                var jobsSlotProvider = new JobSlotsActorProvider(ActorSystemInstance, provider);
-                    var memberController = ActorSystemInstance.ActorOf(Props.Create(typeof(MemberControllerActor), jobsSlotProvider), "MemberController");
+                var memberController = MemberActorProvider.CreateInstance(ActorSystemInstance, memberRepository);
+                var jobsActorProvider = JobsActorProvider.CreateInstance(ActorSystemInstance);
+                var backLogsActorProvider = BackLogsActorProvider.CreateInstance(ActorSystemInstance, new JobsActorProvider(ActorSystemInstance, host));
 
             } 
             catch (Exception ex)

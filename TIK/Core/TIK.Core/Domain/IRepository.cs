@@ -7,6 +7,8 @@ namespace TIK.Core.Domain
 {
     public interface IRepository<T, TId>
     {
+        TId Add(T entry);
+
         TId Save(T entry);
 
         T Get(TId id);

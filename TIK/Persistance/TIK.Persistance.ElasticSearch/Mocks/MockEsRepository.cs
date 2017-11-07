@@ -50,9 +50,28 @@ namespace TIK.Persistance.ElasticSearch.Mocks
             }
 
         }
+
+        public Int32 Add(T entry)
+        {
+            if (entry.Id == 0)
+            {
+                entry.Id = _collection.Count() + 1;
+            }
+            var persistEntity = _collection.FirstOrDefault(a => a.Id.Equals(entry.Id));
+            if (persistEntity == null)
+            {
+                _collection.Add(entry);
+            }
+            else
+            {
+                persistEntity = entry;
+            }
+            return entry.Id;
+        }
+
         public Int32 Save(T entry)
         {
-            //if (entry.Id == 0)
+            if (entry.Id == 0)
             {
                 entry.Id = _collection.Count() + 1;
             }

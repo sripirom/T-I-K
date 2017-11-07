@@ -13,9 +13,9 @@
   <ItemGroup>
     <Folder Include="Jobs\" />
     <Folder Include="JobSlots\" />
-    <Folder Include="Members\" />
     <Folder Include="Mocks\" />
     <Folder Include="Routes\" />
+    <Folder Include="Members\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Akka" Version="1.3.1" />

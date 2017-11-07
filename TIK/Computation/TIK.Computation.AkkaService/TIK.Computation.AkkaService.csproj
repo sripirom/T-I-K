@@ -16,11 +16,13 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Applications\TIK.Applications\TIK.Applications.csproj" />
-    <ProjectReference Include="..\..\Applications\TIK.Applications.Membership\TIK.Applications.Membership.csproj" />
     <ProjectReference Include="..\TIK.Computation\TIK.Computation.csproj" />
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
     <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
     <ProjectReference Include="..\..\Integration\TIK.Integration\TIK.Integration.csproj" />
     <ProjectReference Include="..\..\Integration\TIK.Integration.WebApi\TIK.Integration.WebApi.csproj" />
+    <ProjectReference Include="..\..\Applications\TIK.Applications.Online\TIK.Applications.Online.csproj" />
+    <ProjectReference Include="..\..\Persistance\TIK.Persistance\TIK.Persistance.csproj" />
+    <ProjectReference Include="..\..\Persistance\TIK.Persistance.ElasticSearch\TIK.Persistance.ElasticSearch.csproj" />
   </ItemGroup>
 </Project>

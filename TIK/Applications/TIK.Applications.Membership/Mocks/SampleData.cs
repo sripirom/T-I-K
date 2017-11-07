@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using TIK.Domain.Membership;
+using TIK.Domain.Jobs;
 
 namespace TIK.Applications.Membership.Mocks
 {

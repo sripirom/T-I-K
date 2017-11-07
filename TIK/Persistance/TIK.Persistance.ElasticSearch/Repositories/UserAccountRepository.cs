@@ -7,8 +7,8 @@ namespace TIK.Persistance.ElasticSearch.Repositories
 {
     public class UserAccountRepository : EsRepository<UserAccount, Int32>, IUserAccountRepository
     {
-        public UserAccountRepository(IElasticClient elasticClient)
-            :base(elasticClient)
+        public UserAccountRepository(IElasticClient elasticClient, string indexName)
+            :base(elasticClient, indexName)
         {
         }
     }

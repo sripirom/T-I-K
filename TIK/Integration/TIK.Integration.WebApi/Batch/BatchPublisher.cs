@@ -5,7 +5,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using TIK.Domain.Membership;
+using TIK.Domain.Jobs;
 using TIK.Domain.SearchNews;
 using TIK.Integration.Batch;
 
