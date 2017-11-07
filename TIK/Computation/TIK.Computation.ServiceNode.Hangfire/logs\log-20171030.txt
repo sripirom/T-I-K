@@ -1,0 +1,149 @@
+2017-10-30 22:36:18.724 +07:00 [Information] Accepted args: NodeOptions { Identifier: "nodeA", Queues: "default,order,batch", WorkerCount: 20 }
+2017-10-30 22:36:21.945 +07:00 [Information] Starting Hangfire Server
+2017-10-30 22:36:21.949 +07:00 [Information] Using job storage: 'redis://localhost:6379/0'
+2017-10-30 22:36:21.955 +07:00 [Information] Using the following options for Redis job storage:
+2017-10-30 22:36:21.958 +07:00 [Information] ConnectionString: localhost:6379
+DN: 0
+2017-10-30 22:36:21.958 +07:00 [Information] Using the following options for Hangfire Server:
+2017-10-30 22:36:21.959 +07:00 [Information]     Worker count: 20
+2017-10-30 22:36:21.961 +07:00 [Information]     Listening queues: 'default', 'order', 'batch'
+2017-10-30 22:36:21.961 +07:00 [Information]     Shutdown timeout: 00:00:15
+2017-10-30 22:36:21.961 +07:00 [Information]     Schedule polling interval: 00:00:15
+2017-10-30 22:36:22.018 +07:00 [Debug] Background process 'BackgroundProcessingServer' started.
+2017-10-30 22:36:22.024 +07:00 [Information] The hangfire server "nodeA" [queues: "default,order,batch", workercount: 20] is now running, press Control+C to exit.
+2017-10-30 22:36:22.154 +07:00 [Debug] Background process 'ServerHeartbeat' started.
+2017-10-30 22:36:22.214 +07:00 [Debug] Background process 'ServerWatchdog' started.
+2017-10-30 22:36:22.256 +07:00 [Debug] Background process 'Hangfire.Redis.FetchedJobsWatcher' started.
+2017-10-30 22:36:22.285 +07:00 [Debug] Background process 'Hangfire.Redis.RedisSubscription' started.
+2017-10-30 22:36:22.326 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-10-30 22:36:22.328 +07:00 [Debug] Background process 'Worker #43754bb6' started.
+2017-10-30 22:36:22.396 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-10-30 22:36:22.400 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-10-30 22:36:22.404 +07:00 [Debug] Background process 'Worker #d322dfa3' started.
+2017-10-30 22:36:22.443 +07:00 [Debug] Acquiring the lock for the fetched list of the 'batch' queue...
+2017-10-30 22:36:22.443 +07:00 [Debug] Background process 'Worker #ebf9f525' started.
+2017-10-30 22:36:22.455 +07:00 [Information] 3 servers were removed due to timeout
+2017-10-30 22:36:22.455 +07:00 [Debug] Looking for timed out jobs in the 'batch' queue...
+2017-10-30 22:36:22.474 +07:00 [Debug] Background process 'Worker #1840fb66' started.
+2017-10-30 22:36:22.476 +07:00 [Debug] No timed out jobs were found in the 'batch' queue
+2017-10-30 22:36:22.511 +07:00 [Debug] Background process 'Worker #cb94dfe1' started.
+2017-10-30 22:36:22.584 +07:00 [Debug] Background process 'Worker #66dd6624' started.
+2017-10-30 22:36:22.604 +07:00 [Debug] Background process 'Worker #44a5130a' started.
+2017-10-30 22:36:22.646 +07:00 [Debug] Background process 'Worker #8ee9efac' started.
+2017-10-30 22:36:22.676 +07:00 [Debug] Background process 'Worker #e93eb7b0' started.
+2017-10-30 22:36:22.782 +07:00 [Debug] Background process 'Worker #ce395cfb' started.
+2017-10-30 22:36:22.911 +07:00 [Debug] Background process 'Worker #33c80501' started.
+2017-10-30 22:36:22.913 +07:00 [Debug] Background process 'Worker #0482406d' started.
+2017-10-30 22:36:22.914 +07:00 [Debug] Background process 'Worker #44ce43c4' started.
+2017-10-30 22:36:22.967 +07:00 [Debug] Background process 'Worker #a917bef4' started.
+2017-10-30 22:36:23.048 +07:00 [Debug] Background process 'Worker #144a40fa' started.
+2017-10-30 22:36:23.109 +07:00 [Debug] Background process 'Worker #d6765056' started.
+2017-10-30 22:36:23.119 +07:00 [Debug] Background process 'Worker #43d012f0' started.
+2017-10-30 22:36:23.299 +07:00 [Debug] Background process 'Worker #500711f8' started.
+2017-10-30 22:36:23.299 +07:00 [Debug] Background process 'Worker #0bb0fbb8' started.
+2017-10-30 22:36:23.307 +07:00 [Debug] Background process 'Worker #c84d859d' started.
+2017-10-30 22:36:23.309 +07:00 [Debug] Background process 'DelayedJobScheduler' started.
+2017-10-30 22:36:23.332 +07:00 [Debug] Background process 'RecurringJobScheduler' started.
+2017-10-30 22:37:22.479 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-10-30 22:37:22.480 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-10-30 22:37:22.480 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-10-30 22:37:22.481 +07:00 [Debug] Acquiring the lock for the fetched list of the 'batch' queue...
+2017-10-30 22:37:22.481 +07:00 [Debug] Looking for timed out jobs in the 'batch' queue...
+2017-10-30 22:37:22.481 +07:00 [Debug] No timed out jobs were found in the 'batch' queue
+2017-10-30 22:38:22.485 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-10-30 22:38:22.486 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-10-30 22:38:22.487 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-10-30 22:38:22.487 +07:00 [Debug] Acquiring the lock for the fetched list of the 'batch' queue...
+2017-10-30 22:38:22.488 +07:00 [Debug] Looking for timed out jobs in the 'batch' queue...
+2017-10-30 22:38:22.488 +07:00 [Debug] No timed out jobs were found in the 'batch' queue
+2017-10-30 22:39:22.492 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-10-30 22:39:22.492 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-10-30 22:39:22.493 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-10-30 22:39:22.494 +07:00 [Debug] Acquiring the lock for the fetched list of the 'batch' queue...
+2017-10-30 22:39:22.494 +07:00 [Debug] Looking for timed out jobs in the 'batch' queue...
+2017-10-30 22:39:22.495 +07:00 [Debug] No timed out jobs were found in the 'batch' queue
+2017-10-30 22:39:25.678 +07:00 [Information] SearchNewsBankOfThailand
+2017-10-30 22:39:35.757 +07:00 [Information] AnalysisResult
+2017-10-30 22:39:35.761 +07:00 [Information] ReportingResult
+2017-10-30 22:40:02.547 +07:00 [Information] SearchNewsBankOfThailand
+2017-10-30 22:40:12.562 +07:00 [Information] AnalysisResult
+2017-10-30 22:40:12.567 +07:00 [Information] ReportingResult
+2017-10-30 22:40:22.499 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-10-30 22:40:22.499 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-10-30 22:40:22.500 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-10-30 22:40:22.501 +07:00 [Debug] Acquiring the lock for the fetched list of the 'batch' queue...
+2017-10-30 22:40:22.501 +07:00 [Debug] Looking for timed out jobs in the 'batch' queue...
+2017-10-30 22:40:22.502 +07:00 [Debug] No timed out jobs were found in the 'batch' queue
+2017-10-30 22:40:33.228 +07:00 [Information] SearchNewsBankOfThailand
+2017-10-30 22:40:43.254 +07:00 [Information] AnalysisResult
+2017-10-30 22:40:43.257 +07:00 [Information] ReportingResult
+2017-10-30 22:41:22.506 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-10-30 22:41:22.506 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-10-30 22:41:22.507 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-10-30 22:41:22.507 +07:00 [Debug] Acquiring the lock for the fetched list of the 'batch' queue...
+2017-10-30 22:41:22.507 +07:00 [Debug] Looking for timed out jobs in the 'batch' queue...
+2017-10-30 22:41:22.508 +07:00 [Debug] No timed out jobs were found in the 'batch' queue
+2017-10-30 22:59:29.829 +07:00 [Information] Accepted args: NodeOptions { Identifier: "nodeA", Queues: "default,order,batch", WorkerCount: 20 }
+2017-10-30 22:59:32.103 +07:00 [Information] Starting Hangfire Server
+2017-10-30 22:59:32.104 +07:00 [Information] Using job storage: 'redis://localhost:6379/0'
+2017-10-30 22:59:32.105 +07:00 [Information] Using the following options for Redis job storage:
+2017-10-30 22:59:32.105 +07:00 [Information] ConnectionString: localhost:6379
+DN: 0
+2017-10-30 22:59:32.105 +07:00 [Information] Using the following options for Hangfire Server:
+2017-10-30 22:59:32.106 +07:00 [Information]     Worker count: 20
+2017-10-30 22:59:32.106 +07:00 [Information]     Listening queues: 'default', 'order', 'batch'
+2017-10-30 22:59:32.108 +07:00 [Information]     Shutdown timeout: 00:00:15
+2017-10-30 22:59:32.109 +07:00 [Information]     Schedule polling interval: 00:00:15
+2017-10-30 22:59:32.194 +07:00 [Debug] Background process 'BackgroundProcessingServer' started.
+2017-10-30 22:59:32.208 +07:00 [Information] The hangfire server "nodeA" [queues: "default,order,batch", workercount: 20] is now running, press Control+C to exit.
+2017-10-30 22:59:32.361 +07:00 [Debug] Background process 'ServerWatchdog' started.
+2017-10-30 22:59:32.388 +07:00 [Debug] Background process 'ServerHeartbeat' started.
+2017-10-30 22:59:32.417 +07:00 [Debug] Background process 'Hangfire.Redis.FetchedJobsWatcher' started.
+2017-10-30 22:59:32.449 +07:00 [Debug] Background process 'Hangfire.Redis.RedisSubscription' started.
+2017-10-30 22:59:32.463 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-10-30 22:59:32.525 +07:00 [Debug] Background process 'Worker #bb4e36c3' started.
+2017-10-30 22:59:32.536 +07:00 [Debug] Background process 'Worker #3f8be8e0' started.
+2017-10-30 22:59:32.559 +07:00 [Information] 1 servers were removed due to timeout
+2017-10-30 22:59:32.561 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-10-30 22:59:32.586 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-10-30 22:59:32.586 +07:00 [Debug] Background process 'Worker #72fa8980' started.
+2017-10-30 22:59:32.715 +07:00 [Debug] Background process 'Worker #be60065e' started.
+2017-10-30 22:59:32.716 +07:00 [Debug] Background process 'Worker #eabc26b8' started.
+2017-10-30 22:59:32.734 +07:00 [Debug] Background process 'Worker #aed0dc69' started.
+2017-10-30 22:59:32.927 +07:00 [Debug] Background process 'Worker #e007b9c6' started.
+2017-10-30 22:59:33.060 +07:00 [Debug] Acquiring the lock for the fetched list of the 'batch' queue...
+2017-10-30 22:59:33.063 +07:00 [Debug] Looking for timed out jobs in the 'batch' queue...
+2017-10-30 22:59:33.064 +07:00 [Debug] No timed out jobs were found in the 'batch' queue
+2017-10-30 22:59:33.066 +07:00 [Debug] Background process 'Worker #a88ce626' started.
+2017-10-30 22:59:33.066 +07:00 [Debug] Background process 'Worker #37584e56' started.
+2017-10-30 22:59:33.095 +07:00 [Debug] Background process 'Worker #b83e9814' started.
+2017-10-30 22:59:33.096 +07:00 [Debug] Background process 'Worker #a8be0299' started.
+2017-10-30 22:59:33.417 +07:00 [Debug] Background process 'Worker #6ff9e30f' started.
+2017-10-30 22:59:33.470 +07:00 [Debug] Background process 'Worker #43810081' started.
+2017-10-30 22:59:33.480 +07:00 [Debug] Background process 'Worker #114f3e41' started.
+2017-10-30 22:59:33.530 +07:00 [Debug] Background process 'Worker #677c6f3f' started.
+2017-10-30 22:59:33.564 +07:00 [Debug] Background process 'DelayedJobScheduler' started.
+2017-10-30 22:59:33.564 +07:00 [Debug] Background process 'Worker #e0b196ca' started.
+2017-10-30 22:59:33.573 +07:00 [Debug] Background process 'Worker #7d3d085d' started.
+2017-10-30 22:59:33.600 +07:00 [Debug] Background process 'Worker #c742af54' started.
+2017-10-30 22:59:33.600 +07:00 [Debug] Background process 'Worker #4aa4777b' started.
+2017-10-30 22:59:33.600 +07:00 [Debug] Background process 'Worker #524a8b4d' started.
+2017-10-30 22:59:33.600 +07:00 [Debug] Background process 'RecurringJobScheduler' started.
+2017-10-30 23:00:33.143 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-10-30 23:00:33.144 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-10-30 23:00:33.145 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-10-30 23:00:33.146 +07:00 [Debug] Acquiring the lock for the fetched list of the 'batch' queue...
+2017-10-30 23:00:33.146 +07:00 [Debug] Looking for timed out jobs in the 'batch' queue...
+2017-10-30 23:00:33.147 +07:00 [Debug] No timed out jobs were found in the 'batch' queue
+2017-10-30 23:01:33.151 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-10-30 23:01:33.152 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-10-30 23:01:33.153 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-10-30 23:01:33.154 +07:00 [Debug] Acquiring the lock for the fetched list of the 'batch' queue...
+2017-10-30 23:01:33.154 +07:00 [Debug] Looking for timed out jobs in the 'batch' queue...
+2017-10-30 23:01:33.155 +07:00 [Debug] No timed out jobs were found in the 'batch' queue
+2017-10-30 23:02:33.158 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-10-30 23:02:33.159 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-10-30 23:02:33.159 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-10-30 23:02:33.160 +07:00 [Debug] Acquiring the lock for the fetched list of the 'batch' queue...
+2017-10-30 23:02:33.160 +07:00 [Debug] Looking for timed out jobs in the 'batch' queue...
+2017-10-30 23:02:33.161 +07:00 [Debug] No timed out jobs were found in the 'batch' queue

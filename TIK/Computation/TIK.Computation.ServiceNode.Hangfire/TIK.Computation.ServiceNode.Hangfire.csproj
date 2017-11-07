@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>TRACE;LIBLOG_PUBLIC;DEBUG;NETCOREAPP2_0</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="HangFire.Redis.StackExchange" Version="1.7.0" />
+    <PackageReference Include="CommandLineParser" Version="2.1.1-beta" />
+    <PackageReference Include="Serilog.Sinks.Literate" Version="2.1.0" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+    <PackageReference Include="HangFire.Autofac" Version="2.3.1" />
+    <PackageReference Include="StackExchange.Redis" Version="1.2.6" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.1.0-preview1-27173" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Applications\TIK.Applications\TIK.Applications.csproj" />
+    <ProjectReference Include="..\..\Applications\TIK.Applications.DataTransformation\TIK.Applications.DataTransformation.csproj" />
+    <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
+    <ProjectReference Include="..\..\Integration\TIK.Integration.SignalR\TIK.Integration.SignalR.csproj" />
+    <ProjectReference Include="..\..\Applications\TIK.Applications.Batch\TIK.Applications.Batch.csproj" />
+    <ProjectReference Include="..\..\Integration\TIK.Integration\TIK.Integration.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Integration\" />
+  </ItemGroup>
+</Project>

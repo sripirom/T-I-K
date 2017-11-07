@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div >
+    <table>
+        <tr>
+            <td>
+
+                <input id="uploadInput" type="file" />
+
+                <button onclick="clientGobusomthing.ButtonClickEvent(this)">GO</button>
+                <text id="a1"></text>
+            </td>
+        </tr>
+    </table>
+</div>
+   <!--Script references. -->
+   <script src="http://localhost:5000/lib/signalr-client/signalr-client.js"></script>
+<script>
+    
+        Globallocalstory = [];
+
+        GlobalAPILocation = {
+            DataTransform: function (whosend, doshomthing)
+            { return 'http://localhost:5000/api/DataTransformation/Create' + "/" + whosend + "/" + doshomthing }
+        };
+
+        var clientGobusomthing = {
+       
+
+            ButtonClickEvent: function (obj) {
+
+                var element = document.getElementById("uploadInput");
+                var file = element.files[0];
+
+                var loFormData = new FormData();
+                loFormData.append("filename", file.name);
+                loFormData.append("file", file);
+
+                var loAjaxRequest =  $.ajax({
+                    cache: false,
+                    type: 'POST',
+                    url: "http://localhost:5000/api/DataTransformation/?filename=" + file.name,
+                    contentType: false,
+                    processData: false,
+                    data: file
+                });
+                loAjaxRequest.done(function (xhr, textStatus) {
+                    alert(textStatus);
+                });
+            },
+           
+            ajaxCallBack: function (data) {
+          
+                Globallocalstory.push(data);
+                clientGobusomthing.UpdateTextUI("a1", 'Callbacked');
+
+            },
+           
+            ReceverSignalrMsg: function (taskId, who, message) {
+
+            
+                var hiddenElement = document.createElement('a');
+
+                hiddenElement.href = 'data:application/octet-stream;charset=utf-8;base64,' + message;
+                hiddenElement.target = '_blank';
+                hiddenElement.download = taskId;
+                hiddenElement.click();
+
+            },
+     
+            UpdateTextUI: function (tagId, msg) {
+                $('#' + tagId).text(msg);
+            }
+        };
+
+        $(function () {
+
+            $.connection.hub.url = "http://localhost:5000"
+            $.connection.hub.logging = true;
+
+            var hfhub = $.connection.dataStreamHUB;
+            hfhub.client.receiveMessage = clientGobusomthing.ReceverSignalrMsg;
+            $.connection.hub.start();
+        });
+</script>

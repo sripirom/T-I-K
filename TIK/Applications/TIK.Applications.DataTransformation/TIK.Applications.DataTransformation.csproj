@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Commands\Delimited\" />
+    <Folder Include="Commands\FixedLength\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
+    <ProjectReference Include="..\TIK.Applications\TIK.Applications.csproj" />
+    <ProjectReference Include="..\..\Integration\TIK.Integration\TIK.Integration.csproj" />
+  </ItemGroup>
+</Project>

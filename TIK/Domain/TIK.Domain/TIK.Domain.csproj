@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Transaction\" />
+    <Folder Include="Transaction\Bulk\" />
+    <Folder Include="Transaction\Single\" />
+    <Folder Include="Membership\" />
+    <Folder Include="UserAccounts\" />
+    <Folder Include="SearchNews\" />
+    <Folder Include="Notifications\" />
+    <Folder Include="TheSet\" />
+    <Folder Include="Jobs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
+  </ItemGroup>
+</Project>

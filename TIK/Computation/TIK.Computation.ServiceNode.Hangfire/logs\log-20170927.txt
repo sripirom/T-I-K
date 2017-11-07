@@ -1,0 +1,88 @@
+2017-09-27 23:10:06.881 +07:00 [Information] Accepted args: NodeOptions { Identifier: "nodeA", Queues: "order,storage", WorkerCount: 20 }
+2017-09-27 23:10:07.733 +07:00 [Information] Starting Hangfire Server
+2017-09-27 23:10:07.734 +07:00 [Information] Using job storage: 'redis://localhost:6379/0'
+2017-09-27 23:10:07.734 +07:00 [Information] Using the following options for Redis job storage:
+2017-09-27 23:10:07.735 +07:00 [Information] ConnectionString: localhost:6379
+DN: 0
+2017-09-27 23:10:07.735 +07:00 [Information] Using the following options for Hangfire Server:
+2017-09-27 23:10:07.735 +07:00 [Information]     Worker count: 20
+2017-09-27 23:10:07.736 +07:00 [Information]     Listening queues: 'order', 'storage'
+2017-09-27 23:10:07.736 +07:00 [Information]     Shutdown timeout: 00:00:15
+2017-09-27 23:10:07.736 +07:00 [Information]     Schedule polling interval: 00:00:15
+2017-09-27 23:10:07.754 +07:00 [Information] The hangfire server "nodeA" [queues: "order,storage", workercount: 20] is now running, press Control+C to exit.
+2017-09-27 23:10:07.762 +07:00 [Debug] Background process 'BackgroundProcessingServer' started.
+2017-09-27 23:10:07.847 +07:00 [Debug] Background process 'ServerHeartbeat' started.
+2017-09-27 23:10:07.885 +07:00 [Debug] Background process 'ServerWatchdog' started.
+2017-09-27 23:10:07.911 +07:00 [Debug] Background process 'Hangfire.Redis.FetchedJobsWatcher' started.
+2017-09-27 23:10:07.933 +07:00 [Debug] Background process 'Hangfire.Redis.RedisSubscription' started.
+2017-09-27 23:10:08.041 +07:00 [Debug] Background process 'Worker #a792b368' started.
+2017-09-27 23:10:08.041 +07:00 [Debug] Background process 'Worker #35281e9e' started.
+2017-09-27 23:10:08.055 +07:00 [Debug] Background process 'Worker #cbc414db' started.
+2017-09-27 23:10:08.118 +07:00 [Debug] Background process 'Worker #63ea830a' started.
+2017-09-27 23:10:08.141 +07:00 [Debug] Background process 'Worker #8a07153f' started.
+2017-09-27 23:10:08.141 +07:00 [Debug] Background process 'Worker #f4f9f660' started.
+2017-09-27 23:10:08.172 +07:00 [Debug] Background process 'Worker #6bf106ff' started.
+2017-09-27 23:10:08.225 +07:00 [Debug] Background process 'Worker #3049a09a' started.
+2017-09-27 23:10:08.225 +07:00 [Debug] Background process 'Worker #89d880dc' started.
+2017-09-27 23:10:08.226 +07:00 [Debug] Background process 'Worker #f1d1bc49' started.
+2017-09-27 23:10:08.226 +07:00 [Debug] Background process 'Worker #ef90e383' started.
+2017-09-27 23:10:08.233 +07:00 [Debug] Background process 'Worker #2de9ecc8' started.
+2017-09-27 23:10:08.316 +07:00 [Debug] Background process 'Worker #43f32edb' started.
+2017-09-27 23:10:08.324 +07:00 [Debug] Background process 'Worker #91fa8b0d' started.
+2017-09-27 23:10:08.395 +07:00 [Debug] Background process 'Worker #b40ff78d' started.
+2017-09-27 23:10:08.414 +07:00 [Debug] Background process 'Worker #132dfce8' started.
+2017-09-27 23:10:08.415 +07:00 [Debug] Background process 'Worker #6d9aeb1f' started.
+2017-09-27 23:10:08.435 +07:00 [Debug] Background process 'Worker #962767d0' started.
+2017-09-27 23:10:08.435 +07:00 [Debug] Background process 'Worker #251ecb99' started.
+2017-09-27 23:10:08.467 +07:00 [Debug] Background process 'Worker #8edae5c7' started.
+2017-09-27 23:10:08.473 +07:00 [Debug] Background process 'DelayedJobScheduler' started.
+2017-09-27 23:10:08.473 +07:00 [Debug] Background process 'RecurringJobScheduler' started.
+2017-09-27 23:16:00.665 +07:00 [Debug] Background process 'DelayedJobScheduler' stopped.
+2017-09-27 23:16:00.689 +07:00 [Debug] Background process 'ServerHeartbeat' stopped.
+2017-09-27 23:16:00.696 +07:00 [Debug] Background process 'ServerWatchdog' stopped.
+2017-09-27 23:16:00.702 +07:00 [Debug] Background process 'Hangfire.Redis.FetchedJobsWatcher' stopped.
+2017-09-27 23:16:00.719 +07:00 [Debug] Background process 'Hangfire.Redis.RedisSubscription' stopped.
+2017-09-27 23:16:00.725 +07:00 [Verbose] Background process 'Worker #a792b368' was stopped due to a shutdown request.
+2017-09-27 23:16:00.725 +07:00 [Verbose] Background process 'Worker #f1d1bc49' was stopped due to a shutdown request.
+2017-09-27 23:16:00.726 +07:00 [Verbose] Background process 'Worker #b40ff78d' was stopped due to a shutdown request.
+2017-09-27 23:16:00.727 +07:00 [Verbose] Background process 'Worker #63ea830a' was stopped due to a shutdown request.
+2017-09-27 23:16:00.727 +07:00 [Debug] Background process 'Worker #f1d1bc49' stopped.
+2017-09-27 23:16:00.727 +07:00 [Debug] Background process 'Worker #63ea830a' stopped.
+2017-09-27 23:16:00.725 +07:00 [Debug] Background process 'Worker #a792b368' stopped.
+2017-09-27 23:16:00.727 +07:00 [Debug] Background process 'Worker #b40ff78d' stopped.
+2017-09-27 23:16:00.725 +07:00 [Verbose] Background process 'Worker #ef90e383' was stopped due to a shutdown request.
+2017-09-27 23:16:00.771 +07:00 [Debug] Background process 'Worker #ef90e383' stopped.
+2017-09-27 23:16:00.725 +07:00 [Verbose] Background process 'Worker #2de9ecc8' was stopped due to a shutdown request.
+2017-09-27 23:16:00.777 +07:00 [Debug] Background process 'Worker #2de9ecc8' stopped.
+2017-09-27 23:16:00.762 +07:00 [Verbose] Background process 'Worker #91fa8b0d' was stopped due to a shutdown request.
+2017-09-27 23:16:00.802 +07:00 [Debug] Background process 'Worker #91fa8b0d' stopped.
+2017-09-27 23:16:00.726 +07:00 [Verbose] Background process 'Worker #35281e9e' was stopped due to a shutdown request.
+2017-09-27 23:16:00.727 +07:00 [Verbose] Background process 'Worker #cbc414db' was stopped due to a shutdown request.
+2017-09-27 23:16:00.816 +07:00 [Debug] Background process 'Worker #cbc414db' stopped.
+2017-09-27 23:16:00.815 +07:00 [Debug] Background process 'Worker #35281e9e' stopped.
+2017-09-27 23:16:00.770 +07:00 [Verbose] Background process 'Worker #132dfce8' was stopped due to a shutdown request.
+2017-09-27 23:16:00.826 +07:00 [Verbose] Background process 'Worker #8edae5c7' was stopped due to a shutdown request.
+2017-09-27 23:16:00.827 +07:00 [Debug] Background process 'Worker #132dfce8' stopped.
+2017-09-27 23:16:00.827 +07:00 [Debug] Background process 'Worker #8edae5c7' stopped.
+2017-09-27 23:16:00.726 +07:00 [Verbose] Background process 'Worker #8a07153f' was stopped due to a shutdown request.
+2017-09-27 23:16:00.736 +07:00 [Verbose] Background process 'Worker #f4f9f660' was stopped due to a shutdown request.
+2017-09-27 23:16:00.838 +07:00 [Debug] Background process 'Worker #f4f9f660' stopped.
+2017-09-27 23:16:00.838 +07:00 [Debug] Background process 'Worker #8a07153f' stopped.
+2017-09-27 23:16:00.736 +07:00 [Verbose] Background process 'Worker #6bf106ff' was stopped due to a shutdown request.
+2017-09-27 23:16:00.848 +07:00 [Debug] Background process 'Worker #6bf106ff' stopped.
+2017-09-27 23:16:00.761 +07:00 [Verbose] Background process 'Worker #3049a09a' was stopped due to a shutdown request.
+2017-09-27 23:16:00.854 +07:00 [Debug] Background process 'Worker #3049a09a' stopped.
+2017-09-27 23:16:00.862 +07:00 [Verbose] Background process 'Worker #251ecb99' was stopped due to a shutdown request.
+2017-09-27 23:16:00.862 +07:00 [Debug] Background process 'Worker #251ecb99' stopped.
+2017-09-27 23:16:00.777 +07:00 [Verbose] Background process 'Worker #6d9aeb1f' was stopped due to a shutdown request.
+2017-09-27 23:16:00.761 +07:00 [Verbose] Background process 'Worker #89d880dc' was stopped due to a shutdown request.
+2017-09-27 23:16:00.869 +07:00 [Debug] Background process 'Worker #6d9aeb1f' stopped.
+2017-09-27 23:16:00.771 +07:00 [Verbose] Background process 'Worker #962767d0' was stopped due to a shutdown request.
+2017-09-27 23:16:00.762 +07:00 [Verbose] Background process 'Worker #43f32edb' was stopped due to a shutdown request.
+2017-09-27 23:16:00.876 +07:00 [Debug] Background process 'Worker #962767d0' stopped.
+2017-09-27 23:16:00.876 +07:00 [Debug] Background process 'Worker #43f32edb' stopped.
+2017-09-27 23:16:00.869 +07:00 [Debug] Background process 'Worker #89d880dc' stopped.
+2017-09-27 23:16:00.893 +07:00 [Verbose] Background process 'RecurringJobScheduler' was stopped due to a shutdown request.
+2017-09-27 23:16:00.894 +07:00 [Debug] Background process 'RecurringJobScheduler' stopped.
+2017-09-27 23:16:00.905 +07:00 [Debug] Background process 'BackgroundProcessingServer' stopped.
+2017-09-27 23:16:00.905 +07:00 [Information] Hangfire Server stopped.
