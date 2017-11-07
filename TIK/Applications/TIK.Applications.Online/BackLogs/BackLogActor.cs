@@ -74,7 +74,7 @@ namespace TIK.Applications.Online.BackLogs
             if (existingBackLogItemWithJob is BackLogItem)
             {
                 // Add to existing backLog item
-                existingBackLogItemWithJob.Command = command;
+                existingBackLogItemWithJob.Procedure = command;
                 return new ItemAdded(
                     backLogItemId: existingBackLogItemWithJob.Id
                 );
@@ -85,11 +85,11 @@ namespace TIK.Applications.Online.BackLogs
                 var backLogItemId = Guid.NewGuid();
                 this.BackLogState.Items.Add(new BackLogItem {
                     Id = backLogItemId,
-                    JobId = jobToAdd.Id,
-                    Title = jobToAdd.Application,
-                    Brand = jobToAdd.Procedure,
-                    PricePerUnit = jobToAdd.PricePerUnit,
-                    Command = command
+                    JobId = jobToAdd.Id.ToString(),
+                    Title = command,
+                    Application = jobToAdd.Application,
+                    //PricePerUnit = jobToAdd.PricePerUnit,
+                    Procedure = jobToAdd.Procedure
                 });
 
                 return new ItemAdded(backLogItemId);

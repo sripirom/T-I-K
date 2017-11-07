@@ -14,10 +14,10 @@ namespace TIK.Applications.Online.BackLogs
             public readonly int JobId;
             public readonly string Command;
 
-            public AddItemToBackLog(int memberId = 0, int jobId = 0, string amount = "") : base(memberId)
+            public AddItemToBackLog(int memberId = 0, int jobId = 0, string command = "") : base(memberId)
             {
                 this.JobId = jobId;
-                this.Command = amount;
+                this.Command = command;
             }
         }
 

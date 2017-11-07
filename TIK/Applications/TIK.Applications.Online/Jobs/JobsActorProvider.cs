@@ -1,5 +1,6 @@
 using System;
 using Akka.Actor;
+using TIK.Integration.Batch;
 
 namespace TIK.Applications.Online.Jobs
 {
@@ -20,10 +21,10 @@ namespace TIK.Applications.Online.Jobs
             return JobsActor;
         }
 
-        public static IActorRef CreateInstance(ActorSystem actorSystem)
+        public static IActorRef CreateInstance(ActorSystem actorSystem, IBatchPublisher batchPublisher)
         {
             var jobs = SampleData.Get(); // set sample jobs
-            return actorSystem.ActorOf(Props.Create<JobsActor>(jobs), "jobs");
+            return actorSystem.ActorOf(Props.Create<JobsActor>(jobs, batchPublisher), "jobs");
         }
     }
 }

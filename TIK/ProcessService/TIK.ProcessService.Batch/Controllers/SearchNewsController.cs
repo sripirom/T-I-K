@@ -3,7 +3,7 @@ using Hangfire;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TIK.Applications.Batch.Commands.SearchNews;
-using TIK.Domain.Membership;
+using TIK.Domain.Jobs;
 using TIK.Domain.SearchNews;
 using TIK.ProcessService.Batch.Models;
 

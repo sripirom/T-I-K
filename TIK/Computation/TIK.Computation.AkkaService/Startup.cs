@@ -8,6 +8,7 @@ using TIK.Applications.Online.Jobs;
 using TIK.Applications.Online.Members;
 using TIK.Core.Logging;
 using TIK.Domain.Membership;
+using TIK.Integration.Batch;
 using TIK.Integration.WebApi.Batch;
 using TIK.Persistance.ElasticSearch.Mocks;
 
@@ -52,9 +53,10 @@ namespace TIK.Computation.AkkaService
                 var config = HoconLoader.FromFile(huconConfig);
                 ActorSystemInstance = ActorSystem.Create("OnlineSystem", config);
                 IMemberRepository memberRepository = new MockMemberRepository();
+                IBatchPublisher batchPublisher = new BatchPublisher(new Uri("http://localhost:5102/"));
 
                 var memberController = MemberActorProvider.CreateInstance(ActorSystemInstance, memberRepository);
-                var jobsActorProvider = JobsActorProvider.CreateInstance(ActorSystemInstance);
+                var jobsActorProvider = JobsActorProvider.CreateInstance(ActorSystemInstance, batchPublisher);
                 var backLogsActorProvider = BackLogsActorProvider.CreateInstance(ActorSystemInstance, new JobsActorProvider(ActorSystemInstance, host));
 
             } 

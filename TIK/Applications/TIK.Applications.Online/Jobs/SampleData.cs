@@ -8,38 +8,38 @@ namespace TIK.Applications.Online.Jobs
         {
             return new List<Job> {
                 new Job {
-                    Id = 1000,
+                    Id = "1000",
                     Application = "Playstation 4 500GB",
                     Procedure = "Sony",
-                    PricePerUnit = 29900,
+                    Status = "Success",
                     InQueue = 5
                 },
                 new Job {
-                    Id = 1001,
+                    Id = "1001",
                     Application = "Playstation 4 Pro 1TB",
                     Procedure = "Sony",
-                    PricePerUnit = 39900,
+                    Status = "Success",
                     InQueue = 2
                 },
                 new Job {
-                    Id = 1002,
+                    Id = "1002",
                     Application = "XBOX One",
                     Procedure = "Microsoft",
-                    PricePerUnit = 26700,
+                    Status = "Success",
                     InQueue = 10
                 },
                 new Job {
-                    Id = 1003,
+                    Id = "1003",
                     Application = "XBOX One Scorpio",
                     Procedure = "Microsoft",
-                    PricePerUnit = 499000,
+                    Status = "Success",
                     InQueue = 1
                 },
                 new Job {
-                    Id = 1004,
+                    Id = "1004",
                     Application = "Wii U",
                     Procedure = "Nintendo",
-                    PricePerUnit = 19900,
+                    Status = "Success",
                     InQueue = 8
                 },
             };
