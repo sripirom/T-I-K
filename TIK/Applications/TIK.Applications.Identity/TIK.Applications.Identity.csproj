@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Mocks\" />
+    <Folder Include="Authentication\" />
+    <Folder Include="Authentication\Routes\" />
+    <Folder Include="JwtSecurity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
+    <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
+    <ProjectReference Include="..\TIK.Applications\TIK.Applications.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+  </ItemGroup>
+</Project>

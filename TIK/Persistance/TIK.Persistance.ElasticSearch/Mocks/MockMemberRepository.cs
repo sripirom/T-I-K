@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace TIK.Persistance.ElasticSearch.Mocks
 {
-    public class MockMemberRepository : MockEsRepository<Member>, IMemberRepository
+    public class MockMemberRepository : MockEsRepository<Member, Int32>, IMemberRepository
     {
 
         public MockMemberRepository()

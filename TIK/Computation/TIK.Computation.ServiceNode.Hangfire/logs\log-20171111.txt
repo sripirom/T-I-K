@@ -1,0 +1,320 @@
+2017-11-11 03:52:37.773 +07:00 [Information] Accepted args: NodeOptions { Identifier: "nodeA", Queues: "default,order,batch", WorkerCount: 20 }
+2017-11-11 03:52:40.464 +07:00 [Information] Starting Hangfire Server
+2017-11-11 03:52:40.467 +07:00 [Information] Using job storage: 'redis://localhost:6379/0'
+2017-11-11 03:52:40.470 +07:00 [Information] Using the following options for Redis job storage:
+2017-11-11 03:52:40.471 +07:00 [Information] ConnectionString: localhost:6379
+DN: 0
+2017-11-11 03:52:40.471 +07:00 [Information] Using the following options for Hangfire Server:
+2017-11-11 03:52:40.471 +07:00 [Information]     Worker count: 20
+2017-11-11 03:52:40.472 +07:00 [Information]     Listening queues: 'default', 'order', 'batch'
+2017-11-11 03:52:40.472 +07:00 [Information]     Shutdown timeout: 00:00:15
+2017-11-11 03:52:40.472 +07:00 [Information]     Schedule polling interval: 00:00:15
+2017-11-11 03:52:40.541 +07:00 [Information] The hangfire server "nodeA" [queues: "default,order,batch", workercount: 20] is now running, press Control+C to exit.
+2017-11-11 03:52:40.544 +07:00 [Debug] Background process 'BackgroundProcessingServer' started.
+2017-11-11 03:52:40.719 +07:00 [Debug] Background process 'ServerHeartbeat' started.
+2017-11-11 03:52:40.719 +07:00 [Debug] Background process 'ServerWatchdog' started.
+2017-11-11 03:52:40.779 +07:00 [Debug] Background process 'Hangfire.Redis.RedisSubscription' started.
+2017-11-11 03:52:40.856 +07:00 [Debug] Background process 'Worker #57244edd' started.
+2017-11-11 03:52:40.857 +07:00 [Debug] Background process 'Worker #a33391f1' started.
+2017-11-11 03:52:40.779 +07:00 [Debug] Background process 'Hangfire.Redis.FetchedJobsWatcher' started.
+2017-11-11 03:52:40.889 +07:00 [Information] 2 servers were removed due to timeout
+2017-11-11 03:52:40.937 +07:00 [Debug] Background process 'Worker #0cebcc59' started.
+2017-11-11 03:52:40.942 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 03:52:41.051 +07:00 [Debug] Background process 'Worker #78fc3702' started.
+2017-11-11 03:52:41.085 +07:00 [Debug] Background process 'Worker #503a03b9' started.
+2017-11-11 03:52:41.075 +07:00 [Debug] Background process 'Worker #4b3e6b41' started.
+2017-11-11 03:52:41.095 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 03:52:40.927 +07:00 [Debug] Background process 'Worker #40fd3fed' started.
+2017-11-11 03:52:41.201 +07:00 [Debug] Background process 'Worker #ab7d3191' started.
+2017-11-11 03:52:41.215 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 03:52:41.051 +07:00 [Debug] Background process 'Worker #78d55954' started.
+2017-11-11 03:52:41.289 +07:00 [Debug] Background process 'Worker #b6830232' started.
+2017-11-11 03:52:41.408 +07:00 [Debug] Background process 'Worker #47668803' started.
+2017-11-11 03:52:41.409 +07:00 [Debug] Background process 'Worker #fa3c454a' started.
+2017-11-11 03:52:41.460 +07:00 [Debug] Background process 'Worker #0f70a52d' started.
+2017-11-11 03:52:41.492 +07:00 [Debug] Background process 'Worker #f3312dae' started.
+2017-11-11 03:52:41.555 +07:00 [Debug] Background process 'Worker #04bd30d8' started.
+2017-11-11 03:52:41.575 +07:00 [Debug] Background process 'Worker #58ae5c7b' started.
+2017-11-11 03:52:41.682 +07:00 [Debug] Background process 'Worker #c04c7084' started.
+2017-11-11 03:52:41.724 +07:00 [Debug] Background process 'Worker #4845d943' started.
+2017-11-11 03:52:41.760 +07:00 [Debug] Background process 'Worker #a70d19c6' started.
+2017-11-11 03:52:41.770 +07:00 [Debug] Background process 'Worker #1c0cd044' started.
+2017-11-11 03:52:41.815 +07:00 [Debug] Background process 'DelayedJobScheduler' started.
+2017-11-11 03:52:41.816 +07:00 [Debug] Background process 'RecurringJobScheduler' started.
+2017-11-11 03:52:42.258 +07:00 [Warning] Failed to process the job '4ebd1c7b-2d2f-4775-ba31-bd5518b4912e': an exception occurred. Retry attempt 4 of 10 will be performed in 00:02:44.
+System.IO.FileNotFoundException: Could not load file or assembly 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type, ObjectHandleOnStack keepalive)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Storage.InvocationData.Deserialize()
+
+
+2017-11-11 03:52:42.642 +07:00 [Warning] Failed to process the job '4a1c5410-26f9-40c7-ba1a-c6af22d62a31': an exception occurred. Retry attempt 3 of 10 will be performed in 00:00:46.
+System.IO.FileNotFoundException: Could not load file or assembly 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type, ObjectHandleOnStack keepalive)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Storage.InvocationData.Deserialize()
+
+
+2017-11-11 03:52:42.711 +07:00 [Warning] Failed to process the job '42e47e94-dd89-4acb-a7aa-826a15495dc5': an exception occurred. Retry attempt 5 of 10 will be performed in 00:06:41.
+System.IO.FileNotFoundException: Could not load file or assembly 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type, ObjectHandleOnStack keepalive)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Storage.InvocationData.Deserialize()
+
+
+2017-11-11 03:52:42.734 +07:00 [Information] 3 scheduled job(s) enqueued.
+2017-11-11 03:53:37.159 +07:00 [Information] Accepted args: NodeOptions { Identifier: "nodeA", Queues: "default,order,batch", WorkerCount: 20 }
+2017-11-11 03:53:39.127 +07:00 [Information] Starting Hangfire Server
+2017-11-11 03:53:39.129 +07:00 [Information] Using job storage: 'redis://localhost:6379/0'
+2017-11-11 03:53:39.136 +07:00 [Information] Using the following options for Redis job storage:
+2017-11-11 03:53:39.137 +07:00 [Information] ConnectionString: localhost:6379
+DN: 0
+2017-11-11 03:53:39.138 +07:00 [Information] Using the following options for Hangfire Server:
+2017-11-11 03:53:39.141 +07:00 [Information]     Worker count: 20
+2017-11-11 03:53:39.149 +07:00 [Information]     Listening queues: 'default', 'order', 'batch'
+2017-11-11 03:53:39.154 +07:00 [Information]     Shutdown timeout: 00:00:15
+2017-11-11 03:53:39.155 +07:00 [Information]     Schedule polling interval: 00:00:15
+2017-11-11 03:53:39.201 +07:00 [Information] The hangfire server "nodeA" [queues: "default,order,batch", workercount: 20] is now running, press Control+C to exit.
+2017-11-11 03:53:39.219 +07:00 [Debug] Background process 'BackgroundProcessingServer' started.
+2017-11-11 03:53:39.361 +07:00 [Debug] Background process 'ServerHeartbeat' started.
+2017-11-11 03:53:39.379 +07:00 [Debug] Background process 'ServerWatchdog' started.
+2017-11-11 03:53:39.434 +07:00 [Debug] Background process 'Hangfire.Redis.FetchedJobsWatcher' started.
+2017-11-11 03:53:39.477 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 03:53:39.478 +07:00 [Debug] Background process 'Hangfire.Redis.RedisSubscription' started.
+2017-11-11 03:53:39.521 +07:00 [Debug] Background process 'Worker #6524eb4b' started.
+2017-11-11 03:53:39.549 +07:00 [Debug] Background process 'Worker #e104597f' started.
+2017-11-11 03:53:39.550 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 03:53:39.552 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 03:53:39.598 +07:00 [Debug] Background process 'Worker #a9ddde47' started.
+2017-11-11 03:53:39.620 +07:00 [Debug] Background process 'Worker #611a7784' started.
+2017-11-11 03:53:39.643 +07:00 [Debug] Background process 'Worker #b913dde8' started.
+2017-11-11 03:53:39.724 +07:00 [Debug] Background process 'Worker #444129fc' started.
+2017-11-11 03:53:39.752 +07:00 [Debug] Background process 'Worker #f14508e9' started.
+2017-11-11 03:53:39.800 +07:00 [Debug] Background process 'Worker #42630477' started.
+2017-11-11 03:53:39.811 +07:00 [Debug] Background process 'Worker #373d77ee' started.
+2017-11-11 03:53:39.828 +07:00 [Debug] Background process 'Worker #ee17cd30' started.
+2017-11-11 03:53:39.921 +07:00 [Debug] Background process 'Worker #e1396bb9' started.
+2017-11-11 03:53:39.923 +07:00 [Debug] Background process 'Worker #02dd0e37' started.
+2017-11-11 03:53:39.985 +07:00 [Debug] Background process 'Worker #cb9f7ef5' started.
+2017-11-11 03:53:40.003 +07:00 [Debug] Background process 'Worker #d6288663' started.
+2017-11-11 03:53:40.013 +07:00 [Debug] Background process 'Worker #592e47d6' started.
+2017-11-11 03:53:40.070 +07:00 [Debug] Background process 'Worker #13b110c9' started.
+2017-11-11 03:53:40.081 +07:00 [Debug] Background process 'Worker #09da8d47' started.
+2017-11-11 03:53:40.154 +07:00 [Debug] Background process 'Worker #91f97bc3' started.
+2017-11-11 03:53:40.155 +07:00 [Debug] Background process 'Worker #46c9dc1d' started.
+2017-11-11 03:53:40.231 +07:00 [Debug] Background process 'Worker #e8460591' started.
+2017-11-11 03:53:40.237 +07:00 [Debug] Background process 'DelayedJobScheduler' started.
+2017-11-11 03:53:40.257 +07:00 [Debug] Background process 'RecurringJobScheduler' started.
+2017-11-11 03:53:40.677 +07:00 [Warning] Failed to process the job '4a1c5410-26f9-40c7-ba1a-c6af22d62a31': an exception occurred. Retry attempt 4 of 10 will be performed in 00:02:52.
+System.IO.FileNotFoundException: Could not load file or assembly 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type, ObjectHandleOnStack keepalive)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Storage.InvocationData.Deserialize()
+
+
+2017-11-11 03:53:40.870 +07:00 [Information] 1 scheduled job(s) enqueued.
+2017-11-11 03:58:51.041 +07:00 [Information] Accepted args: NodeOptions { Identifier: "nodeA", Queues: "default,order,batch", WorkerCount: 20 }
+2017-11-11 03:58:53.004 +07:00 [Information] Starting Hangfire Server
+2017-11-11 03:58:53.006 +07:00 [Information] Using job storage: 'redis://localhost:6379/0'
+2017-11-11 03:58:53.007 +07:00 [Information] Using the following options for Redis job storage:
+2017-11-11 03:58:53.008 +07:00 [Information] ConnectionString: localhost:6379
+DN: 0
+2017-11-11 03:58:53.008 +07:00 [Information] Using the following options for Hangfire Server:
+2017-11-11 03:58:53.009 +07:00 [Information]     Worker count: 20
+2017-11-11 03:58:53.009 +07:00 [Information]     Listening queues: 'default', 'order', 'batch'
+2017-11-11 03:58:53.010 +07:00 [Information]     Shutdown timeout: 00:00:15
+2017-11-11 03:58:53.010 +07:00 [Information]     Schedule polling interval: 00:00:15
+2017-11-11 03:58:53.082 +07:00 [Debug] Background process 'BackgroundProcessingServer' started.
+2017-11-11 03:58:53.090 +07:00 [Information] The hangfire server "nodeA" [queues: "default,order,batch", workercount: 20] is now running, press Control+C to exit.
+2017-11-11 03:58:53.204 +07:00 [Debug] Background process 'ServerHeartbeat' started.
+2017-11-11 03:58:53.225 +07:00 [Debug] Background process 'ServerWatchdog' started.
+2017-11-11 03:58:53.337 +07:00 [Debug] Background process 'Hangfire.Redis.FetchedJobsWatcher' started.
+2017-11-11 03:58:53.347 +07:00 [Debug] Background process 'Hangfire.Redis.RedisSubscription' started.
+2017-11-11 03:58:53.349 +07:00 [Debug] Background process 'Worker #bd4c1db9' started.
+2017-11-11 03:58:53.349 +07:00 [Debug] Background process 'Worker #62db29d2' started.
+2017-11-11 03:58:53.391 +07:00 [Debug] Background process 'Worker #07733361' started.
+2017-11-11 03:58:53.399 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 03:58:53.401 +07:00 [Debug] Background process 'Worker #9a43c639' started.
+2017-11-11 03:58:53.458 +07:00 [Debug] Background process 'Worker #3ab2a24f' started.
+2017-11-11 03:58:53.467 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 03:58:53.541 +07:00 [Debug] Background process 'Worker #d0423890' started.
+2017-11-11 03:58:53.547 +07:00 [Debug] Background process 'Worker #dc1878e0' started.
+2017-11-11 03:58:53.549 +07:00 [Debug] Background process 'Worker #9d18bd50' started.
+2017-11-11 03:58:53.578 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 03:58:53.601 +07:00 [Debug] Background process 'Worker #c64881b9' started.
+2017-11-11 03:58:53.678 +07:00 [Information] 1 servers were removed due to timeout
+2017-11-11 03:58:53.678 +07:00 [Debug] Background process 'Worker #8c58de68' started.
+2017-11-11 03:58:53.709 +07:00 [Debug] Background process 'Worker #d5dd683b' started.
+2017-11-11 03:58:53.757 +07:00 [Debug] Background process 'Worker #af12acdd' started.
+2017-11-11 03:58:53.857 +07:00 [Debug] Background process 'Worker #bf6ddb44' started.
+2017-11-11 03:58:53.872 +07:00 [Debug] Background process 'Worker #cf64bdde' started.
+2017-11-11 03:58:53.873 +07:00 [Debug] Background process 'Worker #25ca7e3c' started.
+2017-11-11 03:58:53.948 +07:00 [Debug] Background process 'Worker #f9cbe7c7' started.
+2017-11-11 03:58:53.987 +07:00 [Debug] Background process 'Worker #09b6b1ed' started.
+2017-11-11 03:58:54.005 +07:00 [Debug] Background process 'Worker #3ed4e82e' started.
+2017-11-11 03:58:54.010 +07:00 [Debug] Background process 'Worker #a3bccd2f' started.
+2017-11-11 03:58:54.094 +07:00 [Debug] Background process 'Worker #475a03d9' started.
+2017-11-11 03:58:54.139 +07:00 [Debug] Background process 'DelayedJobScheduler' started.
+2017-11-11 03:58:54.177 +07:00 [Debug] Background process 'RecurringJobScheduler' started.
+2017-11-11 03:58:54.518 +07:00 [Warning] Failed to process the job '4ebd1c7b-2d2f-4775-ba31-bd5518b4912e': an exception occurred. Retry attempt 5 of 10 will be performed in 00:04:46.
+System.IO.FileNotFoundException: Could not load file or assembly 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type, ObjectHandleOnStack keepalive)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Storage.InvocationData.Deserialize()
+
+
+2017-11-11 03:58:54.655 +07:00 [Warning] Failed to process the job '4a1c5410-26f9-40c7-ba1a-c6af22d62a31': an exception occurred. Retry attempt 5 of 10 will be performed in 00:05:06.
+System.IO.FileNotFoundException: Could not load file or assembly 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type, ObjectHandleOnStack keepalive)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Storage.InvocationData.Deserialize()
+
+
+2017-11-11 03:58:54.659 +07:00 [Information] 2 scheduled job(s) enqueued.
+2017-11-11 03:59:24.666 +07:00 [Warning] Failed to process the job '42e47e94-dd89-4acb-a7aa-826a15495dc5': an exception occurred. Retry attempt 6 of 10 will be performed in 00:10:40.
+System.IO.FileNotFoundException: Could not load file or assembly 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type, ObjectHandleOnStack keepalive)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Storage.InvocationData.Deserialize()
+
+
+2017-11-11 03:59:24.677 +07:00 [Information] 1 scheduled job(s) enqueued.
+2017-11-11 03:59:53.681 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 03:59:53.687 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 03:59:53.687 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:00:32.151 +07:00 [Information] SearchNewsBankOfThailand
+2017-11-11 04:00:42.211 +07:00 [Information] AnalysisResult
+2017-11-11 04:00:42.215 +07:00 [Information] ReportingResult
+2017-11-11 04:00:53.690 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:00:53.691 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:00:53.691 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:01:53.695 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:01:53.695 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:01:53.696 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:02:53.698 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:02:53.699 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:02:53.699 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:03:53.687 +07:00 [Information] 1 servers were removed due to timeout
+2017-11-11 04:03:53.703 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:03:53.704 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:03:53.704 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:03:54.727 +07:00 [Warning] Failed to process the job '4ebd1c7b-2d2f-4775-ba31-bd5518b4912e': an exception occurred. Retry attempt 6 of 10 will be performed in 00:12:40.
+System.IO.FileNotFoundException: Could not load file or assembly 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type, ObjectHandleOnStack keepalive)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Storage.InvocationData.Deserialize()
+
+
+2017-11-11 04:03:54.733 +07:00 [Information] 1 scheduled job(s) enqueued.
+2017-11-11 04:04:09.743 +07:00 [Warning] Failed to process the job '4a1c5410-26f9-40c7-ba1a-c6af22d62a31': an exception occurred. Retry attempt 6 of 10 will be performed in 00:10:58.
+System.IO.FileNotFoundException: Could not load file or assembly 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type, ObjectHandleOnStack keepalive)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Storage.InvocationData.Deserialize()
+
+
+2017-11-11 04:04:09.749 +07:00 [Information] 1 scheduled job(s) enqueued.
+2017-11-11 04:04:53.708 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:04:53.709 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:04:53.710 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:05:53.714 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:05:53.714 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:05:53.715 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:06:53.718 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:06:53.719 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:06:53.719 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:07:53.723 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:07:53.724 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:07:53.724 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:08:53.728 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:08:53.728 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:08:53.729 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:09:53.734 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:09:53.734 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:09:53.734 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:10:09.830 +07:00 [Warning] Failed to process the job '42e47e94-dd89-4acb-a7aa-826a15495dc5': an exception occurred. Retry attempt 7 of 10 will be performed in 00:24:32.
+System.IO.FileNotFoundException: Could not load file or assembly 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type, ObjectHandleOnStack keepalive)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Storage.InvocationData.Deserialize()
+
+
+2017-11-11 04:10:09.835 +07:00 [Information] 1 scheduled job(s) enqueued.
+2017-11-11 04:10:53.739 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:10:53.740 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:10:53.740 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:11:53.744 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:11:53.745 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:11:53.745 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:12:53.750 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:12:53.750 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:12:53.751 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:13:53.756 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:13:53.756 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:13:53.757 +07:00 [Debug] No timed out jobs were found in the 'default' queue
+2017-11-11 04:29:12.649 +07:00 [Warning] Failed to process the job '4a1c5410-26f9-40c7-ba1a-c6af22d62a31': an exception occurred. Retry attempt 7 of 10 will be performed in 00:22:19.
+System.IO.FileNotFoundException: Could not load file or assembly 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type, ObjectHandleOnStack keepalive)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Storage.InvocationData.Deserialize()
+
+
+2017-11-11 04:29:12.661 +07:00 [Warning] Failed to process the job '4ebd1c7b-2d2f-4775-ba31-bd5518b4912e': an exception occurred. Retry attempt 7 of 10 will be performed in 00:24:32.
+System.IO.FileNotFoundException: Could not load file or assembly 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+
+File name: 'TIK.Applications.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type, ObjectHandleOnStack keepalive)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at Hangfire.Storage.InvocationData.Deserialize()
+
+
+2017-11-11 04:29:12.665 +07:00 [Information] 2 scheduled job(s) enqueued.
+2017-11-11 04:29:41.511 +07:00 [Debug] Acquiring the lock for the fetched list of the 'default' queue...
+2017-11-11 04:29:41.512 +07:00 [Debug] Looking for timed out jobs in the 'default' queue...
+2017-11-11 04:29:41.512 +07:00 [Debug] No timed out jobs were found in the 'default' queue

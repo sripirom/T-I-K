@@ -8,6 +8,7 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="Autofac" Version="4.6.1" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.0" />
+    <PackageReference Include="RestSharp" Version="106.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,17 +21,21 @@
     <Folder Include="wwwroot\app\transaction-mornitor\bulk\" />
     <Folder Include="wwwroot\app\transaction-mornitor\single\" />
     <Folder Include="wwwroot\app\user-activity\" />
-    <Folder Include="Services\" />
+    <Folder Include="wwwroot\app\stock-viewer\" />
+    <Folder Include="wwwroot\app\stock-viewer\stock\" />
+    <Folder Include="Controllers\StockViewer\" />
+    <Folder Include="Models\StockViewerViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Controllers\EmptyTextFile.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Applications\TIK.Applications\TIK.Applications.csproj" />
-    <ProjectReference Include="..\Applications\TIK.Applications.Membership\TIK.Applications.Membership.csproj" />
     <ProjectReference Include="..\Core\TIK.Core\TIK.Core.csproj" />
     <ProjectReference Include="..\Domain\TIK.Domain\TIK.Domain.csproj" />
     <ProjectReference Include="..\Persistance\TIK.Persistance\TIK.Persistance.csproj" />
     <ProjectReference Include="..\Persistance\TIK.Persistance.ElasticSearch\TIK.Persistance.ElasticSearch.csproj" />
+    <ProjectReference Include="..\Integration\TIK.Integration\TIK.Integration.csproj" />
+    <ProjectReference Include="..\Integration\TIK.Integration.WebApi\TIK.Integration.WebApi.csproj" />
   </ItemGroup>
 </Project>

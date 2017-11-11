@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Stock Viewer";
+}
+
+    <environment include="Development">
+        <link href="~/app/site.css" rel="stylesheet" /> 
+        <script src="~/app/angular-web-api-security.js"></script>
+        <script src="~/app/stock-viewer/app-module.js"></script>
+        <script src="~/app/stock-viewer/stock-viewer-app.component.js"></script>
+
+        <script src="~/app/stock-viewer/user-account.service.js"></script>
+        <script src="~/app/stock-viewer/user-status.component.js"></script>
+	  
+        <script src="~/app/stock-viewer/main-navigator.component.js"></script>
+        <script src="~/app/stock-viewer/home.component.js"></script>
+	
+        <script src="~/app/stock-viewer/stock/stock.service.js"></script>
+	    <script src="~/app/stock-viewer/stock/stock-list.component.js"></script>
+	 <!--
+       
+        <script src="~/app/course-viewer/course/course.component.js"></script>
+        <script src="~/app/course-viewer/course/course-heading.component.js"></script>
+        <script src="~/app/course-viewer/course/course-navigator.component.js"></script>
+        <script src="~/app/course-viewer/course/course-modules.component.js"></script>
+        <script src="~/app/course-viewer/course/course-description.component.js"></script>
+        <script src="~/app/course-viewer/course/course-discussion.component.js"></script>
+        <script src="~/app/course-viewer/course/course-discussion-list.component.js"></script>
+        <script src="~/app/course-viewer/course/course-discussion-item.component.js"></script>
+        <script src="~/app/course-viewer/course/course-author-info.component.js"></script>
+        <script src="~/app/course-viewer/course/recent-courses.component.js"></script>
+        <script src="~/app/course-viewer/author/author.service.js"></script>
+        <script src="~/app/course-viewer/author/author-list.component.js"></script>
+        <script src="~/app/course-viewer/author/author.component.js"></script>
+        <script src="~/app/course-viewer/author/author-heading.component.js"></script>
+        <script src="~/app/course-viewer/author/author-navigator.component.js"></script>
+        <script src="~/app/course-viewer/author/author-bio.component.js"></script>
+        <script src="~/app/course-viewer/author/author-courses.component.js"></script>
+     -->        
+    </environment>
+
+
+
+
+<div ng-non-bindable class="container-fluid">
+    <div id="stock-viewer" class="section-container">
+        <div class="body-content" ng-cloak>
+            <stock-viewer-app></stock-viewer-app>
+        </div>
+    </div>
+</div>
+
+<script>
+ angular.bootstrap(document.getElementById("stock-viewer"), ['stockViewer']);
+</script>

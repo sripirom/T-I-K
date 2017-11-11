@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <Folder Include="Batch\" />
+    <Folder Include="Identity\" />
+    <Folder Include="Online\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />

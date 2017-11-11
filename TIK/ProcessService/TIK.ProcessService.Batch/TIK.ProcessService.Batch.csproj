@@ -27,5 +27,6 @@
     <ProjectReference Include="..\..\Applications\TIK.Applications\TIK.Applications.csproj" />
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
     <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
+    <ProjectReference Include="..\..\Applications\TIK.Applications.Notification\TIK.Applications.Notification.csproj" />
   </ItemGroup>
 </Project>

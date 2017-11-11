@@ -1,0 +1,23 @@
+<h3>stock LIST</h3>
+<hr />
+<div ng-if="vm.stocks == null">
+    NO stockS
+</div>
+<div ng-if="vm.stocks != null">
+    <div class="row">
+        <div class="col-md-3"><h4>Symbol</h4></div>
+        <div class="col-md-6"><h4>SECURITY NAME</h4></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-2"><h4>MARKET</h4></div>
+    </div>
+    <div class="row" ng-repeat="stock in vm.stocks">
+        <div class="col-md-3">
+            <a ui-sref='stock({ id: stock.id })'>
+                {{ stock.id }}
+            </a>
+        </div>
+        <div class="col-md-6">{{ stock.securityName }}</div>
+        <div class="col-md-1"></div>
+        <div class="col-md-2">{{ stock.market }}</div>
+    </div>
+</div>

@@ -3,23 +3,26 @@ using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using TIK.Core.Application;
 using TIK.Domain.Notifications;
 
 namespace TIK.Applications.Notification.Commands.Socket
 {
-    public class SignalRNotificationCommand : ISignalRNotificationCommand
+    public class SignalRNotificationCommand :BaseAppService,  ISignalRNotificationCommand
     {
         private string _endpoint = "localhost:5100";
 
-        public SignalRNotificationCommand(string endpoint)
+        public SignalRNotificationCommand()
         {
-            _endpoint = endpoint;
+            //_endpoint = "localhost:5100";//endpoint;
         }
 
         public void Send(SignalRCommand command)
         {
-            RunWebSockets(command.Message).GetAwaiter().GetResult();
+            //RunWebSockets(command.Message).GetAwaiter().GetResult();
         }
+
+        /*
         private async Task RunWebSockets(string message)
         {
 
@@ -74,5 +77,6 @@ namespace TIK.Applications.Notification.Commands.Socket
 
             }
         }
+        */
     }
 }

@@ -5,7 +5,7 @@ using TIK.Domain.Membership;
 using Microsoft.AspNetCore.Authorization;
 using System.Collections.Generic;
 using System.Linq;
-using TIK.Applications.Authentication;
+using TIK.Applications.Security;
 
 namespace TIK.Applications.Online.Members.Routes
 { 

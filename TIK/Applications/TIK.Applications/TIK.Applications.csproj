@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Messaging\" />
-    <Folder Include="Authentication\" />
+    <Folder Include="Security\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />

@@ -3,14 +3,13 @@
 
     var securityModule = angular.module('securityModule', []);
 
-    securityModule.value('authenAddress', 'http://localhost:5000/');
-    securityModule.value('baseAddress', 'http://pluralsightcourseviewer.azurewebsites.net/');
+    securityModule.value('baseAddress', 'http://localhost:5000/');
 
-    securityModule.factory('authenticationService', function ($http, authenAddress) {
+    securityModule.factory('authenticationService', function ($http, baseAddress) {
 
         var self = this;
         
-        var apiAccountBase = authenAddress + 'api/Account/';
+        var apiAccountBase = baseAddress + 'api/IdentityToken/';
 
         self.userName = (localStorage['userName'] ? localStorage['userName'] : '');
         self.loggedIn = (localStorage['login'] && self.userName != '' ? true : false);
@@ -32,11 +31,12 @@
         self.login = function (userName, password) {
             var payload = 'password=' + encodeURIComponent(password) + '&grant_type=password&username=' + encodeURIComponent(userName);
             return $http({
-                    url: authenAddress + 'Token',
+                    url: apiAccountBase,
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
                     data: payload
-                }).then(function (result) {
+                }).then(function (result) 
+                {
                     localStorage['login'] = JSON.stringify(result.data);
                     localStorage['userName'] = userName;
                     self.loggedIn = true;
