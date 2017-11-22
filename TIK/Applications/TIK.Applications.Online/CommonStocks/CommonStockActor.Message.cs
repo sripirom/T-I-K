@@ -12,7 +12,6 @@ namespace TIK.Applications.Online.CommonStocks
             {
 
             }
-
         }
 
         public class RetriveEods: MessageWithStockId
@@ -22,6 +21,30 @@ namespace TIK.Applications.Online.CommonStocks
             {
 
             }
+        }
+
+        public class GetDiscussion : MessageWithStockId
+        {
+            public GetDiscussion(int memberId, int stockId)
+                : base(memberId, stockId)
+            {
+
+            }
+        }
+
+        public class AddDiscussion : MessageWithStockId
+        {
+            public AddDiscussion(int memberId, int stockId, string userName, string comment, DateTime enteredOn)
+                : base(memberId, stockId)
+            {
+                UserName = userName;
+                EnteredOn = enteredOn;
+                Comment = comment;
+            }
+
+            public string UserName { get; private set; }
+            public DateTime EnteredOn { get; private set; }
+            public string Comment { get; private set; }
         }
     }
 }

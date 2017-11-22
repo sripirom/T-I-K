@@ -53,6 +53,21 @@
                     }
                 },
                 template: '<stock stock-id="$resolve.stockId"></stock>'
+            },
+            {
+                name: 'stock.historical',
+                url: '/historical',
+                template: '<stock-historical stock="vm.stock"></stock-historical>'
+            },
+            {
+                name: 'stock.backtester',
+                url: '/backtester',
+                template: '<stock-backtester stock="vm.stock"></stock-backtester>'
+            },
+            {
+                name: 'stock.discussion',
+                url: '/discussion',
+                template: '<stock-discussion stock="vm.stock" logged-in="vm.authenticationService.loggedIn"></stock-discussion>'
             }
         ];
 

@@ -1,0 +1,8 @@
+<div ng-if="vm.authenticationService.loggedIn">
+    <h4>STOCK HISTORICAL</h4>
+    <stock-historical-list stock-historical="vm.stockHistorical"></stock-historical-list>
+    <hr />
+</div>
+<div ng-if="!vm.authenticationService.loggedIn">
+    NOT LOGGED IN
+</div>

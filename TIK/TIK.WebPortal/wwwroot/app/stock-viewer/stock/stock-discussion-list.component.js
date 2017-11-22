@@ -1,15 +1,15 @@
 (function () {
     'use strict';
     
-    angular.module('courseViewer').component('courseDiscussionList', {
+    angular.module('stockViewer').component('stockDiscussionList', {
         bindings: {
-            courseDiscussion: '<',
+            stockDiscussion: '<',
         },
         controllerAs: 'vm',
         controller: function () {
             var vm = this;
 
         },
-        templateUrl: 'App/course-viewer/course/course-discussion-list.component.html'
+        templateUrl: 'App/stock-viewer/stock/stock-discussion-list.component.html'
     });    
 })();

@@ -17,7 +17,7 @@
                 /*if (vm.stockId)
                  {
                   */
-                    stockService.getstock(vm.stockId).then(function (stock) {
+                    stockService.getStock(vm.stockId).then(function (stock) {
                         vm.stock = stock;
                         /*
                         if (authenticationService.loggedIn) {

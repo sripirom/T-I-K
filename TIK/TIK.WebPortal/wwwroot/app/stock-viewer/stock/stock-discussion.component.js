@@ -1,25 +1,25 @@
 (function () {
     'use strict';
 
-    angular.module('courseViewer').component('courseDiscussion', {
+    angular.module('stockViewer').component('stockDiscussion', {
         bindings: {
-            course: '<',
+            stock: '<',
             loggedIn: '<'
         },
         controllerAs: 'vm',
-        controller: function (authenticationService, courseService) {
+        controller: function (authenticationService, stockService) {
             var vm = this;
 
-            vm.courseDiscussion = null;
+            vm.stockDiscussion = null;
             vm.authenticationService = authenticationService;
             vm.commentEntryVisible = false;
 
             vm.$onChanges = function (changes) {
                 if ((changes.loggedIn != null && changes.loggedIn.currentValue != null) || 
-                    (changes.course != null && changes.course.currentValue != null)) {
-                    if (authenticationService.loggedIn && vm.course != null) {
-                        courseService.getCourseDiscussion(vm.course.CourseId).then(function (courseDiscussion) {
-                            vm.courseDiscussion = courseDiscussion;
+                    (changes.stock != null && changes.stock.currentValue != null)) {
+                    if (authenticationService.loggedIn && vm.stock != null) {
+                        stockService.getStockDiscussion(vm.stock.stockId).then(function (stockDiscussion) {
+                            vm.stockDiscussion = stockDiscussion;
                         });
                     }
                 }
@@ -31,8 +31,8 @@
 
             vm.commentSubmitted = function (commentText) {
                 if (authenticationService.loggedIn) {
-                    courseService.addCourseDiscussionItem(authenticationService.userName, vm.course.CourseId, commentText).then(function (discussionItem) {
-                        vm.courseDiscussion.push(discussionItem);
+                    stockService.addStockDiscussionItem(authenticationService.userName, vm.stock.stockId, commentText).then(function (discussionItem) {
+                        vm.stockDiscussion.push(discussionItem);
                         vm.commentEntryVisible = false;
                     });
                 }
@@ -42,6 +42,6 @@
                 vm.commentEntryVisible = false;
             }
         },
-        templateUrl: 'App/course-viewer/course/course-discussion.component.html'
+        templateUrl: 'App/stock-viewer/stock/stock-discussion.component.html'
     });
 })();

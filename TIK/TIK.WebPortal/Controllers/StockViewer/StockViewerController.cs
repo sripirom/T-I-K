@@ -48,34 +48,51 @@ namespace TIK.WebPortal.Controllers.StockViewer
         public IActionResult StockInfo(Int32 id)
         {
             var task = StockPublisher.GetInfo(0, id);
-            /*
-            var stock = new CommonStockInfo();
-            stock.Id = id;
-            stock.Symbol = "A";
-            stock.SecurityName = "AREEYA PROPERTY PUBLIC COMPANY LIMITED";
-            stock.Address = "DYNASTY COMPLEX 2, 67/4 LADPRAO 71, WANG THONGLANG Bangkok";
-            stock.Telephone = "0-2933-0333, 0-2539-4000";
-            stock.Fax = "0-2955-9766";
-            stock.WebSite = "http://www.areeya.co.th";
-            stock.Market = "SET";
-            stock.Industry = "Property & Construction";
-            stock.Sector = "";
-            stock.FirstTradeDate = new DateTime(2004, 4, 1);
-            stock.ParValue = 1.00m;
-            stock.AuthorizedCapital = 1200000000.00m;
-            stock.PaidUpCapital = 980000000.00m;
-            */
+
             var stockInfo = task.Result;
             return Ok(stockInfo);
         }
 
      
-        [HttpGet("stock/{symbol}/discussion")]
-        public string Discussion(string symbol)
+        [HttpGet("stock/{stockId}/discussion")]
+        public IActionResult GetDiscussion(string stockId)
         {
-            return "value";
+            var id = Convert.ToInt32(stockId);
+            var task = StockPublisher.GetStockDiscussion(0, id);
+
+            var list = task.Result;
+            return Ok(list);
         }
 
+        [HttpPost("stock/{stockId}/discussion")]
+        public IActionResult PostDiscussion(Int32 stockId, [FromBody] DiscussionItemViewModel discussionItem)
+        {
+            var task = StockPublisher.AddStockDiscussionItem(0, stockId, new DiscussionItem{
+                 UserName = discussionItem.UserName,
+                Comment = discussionItem.Comment,
+                 EnteredOn = DateTime.Now
+            });
+
+            var item = task.Result;
+            return Ok(item);
+        }
+
+
+        [HttpGet("stock/{stockId}/historical")]
+        public IActionResult GetHistorical(string stockId)
+        {
+            IList<Eod> list = new List<Eod> { 
+                new Eod{ Id="1", Symbol = "A", EodDate = new DateTime(2017, 11, 1), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
+                new Eod{ Id="2", Symbol = "A", EodDate = new DateTime(2017, 11, 2), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
+                new Eod{ Id="3", Symbol = "A", EodDate = new DateTime(2017, 11, 3), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
+                new Eod{ Id="4", Symbol = "A", EodDate = new DateTime(2017, 11, 4), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
+                new Eod{ Id="5", Symbol = "A", EodDate = new DateTime(2017, 11, 5), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
+                new Eod{ Id="6", Symbol = "A", EodDate = new DateTime(2017, 11, 6), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
+                new Eod{ Id="7", Symbol = "A", EodDate = new DateTime(2017, 11, 7), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
+                new Eod{ Id="8", Symbol = "A", EodDate = new DateTime(2017, 11, 8), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 }
+            };
+            return Ok(list);
+        }
 
     }
 }

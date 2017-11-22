@@ -1,15 +1,15 @@
 (function () {
     'use strict';
 
-    angular.module('courseViewer').component('courseDescription', {
+    angular.module('stockViewer').component('stockBacktester', {
         bindings: {
-            course: '<'
+            stock: '<'
         },
         controllerAs: 'vm',
         controller: function () {
             var vm = this;
 
         },
-        templateUrl: 'App/course-viewer/course/course-description.component.html'
+        templateUrl: 'App/stock-viewer/stock/stock-backtester.component.html'
     });
 })();

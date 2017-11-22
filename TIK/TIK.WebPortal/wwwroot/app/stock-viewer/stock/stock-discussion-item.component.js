@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     
-    angular.module('courseViewer').component('courseDiscussionItem', {
+    angular.module('stockViewer').component('stockDiscussionItem', {
         bindings: {
             commentSubmitted: '&',
             commentCanceled: '&'
@@ -30,6 +30,6 @@
                 }
             }
         },
-        templateUrl: 'App/course-viewer/course/course-discussion-item.component.html'
+        templateUrl: 'App/stock-viewer/stock/stock-discussion-item.component.html'
     });       
 })();

@@ -11,10 +11,16 @@ namespace TIK.Applications.Online.CommonStocks.Routes
     {
         private GetCommonStocks GetCommonStocks { get; }
         private GetStockInfo GetStockInfo { get; }
-        public CommonStockController(GetCommonStocks getCommonStocks, GetStockInfo getStockInfo)
+        private GetDiscussion GetDiscussion { get; }
+        private AddDiscussion AddDiscussion { get; }
+
+        public CommonStockController(GetCommonStocks getCommonStocks, GetStockInfo getStockInfo,
+                                    GetDiscussion getDiscussion, AddDiscussion addDiscussion)
         {
             GetCommonStocks = getCommonStocks;
             GetStockInfo = getStockInfo;
+            GetDiscussion = getDiscussion;
+            AddDiscussion = addDiscussion;
         }
 
 
@@ -29,6 +35,20 @@ namespace TIK.Applications.Online.CommonStocks.Routes
         [HttpGet()] public async Task<CommonStockInfo> GetInfo(int stockId)
         {
             var result = await this.GetStockInfo.Execute(0, stockId);
+            return result;
+        }
+
+        [Route("{stockId}/discussion")]
+        [HttpGet()]public async Task<IEnumerable<DiscussionItem>> GetDiscussionList(int stockId)
+        {
+            var result = await this.GetDiscussion.Execute(0, stockId);
+            return result;
+        }
+
+        [Route("{stockId}/discussion")]
+        [HttpPost()] public async Task<DiscussionItem> AddDiscussionItem(Int32 stockId, [FromBody] DiscussionItem discussionItem)
+        {
+            var result = await this.AddDiscussion.Execute(0, stockId, discussionItem);
             return result;
         }
     }
