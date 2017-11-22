@@ -10,7 +10,7 @@ using Hangfire;
 using TIK.Applications.DataTransformation.Commands.FixedLength;
 using Autofac.Extensions.DependencyInjection;
 using TIK.Core.Container;
-using TIK.Applications.Batch.Commands.SearchNews;
+using TIK.Applications.Batch.SearchNews;
 
 namespace TIK.Governance
 {

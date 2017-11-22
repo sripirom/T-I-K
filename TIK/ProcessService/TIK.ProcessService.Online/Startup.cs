@@ -9,12 +9,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-
-using TIK.Applications.Authentication;
 using TIK.Applications.Online;
 using TIK.Applications.Online.Members.Routes;
+using TIK.Applications.Security;
 
 namespace TIK.ProcessService.Online
 {

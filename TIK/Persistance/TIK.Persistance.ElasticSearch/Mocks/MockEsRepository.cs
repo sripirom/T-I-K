@@ -7,8 +7,8 @@ using TIK.Core.Domain;
 
 namespace TIK.Persistance.ElasticSearch.Mocks
 {
-    public class MockEsRepository<T>  
-        where T : BaseModel<Int32>
+    public class MockEsRepository<T, TId>  
+        where T : BaseModel<TId>
     {
         protected List<T> _collection;
 
@@ -18,7 +18,7 @@ namespace TIK.Persistance.ElasticSearch.Mocks
 
         }
 
-        public T Get(Int32 id)
+        public T Get(TId id)
         {
             return (T)_collection.FirstOrDefault(a => a.Id.Equals(id));
         }
@@ -36,7 +36,7 @@ namespace TIK.Persistance.ElasticSearch.Mocks
 
             return results;
         }
-        public bool Delete(Int32 id)
+        public bool Delete(TId id)
         {
             var entity = _collection.FirstOrDefault(a => a.Id.Equals(id));
             if (entity != null)
@@ -51,11 +51,11 @@ namespace TIK.Persistance.ElasticSearch.Mocks
 
         }
 
-        public Int32 Add(T entry)
+        public TId Add(T entry)
         {
-            if (entry.Id == 0)
+            if (entry.Id.ToString() ==  "0")
             {
-                entry.Id = _collection.Count() + 1;
+                //entry.Id = _collection.Count() + 1;
             }
             var persistEntity = _collection.FirstOrDefault(a => a.Id.Equals(entry.Id));
             if (persistEntity == null)
@@ -69,11 +69,11 @@ namespace TIK.Persistance.ElasticSearch.Mocks
             return entry.Id;
         }
 
-        public Int32 Save(T entry)
+        public TId Save(T entry)
         {
-            if (entry.Id == 0)
+            if (entry.Id.ToString() == "0" || String.IsNullOrEmpty(entry.Id.ToString()))
             {
-                entry.Id = _collection.Count() + 1;
+                //entry.Id = _collection.Count() + 1;
             }
             var persistEntity = _collection.FirstOrDefault(a => a.Id.Equals(entry.Id));
             if (persistEntity == null)

@@ -3,12 +3,18 @@
     padding-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
+    height: 100%;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -17,3 +23,11 @@
 .dl-horizontal dt {
     white-space: normal;
 }
+
+.footer {
+    position: relative;
+    margin-top: -150px; /* negative value of footer height */
+    height: 150px;
+    clear: both;
+    padding-top: 20px;
+} 

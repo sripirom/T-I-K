@@ -33,7 +33,7 @@ namespace TIK.WebPortal
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
              .AddJwtBearer(options => {
@@ -69,13 +69,16 @@ namespace TIK.WebPortal
                 options.AddPolicy("Member",
                     policy => policy.RequireClaim("MembershipId"));
             });
+
+
+            services.AddServiceCollection();
         
 
             services.AddMvc();
 
 
     //Now register our services with Autofac container
-
+            /*
    
             var builder = new ContainerBuilder();
             //builder.RegisterType<UserAccountRepository>().As<IUserAccountRepository>();
@@ -87,6 +90,7 @@ namespace TIK.WebPortal
             var container = builder.Build();
             //Create the IServiceProvider based on the container.
             return new AutofacServiceProvider(container);
+            */
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Stock Viewer";
+}
+
+    <environment include="Development">
+        <link href="~/app/site.css" rel="stylesheet" /> 
+        <script src="~/app/angular-web-api-security.js"></script>
+        <script src="~/app/stock-viewer/app-module.js"></script>
+        <script src="~/app/stock-viewer/stock-viewer-app.component.js"></script>
+
+        <script src="~/app/stock-viewer/user-account.service.js"></script>
+        <script src="~/app/stock-viewer/user-status.component.js"></script>
+	  
+        <script src="~/app/stock-viewer/main-navigator.component.js"></script>
+        <script src="~/app/stock-viewer/home.component.js"></script>
+	
+        <script src="~/app/stock-viewer/stock/stock.service.js"></script>
+	    <script src="~/app/stock-viewer/stock/stock-list.component.js"></script>
+	    <script src="~/app/stock-viewer/stock/stock.component.js"></script>
+        <script src="~/app/stock-viewer/stock/stock-heading.component.js"></script>
+	    <script src="~/app/stock-viewer/stock/stock-capitaldetail.component.js"></script>
+        <script src="~/app/stock-viewer/stock/stock-navigator.component.js"></script>
+        <script src="~/app/stock-viewer/stock/stock-discussion.component.js"></script>
+        <script src="~/app/stock-viewer/stock/stock-discussion-list.component.js"></script>
+        <script src="~/app/stock-viewer/stock/stock-discussion-item.component.js"></script>
+        <script src="~/app/stock-viewer/stock/stock-historical.component.js"></script>
+	    <script src="~/app/stock-viewer/stock/stock-historical-list.component.js"></script>
+	    <script src="~/app/stock-viewer/stock/stock-backtester.component.js"></script>       
+    </environment>
+
+
+
+
+<div ng-non-bindable class="container-fluid">
+    <div id="stock-viewer" class="section-container">
+        <div class="body-content" ng-cloak>
+            <stock-viewer-app></stock-viewer-app>
+        </div>
+    </div>
+</div>
+
+<script>
+ angular.bootstrap(document.getElementById("stock-viewer"), ['stockViewer']);
+</script>

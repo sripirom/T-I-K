@@ -14,6 +14,7 @@
     <Folder Include="Notifications\" />
     <Folder Include="TheSet\" />
     <Folder Include="Jobs\" />
+    <Folder Include="Identity\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />

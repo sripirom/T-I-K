@@ -10,7 +10,7 @@ using TIK.Core.Logging;
 using TIK.Core.Container;
 using TIK.Applications.DataTransformation;
 using TIK.Integration.SignalR.DataTransform;
-using TIK.Applications.Batch.Commands.SearchNews;
+using TIK.Applications.Batch.SearchNews;
 using TIK.Integration.DataTransformation;
 
 namespace TIK.Computation.ServiceNode.Hangfire

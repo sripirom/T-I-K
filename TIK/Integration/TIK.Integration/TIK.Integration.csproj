@@ -9,6 +9,8 @@
     <Folder Include="Notification\" />
     <Folder Include="DataTransformation\" />
     <Folder Include="Bulk\" />
+    <Folder Include="Identity\" />
+    <Folder Include="Online\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />

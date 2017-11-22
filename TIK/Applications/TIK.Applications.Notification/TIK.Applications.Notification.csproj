@@ -17,4 +17,7 @@
     <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
     <ProjectReference Include="..\..\Integration\TIK.Integration\TIK.Integration.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="HangFire.Core" Version="1.6.17" />
+  </ItemGroup>
 </Project>
