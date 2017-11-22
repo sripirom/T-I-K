@@ -2,12 +2,11 @@
 using Hangfire;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TIK.Applications.Batch.Commands.SearchNews;
+using TIK.Applications.Batch.SearchNews;
 using TIK.Domain.Jobs;
 using TIK.Domain.SearchNews;
-using TIK.ProcessService.Batch.Models;
 
-namespace TIK.ProcessService.Batch.Controllers
+namespace TIK.Applications.Batch.SearchNews.Routes
 {
     //[Authorize]
     public class SearchNewsController : Controller
@@ -18,7 +17,7 @@ namespace TIK.ProcessService.Batch.Controllers
         [HttpPost]
        // [ValidateAntiForgeryToken]
         [Route("SearchNews")]
-        public IActionResult AddQueue([FromBody]SearchNewsModel inputModel)
+        public IActionResult AddQueue([FromBody]CriteriaSearchNews inputModel)
         {
              
             CriteriaSearchNews message = new CriteriaSearchNews 

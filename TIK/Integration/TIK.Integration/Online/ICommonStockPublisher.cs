@@ -8,6 +8,7 @@ namespace TIK.Integration.Online
     public interface ICommonStockPublisher
     {
         Task<IEnumerable<CommonStock>> GetList(int startIndex, int pageSize);
+        Task<CommonStockInfo> GetInfo(int memberId, int stockId);
     }
 }
  

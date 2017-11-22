@@ -21,9 +21,10 @@ namespace TIK.Applications.Online.CommonStocks
             return this.CommonStocksActorInstance;
         }
 
-        public static IActorRef CreateInstance(ActorSystem actorSystem, ICommonStockRepository commonStrockRepository)
+        public static IActorRef CreateInstance(ActorSystem actorSystem, ICommonStockRepository commonStockRepository, 
+                                               ICommonStockInfoRepository commonStockInfoRepository)
         {
-            return actorSystem.ActorOf(CommonStocksActor.Props(commonStrockRepository), "commonStrocks");
+            return actorSystem.ActorOf(CommonStocksActor.Props(commonStockRepository, commonStockInfoRepository), "commonStrocks");
         }
     }
 } 

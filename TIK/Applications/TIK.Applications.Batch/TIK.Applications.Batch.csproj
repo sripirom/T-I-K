@@ -11,7 +11,10 @@
     <ProjectReference Include="..\..\Integration\TIK.Integration\TIK.Integration.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="Commands\SearchNews\" />
+    <Folder Include="SearchNews\" />
+    <Folder Include="SearchNews\Routes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="HangFire.Core" Version="1.6.17" />
   </ItemGroup>
 </Project>

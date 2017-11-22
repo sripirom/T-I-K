@@ -1,5 +1,5 @@
 ﻿using System;
-namespace TIK.Applications.Online.EodStrocks
+namespace TIK.Applications.Online.EodStocks
 {
     public partial class EodStocksActor
     {

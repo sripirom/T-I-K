@@ -3,15 +3,50 @@ using TIK.Core.Domain;
 
 namespace TIK.Domain.TheSet
 {
-    public class CommonStorkInfo : BaseModel<String>
+    public class CommonStockInfo : BaseModel<Int32>
     {
-        public CommonStorkInfo()
+        public CommonStockInfo()
         {
+        }
+        public Int32 StockId
+        {
+            get { return Id; }
         }
 
         public string Symbol
         {
-            get { return Id; }
+            get;
+            set;
+        }
+        public string Address
+        {
+            get;set;
+        }
+        public string Telephone
+        {
+            get;
+            set;
+        }
+        public string Fax
+        {
+            get;
+            set;
+        }
+        public string WebSite
+        {
+            get;
+            set;
+        }
+
+        public string Market
+        {
+            get;
+            set;
+        }
+        public string SecurityName
+        {
+            get;
+            set;
         }
 
         /// <summary> 

@@ -12,8 +12,8 @@
                 });
         }
 
-        self.getstock = function (symbol) {
-            return $http.get(apiBase + 'stock/' + symbol + '/info')
+        self.getstock = function (stockId) {
+            return $http.get(apiBase + 'stock/' + stockId + '/info')
                 .then(function (result) {
                     return result.data;
                 });
@@ -39,10 +39,10 @@
             return timeString;
         }
 
-        self.getstockDiscussion = function (symbol) {
+        self.getstockDiscussion = function (stockId) {
             var accessToken = authenticationService.getAccessToken();
             return $http( {
-                url: apiBase + 'stock/' + symbol + '/discussion',
+                url: apiBase + 'stock/' + stockId + '/discussion',
                 method: 'GET',
                 headers: { 'Authorization': 'Bearer ' + accessToken }
             })
@@ -51,16 +51,16 @@
             });
         }
 
-        self.addstockDiscussionItem = function (userName, symbol, comment) {
+        self.addstockDiscussionItem = function (userName, stockId, comment) {
             var accessToken = authenticationService.getAccessToken();
             if (accessToken != '') {
                 var discussionItemModel = {
                     UserName: userName,
-                    stockId: symbol,
+                    stockId: stockId,
                     Comment: comment
                 };
                 return $http({
-                    url: apiBase + 'stock/' + symbol + '/discussion',
+                    url: apiBase + 'stock/' + stockId + '/discussion',
                     method: 'POST',
                     headers: { 'Authorization': 'Bearer ' + accessToken },
                     data: discussionItemModel

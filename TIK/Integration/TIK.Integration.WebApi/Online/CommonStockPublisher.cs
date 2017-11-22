@@ -14,6 +14,7 @@ namespace TIK.Integration.WebApi.Online
 
         private readonly string _getAllJobs;
         private readonly string _getCommonStocks;
+        private readonly string _getInfo;
 
         private readonly Uri _uri;
 
@@ -22,6 +23,7 @@ namespace TIK.Integration.WebApi.Online
             _uri = uri;
 
             _getCommonStocks = "CommonStock/GetList/{0}/{1}";
+            _getInfo = "CommonStock/GetInfo/{0}";
         }
 
         public Task<IEnumerable<CommonStock>> GetList(int startIndex, int pageSize)
@@ -42,6 +44,26 @@ namespace TIK.Integration.WebApi.Online
             var stocks = JsonConvert.DeserializeObject<IEnumerable<CommonStock>>(content);
              
             return Task.FromResult<IEnumerable<CommonStock>>(stocks);
+        }
+
+        public Task<CommonStockInfo> GetInfo(int memberId, int stockId)
+        {
+
+            var client = new RestClient(_uri);
+
+            string template = string.Format(_getInfo, stockId);
+
+            var request = new RestRequest(template, Method.GET);
+
+            request.AddHeader("Accept", "application/json");
+            request.Parameters.Clear();
+
+            var response = client.Execute(request);
+            var content = response.Content; // raw content as string      
+
+            var stockInfo = JsonConvert.DeserializeObject<CommonStockInfo>(content);
+
+            return Task.FromResult<CommonStockInfo>(stockInfo);
         }
     }
 }

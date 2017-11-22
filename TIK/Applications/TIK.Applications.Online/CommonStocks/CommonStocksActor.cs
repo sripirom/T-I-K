@@ -9,10 +9,13 @@ namespace TIK.Applications.Online.CommonStocks
     public partial class CommonStocksActor : ReceiveActor
     {
         private ICommonStockRepository _commonStrockRepository;
+        private ICommonStockInfoRepository _commonStockInfoRepository;
          
-        public CommonStocksActor(ICommonStockRepository commonStrockRepository)
+        public CommonStocksActor(ICommonStockRepository commonStrockRepository,
+                                 ICommonStockInfoRepository commonStockInfoRepository)
         {
             _commonStrockRepository = commonStrockRepository;
+            _commonStockInfoRepository = commonStockInfoRepository;
 
             Receive<GetCommonStocks>(m =>
             {
@@ -21,11 +24,17 @@ namespace TIK.Applications.Online.CommonStocks
                 Sender.Tell(new ReadOnlyCollection<CommonStock>(commonStocks.ToList()));
             });
 
+            Receive<RetriveCommonStock>(m => 
+            {
+                var stockInfo = _commonStockInfoRepository.Get(m.StockId);
+                Sender.Tell(stockInfo);
+            });
+
         }
 
-        public static Props Props(ICommonStockRepository commonStrockRepository)
+        public static Props Props(ICommonStockRepository commonStrockRepository, ICommonStockInfoRepository commonStockInfoRepository)
         {
-            return Akka.Actor.Props.Create(() => new CommonStocksActor(commonStrockRepository));
+            return Akka.Actor.Props.Create(() => new CommonStocksActor(commonStrockRepository, commonStockInfoRepository));
         }
 
 

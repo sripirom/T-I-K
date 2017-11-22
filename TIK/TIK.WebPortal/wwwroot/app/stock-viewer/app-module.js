@@ -46,17 +46,17 @@
             },
             {
                 name: 'stock',
-                url: '/stock/{symbol}',
+                url: '/stock/{stockId}',
                 resolve: {
-                    symbol: function ($stateParams) {
-                        return $stateParams.symbol;
+                    stockId: function ($stateParams) {
+                        return $stateParams.stockId;
                     }
                 },
-                template: '<stock stock-symbol="$resolve.symbol"></stock>'
+                template: '<stock stock-id="$resolve.stockId"></stock>'
             }
         ];
 
-        $urlRouterProvider.when('/stock/:symbol', '/stock/:symbol/stocks');
+       /* $urlRouterProvider.when('/stock/:stockId', '/stock/:stockId/stocks');*/
         $urlRouterProvider.otherwise('/');
 
         states.forEach(function (state) {       

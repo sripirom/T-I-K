@@ -20,9 +20,9 @@ namespace TIK.Applications.Identity.Authentication.Routes
 
 
         [Route("Authen")]
-        [HttpPost] public IActionResult Create([FromBody]ApiDsl.LoginInputModel inputModel)
+        [HttpPost] public IActionResult Create(string username, string password, string grant_type)
         {
-            var taskAuthen = GetToken.Execute(inputModel.Username, inputModel.Password);
+            var taskAuthen = GetToken.Execute(username, password);
 
             if (taskAuthen.IsCompletedSuccessfully){
                 var token = taskAuthen.Result;

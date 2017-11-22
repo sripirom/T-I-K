@@ -7,27 +7,20 @@ namespace TIK.Applications.Online.CommonStocks
     public partial class CommonStockActor : ReceiveActor
     {
 
-        public CommonStock CommonStork { get; }
-        /*
-        private decimal _Open;
-        private decimal _Close;
-        private decimal _High;
-        private decimal _Low;
-        private long _volumn;
-*/
-
-        public CommonStockActor(CommonStock commonStork, IActorRef eodStocksActor)
+        public CommonStockInfo CommonStorkData { get; }
+        
+        public CommonStockActor(CommonStockInfo commonStork, IActorRef eodStocksActor)
         {
-            CommonStork = commonStork;
+            CommonStorkData = commonStork;
 
 
             Receive<GetStockInfo>(m =>
             {
-                //Sender.Tell(new CommonStockInfo(){ Id = ""});
+                Sender.Tell(CommonStorkData);
             });
         }
 
-        public static Props Props(CommonStock commonStork, IActorRef eodStocksActor)
+        public static Props Props(CommonStockInfo commonStork, IActorRef eodStocksActor)
         {
             return Akka.Actor.Props.Create(() => new CommonStockActor(commonStork, eodStocksActor));
         }

@@ -8,6 +8,7 @@ namespace TIK.Applications.Online.CommonStocks
         {
             //services.AddSingleton<JobsActorProvider>();
             services.AddSingleton<Routes.GetCommonStocks>();
+            services.AddSingleton<Routes.GetStockInfo>();
         }
     }
 }

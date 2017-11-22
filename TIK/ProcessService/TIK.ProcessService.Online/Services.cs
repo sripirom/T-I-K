@@ -13,6 +13,7 @@ using TIK.Applications.Online.BackLogs;
 using TIK.Applications.Online.Jobs;
 using TIK.Applications.Online.Members.Routes;
 using TIK.Applications.Online.CommonStocks;
+using TIK.Applications.Online.EodStocks;
 
 namespace TIK.ProcessService.Online
 {
@@ -36,6 +37,8 @@ namespace TIK.ProcessService.Online
             var backLogsActorProvider = new BackLogsActorProvider(actorSystem, host);
             var jobsActorProvider = new JobsActorProvider(actorSystem, host);
             var commonStocksProvider = new CommonStocksProvider(actorSystem, host);
+            var eodStocksProvider = new EodStocksProvider(actorSystem, host);
+            var commonStockRouteProvider = new CommonStockRouteProvider(actorSystem, host);
 
             services.AddSingleton(typeof(ActorSystem), actorSystem);
 
@@ -44,6 +47,8 @@ namespace TIK.ProcessService.Online
             services.AddSingleton<BackLogsActorProvider>(_ => backLogsActorProvider);
             services.AddSingleton<JobsActorProvider>(_ => jobsActorProvider);
             services.AddSingleton<CommonStocksProvider>(_ => commonStocksProvider);
+            services.AddSingleton<EodStocksProvider>(_ => eodStocksProvider);
+            services.AddSingleton<CommonStockRouteProvider>(_ => commonStockRouteProvider);
 
             services.AddMemberServices();
             services.AddJobServices();

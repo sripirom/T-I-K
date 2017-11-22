@@ -4,7 +4,7 @@ using TIK.Core.Application;
 using TIK.Core.Logging;
 using TIK.Domain.SearchNews;
 
-namespace TIK.Applications.Batch.Commands.SearchNews
+namespace TIK.Applications.Batch.SearchNews
 {
     public class SearchNewsCommand : BaseAppService, ISearchNewsCommand
     {

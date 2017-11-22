@@ -10,9 +10,11 @@ namespace TIK.Applications.Online.CommonStocks.Routes
     public class CommonStockController : Controller
     {
         private GetCommonStocks GetCommonStocks { get; }
-        public CommonStockController(GetCommonStocks getCommonStocks)
+        private GetStockInfo GetStockInfo { get; }
+        public CommonStockController(GetCommonStocks getCommonStocks, GetStockInfo getStockInfo)
         {
             GetCommonStocks = getCommonStocks;
+            GetStockInfo = getStockInfo;
         }
 
 
@@ -23,5 +25,11 @@ namespace TIK.Applications.Online.CommonStocks.Routes
             return result;
         }
 
+        [Route("GetInfo/{stockId}")]
+        [HttpGet()] public async Task<CommonStockInfo> GetInfo(int stockId)
+        {
+            var result = await this.GetStockInfo.Execute(0, stockId);
+            return result;
+        }
     }
 }

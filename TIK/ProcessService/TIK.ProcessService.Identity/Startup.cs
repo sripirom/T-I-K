@@ -41,6 +41,8 @@ namespace TIK.ProcessService.Identity
 
             services.AddAuthenticationServices();
 
+            services.AddCors();
+
             // add controller at TIK.Applications.Identity
             services.AddMvc()
                     .AddApplicationPart(typeof(TokenController).GetTypeInfo().Assembly)
@@ -94,6 +96,9 @@ namespace TIK.ProcessService.Identity
                     });
                 });
             }
+
+            app.UseCors(builder =>
+                        builder.WithOrigins("http://localhost:5000"));
 
             app.UseAuthentication();
 

@@ -4,7 +4,7 @@ using TIK.Domain.TheSet;
 
 namespace TIK.Persistance.ElasticSearch.Mocks
 {
-    public class MockCommonStockRepository : MockEsRepository<CommonStock, String>, ICommonStockRepository
+    public class MockCommonStockRepository : MockEsRepository<CommonStock, Int32>, ICommonStockRepository
     {
         public MockCommonStockRepository()
         {
@@ -13,10 +13,10 @@ namespace TIK.Persistance.ElasticSearch.Mocks
             //3,AAV,SET,บริษัท เอเชีย เอวิเอชั่น จำกัด(มหาชน),ASIA AVIATION PUBLIC COMPANY LIMITED,,
             //4,ABICO,mai,บริษัท เอบิโก้ โฮลดิ้งส์ จำกัด(มหาชน),ABICO HOLDINGS PUBLIC COMPANY LIMITED,,
             _collection = new List<CommonStock> {
-                new CommonStock { Id = "2S", Market="mai", SecurityName = "2S METAL PUBLIC COMPANY LIMITED" },
-                new CommonStock { Id = "A", Market="SET", SecurityName = "AREEYA PROPERTY PUBLIC COMPANY LIMITED" },
-                new CommonStock { Id = "AAV", Market="SET", SecurityName = "ASIA AVIATION PUBLIC COMPANY LIMITED" },
-                new CommonStock { Id = "ABICO", Market="mai", SecurityName = "ABICO HOLDINGS PUBLIC COMPANY LIMITED" }
+                new CommonStock { Id = 1, Symbol = "2S", Market="mai", SecurityName = "2S METAL PUBLIC COMPANY LIMITED" },
+                new CommonStock { Id = 2, Symbol = "A", Market="SET", SecurityName = "AREEYA PROPERTY PUBLIC COMPANY LIMITED" },
+                new CommonStock { Id = 3, Symbol = "AAV", Market="SET", SecurityName = "ASIA AVIATION PUBLIC COMPANY LIMITED" },
+                new CommonStock { Id = 4, Symbol = "ABICO", Market="mai", SecurityName = "ABICO HOLDINGS PUBLIC COMPANY LIMITED" }
 
             };
         }

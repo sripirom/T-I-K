@@ -12,8 +12,8 @@
     </div>
     <div class="row" ng-repeat="stock in vm.stocks">
         <div class="col-md-3">
-            <a ui-sref='stock({ id: stock.id })'>
-                {{ stock.id }}
+            <a ui-sref='stock({ stockId: stock.stockId })'>
+                {{ stock.symbol }}
             </a>
         </div>
         <div class="col-md-6">{{ stock.securityName }}</div>

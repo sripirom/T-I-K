@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Hangfire;
 using Microsoft.AspNetCore.Builder;
@@ -12,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.PlatformAbstractions;
 using Swashbuckle.AspNetCore.Swagger;
+using TIK.Applications.Batch.SearchNews.Routes;
 using TIK.ProcessService.Authentication;
 
 namespace TIK.ProcessService.Batch
@@ -56,7 +58,9 @@ namespace TIK.ProcessService.Batch
  
 
             services.JwtBearerAuthentication(Configuration);
-            services.AddMvc();
+            services.AddMvc()
+                    .AddApplicationPart(typeof(SearchNewsController).GetTypeInfo().Assembly)
+                    .AddControllersAsServices();
 
 
             // Register the Swagger generator, defining one or more Swagger documents

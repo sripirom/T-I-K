@@ -20,7 +20,7 @@ namespace TIK.Applications.Online.CommonStocks
 
         public class RetriveCommonStock
         {
-            public string Symbol
+            public Int32 StockId
             {
                 get;
                 set;

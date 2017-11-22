@@ -1,20 +1,11 @@
 ﻿using System;
-using TIK.Core.Domain;
-
-namespace TIK.Domain.TheSet
+namespace TIK.WebPortal.Models.StockViewerViewModels
 {
-    public class CommonStock : BaseModel<Int32>
+    public class StockViewModel
     {
-        public CommonStock()
-        {
-        }
-        public string Symbol
-        {
-            get;
-            set;
-        }
+        public int StockId { get; set; }
 
-        public string Market
+        public string Symbol
         {
             get;
             set;
@@ -24,7 +15,10 @@ namespace TIK.Domain.TheSet
             get;
             set;
         }
-
- 
+        public string Market
+        {
+            get;
+            set;
+        }
     }
 }
