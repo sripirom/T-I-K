@@ -13,9 +13,9 @@
     <Folder Include="Tmpl\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Persistance\TIK.Persistance.ElasticSearch\TIK.Persistance.ElasticSearch.csproj" />
-    <ProjectReference Include="..\..\Persistance\TIK.Persistance\TIK.Persistance.csproj" />
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
     <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
+    <ProjectReference Include="..\..\Core\TIK.Persistance\TIK.Persistance.csproj" />
+    <ProjectReference Include="..\..\Persistance\ElasticSearch\TIK.Persistance.ElasticSearch.csproj" />
   </ItemGroup>
 </Project>

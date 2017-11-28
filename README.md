@@ -5,5 +5,5 @@ POC .NET Core Project
 - Hangfire
 - AngularJs
 
-![GitHub Logo](/docs/TIK_Architecture.png)
-![GitHub Logo](/docs/TIK_Layer.png)
+![GitHub Logo](/docs/images/TIK_Architecture.png)
+![GitHub Logo](/docs/images/TIK_Layer.png)
