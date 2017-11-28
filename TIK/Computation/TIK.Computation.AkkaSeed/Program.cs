@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
@@ -18,7 +19,11 @@ namespace TIK.Computation.AkkaSeed
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
+            
             WebHost.CreateDefaultBuilder(args)
+                   .UseKestrel(options=>{
+                        options.Listen(EnvSettings.Instance().IP,EnvSettings.Instance().Port);
+                    })
                 .UseStartup<Startup>()
                 .Build();
     }

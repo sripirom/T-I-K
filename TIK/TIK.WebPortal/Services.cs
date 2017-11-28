@@ -15,8 +15,8 @@ namespace TIK.WebPortal
     {
         public static void AddServiceCollection(this IServiceCollection services)
         {
-            services.AddTransient<IIdentityTokenPublisher>(_ => new IdentityTokenPublisher(new Uri("http://localhost:5100")));
-            services.AddTransient<ICommonStockPublisher>(_ => new CommonStockPublisher(new Uri("http://localhost:5101"))); 
+            services.AddTransient<IIdentityTokenPublisher>(_ => new IdentityTokenPublisher(new Uri(EnvSettings.Instance().IdentityUrl)));
+            services.AddTransient<ICommonStockPublisher>(_ => new CommonStockPublisher(new Uri(EnvSettings.Instance().OnlineUrl))); 
         }
          
 

@@ -97,8 +97,8 @@ namespace TIK.ProcessService.Identity
                 });
             }
 
-            app.UseCors(builder =>
-                        builder.WithOrigins("http://localhost:5000"));
+            //app.UseCors(builder =>
+                        //builder.WithOrigins("http://localhost:5000"));
 
             app.UseAuthentication();
 

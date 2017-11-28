@@ -14,7 +14,7 @@ namespace TIK.ProcessService.Online
     {
         public static void Main(string[] args)
         {
-            Task.Delay(8000).Wait();
+            Task.Delay(15000).Wait();
             try
             {
                 BuildWebHost(args).Run();
@@ -28,6 +28,10 @@ namespace TIK.ProcessService.Online
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                   .UseKestrel(options =>
+                      {
+                          options.Listen(EnvSettings.Instance().IP, EnvSettings.Instance().Port);
+                      })
                 .UseStartup<Startup>()
                 .Build();
     }
