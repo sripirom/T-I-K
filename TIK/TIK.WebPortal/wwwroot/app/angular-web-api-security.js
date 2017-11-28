@@ -4,7 +4,7 @@
     var securityModule = angular.module('securityModule', []);
 
     securityModule.value('baseAddress', 'http://localhost:5000/');
-    securityModule.value('baseIdentityAddress', 'http://localhost:5100/');
+    securityModule.value('baseIdentityAddress', 'http://localhost:5000/');
 
     securityModule.factory('authenticationService', function ($http, baseIdentityAddress) {
 

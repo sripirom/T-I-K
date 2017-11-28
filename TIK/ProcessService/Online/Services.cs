@@ -23,19 +23,20 @@ namespace TIK.ProcessService.Online
         {
             services.AddTransient<IMemberRepository, MockMemberRepository>();
              
-            services.AddSingleton<IBatchPublisher>(_=> new BatchPublisher(new Uri("http://localhost:5102")));
+            services.AddSingleton<IBatchPublisher>(_=> new BatchPublisher(new Uri(EnvSettings.Instance().BatchUrl)));
         }
 
         public static void AddActorSystem(this IServiceCollection services)
         {
-            string host = @"127.0.0.1:5301";
-            var huconConfig = Path.Combine(Directory.GetCurrentDirectory(), "Hucon.txt");
+            string host = EnvSettings.Instance().AkkaAddress;
+
+            var huconConfig = Path.Combine(Directory.GetCurrentDirectory(), EnvSettings.Instance().HuconFileName);
             var config = HoconLoader.FromFile(huconConfig);
 
-            var actorSystem = ActorSystem.Create("OnlineSystem", config);
+            var actorSystem = ActorSystem.Create(EnvSettings.Instance().ActorSystem, config);
             var memberActorProvider = new MemberActorProvider(actorSystem, host);
-            var backLogsActorProvider = new BackLogsActorProvider(actorSystem, host);
-            var jobsActorProvider = new JobsActorProvider(actorSystem, host);
+            //var backLogsActorProvider = new BackLogsActorProvider(actorSystem, host);
+            //var jobsActorProvider = new JobsActorProvider(actorSystem, host);
             var commonStocksProvider = new CommonStocksProvider(actorSystem, host);
             var eodStocksProvider = new EodStocksProvider(actorSystem, host);
             var commonStockRouteProvider = new CommonStockRouteProvider(actorSystem, host);
@@ -44,8 +45,8 @@ namespace TIK.ProcessService.Online
 
 
             services.AddSingleton<MemberActorProvider>(_ => memberActorProvider);
-            services.AddSingleton<BackLogsActorProvider>(_ => backLogsActorProvider);
-            services.AddSingleton<JobsActorProvider>(_ => jobsActorProvider);
+            //services.AddSingleton<BackLogsActorProvider>(_ => backLogsActorProvider);
+            //services.AddSingleton<JobsActorProvider>(_ => jobsActorProvider);
             services.AddSingleton<CommonStocksProvider>(_ => commonStocksProvider);
             services.AddSingleton<EodStocksProvider>(_ => eodStocksProvider);
             services.AddSingleton<CommonStockRouteProvider>(_ => commonStockRouteProvider);

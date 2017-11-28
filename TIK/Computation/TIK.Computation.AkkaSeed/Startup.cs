@@ -8,11 +8,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Serilog;
 
 namespace TIK.Computation.AkkaSeed
 {
     public class Startup
     {
+        private static AkkaStateService ActorSystemInstance;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -23,6 +26,15 @@ namespace TIK.Computation.AkkaSeed
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Log.Logger = new LoggerConfiguration()
+                  .MinimumLevel.Verbose()
+                  .WriteTo.LiterateConsole()
+                  .WriteTo.RollingFile("logs\\log-{Date}.txt")
+                  .CreateLogger();
+            
+            ActorSystemInstance = new AkkaStateService();
+            services.AddSingleton(typeof(AkkaStateService), ActorSystemInstance);
+
             services.AddMvc();
         }
 
@@ -35,6 +47,9 @@ namespace TIK.Computation.AkkaSeed
             }
 
             app.UseMvc();
+
+
+            ActorSystemInstance.Start();
         }
     }
 }

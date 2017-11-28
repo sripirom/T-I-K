@@ -1,0 +1,31 @@
+﻿
+akka {
+  loglevel = DEBUG
+
+  actor {
+    provider = cluster
+    debug {
+      receive = on
+      autoreceive = on
+      lifecycle = on
+      event-stream = on
+      unhandled = on
+    }
+  }
+
+  remote {
+    dot-netty.tcp {
+      hostname = localhost      # external (logical) hostname
+      port = 0                   # external (logical) port
+
+    }
+  }
+
+  cluster {
+    seed-nodes = ["akka.tcp://OnlineSystem@localhost:5301"]
+    rules = ["client"]
+  }
+
+}      
+
+

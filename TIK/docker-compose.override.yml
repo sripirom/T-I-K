@@ -3,101 +3,45 @@ version: '2'
 
 services:
 # Simplified number of services here:
+  tik.computation.akkaseed:
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    - TIK_AKKASEED_IP=0.0.0.0
+    - TIK_AKKASEED_PORT=80
+    - TIK_AKKASEED_HUCON=Hucon.txt
+    - TIK_AKKASEED_ADDR=tik-akkaseed:5301
+    - TIK_BATCH_URL=http://tik-batch
+    - TIK_ACTORSYSTEM=OnlineSystem
+    ports:
+      - "5301:5301"
+      - "5300:80"
+
   tik.processservice.online:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:5101
-      - ConnectionString=Server=sql.data; Database=Microsoft.eShopOnContainers.Services.CatalogDb; User Id=sa;Password=Pass@word
-      - ExternalCatalogBaseUrl=http://localhost:5101
+      - TIK_ONLINE_IP=0.0.0.0
+      - TIK_ONLINE_PORT=80
+      - TIK_ONLINE_HUCON=Hucon.txt
+      - TIK_AKKASEED_ADDR=tik-akkaseed:5301
+      - TIK_BATCH_URL=http://tik-batch
+      - TIK_ACTORSYSTEM=OnlineSystem
     ports:
-      - "5101:5101"
-
-  tik.processservice.batch:
-    environment:
-    - ASPNETCORE_ENVIRONMENT=Development
-    - ASPNETCORE_URLS=http://0.0.0.0:5102
-    - SpaClient=http://localhost:5104
-    - ConnectionStrings__DefaultConnection = Server=sql.data;Database=Microsoft.eShopOnContainers.Service.IdentityDb;User Id=sa;Password=Pass@word
-    - MvcClient=http://localhost:5100
-    ports:
-      - "5105:5105"
+      - "5101:80"
 
   tik.processservice.identity:
     environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - ASPNETCORE_URLS=http://0.0.0.0:5100
-    - SpaClient=http://localhost:5104
-    - ConnectionStrings__DefaultConnection = Server=sql.data;Database=Microsoft.eShopOnContainers.Service.IdentityDb;User Id=sa;Password=Pass@word
-    - MvcClient=http://localhost:5100
+    - TIK_IDENTITY_IP=0.0.0.0
+    - TIK_IDENTITY_PORT=80
     ports:
-      - "5105:5105"
-
-  tik.processservice.notification:
-    environment:
-    - ASPNETCORE_ENVIRONMENT=Development
-    - ASPNETCORE_URLS=http://0.0.0.0:5103
-    - SpaClient=http://localhost:5104
-    - ConnectionStrings__DefaultConnection = Server=sql.data;Database=Microsoft.eShopOnContainers.Service.IdentityDb;User Id=sa;Password=Pass@word
-    - MvcClient=http://localhost:5100
-    ports:
-      - "5105:5105"
-
-  tik.computation.akka:
-    environment:
-    - ASPNETCORE_ENVIRONMENT=Development
-    - ASPNETCORE_URLS=http://0.0.0.0:5301
-    - SpaClient=http://localhost:5104
-    - ConnectionStrings__DefaultConnection = Server=sql.data;Database=Microsoft.eShopOnContainers.Service.IdentityDb;User Id=sa;Password=Pass@word
-    - MvcClient=http://localhost:5100
-    ports:
-      - "5105:5105"
-
-  tik.computation.hangfire:
-    environment:
-    - ASPNETCORE_ENVIRONMENT=Development
-    - ASPNETCORE_URLS=http://0.0.0.0:5302
-    - SpaClient=http://localhost:5104
-    - ConnectionStrings__DefaultConnection = Server=sql.data;Database=Microsoft.eShopOnContainers.Service.IdentityDb;User Id=sa;Password=Pass@word
-    - MvcClient=http://localhost:5100
-    ports:
-      - "5105:5105"
-
-  tik.governance:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:5002
-      - CatalogUrl=http://localhost:5101
-      - OrderingUrl=http://localhost:5102
-      - IdentityUrl=http://localhost:5105
-      - BasketUrl=http:// localhost:5103
-    ports:
-      - "5104:5104"
+      - "5100:80"
 
   tik.webportal:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:5000
-      - OnlineUrl=http://localhost:5101
-      - BatchUrl=http://localhost:5102
-      - IdentityUrl=http://localhost:5105
-      - NotificationUrl=http:// localhost:5103
+      - TIK_WEBPORTAL_IP=0.0.0.0
+      - TIK_WEBPORTAL_PORT=80
+      - TIK_ONLINE_URL=http://tik-online
+      - TIK_IDENTITY_URL=http://tik-identity
     ports:
-      - "5104:5104"
-
-  tik.webportal.signalr:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:5001
-      - CatalogUrl=http://localhost:5101
-      - OrderingUrl=http://localhost:5102
-      - IdentityUrl=http://localhost:5105
-      - BasketUrl=http:// localhost:5103
-    ports:
-      - "5104:5104"
-
-  sql.data:
-    environment:
-      - SA_PASSWORD=Pass@word
-      - ACCEPT_EULA=Y
-    ports:
-      - "5433:1433"
+      - "5000:80"

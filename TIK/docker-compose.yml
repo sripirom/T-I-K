@@ -2,88 +2,41 @@
 version: '2'
 
 services:
-  tik.processservice.online:
-    image: sripirom/tik.processservice.online
+  tik.computation.akkaseed:
+    image: tik.computation.akkaseed
+    container-name: tik-akkaseed
     build:
-    context: ./TIK/ProcessService/Online
-    dockerfile: Dockerfile
-    depends_on:
-      - tik.processservice.identity
-
-  tik.processservice.batch:
-    image: sripirom/tik.processservice.batch
-    build:
-    context: ./TIK/ProcessService/Batch
-    dockerfile: Dockerfile
-    depends_on:
-      - tik.processservice.identity
-
-  tik.processservice.identity:
-    image: sripirom/tik.processservice.identity
-    build:
-    context: ./TIK/ProcessService/Identity
-    dockerfile: Dockerfile
-    depends_on:
-      - sql.data
-
-  tik.processservice.notification:
-    image: sripirom/tik.processservice.notification
-    build:
-    context: ./TIK/ProcessService/Notification
-    dockerfile: Dockerfile
-    depends_on:
-      - tik.processservice.identity
-
-  tik.computation.akka:
-    image: sripirom/tik.computation.akka
-    build:
-    context: ./TIK/Computation/Akka
-    dockerfile: Dockerfile
-    depends_on:
+      context: ./TIK/Computation/AkkaSeed
+      dockerfile: Dockerfile
+    depends_on: 
       - tik.processservice.online
       - tik.processservice.batch
 
-  tik.computation.hangfire:
-    image: sripirom/tik.computation.hangfire
+  tik.processservice.online:
+    image: tik.processservice.online
+    container-name: tik-online
     build:
-    context: ./TIK/Computation/Hangfire
-    dockerfile: Dockerfile
-    depends_on:
-      - tik.processservice.online
-
-  tik.governance:
-    image: sripirom/tik.governance
-    build:
-    context: ./TIK/Governance
-    dockerfile: Dockerfile
+      context: ./TIK/ProcessService/Online
+      dockerfile: Dockerfile
     depends_on:
       - tik.processservice.identity
+      - tik.computation.akka
+
+  tik.processservice.identity:
+    image: tik.processservice.identity
+    container-name: tik-identity
+    build:
+      context: ./TIK/ProcessService/Identity
+      dockerfile: Dockerfile
 
   tik.webportal:
     image: sripirom/tik.webportal
+    container-name: tik-webportal
     build:
-    context: ./TIK/WebPortal
-    dockerfile: Dockerfile
+      context: ./TIK/WebPortal
+      dockerfile: Dockerfile
     depends_on:
       - tik.processservice.identity
       - tik.processservice.online
-      - tik.processservice.notification
-      - tik.processservice.batch
 
-  tik.webportal.signalr:
-    image: sripirom/tik.webportal.signalr
-    build:
-    context: ./TIK/WebPortal.SignalR
-    dockerfile: Dockerfile
-
-  sql.data:
-    image: microsoft/mssql-server-linux
-    stock.data:
-    image: redis
-    expose:
-      - "6379"
-    rabbitmq:
-    image: rabbitmq
-    ports:
-      - "5672:5672"
 

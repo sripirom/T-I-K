@@ -10,7 +10,7 @@ using TIK.WebPortal.Models;
 
 namespace TIK.WebPortal.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("IdentityToken")]
     public class IdentityTokenController : Controller
     {
         public IIdentityTokenPublisher TokenPublisher { get; }
@@ -20,8 +20,8 @@ namespace TIK.WebPortal.Controllers
         }
 
         //password=password&grant_type=password&username=user1
-        [HttpPost]
-        public IActionResult Post(string username, string password, string grant_type)
+        [Route("Authen")]
+        [HttpPost]public IActionResult Post(string username, string password, string grant_type)
         {
             var taskResult = TokenPublisher.Authen(username, password);
 

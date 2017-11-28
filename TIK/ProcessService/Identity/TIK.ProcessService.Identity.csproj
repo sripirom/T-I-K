@@ -5,6 +5,15 @@
     <DockerComposeProjectPath>../../docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <StartAction>Project</StartAction>
+    <EnvironmentVariables>
+      <Variable name="ASPNETCORE_ENVIRONMENT" value="Development" />
+      <Variable name="TIK_IDENTITY_IP" value="127.0.0.1" />
+      <Variable name="TIK_IDENTITY_PORT" value="5100" />
+    </EnvironmentVariables>
+    <LaunchBrowser>false</LaunchBrowser>
+  </PropertyGroup>
   <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>

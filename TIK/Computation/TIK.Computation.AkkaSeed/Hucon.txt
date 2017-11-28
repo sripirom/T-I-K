@@ -16,15 +16,15 @@ akka {
   remote {
     # enabled-transports = ["akka.remote.dot-netty.tcp", "akka.remote.dot-netty.udp"]
     dot-netty.tcp {
-        port = 0
+        port = 5301
         hostname = 0.0.0.0 # listen on all interfaces
-        public-hostname = "tik-online"
+        public-hostname = "tik-akkaseed"
     }
   }
 
   cluster {
-    seed-nodes = ["akka.tcp://OnlineSystem@0.0.0.0:5301"]
-    rules = ["client"]
+    seed-nodes = ["akka.tcp://OnlineSystem@tik-akkaseed:5301"]
+    rules = ["Membership", "commonStrockRoute", "commonStrocks", "eodStocks"]
   }
 
 }      
