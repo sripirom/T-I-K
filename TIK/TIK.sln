@@ -85,11 +85,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Persistance.SQLite", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.ProcessService", "Core\TIK.ProcessService\TIK.ProcessService.csproj", "{B207EE93-192F-441F-8964-EF9878128BA1}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "TIK.Specification", "Specification\TIK.Specification\TIK.Specification.csproj", "{B6FE9232-2FC8-4FD6-B5E6-E491727B5B3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Specification", "Specification\TIK.Specification\TIK.Specification.csproj", "{B6FE9232-2FC8-4FD6-B5E6-E491727B5B3B}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "TIK.WebPortal.Sockets", "TIK.WebPortal.Sockets\TIK.WebPortal.Sockets.csproj", "{FF742A55-3E8B-4059-8D3A-584A371659B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.WebPortal.Sockets", "TIK.WebPortal.Sockets\TIK.WebPortal.Sockets.csproj", "{FF742A55-3E8B-4059-8D3A-584A371659B3}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "TIK.UnitTests", "TIK.UnitTests\TIK.UnitTests.csproj", "{46137EEE-B348-4B79-ADA4-044922EA3942}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.UnitTests", "TIK.UnitTests\TIK.UnitTests.csproj", "{46137EEE-B348-4B79-ADA4-044922EA3942}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
