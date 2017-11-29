@@ -52,8 +52,8 @@ namespace TIK.ProcessService.Online
             services.AddSingleton<CommonStockRouteProvider>(_ => commonStockRouteProvider);
 
             services.AddMemberServices();
-            services.AddJobServices();
-            services.AddBackLogServices();
+            //services.AddJobServices();
+            //services.AddBackLogServices();
             services.AddCommonStockServices();
         }
     }

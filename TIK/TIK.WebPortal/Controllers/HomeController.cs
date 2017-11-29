@@ -13,15 +13,10 @@ namespace TIK.WebPortal.Controllers
      
         public ActionResult Index()
         {
-            return View("CourseViewer");
-
-        }
-
-        [Route("")]
-        public ActionResult Stock()
-        {
             return View("StockViewer");
+
         }
+
 
         public IActionResult About()
         {

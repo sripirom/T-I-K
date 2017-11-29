@@ -1,6 +1,6 @@
 ﻿
 akka {
-  loglevel = DEBUG
+  loglevel = OFF
 
   actor {
     provider = remote

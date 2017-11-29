@@ -12,8 +12,8 @@
       <Variable name="TIK_ONLINE_IP" value="127.0.0.1" />
       <Variable name="TIK_ONLINE_PORT" value="5101" />
       <Variable name="TIK_ONLINE_HUCON" value="Hucon_Dev.txt" />
-      <Variable name="TIK_AKKASEED_ADDR" value="localhost:5301" />
-      <Variable name="TIK_BATCH_URL" value="http://tik-batch" />
+      <Variable name="TIK_AKKASEED_ADDR" value="127.0.0.1:5301" />
+      <Variable name="TIK_BATCH_URL" value="http://127.0.0.1:5103" />
       <Variable name="TIK_ACTORSYSTEM" value="OnlineSystem" />
     </EnvironmentVariables>
     <LaunchBrowser>false</LaunchBrowser>

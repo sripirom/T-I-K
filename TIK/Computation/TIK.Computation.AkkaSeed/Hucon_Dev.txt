@@ -1,6 +1,6 @@
 ﻿
 akka {
-  loglevel = OFF
+  loglevel = DEBUG
 
   actor {
     provider = cluster
@@ -15,16 +15,14 @@ akka {
 
   remote {
     dot-netty.tcp {
-      hostname = localhost      # external (logical) hostname
-      port = 0                   # external (logical) port
+      hostname = 127.0.0.1      # external (logical) hostname
+      port = 5301                  # external (logical) port
 
-      # bind-hostname = localhost # internal (bind) hostname
-      # bind-port = 5301              # internal (bind) port
     }
   }
 
   cluster {
-    seed-nodes = ["akka.tcp://OnlineSystem@localhost:5301"]
+    seed-nodes = ["akka.tcp://OnlineSystem@127.0.0.1:5301"]
     rules = ["Membership", "commonStrockRoute", "commonStrocks", "eodStocks"]
   }
 
