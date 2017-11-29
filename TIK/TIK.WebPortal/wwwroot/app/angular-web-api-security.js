@@ -3,13 +3,12 @@
 
     var securityModule = angular.module('securityModule', []);
 
-    securityModule.value('baseAddress', 'http://localhost:5000/');
-    securityModule.value('baseIdentityAddress', 'http://localhost:5000/');
+    securityModule.value('baseAddress', window.__env.apiBase);
 
-    securityModule.factory('authenticationService', function ($http, baseIdentityAddress) {
+    securityModule.factory('authenticationService', function ($http, baseAddress) {
 
         var self = this;
-        var baseAddress = baseIdentityAddress;
+
         var apiAccountBase = baseAddress + 'IdentityToken/Authen';
 
         self.userName = (localStorage['userName'] ? localStorage['userName'] : '');

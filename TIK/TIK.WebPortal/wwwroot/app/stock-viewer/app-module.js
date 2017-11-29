@@ -3,7 +3,7 @@
 
     var appModule = angular.module('stockViewer', ['securityModule', 'ui.router']);
 
-    appModule.value('apiBase', 'http://localhost:5000/api/stockViewer/');
+    appModule.value('apiBase', window.__env.apiBaseStock);
     appModule.value('componentBorders', true);
 
     appModule.run(function (componentBorders) {

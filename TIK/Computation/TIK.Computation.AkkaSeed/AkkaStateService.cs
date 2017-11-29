@@ -33,11 +33,11 @@ namespace TIK.Computation.AkkaSeed
                 ICommonStockInfoRepository commonStockInfoRepository = new MockCommonStockInfoRepository();
                 IEodRepository eodRepository = new MockEodRepository();
 
-                IBatchPublisher batchPublisher = new BatchPublisher(new Uri(EnvSettings.Instance().BatchUrl));
+                //IBatchPublisher batchPublisher = new BatchPublisher(new Uri(EnvSettings.Instance().BatchUrl));
 
                 var memberController = MemberActorProvider.CreateInstance(ActorSystemInstance, memberRepository);
                 //var jobsActorProvider = JobsActorProvider.CreateInstance(ActorSystemInstance, batchPublisher);
-                //var backLogsActor = BackLogsActorProvider.CreateInstance(ActorSystemInstance, new JobsActorProvider(ActorSystemInstance, host));
+                //var backLogsActor = BackLogsActorProvider.CreateInstance(ActorSystemInstance, new JobsActorProvider(ActorSystemInstance, EnvSettings.Instance().AkkaAddress));
                 var commonStocksActor = CommonStocksProvider.CreateInstance(ActorSystemInstance, commonStockRepository, commonStockInfoRepository);
                 var eodStocksActor = EodStocksProvider.CreateInstance(ActorSystemInstance, eodRepository);
                 var commonStockRouteActor = CommonStockRouteProvider.CreateInstance(ActorSystemInstance, commonStocksActor, eodStocksActor);

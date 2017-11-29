@@ -14,14 +14,18 @@ namespace TIK.Computation.AkkaSeed
 {
     public class Startup
     {
-        private static AkkaStateService ActorSystemInstance;
+       
+
 
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            ActorSystemInstance = new AkkaStateService();
         }
 
         public IConfiguration Configuration { get; }
+
+        public AkkaStateService ActorSystemInstance { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -32,7 +36,7 @@ namespace TIK.Computation.AkkaSeed
                   .WriteTo.RollingFile("logs\\log-{Date}.txt")
                   .CreateLogger();
             
-            ActorSystemInstance = new AkkaStateService();
+           
             services.AddSingleton(typeof(AkkaStateService), ActorSystemInstance);
 
             services.AddMvc();
@@ -46,10 +50,12 @@ namespace TIK.Computation.AkkaSeed
                 app.UseDeveloperExceptionPage();
             }
 
+            ActorSystemInstance.Start();
+
             app.UseMvc();
 
 
-            ActorSystemInstance.Start();
+         
         }
     }
 }
