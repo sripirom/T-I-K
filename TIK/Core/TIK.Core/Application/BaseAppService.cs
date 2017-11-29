@@ -5,6 +5,6 @@ namespace TIK.Core.Application
 {
     public abstract class BaseAppService : IAppService
     {
-        public virtual ILog Logger { get; set; } = new NullLogger();
+        //public virtual ILog Logger { get; set; } = new NullLogger();
     }
 }
