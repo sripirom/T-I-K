@@ -31,6 +31,6 @@
 
  
         },
-        templateUrl: 'App/stock-viewer/user-status.component.html'
+        templateUrl: 'app/stock-viewer/user-status.component.html'
     });
 })();

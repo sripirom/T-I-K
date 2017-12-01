@@ -25,6 +25,6 @@
             }
 
         },
-        templateUrl: 'App/stock-viewer/stock/stock-historical.component.html'
+        templateUrl: 'app/stock-viewer/stock/stock-historical.component.html'
     });
 })();

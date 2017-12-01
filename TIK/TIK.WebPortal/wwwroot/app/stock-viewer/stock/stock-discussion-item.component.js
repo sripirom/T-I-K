@@ -30,6 +30,6 @@
                 }
             }
         },
-        templateUrl: 'App/stock-viewer/stock/stock-discussion-item.component.html'
+        templateUrl: 'app/stock-viewer/stock/stock-discussion-item.component.html'
     });       
 })();

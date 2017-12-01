@@ -7,6 +7,6 @@
             var vm = this;
 
         },
-        templateUrl: 'App/stock-viewer/stock/stock-navigator.component.html'
+        templateUrl: 'app/stock-viewer/stock/stock-navigator.component.html'
     });
 })();

@@ -2,6 +2,6 @@
     'use strict';
 
     angular.module('stockViewer').component('stockViewerApp', {
-        templateUrl: 'App/stock-viewer/stock-viewer-app.component.html'
+        templateUrl: 'app/stock-viewer/stock-viewer-app.component.html'
     });
 })();

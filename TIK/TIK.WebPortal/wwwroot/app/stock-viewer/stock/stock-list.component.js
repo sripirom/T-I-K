@@ -14,6 +14,6 @@
                 });
             }
         },
-        templateUrl: 'App/stock-viewer/stock/stock-list.component.html'
+        templateUrl: 'app/stock-viewer/stock/stock-list.component.html'
     });
 })();
