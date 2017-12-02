@@ -4,36 +4,33 @@ version: '2'
 services:
   tik.computation.akkaseed:
     image: tik.computation.akkaseed
-    container-name: tik-akkaseed
+    container_name: tik-akkaseed
     build:
-      context: ./TIK/Computation/AkkaSeed
+      context: ./Computation/AkkaSeed
       dockerfile: Dockerfile
-    depends_on: 
-      - tik.processservice.online
-      - tik.processservice.batch
 
   tik.processservice.online:
     image: tik.processservice.online
-    container-name: tik-online
+    container_name: tik-online
     build:
-      context: ./TIK/ProcessService/Online
+      context: ./ProcessService/Online
       dockerfile: Dockerfile
     depends_on:
       - tik.processservice.identity
-      - tik.computation.akka
+      - tik.computation.akkaseed
 
   tik.processservice.identity:
     image: tik.processservice.identity
-    container-name: tik-identity
+    container_name: tik-identity
     build:
-      context: ./TIK/ProcessService/Identity
+      context: ./ProcessService/Identity
       dockerfile: Dockerfile
 
   tik.webportal:
-    image: sripirom/tik.webportal
-    container-name: tik-webportal
+    image: tik.webportal
+    container_name: tik-webportal
     build:
-      context: ./TIK/WebPortal
+      context: ./TIK.WebPortal
       dockerfile: Dockerfile
     depends_on:
       - tik.processservice.identity

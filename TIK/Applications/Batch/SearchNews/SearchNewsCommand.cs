@@ -17,19 +17,19 @@ namespace TIK.Applications.Batch.SearchNews
 
         public void SearchNewsBankOfThailand(CriteriaSearchNews criteriaSearchNews)
         {
-            Logger.Info("SearchNewsBankOfThailand");
+            //Logger.Info("SearchNewsBankOfThailand");
             Task.Delay(TimeSpan.FromSeconds(10)).Wait();
         }
 
         public void AnalysisResult(CriteriaSearchNews criteriaSearchNews)
         {
-            Logger.Info("AnalysisResult");
+            //Logger.Info("AnalysisResult");
             Task.Delay(TimeSpan.FromSeconds(5)).Wait();
         }
 
         public void ReportingResult(CriteriaSearchNews criteriaSearchNews)
         {
-            Logger.Info("ReportingResult");
+            //Logger.Info("ReportingResult");
             Task.Delay(TimeSpan.FromSeconds(2)).Wait();
         }
 

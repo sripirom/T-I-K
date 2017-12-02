@@ -31,6 +31,6 @@
 
             }
         },
-        templateUrl: 'App/stock-viewer/stock/stock.component.html'
+        templateUrl: 'app/stock-viewer/stock/stock.component.html'
     });
 })();

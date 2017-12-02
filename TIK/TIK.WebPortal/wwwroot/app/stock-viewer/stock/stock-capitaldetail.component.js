@@ -10,6 +10,6 @@
             var vm = this;
 
         },
-        templateUrl: 'App/stock-viewer/stock/stock-capitaldetail.component.html'
+        templateUrl: 'app/stock-viewer/stock/stock-capitaldetail.component.html'
     });
 })();

@@ -42,6 +42,6 @@
                 vm.commentEntryVisible = false;
             }
         },
-        templateUrl: 'App/stock-viewer/stock/stock-discussion.component.html'
+        templateUrl: 'app/stock-viewer/stock/stock-discussion.component.html'
     });
 })();

@@ -8,6 +8,6 @@
 
             vm.authenticationService = authenticationService;
         },
-        templateUrl: 'App/stock-viewer/home.component.html'
+        templateUrl: 'app/stock-viewer/home.component.html'
     });
 })();
