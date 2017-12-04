@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using TIK.Applications.Online;
 using TIK.Applications.Online.Members.Routes;
 using TIK.Applications.Security;
+using TIK.ProcessService.Activities;
 
 namespace TIK.ProcessService.Online
 {
@@ -41,6 +42,7 @@ namespace TIK.ProcessService.Online
             // add controller at TIK.Applications.Online
             services.AddMvc()
                     .AddApplicationPart(typeof(MemberController).GetTypeInfo().Assembly)
+                    .AddApplicationPart(typeof(HealthCheckController).GetTypeInfo().Assembly) 
                     .AddControllersAsServices();
         }
 

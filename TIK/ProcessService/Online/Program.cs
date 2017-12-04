@@ -7,6 +7,8 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using TIK.Core.Governance;
+using TIK.ProcessService.Activities;
 
 namespace TIK.ProcessService.Online
 {
@@ -17,7 +19,20 @@ namespace TIK.ProcessService.Online
             Task.Delay(15000).Wait();
             try
             {
-                BuildWebHost(args).Run();
+                BuildWebHost(args).Start();
+
+                var client = new ConsulProvider(EnvSettings.Instance().IP.ToString(),
+                                    EnvSettings.Instance().Port);
+                client.Start();
+
+                Console.WriteLine("DataService started...");
+                Console.WriteLine("Press ESC to exit");
+
+                while (Console.Read() != (int)ConsoleKey.Escape)
+                {
+                }
+
+                client.Stop();
             }
             catch (Exception ex)
             {

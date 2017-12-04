@@ -30,6 +30,7 @@
     <ProjectReference Include="..\..\Integration\WebApi\TIK.Integration.WebApi.csproj" />
     <ProjectReference Include="..\..\Core\TIK.Persistance\TIK.Persistance.csproj" />
     <ProjectReference Include="..\..\Persistance\ElasticSearch\TIK.Persistance.ElasticSearch.csproj" />
+    <ProjectReference Include="..\..\Core\TIK.Computation\TIK.Computation.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Hucon.txt">

@@ -19,6 +19,7 @@ using TIK.Applications.Identity.JwtSecurity;
 using TIK.Applications.Security;
 using TIK.Domain.UserAccounts;
 using TIK.Persistance.ElasticSearch.Mocks;
+using TIK.ProcessService.Activities;
 
 namespace TIK.ProcessService.Identity
 {
@@ -46,6 +47,7 @@ namespace TIK.ProcessService.Identity
             // add controller at TIK.Applications.Identity
             services.AddMvc()
                     .AddApplicationPart(typeof(TokenController).GetTypeInfo().Assembly)
+                    .AddApplicationPart(typeof(HealthCheckController).GetTypeInfo().Assembly)
                     .AddControllersAsServices();
         }
 

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using TIK.Core.Governance;
 
 namespace TIK.Computation.AkkaSeed
 {
@@ -16,7 +17,20 @@ namespace TIK.Computation.AkkaSeed
       
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            BuildWebHost(args).Start();
+
+            var client = new ConsulProvider(EnvSettings.Instance().IP.ToString(),
+                                    EnvSettings.Instance().Port);
+            client.Start();
+
+            Console.WriteLine("DataService started...");
+            Console.WriteLine("Press ESC to exit");
+
+            while (Console.Read() != (int)ConsoleKey.Escape)
+            {
+            }
+
+            client.Stop();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

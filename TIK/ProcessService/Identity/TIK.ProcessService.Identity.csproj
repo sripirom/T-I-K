@@ -7,6 +7,8 @@
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <StartAction>Project</StartAction>
+    <ExternalConsole>true</ExternalConsole>
+    <ConsolePause>false</ConsolePause>
     <EnvironmentVariables>
       <Variable name="ASPNETCORE_ENVIRONMENT" value="Development" />
       <Variable name="TIK_IDENTITY_IP" value="127.0.0.1" />
@@ -20,6 +22,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Consul" Version="0.7.2.3" />
   </ItemGroup>
 
   <ItemGroup>
