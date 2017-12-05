@@ -17,6 +17,7 @@ using TIK.Applications.Identity.Authentication;
 using TIK.Applications.Identity.Authentication.Routes;
 using TIK.Applications.Identity.JwtSecurity;
 using TIK.Applications.Security;
+using TIK.Core.Governance.ServiceDiscovery;
 using TIK.Domain.UserAccounts;
 using TIK.Persistance.ElasticSearch.Mocks;
 using TIK.ProcessService.Activities;
@@ -49,6 +50,8 @@ namespace TIK.ProcessService.Identity
                     .AddApplicationPart(typeof(TokenController).GetTypeInfo().Assembly)
                     .AddApplicationPart(typeof(HealthCheckController).GetTypeInfo().Assembly)
                     .AddControllersAsServices();
+
+            services.AddServiceDiscovery(Configuration.GetSection("ServiceDiscovery"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -105,6 +108,9 @@ namespace TIK.ProcessService.Identity
             app.UseAuthentication();
 
             app.UseMvc();
+
+            // Autoregister using server.Features (does not work in reverse proxy mode)
+            app.UseConsulRegisterService();
         }
     }
 }

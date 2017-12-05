@@ -17,20 +17,15 @@ namespace TIK.Computation.AkkaSeed
       
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Start();
-
-            var client = new ConsulProvider(EnvSettings.Instance().IP.ToString(),
-                                    EnvSettings.Instance().Port);
-            client.Start();
-
-            Console.WriteLine("DataService started...");
-            Console.WriteLine("Press ESC to exit");
-
-            while (Console.Read() != (int)ConsoleKey.Escape)
+            try
             {
+                BuildWebHost(args).Run();
             }
-
-            client.Stop();
+            catch (Exception ex)
+            {
+                Console.Write(ex);
+            }
+           
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

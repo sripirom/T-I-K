@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
+using DnsClient;
 using Microsoft.AspNetCore.Mvc;
 using TIK.Integration.Identity;
 using TIK.WebPortal.Models;
@@ -13,7 +15,9 @@ namespace TIK.WebPortal.Controllers
     [Route("IdentityToken")]
     public class IdentityTokenController : Controller
     {
+
         public IIdentityTokenPublisher TokenPublisher { get; }
+
         public IdentityTokenController(IIdentityTokenPublisher tokenPublisher)
         {
             TokenPublisher = tokenPublisher;   
@@ -26,6 +30,7 @@ namespace TIK.WebPortal.Controllers
             var taskResult = TokenPublisher.Authen(username, password);
 
             return Ok(taskResult.Result);
+
         }
     }
 

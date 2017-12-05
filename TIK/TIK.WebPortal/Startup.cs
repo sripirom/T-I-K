@@ -17,6 +17,8 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using TIK.Persistance.ElasticSearch.Repositories;
 using Nest;
+using DnsClient;
+using System.Net;
 
 namespace TIK.WebPortal
 {
@@ -76,6 +78,7 @@ namespace TIK.WebPortal
 
             services.AddMvc();
 
+        
 
     //Now register our services with Autofac container
             /*
