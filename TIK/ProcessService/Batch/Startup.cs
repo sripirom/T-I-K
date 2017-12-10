@@ -20,10 +20,7 @@ namespace TIK.ProcessService.Batch
 {
     public class Startup
     {
-        //public Startup(IConfiguration configuration)
-       // {
-        //    Configuration = configuration;
-        //}
+
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()

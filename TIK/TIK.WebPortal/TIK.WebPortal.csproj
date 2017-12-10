@@ -19,9 +19,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\app\" />
-    <Folder Include="wwwroot\app\transaction-mornitor\" />
-    <Folder Include="wwwroot\app\transaction-mornitor\bulk\" />
-    <Folder Include="wwwroot\app\transaction-mornitor\single\" />
     <Folder Include="wwwroot\app\user-activity\" />
     <Folder Include="wwwroot\app\stock-viewer\" />
     <Folder Include="wwwroot\app\stock-viewer\stock\" />

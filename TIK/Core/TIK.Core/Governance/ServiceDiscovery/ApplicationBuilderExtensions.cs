@@ -18,22 +18,24 @@ namespace TIK.Core.Governance.ServiceDiscovery
         public static IApplicationBuilder UseConsulRegisterService(this IApplicationBuilder app)
         {
             var appLife = app.ApplicationServices.GetRequiredService<IApplicationLifetime>() ?? throw new ArgumentException("Missing dependency", nameof(IApplicationLifetime));
-            var serviceOptions = app.ApplicationServices.GetRequiredService<IOptions<ServiceDisvoveryOptions>>() ?? throw new ArgumentException("Missing dependency", nameof(IOptions<ServiceDisvoveryOptions>));
+            var options = app.ApplicationServices.GetRequiredService<IOptions<ServiceDiscoveryOptions>>() ?? throw new ArgumentException("Missing dependency", nameof(IOptions<ServiceDiscoveryOptions>));
+            var serviceOptions = ServiceDiscoveryEnvFactory.Get(options.Value);
+
             var consul = app.ApplicationServices.GetRequiredService<IConsulClient>() ?? throw new ArgumentException("Missing dependency", nameof(IConsulClient));
             var loggerFactory = app.ApplicationServices.GetRequiredService<ILoggerFactory>();
 
             var logger = loggerFactory.CreateLogger("ServiceDiscoveryBuilder");
 
-            if (string.IsNullOrEmpty(serviceOptions.Value.ServiceName))
+            if (string.IsNullOrEmpty(serviceOptions.ServiceName))
             {
-                throw new ArgumentException("Service Name must be configured", nameof(serviceOptions.Value.ServiceName));
+                throw new ArgumentException("Service Name must be configured", nameof(serviceOptions.ServiceName));
             }
 
             IEnumerable<Uri> addresses = null;
-            if (serviceOptions.Value.Endpoints != null && serviceOptions.Value.Endpoints.Length > 0)
+            if (serviceOptions.Endpoints != null && serviceOptions.Endpoints.Length > 0)
             {
-                logger.LogInformation($"Using {serviceOptions.Value.Endpoints.Length} configured endpoints for service registration.");
-                addresses = serviceOptions.Value.Endpoints.Select(p => new Uri(p));
+                logger.LogInformation($"Using {serviceOptions.Endpoints.Length} configured endpoints for service registration.");
+                addresses = serviceOptions.Endpoints.Select(p => new Uri(p));
             }
             else
             {
@@ -48,15 +50,15 @@ namespace TIK.Core.Governance.ServiceDiscovery
 
             foreach (var address in addresses)
             {
-                var serviceId = $"{serviceOptions.Value.ServiceName}_{address.Host}:{address.Port}";
+                var serviceId = $"{serviceOptions.ServiceName}_{address.Host}:{address.Port}";
 
                 logger.LogInformation($"Registering service {serviceId} for address {address}.");
 
                 var serviceChecks = new List<AgentServiceCheck>();
 
-                if (!string.IsNullOrEmpty(serviceOptions.Value.HealthCheckTemplate))
+                if (!string.IsNullOrEmpty(serviceOptions.HealthCheckTemplate))
                 {
-                    var healthCheckUri = new Uri(address, serviceOptions.Value.HealthCheckTemplate).OriginalString;
+                    var healthCheckUri = new Uri(address, serviceOptions.HealthCheckTemplate).OriginalString;
                     serviceChecks.Add(new AgentServiceCheck()
                     {
                         Status = HealthStatus.Passing,
@@ -73,7 +75,7 @@ namespace TIK.Core.Governance.ServiceDiscovery
                     Checks = serviceChecks.ToArray(),
                     Address = address.Host,
                     ID = serviceId,
-                    Name = serviceOptions.Value.ServiceName,
+                    Name = serviceOptions.ServiceName,
                     Port = address.Port
                 };
 

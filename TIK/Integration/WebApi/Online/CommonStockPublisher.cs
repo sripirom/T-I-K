@@ -17,12 +17,15 @@ namespace TIK.Integration.WebApi.Online
         private readonly string _getInfo;
         private readonly string _getStockDiscussion;
         private readonly string _addStockDiscussionItem;
-        private readonly Uri _uri;
+        private readonly string _serviceName;
 
-        public CommonStockPublisher(Uri uri)
+        private readonly IEndpointDiscovery _dns;
+
+
+        public CommonStockPublisher(string serviceName, IEndpointDiscovery dns)
         {
-            _uri = uri;
-
+            _dns = dns ?? throw new ArgumentNullException(nameof(dns));
+            _serviceName =serviceName;
             _getCommonStocks = "CommonStock/GetList/{0}/{1}";
             _getInfo = "CommonStock/GetInfo/{0}";
 
@@ -33,7 +36,7 @@ namespace TIK.Integration.WebApi.Online
         public Task<IEnumerable<CommonStock>> GetList(int startIndex, int pageSize)
         {
             
-            var client = new RestClient(_uri);
+            var client = new RestClient(_dns.Resolve(_serviceName).Result);
 
             string template = string.Format(_getCommonStocks, startIndex, pageSize);
 
@@ -53,7 +56,7 @@ namespace TIK.Integration.WebApi.Online
         public Task<CommonStockInfo> GetInfo(int memberId, int stockId)
         {
 
-            var client = new RestClient(_uri);
+            var client = new RestClient(_dns.Resolve(_serviceName).Result);
 
             string template = string.Format(_getInfo, stockId);
 
@@ -72,7 +75,7 @@ namespace TIK.Integration.WebApi.Online
 
         public Task<IEnumerable<DiscussionItem>> GetStockDiscussion(int memberId, int stockId)
         {
-            var client = new RestClient(_uri);
+            var client = new RestClient(_dns.Resolve(_serviceName).Result);
 
             string template = string.Format(_getStockDiscussion, stockId);
 
@@ -89,9 +92,9 @@ namespace TIK.Integration.WebApi.Online
             return Task.FromResult<IEnumerable<DiscussionItem>>(stockDiscussions);
         }
 
-        public Task<DiscussionItem> AddStockDiscussionItem(Int32 memberId, Int32 stockId, DiscussionItem discussionItem)
+        public Task<Boolean> AddStockDiscussionItem(Int32 memberId, Int32 stockId, DiscussionItem discussionItem)
         {
-            var client = new RestClient(_uri);
+            var client = new RestClient(_dns.Resolve(_serviceName).Result);
 
             string template = string.Format(_addStockDiscussionItem, stockId);
 
@@ -105,9 +108,9 @@ namespace TIK.Integration.WebApi.Online
             var response = client.Execute(request);
             var content = response.Content; // raw content as string      
 
-            var stockDiscussion = JsonConvert.DeserializeObject<DiscussionItem>(content);
+            var result = JsonConvert.DeserializeObject<Boolean>(content);
 
-            return Task.FromResult<DiscussionItem>(stockDiscussion);
+            return Task.FromResult<Boolean>(result);
         }
 
     }

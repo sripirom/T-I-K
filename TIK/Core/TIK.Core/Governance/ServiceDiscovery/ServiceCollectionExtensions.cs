@@ -5,6 +5,8 @@ using DnsClient;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace TIK.Core.Governance.ServiceDiscovery
 {
@@ -15,24 +17,30 @@ namespace TIK.Core.Governance.ServiceDiscovery
             services.AddOptions();
 
             // setup options
-            services.Configure<ServiceDisvoveryOptions>(serviceOptionsConfiguration);
+            services.Configure<ServiceDiscoveryOptions>(serviceOptionsConfiguration);
 
             // register consul client
             services.AddSingleton<IConsulClient>(p => new ConsulClient(cfg =>
             {
-                var serviceConfiguration = p.GetRequiredService<IOptions<ServiceDisvoveryOptions>>().Value;
+               
+                var options = p.GetRequiredService<IOptions<ServiceDiscoveryOptions>>().Value;
+
+                var serviceConfiguration = ServiceDiscoveryEnvFactory.Get(options);
+               
 
                 if (!string.IsNullOrEmpty(serviceConfiguration.Consul.HttpEndpoint))
                 {
                     // if not configured, the client will use the default value "127.0.0.1:8500"
-                    cfg.Address = new Uri(serviceConfiguration.Consul.HttpEndpoint);
+                    cfg.Address = new Uri(serviceConfiguration.Consul.HttpEndpoint); 
                 }
             }));
 
             // register dns lookup
             services.AddSingleton<IDnsQuery>(p =>
             {
-                var serviceConfiguration = p.GetRequiredService<IOptions<ServiceDisvoveryOptions>>().Value;
+                var options = p.GetRequiredService<IOptions<ServiceDiscoveryOptions>>().Value;
+
+                var serviceConfiguration = ServiceDiscoveryEnvFactory.Get(options);
 
                 var client = new LookupClient(IPAddress.Parse("127.0.0.1"), 8600);
 

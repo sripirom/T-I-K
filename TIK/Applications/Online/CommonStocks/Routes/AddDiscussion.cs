@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using TIK.Domain.TheSet;
 using TIK.Applications.Online.CommonStocks;
 using Microsoft.AspNetCore.Mvc;
+using TIK.Integration.Online;
 
 namespace TIK.Applications.Online.CommonStocks.Routes
 {
@@ -14,14 +15,16 @@ namespace TIK.Applications.Online.CommonStocks.Routes
 
         private ILogger<GetCommonStocks> Logger { get; set; }
         private IActorRef CommonStockRouteActor { get; set; }
+        private IStockDiscussionPublisher Pubisher { get; set; }
 
-        public AddDiscussion(CommonStockRouteProvider provider, ILogger<GetCommonStocks> logger)
+        public AddDiscussion(CommonStockRouteProvider provider, IStockDiscussionPublisher publisher, ILogger<GetCommonStocks> logger)
         {
             this.Logger = logger;
             this.CommonStockRouteActor = provider.Get();
+            this.Pubisher = publisher;
         }
 
-        public async Task<DiscussionItem> Execute(int memberId, int stockId, DiscussionItem discussionItem)
+        public async Task<Boolean> Execute(int memberId, int stockId, DiscussionItem discussionItem)
         {
 
             Logger.LogInformation($"Adding {discussionItem.Comment} of stock '{stockId}'");
@@ -37,7 +40,10 @@ namespace TIK.Applications.Online.CommonStocks.Routes
             {
                 var e = result as CommonStockActor.DiscussionAdded;
                 discussionItem.Id = e.DiscussionId;
-                return await Task.FromResult(discussionItem);
+
+                var res = await Pubisher.AddStockDiscussion(stockId, discussionItem);
+
+                return await Task.FromResult(res);
             }
             else
             {

@@ -12,11 +12,13 @@ namespace TIK.Integration.WebApi.Online
 
         private readonly string _getActiveMember;
 
-        private readonly Uri _uri;
+        private readonly IEndpointDiscovery _dns;
+        private readonly string _serviceName;
 
-        public MemberPublisher(Uri uri)
+        public MemberPublisher(string serviceName, IEndpointDiscovery dns)
         {
-            _uri = uri;
+            _dns = dns ?? throw new ArgumentNullException(nameof(dns));
+            _serviceName = serviceName;
 
             _getActiveMember = "CommonStock/GetList/{0}/{1}";
         }
@@ -24,7 +26,7 @@ namespace TIK.Integration.WebApi.Online
         public Task<Member> Active(string token)
         {
 
-            var client = new RestClient(_uri);
+            var client = new RestClient(_dns.Resolve(_serviceName).Result);
 
          
             var request = new RestRequest(_getActiveMember, Method.GET);

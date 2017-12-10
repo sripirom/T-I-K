@@ -38,5 +38,30 @@ namespace TIK.ProcessService.Online
         {
             get { return Environment.GetEnvironmentVariable("TIK_ACTORSYSTEM"); }
         }
-    } 
+
+        public int ConsulDnsPort
+        {
+            get { return Convert.ToInt32(Environment.GetEnvironmentVariable("CONSUL_DNS_PORT")); }
+        }
+
+        public string ConsulDnsPublishAddress
+        {
+            get { return Environment.GetEnvironmentVariable("CONSUL_DNS_PUBLISH_ADDRESS"); }
+        }
+
+        public string ConsulDnsAddress
+        {
+            get { return Environment.GetEnvironmentVariable("CONSUL_DNS_ADDRESS"); }
+        }
+
+        public string ConsulDnsBaseDomain
+        {
+            get { return Environment.GetEnvironmentVariable("CONSUL_DNS_BASEDOMAIN"); }
+        }
+
+        public string WebSignalRServiceName
+        {
+            get { return Environment.GetEnvironmentVariable("TIK_WEBSIGNALR_SERVICENAME"); }
+        }
+    }  
 }

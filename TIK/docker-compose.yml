@@ -8,6 +8,8 @@ services:
     build:
       context: ./Computation/AkkaSeed
       dockerfile: Dockerfile
+    depends_on:
+      - consul3
 
   tik.processservice.online:
     image: tik.processservice.online
@@ -18,6 +20,7 @@ services:
     depends_on:
       - tik.processservice.identity
       - tik.computation.akkaseed
+      - consul2
 
   tik.processservice.identity:
     image: tik.processservice.identity
@@ -25,6 +28,8 @@ services:
     build:
       context: ./ProcessService/Identity
       dockerfile: Dockerfile
+    depends_on:
+      - consul2
 
   tik.webportal:
     image: tik.webportal
@@ -35,35 +40,37 @@ services:
     depends_on:
       - tik.processservice.identity
       - tik.processservice.online
+      - consul1
+
+  tik.websignalr:
+    image: tik.websignalr
+    container_name: tik-websignalr
+    build:
+      context: ./TIK.WebSignalR
+      dockerfile: Dockerfile
+    depends_on:
+      - tik.processservice.identity
+      - tik.processservice.online
+      - consul2
 
   consul1:
     image: "progrium/consul:latest"
     container_name: "consul1"
     hostname: "consul1"
-    ports:
-      - "8400:8400"
-      - "8500:8500"
-      - "8600:53"
     command: "-server -bootstrap-expect 3 -ui-dir /ui"
+
   consul2:
     image: "progrium/consul:latest"
     container_name: "consul2"
     hostname: "consul2"
-    expose:
-      - "8400"
-      - "8500"
-      - "8600"
     command: "-server -join consul1"
     depends_on:
       - consul1
+      
   consul3:
     image: "progrium/consul:latest"
     container_name: "consul3"
     hostname: "consul3"
-    expose:
-      - "8400"
-      - "8500"
-      - "8600"
     command: "-server -join consul1"
     depends_on:
       - consul1

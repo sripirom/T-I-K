@@ -14,21 +14,7 @@ namespace TIK.ProcessService.Identity
         {
             try
             {
-                BuildWebHost(args).Start();
-
-
-                var client = new ConsulProvider(EnvSettings.Instance().IP.ToString(), 
-                                                 EnvSettings.Instance().Port);
-                client.Start();
-
-                Console.WriteLine("DataService started...");
-                Console.WriteLine("Press ESC to exit");
-
-                while (Console.Read() != (int)ConsoleKey.Escape)
-                {
-                }
-
-                client.Stop();
+                BuildWebHost(args).Run();
 
             }
             catch (Exception ex)

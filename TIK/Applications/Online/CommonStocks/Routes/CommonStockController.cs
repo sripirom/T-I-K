@@ -46,7 +46,7 @@ namespace TIK.Applications.Online.CommonStocks.Routes
         }
 
         [Route("{stockId}/discussion")]
-        [HttpPost()] public async Task<DiscussionItem> AddDiscussionItem(Int32 stockId, [FromBody] DiscussionItem discussionItem)
+        [HttpPost()] public async Task<Boolean> AddDiscussionItem(Int32 stockId, [FromBody] DiscussionItem discussionItem)
         {
             var result = await this.AddDiscussion.Execute(0, stockId, discussionItem);
             return result;

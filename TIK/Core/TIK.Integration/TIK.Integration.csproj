@@ -16,4 +16,7 @@
     <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
     <ProjectReference Include="..\TIK.Core\TIK.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DnsClient" Version="1.0.7" />
+  </ItemGroup>
 </Project>

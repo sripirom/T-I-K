@@ -10,7 +10,7 @@ namespace TIK.Integration.Online
         Task<IEnumerable<CommonStock>> GetList(int startIndex, int pageSize);
         Task<CommonStockInfo> GetInfo(int memberId, int stockId);
         Task<IEnumerable<DiscussionItem>> GetStockDiscussion(int memberId, int stockId);
-        Task<DiscussionItem> AddStockDiscussionItem(int memberId, int stockId, DiscussionItem discussionItem);
+        Task<Boolean> AddStockDiscussionItem(int memberId, int stockId, DiscussionItem discussionItem);
     }
 }
  
