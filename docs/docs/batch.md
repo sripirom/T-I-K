@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: page
 title: Batch Processing
 permalink: /docs/batch/
 ---

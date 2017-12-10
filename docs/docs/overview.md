@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: page
 title: Overview Processing
 permalink: /docs/overview/
 ---
