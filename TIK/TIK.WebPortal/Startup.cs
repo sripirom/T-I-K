@@ -17,6 +17,9 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using TIK.Persistance.ElasticSearch.Repositories;
 using Nest;
+using DnsClient;
+using System.Net;
+using TIK.Core.Governance.ServiceDiscovery;
 
 namespace TIK.WebPortal
 {
@@ -25,9 +28,21 @@ namespace TIK.WebPortal
         const string TokenAudience = "ExampleAudience";
         const string TokenIssuer = "ExampleIssuer";
 
-        public Startup(IConfiguration configuration)
+        public Startup(IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+
+            if (env.IsEnvironment("Development"))
+            {
+                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
+                builder.AddApplicationInsightsSettings(developerMode: true);
+            }
+
+            builder.AddEnvironmentVariables();
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -76,6 +91,9 @@ namespace TIK.WebPortal
 
             services.AddMvc();
 
+            services.AddServiceDiscovery(Configuration.GetSection("ServiceDiscovery"));
+
+        
 
     //Now register our services with Autofac container
             /*
@@ -155,6 +173,9 @@ namespace TIK.WebPortal
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            // Autoregister using server.Features (does not work in reverse proxy mode)
+            app.UseConsulRegisterService();
         }
     }
 

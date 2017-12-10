@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using TIK.Core.Governance;
 
 namespace TIK.WebPortal
 {
@@ -16,7 +17,9 @@ namespace TIK.WebPortal
         {
             try
             {
+
                 BuildWebHost(args).Run();
+
             }
             catch (Exception ex)
             {

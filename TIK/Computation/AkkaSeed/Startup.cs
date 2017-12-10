@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using DnsClient;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -9,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Serilog;
+using TIK.Core.Governance.ServiceDiscovery;
 
 namespace TIK.Computation.AkkaSeed
 {
@@ -17,9 +20,16 @@ namespace TIK.Computation.AkkaSeed
        
 
 
-        public Startup(IConfiguration configuration)
+        public Startup(IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+               .SetBasePath(env.ContentRootPath)
+               .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+               .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+               .AddEnvironmentVariables();
+
+            Configuration = builder.Build();
+
             ActorSystemInstance = new AkkaStateService();
         }
 
@@ -40,6 +50,8 @@ namespace TIK.Computation.AkkaSeed
             services.AddSingleton(typeof(AkkaStateService), ActorSystemInstance);
 
             services.AddMvc();
+
+            services.AddServiceDiscovery(Configuration.GetSection("ServiceDiscovery"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,7 +67,8 @@ namespace TIK.Computation.AkkaSeed
             app.UseMvc();
 
 
-         
+            // Autoregister using server.Features (does not work in reverse proxy mode)
+            app.UseConsulRegisterService();
         }
     }
 }

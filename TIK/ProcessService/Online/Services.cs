@@ -14,6 +14,13 @@ using TIK.Applications.Online.Jobs;
 using TIK.Applications.Online.Members.Routes;
 using TIK.Applications.Online.CommonStocks;
 using TIK.Applications.Online.EodStocks;
+using TIK.Integration.Online;
+using TIK.Integration.SignalR.Online;
+using TIK.Integration;
+using System.Text.RegularExpressions;
+using DnsClient;
+using System.Net;
+using System.Linq;
 
 namespace TIK.ProcessService.Online
 {
@@ -21,9 +28,32 @@ namespace TIK.ProcessService.Online
     {
         public static void AddServiceCollection(this IServiceCollection services)
         {
+            var dnsPublishAddress = EnvSettings.Instance().ConsulDnsPublishAddress;
+            var baseDomain = EnvSettings.Instance().ConsulDnsBaseDomain;
+            var websignalServiceName = EnvSettings.Instance().WebSignalRServiceName;
+
+            var baseDns = new BaseDnsDiscovery(baseDomain);
+            if (!Regex.IsMatch(dnsPublishAddress, @"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b"))
+            {
+                var address = Dns.GetHostAddresses(dnsPublishAddress).LastOrDefault();
+                if (address != null) 
+                {
+                    dnsPublishAddress = address.ToString();
+                }
+            }
+            var endpointDiscovery = new EndpointDiscovery
+                                (new LookupClient(IPAddress.Parse(dnsPublishAddress),
+                                 EnvSettings.Instance().ConsulDnsPort)
+                                { UseTcpOnly = true }, baseDns);
+
+            services.AddSingleton<EndpointDiscovery>(_ => endpointDiscovery);
+
+
             services.AddTransient<IMemberRepository, MockMemberRepository>();
              
             services.AddSingleton<IBatchPublisher>(_=> new BatchPublisher(new Uri(EnvSettings.Instance().BatchUrl)));
+
+            services.AddSingleton<IStockDiscussionPublisher>(_=> new StockDiscussionPublisher(websignalServiceName, endpointDiscovery));
         }
 
         public static void AddActorSystem(this IServiceCollection services)

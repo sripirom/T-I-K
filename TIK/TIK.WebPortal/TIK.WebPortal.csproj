@@ -10,6 +10,7 @@
     <PackageReference Include="Autofac" Version="4.6.1" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.0" />
     <PackageReference Include="RestSharp" Version="106.0.1" />
+    <PackageReference Include="DnsClient" Version="1.0.7" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,9 +19,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\app\" />
-    <Folder Include="wwwroot\app\transaction-mornitor\" />
-    <Folder Include="wwwroot\app\transaction-mornitor\bulk\" />
-    <Folder Include="wwwroot\app\transaction-mornitor\single\" />
     <Folder Include="wwwroot\app\user-activity\" />
     <Folder Include="wwwroot\app\stock-viewer\" />
     <Folder Include="wwwroot\app\stock-viewer\stock\" />

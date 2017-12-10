@@ -8,6 +8,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using TIK.Core.Governance;
 
 namespace TIK.Computation.AkkaSeed
 {
@@ -16,7 +17,15 @@ namespace TIK.Computation.AkkaSeed
       
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            try
+            {
+                BuildWebHost(args).Run();
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex);
+            }
+           
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

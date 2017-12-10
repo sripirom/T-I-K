@@ -6,9 +6,11 @@
 
   <ItemGroup>
     <Folder Include="Authentication\" />
+    <Folder Include="Activities\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Consul" Version="0.7.2.3" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />

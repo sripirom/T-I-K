@@ -17,16 +17,30 @@ using TIK.Applications.Identity.Authentication;
 using TIK.Applications.Identity.Authentication.Routes;
 using TIK.Applications.Identity.JwtSecurity;
 using TIK.Applications.Security;
+using TIK.Core.Governance.ServiceDiscovery;
 using TIK.Domain.UserAccounts;
 using TIK.Persistance.ElasticSearch.Mocks;
+using TIK.ProcessService.Activities;
 
 namespace TIK.ProcessService.Identity
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+
+            if (env.IsEnvironment("Development"))
+            {
+                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
+                builder.AddApplicationInsightsSettings(developerMode: true);
+            }
+
+            builder.AddEnvironmentVariables();
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -46,7 +60,10 @@ namespace TIK.ProcessService.Identity
             // add controller at TIK.Applications.Identity
             services.AddMvc()
                     .AddApplicationPart(typeof(TokenController).GetTypeInfo().Assembly)
+                    .AddApplicationPart(typeof(HealthCheckController).GetTypeInfo().Assembly)
                     .AddControllersAsServices();
+
+            services.AddServiceDiscovery(Configuration.GetSection("ServiceDiscovery"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -103,6 +120,9 @@ namespace TIK.ProcessService.Identity
             app.UseAuthentication();
 
             app.UseMvc();
+
+            // Autoregister using server.Features (does not work in reverse proxy mode)
+            app.UseConsulRegisterService();
         }
     }
 }

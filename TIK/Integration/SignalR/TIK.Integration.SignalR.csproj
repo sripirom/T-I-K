@@ -7,6 +7,7 @@
   <ItemGroup>
     <Folder Include="DataTransform\" />
     <Folder Include="Notification\" />
+    <Folder Include="Online\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\TIK.Applications\TIK.Applications.csproj" />

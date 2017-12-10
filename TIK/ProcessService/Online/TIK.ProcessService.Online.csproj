@@ -12,9 +12,16 @@
       <Variable name="TIK_ONLINE_IP" value="127.0.0.1" />
       <Variable name="TIK_ONLINE_PORT" value="5101" />
       <Variable name="TIK_ONLINE_HUCON" value="Hucon_Dev.txt" />
+      <Variable name="TIK_ONLINE_SERVICENAME" value="tik.online" />
+      <Variable name="TIK_ONLINE_ENDPOINTS" value="http://127.0.0.1:5101" />
+      <Variable name="CONSUL_HELPCHECK_TEMPLATE" value="/HealthCheck" />
+      <Variable name="CONSUL_HTTP_ENPOINT" value="http://127.0.0.1:8500" />
+      <Variable name="CONSUL_DNS_ADDRESS" value="127.0.0.1" />
+      <Variable name="CONSUL_DNS_PORT" value="8600" />
       <Variable name="TIK_AKKASEED_ADDR" value="127.0.0.1:5301" />
       <Variable name="TIK_BATCH_URL" value="http://127.0.0.1:5103" />
       <Variable name="TIK_ACTORSYSTEM" value="OnlineSystem" />
+      <Variable name="CONSUL_DNS_PUBLISH_ADDRESS" value="127.0.0.1" />
     </EnvironmentVariables>
     <LaunchBrowser>false</LaunchBrowser>
   </PropertyGroup>
@@ -43,6 +50,7 @@
     <ProjectReference Include="..\..\Core\TIK.ProcessService\TIK.ProcessService.csproj" />
     <ProjectReference Include="..\..\Applications\Online\TIK.Applications.Online.csproj" />
     <ProjectReference Include="..\..\Integration\WebApi\TIK.Integration.WebApi.csproj" />
+    <ProjectReference Include="..\..\Integration\SignalR\TIK.Integration.SignalR.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="appsettings.json">

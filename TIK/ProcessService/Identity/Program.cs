@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Reflection;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+using Consul;
+using TIK.ProcessService.Activities;
+using TIK.Core.Governance;
 
 namespace TIK.ProcessService.Identity
 {
@@ -17,6 +15,7 @@ namespace TIK.ProcessService.Identity
             try
             {
                 BuildWebHost(args).Run();
+
             }
             catch (Exception ex)
             {
