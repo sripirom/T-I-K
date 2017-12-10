@@ -16,26 +16,7 @@
 title: T-I-K  asp.dotnetcore microservice 
 email: pichit@sripirom.com
 description: >- # this means to ignore newlines until "baseurl:"
-  feature
-    consul ServiceDiscovery
-    Akka.NET computation state service
-    SignalR broadcast realtime "add STOCK DISCUSSION"
-    docker compose deployment .
-    web angularjs
-  services
-  computation
-    tik-akkaseed akka.net state actors processing
-  processservice
-    tik-identity	authentication token (jwt).
-    tik-online	service webapi route to actors (akka.net).
-  portal
-    tik-webportal	angularjs UI route to process serviceses.
-    tik-websignalr	signals broadcast to UI.
-
-  service discovery
-    consul1	server ui service discovery.
-    consul2	children join consul1
-    consul2 children join consul1
+  asp.net core microservice using angularjs, signalr, akka.net, hangfire, consul.net
 baseurl: "/T-I-K" # the subpath of your site, e.g. /blog
 url: "https://sripirom.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sripiromPichit
@@ -58,4 +39,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
