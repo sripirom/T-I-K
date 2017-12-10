@@ -25,7 +25,4 @@
     <ProjectReference Include="..\Domain\TIK.Domain\TIK.Domain.csproj" />
     <ProjectReference Include="..\Applications\Batch\TIK.Applications.Batch.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\DataTransformation\" />
-  </ItemGroup>
 </Project>

@@ -20,7 +20,7 @@ namespace TIK.WebPortal
     {
         public static void AddServiceCollection(this IServiceCollection services)
         {
-            var dnsAddress = EnvSettings.Instance().ConsulDnsAddress;
+            var dnsAddress = EnvSettings.Instance().ConsulDnsPublishAddress;
             var baseDomain = Environment.GetEnvironmentVariable("CONSUL_DNS_BASEDOMAIN");
             var onlineServiceName = Environment.GetEnvironmentVariable("TIK_ONLINE_SERVICENAME"); 
             var identityServiceName = Environment.GetEnvironmentVariable("TIK_IDENTITY_SERVICENAME");

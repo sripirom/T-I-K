@@ -33,7 +33,7 @@ namespace TIK.WebPortal
             get { return Convert.ToInt32(Environment.GetEnvironmentVariable("CONSUL_DNS_PORT")); }
         }
 
-        public string ConsulDnsAddress
+        public string ConsulDnsPublishAddress
         {
             get { return Environment.GetEnvironmentVariable("CONSUL_DNS_PUBLISH_ADDRESS"); }
         }
