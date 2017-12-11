@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Overview Processing
+title: Overview
 permalink: /docs/overview/
 ---
 

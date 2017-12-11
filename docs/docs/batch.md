@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Batch Processing
+title: Batch
 permalink: /docs/batch/
 ---
 

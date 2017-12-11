@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Online Processing
+title: Online
 permalink: /docs/online/
 ---
 
