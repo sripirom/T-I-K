@@ -3,7 +3,7 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Linq;
 
-namespace TIK.Core.Governance.ServiceDiscovery
+namespace TIK.Core.ServiceDiscovery
 {
     public class ServiceDiscoveryEnvs
     {

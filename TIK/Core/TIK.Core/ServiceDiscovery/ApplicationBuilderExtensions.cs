@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 
-namespace TIK.Core.Governance.ServiceDiscovery
+namespace TIK.Core.ServiceDiscovery
 {
     public static class ApplicationBuilderExtensions
     {

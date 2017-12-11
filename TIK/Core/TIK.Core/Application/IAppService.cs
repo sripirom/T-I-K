@@ -4,6 +4,6 @@ namespace TIK.Core.Application
 {
     public interface IAppService : IDependency
     {
-        //ILog Logger { get; set; }
+        ILog Logger { get; set; }
     }
 }

@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Serilog;
-using TIK.Core.Governance.ServiceDiscovery;
+using TIK.Core.ServiceDiscovery;
 
 namespace TIK.Computation.AkkaSeed
 {
@@ -40,12 +40,6 @@ namespace TIK.Computation.AkkaSeed
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            Log.Logger = new LoggerConfiguration()
-                  .MinimumLevel.Verbose()
-                  .WriteTo.LiterateConsole()
-                  .WriteTo.RollingFile("logs\\log-{Date}.txt")
-                  .CreateLogger();
-            
            
             services.AddSingleton(typeof(AkkaStateService), ActorSystemInstance);
 
@@ -62,13 +56,24 @@ namespace TIK.Computation.AkkaSeed
                 app.UseDeveloperExceptionPage();
             }
 
+            var applicationLifetime = app.ApplicationServices.GetRequiredService<IApplicationLifetime>();
+            applicationLifetime.ApplicationStopping.Register(OnShutdown);
+
             ActorSystemInstance.Start();
 
             app.UseMvc();
 
 
+
             // Autoregister using server.Features (does not work in reverse proxy mode)
             app.UseConsulRegisterService();
         }
+
+        private void OnShutdown()
+        {
+            ActorSystemInstance.Stop();
+        }
+
+
     }
 }

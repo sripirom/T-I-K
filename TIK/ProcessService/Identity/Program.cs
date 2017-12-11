@@ -2,9 +2,6 @@
 using System.Reflection;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Consul;
-using TIK.ProcessService.Activities;
-using TIK.Core.Governance;
 
 namespace TIK.ProcessService.Identity
 {

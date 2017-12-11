@@ -17,7 +17,7 @@ using TIK.Applications.Identity.Authentication;
 using TIK.Applications.Identity.Authentication.Routes;
 using TIK.Applications.Identity.JwtSecurity;
 using TIK.Applications.Security;
-using TIK.Core.Governance.ServiceDiscovery;
+using TIK.Core.ServiceDiscovery;
 using TIK.Domain.UserAccounts;
 using TIK.Persistance.ElasticSearch.Mocks;
 using TIK.ProcessService.Activities;
