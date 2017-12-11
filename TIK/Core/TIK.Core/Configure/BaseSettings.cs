@@ -12,10 +12,10 @@ namespace TIK.Core.Configure
         public static TSettings Instance => _instance.Value;
 
 
-        public BaseSettings()
+        public BaseSettings(string configFile = "appsettings.json")
         {
             var builder = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+                .AddJsonFile(configFile, optional: true, reloadOnChange: true);
 
             Configuration = builder.Build();
         }

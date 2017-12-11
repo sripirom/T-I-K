@@ -8,7 +8,7 @@ using Microsoft.Extensions.Options;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace TIK.Core.Governance.ServiceDiscovery
+namespace TIK.Core.ServiceDiscovery
 {
     public static class ServiceCollectionExtensions
     {

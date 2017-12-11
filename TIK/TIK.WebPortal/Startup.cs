@@ -19,7 +19,7 @@ using TIK.Persistance.ElasticSearch.Repositories;
 using Nest;
 using DnsClient;
 using System.Net;
-using TIK.Core.Governance.ServiceDiscovery;
+using TIK.Core.ServiceDiscovery;
 
 namespace TIK.WebPortal
 {

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace TIK.Core.Governance.ServiceDiscovery
+namespace TIK.Core.ServiceDiscovery
 {
     public class ServiceDiscoveryOptions
     {

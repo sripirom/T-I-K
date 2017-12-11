@@ -79,11 +79,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Specification", "Specif
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.UnitTests", "TIK.UnitTests\TIK.UnitTests.csproj", "{46137EEE-B348-4B79-ADA4-044922EA3942}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{6E388F53-F8D9-4DA5-BA1B-77323D4F7656}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Computation.AkkaSeed", "Computation\AkkaSeed\TIK.Computation.AkkaSeed.csproj", "{7F9EFED5-DE86-49E5-83E5-8D112DA5E930}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.WebSignalR", "TIK.WebSignalR\TIK.WebSignalR.csproj", "{2E9D2484-9653-4778-B219-C828D50BF5A7}"
+EndProject
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "docker-compose", "docker-compose.dcproj", "{9AE4AA86-69EC-4927-BBA2-AA969243643D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -211,10 +211,6 @@ Global
 		{46137EEE-B348-4B79-ADA4-044922EA3942}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46137EEE-B348-4B79-ADA4-044922EA3942}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46137EEE-B348-4B79-ADA4-044922EA3942}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6E388F53-F8D9-4DA5-BA1B-77323D4F7656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E388F53-F8D9-4DA5-BA1B-77323D4F7656}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E388F53-F8D9-4DA5-BA1B-77323D4F7656}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E388F53-F8D9-4DA5-BA1B-77323D4F7656}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7F9EFED5-DE86-49E5-83E5-8D112DA5E930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7F9EFED5-DE86-49E5-83E5-8D112DA5E930}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F9EFED5-DE86-49E5-83E5-8D112DA5E930}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -253,5 +249,10 @@ Global
 		{B207EE93-192F-441F-8964-EF9878128BA1} = {53FF32E7-2AEB-4A2E-A832-AA0F2474E909}
 		{B6FE9232-2FC8-4FD6-B5E6-E491727B5B3B} = {3BDEB90B-3340-4E27-82CF-55950769C175}
 		{7F9EFED5-DE86-49E5-83E5-8D112DA5E930} = {43033647-555C-42BA-B466-B21EE21154FC}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
 	EndGlobalSection
 EndGlobal

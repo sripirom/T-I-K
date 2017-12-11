@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using TIK.Core.Governance.ServiceDiscovery;
+using TIK.Core.ServiceDiscovery;
 using TIK.WebSignalR.Controllers;
 using TIK.WebSignalR.EndPoints;
 using TIK.WebSignalR.Hubs;
@@ -43,6 +43,7 @@ namespace TIK.WebSignalR
             }
 
             builder.AddEnvironmentVariables();
+
             Configuration = builder.Build();
         }
 
@@ -118,7 +119,7 @@ namespace TIK.WebSignalR
             // Sockets
             //app.UseCors("Everything");
             app.UseCors(builder =>
-                        builder.WithOrigins("http://localhost:5000")
+                        builder.WithOrigins(EnvSettings.Instance().WebPortalUrl)
                         .AllowAnyOrigin()
                         .AllowAnyHeader()
                         .AllowAnyMethod());
