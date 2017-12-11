@@ -25,13 +25,13 @@
 }
 
 .site-nav {
-  /* float: right; */
+  float: left; 
   /* line-height: $base-line-height * $base-font-size * 2.25;*/
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 25%;
-  height: 100%; /* Full height */
+  /* height: 100%; /* Full height */
   position: fixed; /* Make it stick, even on scroll */
   overflow: auto; /* Enable scrolling if the sidenav has too much content */
 
@@ -83,6 +83,27 @@
       > svg path {
         fill: $grey-color-dark;
       }
+    }
+
+    .nav {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      }
+      .nav li {    
+          margin: 1px 0;
+          border: 1px solid #999;
+      }
+      .nav li a {
+          display: block;
+          line-height: 3em;
+          width: 100%;
+          text-decoration: none;
+      }
+
+    input:checked ~ .trigger {
+      display: block;
+      padding-bottom: 5px;
     }
 
     input ~ .trigger {
