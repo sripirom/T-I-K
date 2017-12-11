@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: page
 title: Online Processing
 permalink: /docs/online/
 ---
