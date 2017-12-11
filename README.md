@@ -44,12 +44,33 @@ using
 
 
 
-### Run Application
-    using docker-compose build images than up to docker.
+### Deploy Application
+docker images on docker hub.
+
+image : [sripirom/tik.computation.akkaseed](https://hub.docker.com/r/sripirom/tik.computation.akkaseed/)
+
+image : [sripirom/tik.processservice.identity](https://hub.docker.com/r/sripirom/tik.processservice.identity/)
+
+image: [sripirom/tik.processservice.online](https://hub.docker.com/r/sripirom/tik.processservice.online/)
+
+image: [sripirom/tik.webportal](https://hub.docker.com/r/sripirom/tik.webportal/)
+
+image: [sripirom/tik.websignalr](https://hub.docker.com/r/sripirom/tik.websignalr/)
+
+
+    # build images 
+    $ docker-compose build 
+
+    # deploy
+    $ docker-compose up
 
 
 ### Sample Application on google cloud:
+    username: user1
+    password: password
 
-[Goto sample Application](https://www.google.com)
+[Goto sample Application](http://35.194.196.147:5000/)
+
+
 
   
