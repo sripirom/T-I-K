@@ -46,6 +46,7 @@ namespace TIK.Computation.AkkaSeed
                           .WriteTo.LiterateConsole()
                           .WriteTo.RollingFile("logs\\log-{Date}.txt")
                           .CreateLogger();
+                    
                     })
                 .UseStartup<Startup>()
                 .Build();

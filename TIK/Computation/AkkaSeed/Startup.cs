@@ -11,14 +11,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Serilog;
+using TIK.Core.Logging;
 using TIK.Core.ServiceDiscovery;
 
 namespace TIK.Computation.AkkaSeed
 {
     public class Startup
     {
-       
-
+        ILog logger = LogProvider.GetLogger(typeof(Startup));
 
         public Startup(IHostingEnvironment env)
         {
@@ -51,6 +51,7 @@ namespace TIK.Computation.AkkaSeed
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            logger.Info("I:Configure");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -67,13 +68,15 @@ namespace TIK.Computation.AkkaSeed
 
             // Autoregister using server.Features (does not work in reverse proxy mode)
             app.UseConsulRegisterService();
+            logger.Info("O:Configure");
+       
         }
 
         private void OnShutdown()
         {
+            logger.Info("OnShutdown");
             ActorSystemInstance.Stop();
         }
-
 
     }
 }

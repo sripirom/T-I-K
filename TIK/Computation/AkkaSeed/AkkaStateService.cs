@@ -7,6 +7,7 @@ using TIK.Applications.Online.CommonStocks;
 using TIK.Applications.Online.EodStocks;
 using TIK.Applications.Online.Jobs;
 using TIK.Applications.Online.Members;
+using TIK.Core.Logging;
 using TIK.Domain.Membership;
 using TIK.Domain.TheSet;
 using TIK.Integration.Batch;
@@ -17,10 +18,13 @@ namespace TIK.Computation.AkkaSeed
 {
     public class AkkaStateService
     {
+        ILog logger = LogProvider.GetLogger(typeof(AkkaStateService));
+
         private ActorSystem ActorSystemInstance;
 
         public void Start()
         {
+            logger.Info("Start");
             try
             {
 
