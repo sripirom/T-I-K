@@ -16,8 +16,7 @@ namespace TIK.ProcessService.Notification
         {
 
                 BuildWebHost(args).Run();
- 
-           
+
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

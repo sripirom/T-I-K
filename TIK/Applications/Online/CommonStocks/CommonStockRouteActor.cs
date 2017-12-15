@@ -3,11 +3,14 @@ using Akka.Actor;
 using TIK.Applications.Messaging;
 using TIK.Domain.TheSet;
 using TIK.Applications.Online.EodStocks;
+using Akka.Event;
 
 namespace TIK.Applications.Online.CommonStocks
 {
     public partial class CommonStockRouteActor : ReceiveActor
     {
+        private readonly ILoggingAdapter _logger = Context.GetLogger();
+
         private IActorRef CommonStocksActor { get; set; }
         private IActorRef EodStocksActor { get; set; }
 
@@ -43,6 +46,33 @@ namespace TIK.Applications.Online.CommonStocks
      
             return Akka.Actor.Props.Create(() => new CommonStockRouteActor(commonStocksActor, eodStocksActor));
         }
+
+        #region Lifecycle hooks
+
+        protected override void PreStart()
+        {
+            _logger.Debug("CommonStockRouteActor PreStart");
+        }
+
+        protected override void PostStop()
+        {
+            _logger.Debug("CommonStockRouteActor PostStop");
+        }
+
+        protected override void PreRestart(Exception reason, object message)
+        {
+            _logger.Debug("CommonStockRouteActor PreRestart because {Reason}", reason);
+
+            base.PreRestart(reason, message);
+        }
+
+        protected override void PostRestart(Exception reason)
+        {
+            _logger.Debug("CommonStockRouteActor PostRestart because {Reason}", reason);
+
+            base.PostRestart(reason);
+        }
+        #endregion
     }
 
 

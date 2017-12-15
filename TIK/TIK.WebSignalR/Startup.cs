@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using TIK.Core.Hosting;
 using TIK.Core.ServiceDiscovery;
 using TIK.WebSignalR.Controllers;
 using TIK.WebSignalR.EndPoints;
@@ -22,27 +23,7 @@ namespace TIK.WebSignalR
     {
         public Startup(IHostingEnvironment env)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
-            
-
-            if (env.IsDevelopment())
-            {
-                try
-                {
-                    // For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
-                    builder.AddUserSecrets<Startup>();
-                }
-                catch (Exception ex)
-                {
-                    Console.Write(ex);
-                }
-           
-            }
-
-            builder.AddEnvironmentVariables();
+            var builder = env.InnitConfigurationHosting();
 
             Configuration = builder.Build();
         }

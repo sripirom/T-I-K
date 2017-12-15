@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Serilog;
+using TIK.Core.Hosting;
 using TIK.Core.Logging;
 using TIK.Core.ServiceDiscovery;
 
@@ -20,8 +21,9 @@ namespace TIK.Computation.AkkaSeed
     {
         ILog logger = LogProvider.GetLogger(typeof(Startup));
 
-        public Startup(IHostingEnvironment env)
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
+            /*
             var builder = new ConfigurationBuilder()
                .SetBasePath(env.ContentRootPath)
                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
@@ -29,6 +31,8 @@ namespace TIK.Computation.AkkaSeed
                .AddEnvironmentVariables();
 
             Configuration = builder.Build();
+            */
+            Configuration = configuration;
 
             ActorSystemInstance = new AkkaStateService();
         }
@@ -57,8 +61,7 @@ namespace TIK.Computation.AkkaSeed
                 app.UseDeveloperExceptionPage();
             }
 
-            var applicationLifetime = app.ApplicationServices.GetRequiredService<IApplicationLifetime>();
-            applicationLifetime.ApplicationStopping.Register(OnShutdown);
+            app.RegisterApplicationStopping(OnShutdown);
 
             ActorSystemInstance.Start();
 

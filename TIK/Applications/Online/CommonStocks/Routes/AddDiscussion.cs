@@ -14,6 +14,7 @@ namespace TIK.Applications.Online.CommonStocks.Routes
     {
 
         private ILogger<GetCommonStocks> Logger { get; set; }
+
         private IActorRef CommonStockRouteActor { get; set; }
         private IStockDiscussionPublisher Pubisher { get; set; }
 
@@ -28,6 +29,7 @@ namespace TIK.Applications.Online.CommonStocks.Routes
         {
 
             Logger.LogInformation($"Adding {discussionItem.Comment} of stock '{stockId}'");
+
             var result = await this.CommonStockRouteActor.Ask<CommonStockActor.CommonStockEvent>(new CommonStockActor.AddDiscussion(
                 memberId,
                 stockId,
