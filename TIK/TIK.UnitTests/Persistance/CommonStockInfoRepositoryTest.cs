@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using TIK.Domain.TheSet;
+using TIK.Persistance.ElasticSearch;
+using TIK.Persistance.ElasticSearch.Repositories;
+using Xunit;
 
-namespace TIK.Persistance.ElasticSearch.Mocks
+namespace TIK.UnitTests.Persistance
 {
-    public class MockCommonStockInfoRepository : MockEsRepository<CommonStockInfo, Int32>, ICommonStockInfoRepository
+    public class CommonStockInfoRepositoryTest
     {
-        public MockCommonStockInfoRepository()
+        IList<CommonStockInfo> _collection;
+        public CommonStockInfoRepositoryTest()
         {
             _collection = new List<CommonStockInfo> {
                 new CommonStockInfo { Id = 1, Symbol = "M1", Market="mai", SecurityName = "FIRST COMPANY LIMITED" ,
@@ -56,6 +61,43 @@ namespace TIK.Persistance.ElasticSearch.Mocks
                     PaidUpCapital = 980000000.00m}
 
             };
+        }
+
+        [Fact]
+        public void IndexCommonStockInfo()
+        {
+            var context = new EsContext(new Uri("http://localhost:9200"));
+            var repo = new IndexRepository(context.CreateClient());
+
+            try
+            {
+                repo.IndexData<CommonStockInfo>(_collection.FirstOrDefault(), "theset", "commonstockinfo");
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
+
+        }
+
+        [Fact] 
+        public void AddCommonStock()
+        {
+            var context = new EsContext(new Uri("http://localhost:9200"));
+            var repo = new CommonStockInfoRepository(context.CreateClient(), "theset");
+
+            try
+            {
+                foreach (var item in _collection)
+                {
+                    repo.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
+
         }
     }
 }

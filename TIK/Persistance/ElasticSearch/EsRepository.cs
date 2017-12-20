@@ -28,7 +28,7 @@ namespace TIK.Persistance.ElasticSearch
 
         public TId Save(T entry)
         {
-            var result = Client.Index<T>(entry, c => c.Index(IndexName));
+            var result = Client.Update<T>(entry, c => c.Index(IndexName));
             var id= (TId)Convert.ChangeType(result.Id, typeof(TId));
             return id;
         }

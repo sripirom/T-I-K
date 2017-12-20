@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using Akka.Actor;
+using Microsoft.Extensions.DependencyInjection;
 using TIK.Applications.Online;
 using TIK.Applications.Online.BackLogs;
 using TIK.Applications.Online.CommonStocks;
@@ -12,7 +13,9 @@ using TIK.Domain.Membership;
 using TIK.Domain.TheSet;
 using TIK.Integration.Batch;
 using TIK.Integration.WebApi.Batch;
+using TIK.Persistance.ElasticSearch;
 using TIK.Persistance.ElasticSearch.Mocks;
+using TIK.Persistance.ElasticSearch.Repositories;
 
 namespace TIK.Computation.AkkaSeed
 {
@@ -21,6 +24,12 @@ namespace TIK.Computation.AkkaSeed
         ILog logger = LogProvider.GetLogger(typeof(AkkaStateService));
 
         private ActorSystem ActorSystemInstance;
+        private IServiceCollection _services;
+
+        public AkkaStateService(IServiceCollection services)
+        {
+            _services = services;
+        }
 
         public void Start()
         {
@@ -33,9 +42,10 @@ namespace TIK.Computation.AkkaSeed
                 ActorSystemInstance = ActorSystem.Create(EnvSettings.Instance().ActorSystem, config);
 
                 IMemberRepository memberRepository = new MockMemberRepository();
-                ICommonStockRepository commonStockRepository = new MockCommonStockRepository();
+                var context = new EsContext(new Uri("http://localhost:9200"), "theset");
+                ICommonStockRepository commonStockRepository = new CommonStockRepository(context.CreateClient(), "theset");
                 ICommonStockInfoRepository commonStockInfoRepository = new MockCommonStockInfoRepository();
-                IEodRepository eodRepository = new MockEodRepository();
+                IEodRepository eodRepository = new MockEodRepository(); 
 
                 //IBatchPublisher batchPublisher = new BatchPublisher(new Uri(EnvSettings.Instance().BatchUrl));
 
