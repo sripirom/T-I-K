@@ -17,7 +17,7 @@
                 if ((changes.loggedIn != null && changes.loggedIn.currentValue != null) || 
                     (changes.stock != null && changes.stock.currentValue != null)) {
                     if (authenticationService.loggedIn && vm.stock != null) {
-                        stockService.getHistorical(vm.stock.stockId).then(function (stockHistorical) {
+                        stockService.getHistorical(vm.stock.symbol).then(function (stockHistorical) {
                             vm.stockHistorical = stockHistorical;
                         });
                     }

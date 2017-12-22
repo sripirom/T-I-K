@@ -83,7 +83,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Computation.AkkaSeed", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.WebSignalR", "TIK.WebSignalR\TIK.WebSignalR.csproj", "{2E9D2484-9653-4778-B219-C828D50BF5A7}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "docker-compose", "docker-compose.dcproj", "{9AE4AA86-69EC-4927-BBA2-AA969243643D}"
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "docker-compose", "docker-compose.dcproj", "{FBE8D3D8-DE2D-45A0-B823-2DC05310600D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

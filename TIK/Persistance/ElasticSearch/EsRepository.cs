@@ -10,20 +10,22 @@ namespace TIK.Persistance.ElasticSearch
     public abstract class EsRepository<T, TId> : BaseRepository, IRepository<T, TId>
         where T : BaseModel<TId>, new()
     {
-
-        public EsRepository(IElasticClient elasticClient, string indexName)
-            :base(elasticClient)
+        public EsRepository(EsContext context)
+            :base(context.CreateClient<T>())
         {
-            IndexName = indexName;
+           
         }
 
-        public string IndexName { get; private set; }
+        public string IndexName { get { return Client.ConnectionSettings.DefaultIndex; } }
 
         public TId Add(T entry)
         {
-            var result = Client.Index<T>(entry, c => c.Index(IndexName));
-            var id = (TId)Convert.ChangeType(result.Id, typeof(TId));
-            return id;
+            var result = Client.Index<T>(entry, c=> c.Index(IndexName));
+            if(!result.IsValid){
+                throw result.OriginalException;
+            }
+           
+            return (TId)Convert.ChangeType(result.Id, typeof(TId));
         }
 
         public TId Save(T entry)
@@ -64,7 +66,7 @@ namespace TIK.Persistance.ElasticSearch
                 q.Term(item.Item1, item.Item2);
             }
             req.Query = q;
-
+       
             var result = Client.Search<T>(req);
             return result.Documents;
         }

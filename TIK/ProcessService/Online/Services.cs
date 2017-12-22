@@ -33,6 +33,7 @@ namespace TIK.ProcessService.Online
             var websignalServiceName = EnvSettings.Instance().WebSignalRServiceName;
 
             var baseDns = new BaseDnsDiscovery(baseDomain);
+
             if (!Regex.IsMatch(dnsPublishAddress, @"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b"))
             {
                 var address = Dns.GetHostAddresses(dnsPublishAddress).LastOrDefault();
@@ -85,6 +86,7 @@ namespace TIK.ProcessService.Online
             //services.AddJobServices();
             //services.AddBackLogServices();
             services.AddCommonStockServices();
+            services.AddEodServices();
         }
     }
 }

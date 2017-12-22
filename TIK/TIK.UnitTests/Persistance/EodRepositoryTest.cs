@@ -6,12 +6,12 @@ using TIK.Persistance.ElasticSearch;
 using TIK.Persistance.ElasticSearch.Repositories;
 using Xunit;
 
-namespace TIK.UnitTests
+namespace TIK.UnitTests.Persistance
 {
-    public class RepositoryElasticTest
+    public class EodRepositoryTest
     {
         private IList<CommonStock> _collection;
-        public RepositoryElasticTest()
+        public EodRepositoryTest()
         {
             _collection = new List<CommonStock> {
                 new CommonStock { Id = 1, Symbol = "M1", Market="mai", SecurityName = "FIRST PUBLIC COMPANY LIMITED" },
@@ -22,16 +22,6 @@ namespace TIK.UnitTests
             };
         }
 
-        [Fact]
-        public void AddUserTest()
-        {
-            var context = new EsContext(new Uri("http://192.168.99.100:32805"));
-            //var repo = new UserAccountRepository(context.CreateClient());
-
-            //repo.Save(new Domain.Member.UserAccount(){ FirstName = "Pichit",
-            // LastName="Sripirom", Password="aaaa", UserName="Pichit"});
-
-        }
 
         [Fact]
         public void MatchAllCommonStock()
@@ -48,9 +38,9 @@ namespace TIK.UnitTests
             {
                 Console.Write(ex.Message);
             }
-      
 
-         
+
+
         }
 
         [Fact]
@@ -70,10 +60,6 @@ namespace TIK.UnitTests
             {
                 Console.Write(ex.Message);
             }
- 
-          
-
-
 
         }
     }

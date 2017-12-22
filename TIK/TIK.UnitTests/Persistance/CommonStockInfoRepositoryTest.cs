@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Nest;
 using TIK.Domain.TheSet;
 using TIK.Persistance.ElasticSearch;
 using TIK.Persistance.ElasticSearch.Repositories;
@@ -26,7 +27,7 @@ namespace TIK.UnitTests.Persistance
                     AuthorizedCapital = 1200000000.00m,
                     PaidUpCapital = 980000000.00m,
                 },
-                new CommonStockInfo { Id = 2, Symbol = "A", Market="SET", SecurityName = "SECOND PUBLIC COMPANY LIMITED" ,
+                new CommonStockInfo { Id = 2, Symbol = "S1", Market="SET", SecurityName = "SECOND PUBLIC COMPANY LIMITED" ,
                     Address = "SECOND PROPERTY COMPLEX 2, 55/4  88, BANGPLI THONGLANG Samutprakan",
                     Telephone = "0-0000-0000, 0-0000-0000",
                     Fax = "0-0000-0000",
@@ -37,7 +38,7 @@ namespace TIK.UnitTests.Persistance
                     ParValue = 1.00m,
                     AuthorizedCapital = 1200000000.00m,
                     PaidUpCapital = 980000000.00m},
-                new CommonStockInfo { Id = 3, Symbol = "AAV", Market="SET", SecurityName = "THIRD PUBLIC COMPANY LIMITED" ,
+                new CommonStockInfo { Id = 3, Symbol = "S2", Market="SET", SecurityName = "THIRD PUBLIC COMPANY LIMITED" ,
                     Address = "THIRD COMPLEX 8, 10/9 RRR , BANGNA Bangkok",
                     Telephone = "0-0000-0000, 0-0000-0000",
                     Fax = "0-0000-0000",
@@ -48,7 +49,7 @@ namespace TIK.UnitTests.Persistance
                     ParValue = 1.00m,
                     AuthorizedCapital = 1200000000.00m,
                     PaidUpCapital = 980000000.00m },
-                new CommonStockInfo { Id = 4, Symbol = "ABICO", Market="mai", SecurityName = "FOURTH PUBLIC COMPANY LIMITED" ,
+                new CommonStockInfo { Id = 4, Symbol = "M2", Market="mai", SecurityName = "FOURTH PUBLIC COMPANY LIMITED" ,
                     Address = "FOURTH COMPLEX 2, 44/4 RRRoad 71, SUKHUMVIT 10 Bangkok",
                     Telephone = "0-0000-0000, 0-0000-0000",
                     Fax = "0-0000-0000",
@@ -66,8 +67,10 @@ namespace TIK.UnitTests.Persistance
         [Fact]
         public void IndexCommonStockInfo()
         {
-            var context = new EsContext(new Uri("http://localhost:9200"));
-            var repo = new IndexRepository(context.CreateClient());
+
+            var client = new ElasticClient(new ConnectionSettings(new Uri("http://localhost:9200"))
+                                           .DefaultIndex("theset"));
+                var repo = new IndexRepository(client);
 
             try
             {
@@ -81,10 +84,10 @@ namespace TIK.UnitTests.Persistance
         }
 
         [Fact] 
-        public void AddCommonStock()
+        public void AddCommonStockInfo()
         {
-            var context = new EsContext(new Uri("http://localhost:9200"));
-            var repo = new CommonStockInfoRepository(context.CreateClient(), "theset");
+            var context = new EsContext(new Uri("http://localhost:9200"), "theset");
+            var repo = new CommonStockInfoRepository(context);
 
             try
             {

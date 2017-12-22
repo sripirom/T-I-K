@@ -51,10 +51,10 @@
             }
         }
 
-        self.getHistorical = function (stockId) {
+        self.getHistorical = function (symbol) {
             var accessToken = authenticationService.getAccessToken();
             return $http( {
-                url: apiBase + 'stock/' + stockId + '/historical',
+                url: apiBase + 'stock/' + symbol + '/historical',
                 method: 'GET',
                 headers: { 'Authorization': 'Bearer ' + accessToken }
             })

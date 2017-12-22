@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TIK.Applications.Online;
+using TIK.Applications.Online.EodStocks.Routes;
 using TIK.Applications.Online.Members.Routes;
 using TIK.Applications.Security;
 using TIK.Core.Hosting;
@@ -47,6 +48,7 @@ namespace TIK.ProcessService.Online
             services.AddMvc()
                     .AddApplicationPart(typeof(MemberController).GetTypeInfo().Assembly)
                     .AddApplicationPart(typeof(HealthCheckController).GetTypeInfo().Assembly) 
+                    .AddApplicationPart(typeof(EodController).GetTypeInfo().Assembly)
                     .AddControllersAsServices();
 
             services.AddServiceDiscovery(Configuration.GetSection("ServiceDiscovery"));

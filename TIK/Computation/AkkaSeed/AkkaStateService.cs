@@ -37,14 +37,19 @@ namespace TIK.Computation.AkkaSeed
             try
             {
 
+
                 var huconConfig = Path.Combine(Directory.GetCurrentDirectory(), EnvSettings.Instance().HuconFileName);
                 var config = HoconLoader.FromFile(huconConfig);
                 ActorSystemInstance = ActorSystem.Create(EnvSettings.Instance().ActorSystem, config);
 
                 IMemberRepository memberRepository = new MockMemberRepository();
-                var context = new EsContext(new Uri("http://localhost:9200"), "theset");
-                ICommonStockRepository commonStockRepository = new CommonStockRepository(context.CreateClient(), "theset");
-                ICommonStockInfoRepository commonStockInfoRepository = new MockCommonStockInfoRepository();
+
+
+                var elasticsearchUrl = EnvSettings.Instance().ElasticsearchUrl;
+                var rootIndex = EnvSettings.Instance().ElasticsearchIndexSet;
+                var context = new EsContext(new Uri(elasticsearchUrl), rootIndex);
+                ICommonStockRepository commonStockRepository = new CommonStockRepository(context);
+                ICommonStockInfoRepository commonStockInfoRepository = new CommonStockInfoRepository(context);
                 IEodRepository eodRepository = new MockEodRepository(); 
 
                 //IBatchPublisher batchPublisher = new BatchPublisher(new Uri(EnvSettings.Instance().BatchUrl));
@@ -55,6 +60,8 @@ namespace TIK.Computation.AkkaSeed
                 var commonStocksActor = CommonStocksProvider.CreateInstance(ActorSystemInstance, commonStockRepository, commonStockInfoRepository);
                 var eodStocksActor = EodStocksProvider.CreateInstance(ActorSystemInstance, eodRepository);
                 var commonStockRouteActor = CommonStockRouteProvider.CreateInstance(ActorSystemInstance, commonStocksActor, eodStocksActor);
+
+            
             }
             catch (Exception ex)
             {

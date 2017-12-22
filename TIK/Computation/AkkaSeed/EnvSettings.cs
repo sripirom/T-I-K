@@ -38,5 +38,16 @@ namespace TIK.Computation.AkkaSeed
         {
             get { return Environment.GetEnvironmentVariable("TIK_ACTORSYSTEM"); }
         }
+
+
+        public string ElasticsearchUrl
+        {
+            get { return Environment.GetEnvironmentVariable("ELASTICSEARCH_URL"); }
+        }
+
+        public string ElasticsearchIndexSet
+        {
+            get { return Environment.GetEnvironmentVariable("ELASTICSEARCH_INDEX_SET"); }
+        }
     } 
 }

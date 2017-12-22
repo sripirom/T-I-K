@@ -7,8 +7,7 @@ namespace TIK.Persistance.ElasticSearch.Repositories
 {
     public class EodRepository : EsRepository<Eod, String>, IEodRepository
     {
-        public EodRepository(IElasticClient elasticClient, string indexName)
-            : base(elasticClient, indexName)
+        public EodRepository(EsContext context) : base(context)
         {
         } 
     }

@@ -3,6 +3,10 @@ using TIK.Domain.TheSet;
 using Akka;
 using Akka.Actor;
 using Akka.Event;
+using System.Linq;
+using System.Collections.Generic;
+using System.Linq.Expressions;
+using System.Collections.ObjectModel;
 
 namespace TIK.Applications.Online.EodStocks
 {
@@ -18,7 +22,16 @@ namespace TIK.Applications.Online.EodStocks
 
             Receive<RetriveBetween>(m =>
             {
-                Sender.Tell(new Eod() { Id = "" });
+                IList<Tuple<Expression<Func<Eod, object>>, object>> paramValue =
+                    new List<Tuple<Expression<Func<Eod, object>>, object>>()
+                    { 
+                    new Tuple<Expression<Func<Eod, object>>, object>(q=>q.Symbol, m.Symbol)
+                    };
+
+                var commonStocks = _eodRepository.Search(paramValue).Where(a => a.EodDate > m.StartDate && a.EodDate < m.EndDate).ToList();
+
+                Sender.Tell(new ReadOnlyCollection<Eod>(commonStocks.ToList()));
+
             });
         }
 
