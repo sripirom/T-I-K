@@ -48,9 +48,6 @@ namespace TIK.UnitTests
             {
                 Console.Write(ex.Message);
             }
-      
-
-         
         }
 
         [Fact]
@@ -71,10 +68,6 @@ namespace TIK.UnitTests
                 Console.Write(ex.Message);
             }
  
-          
-
-
-
         }
     }
 }

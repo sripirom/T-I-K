@@ -6,12 +6,12 @@ using TIK.Persistance.ElasticSearch;
 using TIK.Persistance.ElasticSearch.Repositories;
 using Xunit;
 
-namespace TIK.UnitTests.Persistance
+namespace TIK.Persistance.ElasticSearch.Tests.Repositories
 {
-    public class EodRepositoryTest
+    public class CommonStockRepositoryTest
     {
         private IList<CommonStock> _collection;
-        public EodRepositoryTest()
+        public CommonStockRepositoryTest()
         {
             _collection = new List<CommonStock> {
                 new CommonStock { Id = 1, Symbol = "M1", Market="mai", SecurityName = "FIRST PUBLIC COMPANY LIMITED" },
@@ -28,7 +28,7 @@ namespace TIK.UnitTests.Persistance
         {
             try
             {
-                var context = new EsContext(new Uri("http://localhost:9200"), "theset");
+                var context = new EsContext(new Uri("http://localhost:9200"), "set");
                 var repo = new CommonStockRepository(context);
 
                 var res = repo.List();
@@ -46,7 +46,7 @@ namespace TIK.UnitTests.Persistance
         [Fact]
         public void AddCommonStock()
         {
-            var context = new EsContext(new Uri("http://localhost:9200"), "theset");
+            var context = new EsContext(new Uri("http://localhost:9200"), "set");
             var repo = new CommonStockRepository(context);
 
             try

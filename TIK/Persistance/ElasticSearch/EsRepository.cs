@@ -13,10 +13,10 @@ namespace TIK.Persistance.ElasticSearch
         public EsRepository(EsContext context)
             :base(context.CreateClient<T>())
         {
-           
+            IndexName = Client.ConnectionSettings.DefaultIndex;
         }
 
-        public string IndexName { get { return Client.ConnectionSettings.DefaultIndex; } }
+        public string IndexName { get; }
 
         public TId Add(T entry)
         {
@@ -49,10 +49,10 @@ namespace TIK.Persistance.ElasticSearch
             return result.Source;
         }
 
-        public IEnumerable<T> List()
+        public IEnumerable<T> List(int skip = 0, int size = 20)
         {
             var result = Client.Search<T>(search =>
-                                          search.MatchAll());
+                                          search.Skip(skip).Size(size).MatchAll());
 
             return result.Documents;
         }
@@ -63,7 +63,7 @@ namespace TIK.Persistance.ElasticSearch
             var q = new QueryContainerDescriptor<T>();
             foreach (var item in paramValue)
             {
-                q.Term(item.Item1, item.Item2);
+                q.Match(m=>m.Field(item.Item1).Query(item.Item2.ToString()));
             }
             req.Query = q;
        

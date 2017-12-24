@@ -1,1 +1,0 @@
-curl -s -XPOST 'http://localhost:9200/theset/commonstocks/_bulk?pretty' -H 'Content-Type: application/x-ndjson' --data-binary "$(pwd)/sampleData.json"

@@ -50,7 +50,7 @@ namespace TIK.Computation.AkkaSeed
                 var context = new EsContext(new Uri(elasticsearchUrl), rootIndex);
                 ICommonStockRepository commonStockRepository = new CommonStockRepository(context);
                 ICommonStockInfoRepository commonStockInfoRepository = new CommonStockInfoRepository(context);
-                IEodRepository eodRepository = new MockEodRepository(); 
+                IEodRepository eodRepository = new EodRepository(context); 
 
                 //IBatchPublisher batchPublisher = new BatchPublisher(new Uri(EnvSettings.Instance().BatchUrl));
 

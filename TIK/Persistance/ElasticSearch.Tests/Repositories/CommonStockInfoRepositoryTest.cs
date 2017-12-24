@@ -7,7 +7,7 @@ using TIK.Persistance.ElasticSearch;
 using TIK.Persistance.ElasticSearch.Repositories;
 using Xunit;
 
-namespace TIK.UnitTests.Persistance
+namespace TIK.Persistance.ElasticSearch.Tests.Repositories
 {
     public class CommonStockInfoRepositoryTest
     {
@@ -74,7 +74,7 @@ namespace TIK.UnitTests.Persistance
 
             try
             {
-                repo.IndexData<CommonStockInfo>(_collection.FirstOrDefault(), "theset", "commonstockinfo");
+                repo.IndexData<CommonStockInfo>(_collection.FirstOrDefault(), "set", "commonstockinfo");
             }
             catch (Exception ex)
             {
@@ -86,7 +86,7 @@ namespace TIK.UnitTests.Persistance
         [Fact] 
         public void AddCommonStockInfo()
         {
-            var context = new EsContext(new Uri("http://localhost:9200"), "theset");
+            var context = new EsContext(new Uri("http://localhost:9200"), "set");
             var repo = new CommonStockInfoRepository(context);
 
             try

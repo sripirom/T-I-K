@@ -28,9 +28,10 @@ namespace TIK.Applications.Online.EodStocks
                     new Tuple<Expression<Func<Eod, object>>, object>(q=>q.Symbol, m.Symbol)
                     };
 
-                var commonStocks = _eodRepository.Search(paramValue).Where(a => a.EodDate > m.StartDate && a.EodDate < m.EndDate).ToList();
+                var commonStocks = _eodRepository.Search(paramValue).ToList();
+                var result =  commonStocks.Where(a => a.EodDate > m.StartDate && a.EodDate < m.EndDate);
 
-                Sender.Tell(new ReadOnlyCollection<Eod>(commonStocks.ToList()));
+                Sender.Tell(new ReadOnlyCollection<Eod>(result.ToList()));
 
             });
         }
