@@ -7,7 +7,7 @@ namespace TIK.Domain.TheSet
 {
     public interface IEodRepository : IRepository<Eod, String>
     {
-        IEnumerable<Eod> SearchDateRange(IEnumerable<Tuple<Expression<Func<Eod, object>>, object>> paramValue,
-                                DateTime startDate, DateTime endDate);
+        IEnumerable<Eod> SearchDateRange(string symbol,
+                                         DateTime startDate, DateTime endDate, int maxSize);
     } 
 }

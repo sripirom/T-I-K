@@ -22,15 +22,10 @@ namespace TIK.Persistance.ElasticSearch.Mocks
             };
         }
 
-        public IEnumerable<Eod> SearchDateRange(IEnumerable<Tuple<Expression<Func<Eod, object>>, object>> paramValue, DateTime startDate, DateTime endDate)
+        public IEnumerable<Eod> SearchDateRange(string symbol, DateTime startDate, DateTime endDate, int maxSize)
         {
-            IEnumerable<Eod> results = _collection;
-            foreach (var predicate in paramValue)
-            {
-                results = results.Where(a => predicate.Item1.Compile().Invoke(a).Equals(predicate.Item2)).ToList();
-            }
 
-            return results.Where(a=>a.EodDate >= startDate && a.EodDate<=endDate);
+            return _collection.Where(a=> a.Symbol==symbol && a.EodDate >= startDate && a.EodDate<=endDate).Take(maxSize);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using Elasticsearch.Net;
 using Nest;
 
 namespace TIK.Persistance.ElasticSearch
@@ -19,12 +20,14 @@ namespace TIK.Persistance.ElasticSearch
         public IElasticClient CreateClient<T>()
         {
             var typeIndex = $"{RootIndex}_{typeof(T).Name.ToLower()}"; 
+            var connectionPool = new SingleNodeConnectionPool(_elastiSearchServerUrl);
 
+            var settings = new ConnectionSettings(connectionPool)
+                                    .DefaultIndex(typeIndex)
+                                    .DisableDirectStreaming(); 
             var client = _elastiSearchServerUrl != null ?
-                new ElasticClient(new ConnectionSettings(_elastiSearchServerUrl)
-                                  .DefaultIndex(typeIndex))
-             
-                  : new ElasticClient();
+                        new ElasticClient(settings)
+                        : new ElasticClient();
             
             return client;
 

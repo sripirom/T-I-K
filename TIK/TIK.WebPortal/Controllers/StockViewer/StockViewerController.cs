@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -80,13 +81,23 @@ namespace TIK.WebPortal.Controllers.StockViewer
         }
 
 
-        [HttpGet("stock/{symbol}/historical")]
-        public IActionResult GetHistorical(string symbol)
+        [HttpGet("stock/{symbol}/historical/{fromDate}/{toDate}")]
+        public IActionResult GetHistorical(string symbol, string fromDate, string toDate)
         {
-            var taskResult = EodPublisher.GetList(symbol, DateTime.Now.AddYears(-1), DateTime.Now);
+            var taskResult = EodPublisher.GetList(symbol, GetDate(fromDate), GetDate(toDate));
 
             return Ok(taskResult.Result);
                      
+        }
+
+        private DateTime GetDate(string strDate){
+            DateTime date;
+            if(!DateTime.TryParseExact(strDate, "yyyy-MM-dd", 
+                                      CultureInfo.GetCultureInfo("en-US"), 
+                                      DateTimeStyles.None, out date)){
+                date = DateTime.Now;
+            }
+            return date;
         }
 
     }

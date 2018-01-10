@@ -22,13 +22,7 @@ namespace TIK.Applications.Online.EodStocks
 
             Receive<RetriveBetween>(m =>
             {
-                IList<Tuple<Expression<Func<Eod, object>>, object>> paramValue =
-                    new List<Tuple<Expression<Func<Eod, object>>, object>>()
-                    { 
-                    new Tuple<Expression<Func<Eod, object>>, object>(q=>q.Symbol, m.Symbol)
-                    };
-
-                var commonStocks = _eodRepository.SearchDateRange(paramValue, m.StartDate, m.EndDate).ToList();
+                var commonStocks = _eodRepository.SearchDateRange(m.Symbol, m.StartDate, m.EndDate, 1000).ToList();
 
                 Sender.Tell(new ReadOnlyCollection<Eod>(commonStocks));
 

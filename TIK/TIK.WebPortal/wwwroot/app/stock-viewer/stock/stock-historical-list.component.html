@@ -3,21 +3,23 @@
 </div>
 <div ng-if="vm.stockHistorical != null && vm.stockHistorical.length != 0">
     <div class="row comment">
+        <div class=col-md-1>No.</div>
         <div class="col-md-4">EodDate</div>
         <div class="col-md-1">Open</div>
         <div class="col-md-1">High</div>
         <div class="col-md-1">Low</div>
         <div class="col-md-1">Close</div>
-        <div class="col-md-4">Volume</div>
+        <div class="col-md-3">Volume</div>
     </div>
     <hr />
     <div class="row comment" ng-repeat="eodItem in vm.stockHistorical">
+        <div class=col-md-1>{{$index + 1}}</div>
         <div class="col-md-4">{{ eodItem.eodDate | date : "medium" }}</div>
         <div class="col-md-1">{{ eodItem.open }}</div>
         <div class="col-md-1">{{ eodItem.high }}</div>
         <div class="col-md-1">{{ eodItem.low }}</div>
         <div class="col-md-1">{{ eodItem.close }}</div>
-        <div class="col-md-4">{{ eodItem.volume }}</div>
+        <div class="col-md-3">{{ eodItem.volume }}</div>
         <hr />
     </div>
 </div>

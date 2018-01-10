@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\app\" />
-    <Folder Include="wwwroot\app\user-activity\" />
     <Folder Include="wwwroot\app\stock-viewer\" />
     <Folder Include="wwwroot\app\stock-viewer\stock\" />
     <Folder Include="Controllers\StockViewer\" />

@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var appModule = angular.module('stockViewer', ['securityModule', 'ui.router']);
+    var appModule = angular.module('stockViewer', ['securityModule', 'ui.router', 'ui.bootstrap']);
 
     appModule.value('apiBase', window.__env.apiBaseStock);
     appModule.value('componentBorders', true);

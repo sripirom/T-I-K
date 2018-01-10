@@ -64,30 +64,19 @@ namespace TIK.Persistance.ElasticSearch.Tests.Repositories
         {
             var context = new EsContext(new Uri("http://localhost:9200"), "set");
             var repo = new EodRepository(context);
-            var symbol = "AMA";
-            var startDate = DateTime.Now.AddYears(-1);
+            var symbol = "AFC";
+            var startDate = DateTime.Now.AddMonths(-34);
             var endDate = DateTime.Now;
-            try
-            {
-                
-                List<Tuple<Expression<Func<Eod, object>>, object>> paramValue =
-                    new List<Tuple<Expression<Func<Eod, object>>, object>>()
-                    {
-                    new Tuple<Expression<Func<Eod, object>>, object>(q=>q.Symbol, symbol)
-                    };
+            var maxSize = 1000;
 
-                var commonStocks = repo.Search(paramValue).ToList();
-                var result = commonStocks.Where(a => a.EodDate > startDate && a.EodDate < endDate);
-                Assert.NotEmpty(result);
+            var commonStocks = repo.SearchDateRange(symbol, startDate, endDate, maxSize).ToList();
+            //var result = commonStocks.Where(a => a.EodDate > startDate && a.EodDate < endDate);
+            Assert.NotEmpty(commonStocks);
 
 
 
 
-            }
-            catch (Exception ex)
-            {
-                Console.Write(ex.Message);
-            }
+       
 
         }
     }

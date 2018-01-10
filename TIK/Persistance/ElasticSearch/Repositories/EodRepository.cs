@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Linq.Expressions;
+using System.Text;
 using Nest;
 using TIK.Core.Domain;
 using TIK.Domain.TheSet;
@@ -14,24 +17,28 @@ namespace TIK.Persistance.ElasticSearch.Repositories
         }
 
         public IEnumerable<Eod> SearchDateRange(
-            IEnumerable<Tuple<Expression<Func<Eod, object>>, object>> paramValue,
-            DateTime startDate, DateTime endDate)
+            string symbol,
+            DateTime startDate, DateTime endDate, int maxSize)
         {
-            SearchRequest req = new SearchRequest();
+           // SearchRequest req = new SearchRequest();
             var q = new QueryContainerDescriptor<Eod>();
-            foreach (var item in paramValue)
-            {
-                q.Match(m => m.Field(item.Item1).Query(item.Item2.ToString()));
-            }
-            q.DateRange(r => r
-            .Field(f => f.EodDate)
-                        .GreaterThanOrEquals(startDate)
-                        .LessThan(endDate));
-        
-            req.Query = q;
 
-            var result = Client.Search<Eod>(req);
-            return result.Documents;
+            string queryString = $"{symbol} AND eodDate:[{startDate.ToString("O")} TO {endDate.ToString("O")}]";
+            q.QueryString(c => 
+                          c.DefaultField(prop=>prop.Symbol)
+                          .Query(queryString)
+                         );
+
+
+            var result = Client.Search<Eod>(s => s
+                            .RequestConfiguration(r => r
+                                    .DisableDirectStreaming()
+                                )
+                                            .Query(i => i = q).Size(maxSize));
+
+   
+            return result.Documents; 
         }
+
     }
 }
