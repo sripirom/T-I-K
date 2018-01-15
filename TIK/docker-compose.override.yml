@@ -18,6 +18,9 @@ services:
       - CONSUL_DNS_PORT=8600
       - TIK_BATCH_URL=http://tik-batch
       - TIK_ACTORSYSTEM=OnlineSystem
+      - LOG_TEMPLATE=logs/log-{Date}.txt
+      - ELASTICSEARCH_URL=http://elastic:password@tik-elasticsearch:9200
+      - ELASTICSEARCH_INDEX_SET=set
     ports:
       - "5301:5301"
       - "5300:80"
@@ -40,6 +43,7 @@ services:
       - TIK_BATCH_URL=http://tik-batch
       - TIK_WEBSIGNALR_SERVICENAME=tik-websignalr
       - TIK_ACTORSYSTEM=OnlineSystem
+      - LOG_TEMPLATE=logs/log-{Date}.txt
     ports:
       - "5101:80"
 
@@ -54,6 +58,7 @@ services:
       - CONSUL_HTTP_ENPOINT=http://consul2:8500
       - CONSUL_DNS_ADDRESS=consul2
       - CONSUL_DNS_PORT=8600
+      - LOG_TEMPLATE=logs/log-{Date}.txt
     ports:
       - "5100:80"
 
@@ -73,6 +78,7 @@ services:
       - TIK_IDENTITY_URL=http://tik-identity
       - TIK_ONLINE_SERVICENAME=tik-online
       - TIK_IDENTITY_SERVICENAME=tik-identity
+      - LOG_TEMPLATE=logs/log-{Date}.txt
     ports:
       - "5000:80"
 
@@ -88,6 +94,7 @@ services:
       - CONSUL_DNS_ADDRESS=consul2
       - CONSUL_DNS_PORT=8600
       - TIK_WEBPORTAL_URL=http://tik-webportal
+      - LOG_TEMPLATE=logs/log-{Date}.txt
     ports:
       - "5001:80"
 
@@ -108,4 +115,11 @@ services:
       - "8400"
       - "8500"
       - "8600"
+
+  tik.elasticsearch:
+    environment:
+      - "ELASTIC_PASSWORD=password"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
 

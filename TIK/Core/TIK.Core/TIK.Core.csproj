@@ -7,6 +7,10 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DefineConstants>TRACE;LIBLOG_PUBLIC;DEBUG;NETCOREAPP2_0</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType></DebugType>
+    <DefineConstants>TRACE;LIBLOG_PUBLIC;RELEASE;NETCOREAPP2_0</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
     <Folder Include="Application\" />
     <Folder Include="Logging\" />
