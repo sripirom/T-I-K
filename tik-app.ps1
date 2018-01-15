@@ -1,7 +1,7 @@
 
  Param([string]$func)
 
- function publish-apps()
+ function build-dockers()
  {
     & dotnet publish ./TIK/Computation/AkkaSeed/TIK.Computation.AkkaSeed.csproj -c Release -o ./obj/Docker/publish
     
@@ -17,15 +17,17 @@ function publish-dockers($outputversion)
 {
     Write-Output "taging version: $outputversion" 
 
-    & "docker tag tik.computation.akkaseed sripirom/tik.computation.akkaseed:$outputversion"
+    & docker tag tik.computation.akkaseed sripirom/tik.computation.akkaseed:$outputversion
     
-    $ "docker tag tik.processservice.online sripirom/tik.processservice.online:$outputversion"
+    & docker tag tik.processservice.online sripirom/tik.processservice.online:$outputversion
     
-    $ "docker tag tik.processservice.identity sripirom/tik.processservice.identity:$outputversion"
+    & docker tag tik.processservice.identity sripirom/tik.processservice.identity:$outputversion
     
-    $ "docker tag tik.webportal sripirom/tik.webportal:$outputversion"
+    & docker tag tik.webportal sripirom/tik.webportal:$outputversion
     
-    $ "docker tag tik.websignalr sripirom/tik.websignalr:$outputversion"
+    & docker tag tik.websignalr sripirom/tik.websignalr:$outputversion
+
+    & docker tag tik.elasticsearch sripirom/tik.elasticsearch:$outputversion
     
     Write-Output "pushing version: $outputversion" 
 
@@ -34,12 +36,13 @@ function publish-dockers($outputversion)
     $ "docker push sripirom/tik.processservice.identity:$outputversion"
     $ "docker push sripirom/tik.webportal:$outputversion"
     $ "docker push sripirom/tik.websignalr:$outputversion"
+    $ "docker push sripirom/tik.elasticsearch:$outputversion"
 }
 
 switch ($func) 
 { 
     "publish-dockers" {publish-dockers $args[0]} 
-    "start-apps" {start-apps}
+    "build-dockers" {build-dockers}
 
     default { Write-Output "function not found." }
 }

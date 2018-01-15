@@ -26,7 +26,7 @@ namespace TIK.Persistance.ElasticSearch.Tests
                 //var repoIndex = new IndexRepository(context.CreateClient());
                 //repoIndex.IndexData<UserAccount>(userAccount, "member", "userAccount");
 
-                var repo = new UserAccountRepository(context.CreateClient());
+                var repo = new UserAccountRepository(context);
 
                 IList<Tuple<Expression<Func<UserAccount, object>>, object>> paramValue = 
                     new List<Tuple<Expression<Func<UserAccount, object>>, object>>() 
@@ -75,7 +75,7 @@ namespace TIK.Persistance.ElasticSearch.Tests
                 //var repoIndex = new IndexRepository(context.CreateClient());
                 //repoIndex.IndexData<UserAccount>(userAccount, "member", "userAccount");
 
-                var repo = new UserAccountRepository(context.CreateClient());
+                var repo = new UserAccountRepository(context);
 
                 var id = repo.Save(userAccount);
                 var key = id;

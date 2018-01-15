@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -15,9 +16,11 @@ namespace TIK.WebPortal.Controllers.StockViewer
     public class StockViewerController : Controller
     {
         public ICommonStockPublisher StockPublisher { get; }
-        public StockViewerController(ICommonStockPublisher stockPublisher)
+        public IEodPublisher EodPublisher { get; }
+        public StockViewerController(ICommonStockPublisher stockPublisher, IEodPublisher eodPublisher)
         {
             StockPublisher = stockPublisher;
+            EodPublisher = eodPublisher;
         }
         [Route("stocks")]
         [HttpGet]
@@ -78,20 +81,23 @@ namespace TIK.WebPortal.Controllers.StockViewer
         }
 
 
-        [HttpGet("stock/{stockId}/historical")]
-        public IActionResult GetHistorical(string stockId)
+        [HttpGet("stock/{symbol}/historical/{fromDate}/{toDate}")]
+        public IActionResult GetHistorical(string symbol, string fromDate, string toDate)
         {
-            IList<Eod> list = new List<Eod> { 
-                new Eod{ Id="1", Symbol = "A", EodDate = new DateTime(2017, 11, 1), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
-                new Eod{ Id="2", Symbol = "A", EodDate = new DateTime(2017, 11, 2), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
-                new Eod{ Id="3", Symbol = "A", EodDate = new DateTime(2017, 11, 3), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
-                new Eod{ Id="4", Symbol = "A", EodDate = new DateTime(2017, 11, 4), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
-                new Eod{ Id="5", Symbol = "A", EodDate = new DateTime(2017, 11, 5), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
-                new Eod{ Id="6", Symbol = "A", EodDate = new DateTime(2017, 11, 6), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
-                new Eod{ Id="7", Symbol = "A", EodDate = new DateTime(2017, 11, 7), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 },
-                new Eod{ Id="8", Symbol = "A", EodDate = new DateTime(2017, 11, 8), Open = 1, High = 220, Low = 200, Close = 100, Volume = 128282828 }
-            };
-            return Ok(list);
+            var taskResult = EodPublisher.GetList(symbol, GetDate(fromDate), GetDate(toDate));
+
+            return Ok(taskResult.Result);
+                     
+        }
+
+        private DateTime GetDate(string strDate){
+            DateTime date;
+            if(!DateTime.TryParseExact(strDate, "yyyy-MM-dd", 
+                                      CultureInfo.GetCultureInfo("en-US"), 
+                                      DateTimeStyles.None, out date)){
+                date = DateTime.Now;
+            }
+            return date;
         }
 
     }

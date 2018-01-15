@@ -10,25 +10,27 @@ namespace TIK.Persistance.ElasticSearch
     public abstract class EsRepository<T, TId> : BaseRepository, IRepository<T, TId>
         where T : BaseModel<TId>, new()
     {
-
-        public EsRepository(IElasticClient elasticClient, string indexName)
-            :base(elasticClient)
+        public EsRepository(EsContext context)
+            :base(context.CreateClient<T>())
         {
-            IndexName = indexName;
+            IndexName = Client.ConnectionSettings.DefaultIndex;
         }
 
-        public string IndexName { get; private set; }
+        public string IndexName { get; }
 
         public TId Add(T entry)
         {
-            var result = Client.Index<T>(entry, c => c.Index(IndexName));
-            var id = (TId)Convert.ChangeType(result.Id, typeof(TId));
-            return id;
+            var result = Client.Index<T>(entry, c=> c.Index(IndexName));
+            if(!result.IsValid){
+                throw result.OriginalException;
+            }
+           
+            return (TId)Convert.ChangeType(result.Id, typeof(TId));
         }
 
         public TId Save(T entry)
         {
-            var result = Client.Index<T>(entry, c => c.Index(IndexName));
+            var result = Client.Update<T>(entry, c => c.Index(IndexName));
             var id= (TId)Convert.ChangeType(result.Id, typeof(TId));
             return id;
         }
@@ -47,10 +49,10 @@ namespace TIK.Persistance.ElasticSearch
             return result.Source;
         }
 
-        public IEnumerable<T> List()
+        public IEnumerable<T> List(int skip = 0, int size = 20)
         {
             var result = Client.Search<T>(search =>
-                                          search.MatchAll());
+                                          search.Skip(skip).Size(size).MatchAll());
 
             return result.Documents;
         }
@@ -61,10 +63,10 @@ namespace TIK.Persistance.ElasticSearch
             var q = new QueryContainerDescriptor<T>();
             foreach (var item in paramValue)
             {
-                q.Term(item.Item1, item.Item2);
+                q.Match(m=>m.Field(item.Item1).Query(item.Item2.ToString()));
             }
             req.Query = q;
-
+       
             var result = Client.Search<T>(req);
             return result.Documents;
         }

@@ -11,17 +11,19 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Serilog;
+using TIK.Core.Hosting;
+using TIK.Core.Logging;
 using TIK.Core.ServiceDiscovery;
 
 namespace TIK.Computation.AkkaSeed
 {
     public class Startup
     {
-       
+        ILog logger = LogProvider.GetLogger(typeof(Startup));
 
-
-        public Startup(IHostingEnvironment env)
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
+            /*
             var builder = new ConfigurationBuilder()
                .SetBasePath(env.ContentRootPath)
                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
@@ -29,18 +31,21 @@ namespace TIK.Computation.AkkaSeed
                .AddEnvironmentVariables();
 
             Configuration = builder.Build();
+            */
+            Configuration = configuration;
 
-            ActorSystemInstance = new AkkaStateService();
+          
         }
 
         public IConfiguration Configuration { get; }
 
-        public AkkaStateService ActorSystemInstance { get; }
+        public AkkaStateService ActorSystemInstance { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           
+            ActorSystemInstance = new AkkaStateService(services);
+
             services.AddSingleton(typeof(AkkaStateService), ActorSystemInstance);
 
             services.AddMvc();
@@ -51,13 +56,13 @@ namespace TIK.Computation.AkkaSeed
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            logger.Info("I:Configure");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            var applicationLifetime = app.ApplicationServices.GetRequiredService<IApplicationLifetime>();
-            applicationLifetime.ApplicationStopping.Register(OnShutdown);
+            app.RegisterApplicationStopping(OnShutdown);
 
             ActorSystemInstance.Start();
 
@@ -67,13 +72,15 @@ namespace TIK.Computation.AkkaSeed
 
             // Autoregister using server.Features (does not work in reverse proxy mode)
             app.UseConsulRegisterService();
+            logger.Info("O:Configure");
+       
         }
 
         private void OnShutdown()
         {
+            logger.Info("OnShutdown");
             ActorSystemInstance.Stop();
         }
-
 
     }
 }

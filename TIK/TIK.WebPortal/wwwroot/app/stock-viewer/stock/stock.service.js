@@ -51,10 +51,13 @@
             }
         }
 
-        self.getHistorical = function (stockId) {
+
+        self.getHistorical = function (symbol, fromDate, toDate) {
             var accessToken = authenticationService.getAccessToken();
+            var fromParam = fromDate.toISOString().slice(0, 10);
+            var toParam = toDate.toISOString().slice(0, 10);
             return $http( {
-                url: apiBase + 'stock/' + stockId + '/historical',
+                url: apiBase + 'stock/' + symbol + '/historical/'+fromParam+'/'+toParam,
                 method: 'GET',
                 headers: { 'Authorization': 'Bearer ' + accessToken }
             })

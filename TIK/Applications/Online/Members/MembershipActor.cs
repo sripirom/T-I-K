@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Akka.Actor;
+using Akka.Event;
 using TIK.Applications.Messaging;
 using TIK.Domain.Membership;
 
@@ -8,6 +9,8 @@ namespace TIK.Applications.Online.Members
 {
     public class MembershipActor : ReceiveActor
     {
+        private readonly ILoggingAdapter _logger = Context.GetLogger();
+
         private readonly IMemberRepository _memberRepository;
         public MembershipActor(IMemberRepository memberRepository)
         {
@@ -59,5 +62,32 @@ namespace TIK.Applications.Online.Members
         {
             return Akka.Actor.Props.Create(typeof(MembershipActor));
         }
+
+        #region Lifecycle hooks
+
+        protected override void PreStart()
+        {
+            _logger.Debug("MembershipActor PreStart");
+        }
+
+        protected override void PostStop()
+        {
+            _logger.Debug("MembershipActor PostStop");
+        }
+
+        protected override void PreRestart(Exception reason, object message)
+        {
+            _logger.Debug("MembershipActor PreRestart because {Reason}", reason);
+
+            base.PreRestart(reason, message);
+        }
+
+        protected override void PostRestart(Exception reason)
+        {
+            _logger.Debug("MembershipActor PostRestart because {Reason}", reason);
+
+            base.PostRestart(reason);
+        }
+        #endregion
     }
 }

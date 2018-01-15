@@ -5,6 +5,11 @@ namespace TIK.Applications.Online.EodStocks
     {
         public class RetriveBetween                     
         {
+            public string Symbol
+            {
+                get;
+                set;
+            }
             public DateTime StartDate
             {
                 get;

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace TIK.WebPortal
 {
@@ -29,10 +30,9 @@ namespace TIK.WebPortal
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                   .UseKestrel(options =>
-                                      {
-                                          options.Listen(EnvSettings.Instance().IP, EnvSettings.Instance().Port);
-                                      })
+                   .UseKestrel(options => {
+                       options.Listen(EnvSettings.Instance().IP, EnvSettings.Instance().Port);
+                   })
                 .UseStartup<Startup>()
                 .Build();
 

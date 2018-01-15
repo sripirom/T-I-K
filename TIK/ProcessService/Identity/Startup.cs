@@ -17,6 +17,7 @@ using TIK.Applications.Identity.Authentication;
 using TIK.Applications.Identity.Authentication.Routes;
 using TIK.Applications.Identity.JwtSecurity;
 using TIK.Applications.Security;
+using TIK.Core.Hosting;
 using TIK.Core.ServiceDiscovery;
 using TIK.Domain.UserAccounts;
 using TIK.Persistance.ElasticSearch.Mocks;
@@ -28,18 +29,8 @@ namespace TIK.ProcessService.Identity
     {
         public Startup(IHostingEnvironment env)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+            var builder = env.InnitConfigurationHosting();
 
-            if (env.IsEnvironment("Development"))
-            {
-                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
-                builder.AddApplicationInsightsSettings(developerMode: true);
-            }
-
-            builder.AddEnvironmentVariables();
             Configuration = builder.Build();
         }
 

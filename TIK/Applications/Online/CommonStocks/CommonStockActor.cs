@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Akka.Actor;
+using Akka.Event;
 using TIK.Domain.TheSet;
 
 namespace TIK.Applications.Online.CommonStocks
 {
     public partial class CommonStockActor : ReceiveActor
-    {
+    { 
+        private readonly ILoggingAdapter _logger = Context.GetLogger();
 
         public CommonStockInfo CommonStorkData { get; }
         public IList<DiscussionItem> Discussions { get; }
@@ -43,5 +45,33 @@ namespace TIK.Applications.Online.CommonStocks
         {
             return Akka.Actor.Props.Create(() => new CommonStockActor(commonStork, eodStocksActor));
         }
+
+
+        #region Lifecycle hooks
+
+        protected override void PreStart()
+        {
+            _logger.Debug("CommonStockActor PreStart");
+        }
+
+        protected override void PostStop()
+        {
+            _logger.Debug("CommonStockActor PostStop");
+        }
+
+        protected override void PreRestart(Exception reason, object message)
+        {
+            _logger.Debug("CommonStockActor PreRestart because {Reason}", reason);
+
+            base.PreRestart(reason, message);
+        }
+
+        protected override void PostRestart(Exception reason)
+        {
+            _logger.Debug("CommonStockActor PostRestart because {Reason}", reason);
+
+            base.PostRestart(reason);
+        }
+        #endregion
     }
 }

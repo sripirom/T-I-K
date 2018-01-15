@@ -20,71 +20,32 @@ using Nest;
 using DnsClient;
 using System.Net;
 using TIK.Core.ServiceDiscovery;
+using TIK.Core.Hosting;
+using Serilog;
+using TIK.Applications.Security;
+using TIK.Core.Logging;
 
 namespace TIK.WebPortal
 {
     public class Startup
     {
-        const string TokenAudience = "ExampleAudience";
-        const string TokenIssuer = "ExampleIssuer";
 
         public Startup(IHostingEnvironment env)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+            var builder = env.InnitConfigurationHosting();
 
-            if (env.IsEnvironment("Development"))
-            {
-                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
-                builder.AddApplicationInsightsSettings(developerMode: true);
-            }
-
-            builder.AddEnvironmentVariables();
             Configuration = builder.Build();
-        }
+
+        } 
+
 
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-             .AddJwtBearer(options => {
-                 options.TokenValidationParameters = new TokenValidationParameters
-                 {
-                     ValidateIssuer = true,
-                     ValidateAudience = true,
-                     ValidateLifetime = true,
-                     ValidateIssuerSigningKey = true,
-
-                     ValidIssuer = "Fiver.Security.Bearer",
-                     ValidAudience = "Fiver.Security.Bearer",
-                     IssuerSigningKey = JwtSecurityKey.Create("fiver-secret-key")
-                 };
-
-                 options.Events = new JwtBearerEvents
-                 {
-                     OnAuthenticationFailed = context =>
-                     {
-                         Console.WriteLine("OnAuthenticationFailed: " + context.Exception.Message);
-                         return Task.CompletedTask;
-                     },
-                     OnTokenValidated = context =>
-                     {
-                         Console.WriteLine("OnTokenValidated: " + context.SecurityToken);
-                         return Task.CompletedTask;
-                     }
-                 };
-             });
-
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("Member",
-                    policy => policy.RequireClaim("MembershipId"));
-            });
-
+            Log.Information("I:ConfigureServices");
+            services.JwtBearerAuthentication(Configuration);
 
             services.AddServiceCollection();
         
@@ -93,27 +54,13 @@ namespace TIK.WebPortal
 
             services.AddServiceDiscovery(Configuration.GetSection("ServiceDiscovery"));
 
-        
-
-    //Now register our services with Autofac container
-            /*
-   
-            var builder = new ContainerBuilder();
-            //builder.RegisterType<UserAccountRepository>().As<IUserAccountRepository>();
-            //builder.RegisterType<UserAccountQuery>().As<IUserAccountQuery>();
-            builder.RegisterInstance(new ElasticClient(new ConnectionSettings(new Uri("http://192.168.99.100:32809"))
-                          .DefaultIndex("member"))).As<IElasticClient>();
-            
-            builder.Populate(services);
-            var container = builder.Build();
-            //Create the IServiceProvider based on the container.
-            return new AutofacServiceProvider(container);
-            */
+            Log.Information("O:ConfigureServices");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            Log.Information("I:Configure ApplicationBuilder");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -159,11 +106,11 @@ namespace TIK.WebPortal
                 });
             }
 
+            app.RegisterApplicationStopping(OnShutdown);
 
+             
             app.UseAuthentication();
-
-
-
+           
             app.UseStaticFiles();
 
 
@@ -176,23 +123,13 @@ namespace TIK.WebPortal
 
             // Autoregister using server.Features (does not work in reverse proxy mode)
             app.UseConsulRegisterService();
+            Log.Information("O:Configure ApplicationBuilder");
         }
-    }
 
-
-    public static class JwtSecurityKey
-    {
-        public static SymmetricSecurityKey Create(string secret)
+        public void OnShutdown()
         {
-            try
-            {
-                return new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secret));
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-        }
+            Log.Information("OnShutdown");
+        } 
     }
+
 }

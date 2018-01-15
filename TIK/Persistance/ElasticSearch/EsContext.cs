@@ -1,4 +1,5 @@
 ﻿using System;
+using Elasticsearch.Net;
 using Nest;
 
 namespace TIK.Persistance.ElasticSearch
@@ -6,23 +7,29 @@ namespace TIK.Persistance.ElasticSearch
     public class EsContext
     {
         private readonly Uri _elastiSearchServerUrl;
-        private readonly string _indexName;
-        public EsContext(Uri elastiSearchServerUrl = null, string indexName = "")
+        private readonly string _rootIndex;
+        public EsContext(Uri elastiSearchServerUrl = null, string rootIndex = "")
         {
-            _indexName = indexName;
+            _rootIndex = rootIndex;
             _elastiSearchServerUrl = elastiSearchServerUrl;
   
         }
 
-        public string IndexName { get { return _indexName; }}
+        public string RootIndex { get { return _rootIndex; }}
 
-        public IElasticClient CreateClient()
+        public IElasticClient CreateClient<T>()
         {
-            return _elastiSearchServerUrl != null ?
-                new ElasticClient(new ConnectionSettings(_elastiSearchServerUrl)
-                                  .DefaultIndex(_indexName))
+            var typeIndex = $"{RootIndex}_{typeof(T).Name.ToLower()}"; 
+            var connectionPool = new SingleNodeConnectionPool(_elastiSearchServerUrl);
 
-                  : new ElasticClient();
+            var settings = new ConnectionSettings(connectionPool)
+                                    .DefaultIndex(typeIndex)
+                                    .DisableDirectStreaming(); 
+            var client = _elastiSearchServerUrl != null ?
+                        new ElasticClient(settings)
+                        : new ElasticClient();
+            
+            return client;
 
         }
         public TRepository Get<TRepository>()

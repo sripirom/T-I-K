@@ -32,7 +32,7 @@ namespace TIK.Computation.AkkaSeed
             
             WebHost.CreateDefaultBuilder(args)
                .UseKestrel(options=>{
-                    options.Listen(EnvSettings.Instance().IP,EnvSettings.Instance().Port);
+                        options.Listen(EnvSettings.Instance().IP,EnvSettings.Instance().Port);
                     }).ConfigureAppConfiguration((hostingContext, config) =>
                     {
                         var env = hostingContext.HostingEnvironment;
@@ -44,8 +44,9 @@ namespace TIK.Computation.AkkaSeed
                           Log.Logger = new LoggerConfiguration()
                           .MinimumLevel.Verbose()
                           .WriteTo.LiterateConsole()
-                          .WriteTo.RollingFile("logs\\log-{Date}.txt")
+                          .WriteTo.RollingFile("logs/log-{Date}.txt")
                           .CreateLogger();
+                    
                     })
                 .UseStartup<Startup>()
                 .Build();

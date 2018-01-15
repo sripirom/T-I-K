@@ -22,9 +22,9 @@ namespace TIK.Persistance.ElasticSearch.Mocks
         {
             return (T)_collection.FirstOrDefault(a => a.Id.Equals(id));
         }
-        public IEnumerable<T> List()
+        public IEnumerable<T> List(int skip = 0, int size = 20)
         {
-            return _collection;
+            return _collection.Skip(skip).Take(size);
         }
         public virtual IEnumerable<T> Search(IEnumerable<Tuple<Expression<Func<T, object>>, object>> paramValue)
         {

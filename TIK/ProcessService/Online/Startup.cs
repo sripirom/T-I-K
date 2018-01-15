@@ -10,8 +10,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TIK.Applications.Online;
+using TIK.Applications.Online.EodStocks.Routes;
 using TIK.Applications.Online.Members.Routes;
 using TIK.Applications.Security;
+using TIK.Core.Hosting;
 using TIK.Core.ServiceDiscovery;
 using TIK.ProcessService.Activities;
 
@@ -21,18 +23,8 @@ namespace TIK.ProcessService.Online
     {
         public Startup(IHostingEnvironment env)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+            var builder = env.InnitConfigurationHosting();
 
-            if (env.IsEnvironment("Development"))
-            {
-                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
-                builder.AddApplicationInsightsSettings(developerMode: true);
-            }
-
-            builder.AddEnvironmentVariables();
             Configuration = builder.Build();
         }
 
@@ -56,6 +48,7 @@ namespace TIK.ProcessService.Online
             services.AddMvc()
                     .AddApplicationPart(typeof(MemberController).GetTypeInfo().Assembly)
                     .AddApplicationPart(typeof(HealthCheckController).GetTypeInfo().Assembly) 
+                    .AddApplicationPart(typeof(EodController).GetTypeInfo().Assembly)
                     .AddControllersAsServices();
 
             services.AddServiceDiscovery(Configuration.GetSection("ServiceDiscovery"));

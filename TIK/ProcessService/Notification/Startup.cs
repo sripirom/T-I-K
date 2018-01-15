@@ -15,6 +15,7 @@ using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 using TIK.Applications.Notification.Commands.Socket;
 using TIK.Core.Container;
+using TIK.Core.Hosting;
 using TIK.ProcessService.Authentication;
 
 namespace TIK.ProcessService.Notification
@@ -23,18 +24,8 @@ namespace TIK.ProcessService.Notification
     {
         public Startup(IHostingEnvironment env)
         {
-            var builder = new ConfigurationBuilder()
-             .SetBasePath(env.ContentRootPath)
-             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-             .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+            var builder = env.InnitConfigurationHosting();
 
-            if (env.IsEnvironment("Development"))
-            {
-                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
-                builder.AddApplicationInsightsSettings(developerMode: true);
-            }
-
-            builder.AddEnvironmentVariables();
             Configuration = builder.Build();
         }
 

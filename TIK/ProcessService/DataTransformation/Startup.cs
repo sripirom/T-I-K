@@ -13,15 +13,18 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.PlatformAbstractions;
 using Swashbuckle.AspNetCore.Swagger;
+using TIK.Core.Hosting;
 using TIK.ProcessService.DataTransformation.Hubs;
 
 namespace TIK.ProcessService.DataTransformation
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var builder = env.InnitConfigurationHosting();
+
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }

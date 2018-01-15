@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Serilog;
 using TIK.ProcessService.Activities;
 
 namespace TIK.ProcessService.Online
@@ -30,10 +31,17 @@ namespace TIK.ProcessService.Online
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                   .UseKestrel(options =>
-                      {
-                          options.Listen(EnvSettings.Instance().IP, EnvSettings.Instance().Port);
-                      })
+                   .UseKestrel(options => {
+                   options.Listen(EnvSettings.Instance().IP, EnvSettings.Instance().Port);
+               }).ConfigureLogging((hostingContext, logging) =>
+               {
+                   Log.Logger = new LoggerConfiguration()
+                   .MinimumLevel.Verbose()
+                   .WriteTo.LiterateConsole()
+                   .WriteTo.RollingFile("logs/log-{Date}.txt")
+                   .CreateLogger();
+             
+               })
                 .UseStartup<Startup>()
                 .Build();
     }

@@ -23,4 +23,7 @@
     <ProjectReference Include="..\Core\TIK.Core\TIK.Core.csproj" />
     <ProjectReference Include="..\Core\TIK.Integration\TIK.Integration.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Persistance\" />
+  </ItemGroup>
 </Project>

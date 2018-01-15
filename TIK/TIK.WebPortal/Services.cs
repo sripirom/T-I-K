@@ -44,7 +44,7 @@ namespace TIK.WebPortal
 
             services.AddTransient<IIdentityTokenPublisher>(_ => new IdentityTokenPublisher(identityServiceName, endpointDiscovery));
 
-
+            services.AddTransient<IEodPublisher>(_ => new EodPublisher(onlineServiceName, endpointDiscovery));
 
             services.AddTransient<ICommonStockPublisher>(_ => new CommonStockPublisher(onlineServiceName, endpointDiscovery)); 
         }

@@ -15,7 +15,7 @@ namespace TIK.Core.Domain
 
         bool Delete(TId id);
 
-        IEnumerable<T> List();
+        IEnumerable<T> List(int skip = 0, int size = 20);
 
         IEnumerable<T> Search(IEnumerable<Tuple<Expression<Func<T, object>>, object>> paramValue);
     }

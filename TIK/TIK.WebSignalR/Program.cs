@@ -28,7 +28,6 @@ namespace TIK.WebSignalR
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseSetting(WebHostDefaults.PreventHostingStartupKey, "true")
-
                 .UseKestrel(options =>
                    {
                        options.Listen(EnvSettings.Instance().IP, EnvSettings.Instance().Port);

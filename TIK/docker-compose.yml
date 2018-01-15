@@ -10,6 +10,7 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - consul3
+      - tik.elasticsearch
 
   tik.processservice.online:
     image: tik.processservice.online
@@ -74,3 +75,12 @@ services:
     command: "-server -join consul1"
     depends_on:
       - consul1
+
+  tik.elasticsearch:
+    image: "docker.elastic.co/elasticsearch/elasticsearch-platinum:6.1.1"
+    container_name: "tik-elasticsearch"
+    hostname: "tik-elasticsearch"
+    volumes:
+      - ./sampleData:/home/sampleData
+
+      
