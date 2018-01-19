@@ -25,6 +25,8 @@ using
     Computation:
         - tik.akkaseed using akka.net actors. 
         - tik.hangfirenode using hangfire queue long runing process. 
+    DataStorage:
+        - tik.elasticsearch
 
 ### Consul ServiceDiscovery
 ![Consul ServiceDiscovery](https://drive.google.com/uc?id=1qjl14je6KfqbrwETSvs07ABM9sYt6jVQ)
@@ -56,6 +58,8 @@ image: [sripirom/tik.processservice.online](https://hub.docker.com/r/sripirom/ti
 image: [sripirom/tik.webportal](https://hub.docker.com/r/sripirom/tik.webportal/)
 
 image: [sripirom/tik.websignalr](https://hub.docker.com/r/sripirom/tik.websignalr/)
+
+image: [sripirom/tik.websignalr](https://hub.docker.com/r/sripirom/tik.elasticsearch/)
 
 
     # build images 
