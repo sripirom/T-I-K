@@ -14,7 +14,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
-    <ProjectReference Include="..\..\Core\TIK.Applications\TIK.Applications.csproj" />
     <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
     <ProjectReference Include="..\..\Core\TIK.Persistance\TIK.Persistance.csproj" />
   </ItemGroup>
