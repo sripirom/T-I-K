@@ -16,4 +16,4 @@ addons:
 
 script:    # the following commands are just examples, use whatever your build process requires
   - dotnet restore ./TIK/TIK.sln
-  - dotnet build ./TIK/TIK.sln -c Debug -f netcoreapp2.0
+  - dotnet build ./TIK/TIK.sln -c Debug
