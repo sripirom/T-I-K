@@ -262,9 +262,9 @@
                                 '</div>' +
                             '</div>' +
                             '<div class="form-group">' +
-                                '<label for="inputPassword" class="col-sm-3 control-label">Password</label>' +
+                                '<label for="reginputPassword" class="col-sm-3 control-label">Password</label>' +
                                 '<div class="col-sm-9">' +
-                                    '<input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="vm.regInfo.password">' +
+                                    '<input type="password" class="form-control" id="reginputPassword" placeholder="Password" ng-model="vm.regInfo.password">' +
                                 '</div>' +
                             '</div>' +
                         '</div>' +

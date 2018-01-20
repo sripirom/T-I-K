@@ -3,7 +3,7 @@ using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace TIK.Applications.Security
+namespace TIK.Core.Application.Security
 {
     public static class JwtSecurityKey
     {

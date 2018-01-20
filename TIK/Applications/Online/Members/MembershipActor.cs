@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Akka.Actor;
 using Akka.Event;
-using TIK.Applications.Messaging;
+using TIK.Core.Application.Messaging;
 using TIK.Domain.Membership;
 
 namespace TIK.Applications.Online.Members

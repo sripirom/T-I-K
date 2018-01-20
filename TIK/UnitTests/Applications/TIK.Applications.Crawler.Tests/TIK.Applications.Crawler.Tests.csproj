@@ -18,11 +18,9 @@
     <Folder Include="SourceFiles\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\TIK.Applications\TIK.Applications.csproj" />
     <ProjectReference Include="..\..\..\Core\TIK.Core\TIK.Core.csproj" />
     <ProjectReference Include="..\..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
     <ProjectReference Include="..\..\..\Applications\TIK.Applications.Crawler\TIK.Applications.Crawler.csproj" />
     <ProjectReference Include="..\..\..\Persistance\ElasticSearch\TIK.Persistance.ElasticSearch.csproj" />
-    <ProjectReference Include="..\..\..\Core\TIK.Persistance\TIK.Persistance.csproj" />
   </ItemGroup>
 </Project>

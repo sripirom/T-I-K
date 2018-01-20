@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using TIK.Applications.Online;
 using TIK.Applications.Online.EodStocks.Routes;
 using TIK.Applications.Online.Members.Routes;
-using TIK.Applications.Security;
+using TIK.Core.Application.Security;
 using TIK.Core.Hosting;
 using TIK.Core.ServiceDiscovery;
 using TIK.ProcessService.Activities;

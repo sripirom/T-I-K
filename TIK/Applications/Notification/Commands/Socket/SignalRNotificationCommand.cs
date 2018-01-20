@@ -10,7 +10,7 @@ namespace TIK.Applications.Notification.Commands.Socket
 {
     public class SignalRNotificationCommand :BaseAppService,  ISignalRNotificationCommand
     {
-        private string _endpoint = "localhost:5100";
+        //private string _endpoint = "localhost:5100";
 
         public SignalRNotificationCommand()
         {

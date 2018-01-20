@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
 
-namespace TIK.Applications
+namespace TIK.Core.Application
 {
     public class ServiceSettings
     {

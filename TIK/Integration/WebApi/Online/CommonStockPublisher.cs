@@ -12,7 +12,7 @@ namespace TIK.Integration.WebApi.Online
     public class CommonStockPublisher : ICommonStockPublisher
     {
 
-        private readonly string _getAllJobs;
+
         private readonly string _getCommonStocks;
         private readonly string _getInfo;
         private readonly string _getStockDiscussion;

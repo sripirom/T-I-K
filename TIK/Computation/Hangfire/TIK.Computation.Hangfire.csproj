@@ -15,11 +15,10 @@
     <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
     <PackageReference Include="HangFire.Autofac" Version="2.3.1" />
     <PackageReference Include="StackExchange.Redis" Version="1.2.6" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.1.0-preview1-27173" />
     <PackageReference Include="Serilog.Sinks.Literate" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\TIK.Applications\TIK.Applications.csproj" />
     <ProjectReference Include="..\..\Applications\DataTransformation\TIK.Applications.DataTransformation.csproj" />
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
     <ProjectReference Include="..\..\Integration\SignalR\TIK.Integration.SignalR.csproj" />

@@ -11,7 +11,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
-    <ProjectReference Include="..\..\Core\TIK.Applications\TIK.Applications.csproj" />
     <ProjectReference Include="..\..\Core\TIK.Integration\TIK.Integration.csproj" />
   </ItemGroup>
 </Project>

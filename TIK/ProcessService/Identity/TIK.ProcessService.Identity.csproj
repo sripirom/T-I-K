@@ -21,10 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\TIK.Applications\TIK.Applications.csproj" />
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
     <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
-    <ProjectReference Include="..\..\Core\TIK.Persistance\TIK.Persistance.csproj" />
     <ProjectReference Include="..\..\Persistance\ElasticSearch\TIK.Persistance.ElasticSearch.csproj" />
     <ProjectReference Include="..\..\Applications\Identity\TIK.Applications.Identity.csproj" />
     <ProjectReference Include="..\..\Core\TIK.ProcessService\TIK.ProcessService.csproj" />

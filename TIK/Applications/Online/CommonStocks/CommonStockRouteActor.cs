@@ -1,6 +1,6 @@
 ﻿using System;
 using Akka.Actor;
-using TIK.Applications.Messaging;
+using TIK.Core.Application.Messaging;
 using TIK.Domain.TheSet;
 using TIK.Applications.Online.EodStocks;
 using Akka.Event;

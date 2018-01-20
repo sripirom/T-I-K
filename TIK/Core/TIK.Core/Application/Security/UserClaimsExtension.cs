@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using System.Linq;
-using TIK.Domain.UserAccounts;
 
-namespace TIK.Applications.Security
+namespace TIK.Core.Application.Security
 {
     public static class UserClaimsExtension
     {
-        public static UserAccount GetUserInfo(this HttpContext httpContext)
+        public static UserToken GetUserInfo(this HttpContext httpContext)
         {
-            UserAccount user = new UserAccount();
+            UserToken user = new UserToken();
             var dict = new Dictionary<string, string>();
 
             httpContext.User.Claims.ToList()
