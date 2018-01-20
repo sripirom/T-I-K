@@ -1,5 +1,8 @@
 # T-I-K Asp.Net Core Microservice
 
+[![Build Status](https://travis-ci.org/sripirom/T-I-K.svg?branch=master)](https://travis-ci.org/sripirom/T-I-K)
+
+
 using  
 - [Asp.Net Core](https://docs.microsoft.com/en-us/aspnet/core/)
 - [SignalR Core](https://github.com/aspnet/SignalR)
