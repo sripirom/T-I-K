@@ -10,8 +10,6 @@
     <Folder Include="Online\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\TIK.Applications\TIK.Applications.csproj" />
-    <ProjectReference Include="..\..\Applications\DataTransformation\TIK.Applications.DataTransformation.csproj" />
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
     <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
     <ProjectReference Include="..\..\Core\TIK.Integration\TIK.Integration.csproj" />

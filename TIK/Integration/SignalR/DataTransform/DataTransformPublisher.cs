@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Linq;
-using TIK.Applications.DataTransformation;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Sockets.Client;
 using System.Threading;
-using System.Text;
 using TIK.Integration.DataTransformation;
 
 namespace TIK.Integration.SignalR.DataTransform
