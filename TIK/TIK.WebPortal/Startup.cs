@@ -22,7 +22,7 @@ using System.Net;
 using TIK.Core.ServiceDiscovery;
 using TIK.Core.Hosting;
 using Serilog;
-using TIK.Applications.Security;
+using TIK.Core.Application.Security;
 using TIK.Core.Logging;
 
 namespace TIK.WebPortal

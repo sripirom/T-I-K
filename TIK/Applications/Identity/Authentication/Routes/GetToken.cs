@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using TIK.Applications.Identity.Authentication;
 using TIK.Applications.Identity.JwtSecurity;
 using TIK.Domain.UserAccounts;
+using Application = TIK.Core.Application;
 
 namespace TIK.Applications.Identity.Authentication.Routes
 {
@@ -25,8 +26,8 @@ namespace TIK.Applications.Identity.Authentication.Routes
             if (user == null)
                 return await Task.FromResult("");
 
-            var memberIdKey = ServiceSettings.Instance.AuthenClaimMembershipId;
-
+            var memberIdKey = Application.ServiceSettings.Instance.AuthenClaimMembershipId;
+             
             var token = new JwtTokenBuilder()
                 .AddConfiguration(userName)
                 .AddClaim(memberIdKey, user.Id.ToString())

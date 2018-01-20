@@ -20,7 +20,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\TIK.Domain\TIK.Domain.csproj" />
     <ProjectReference Include="..\..\Core\TIK.Core\TIK.Core.csproj" />
-    <ProjectReference Include="..\..\Core\TIK.Persistance\TIK.Persistance.csproj" />
     <ProjectReference Include="..\ElasticSearch\TIK.Persistance.ElasticSearch.csproj" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace TIK.Applications.Messaging
+namespace TIK.Core.Application.Messaging
 {
     public class MessageWithJobId
     {

@@ -1,5 +1,5 @@
 using System;
-using TIK.Applications.Messaging;
+using TIK.Core.Application.Messaging;
 
 namespace TIK.Applications.Online.BackLogs
 {

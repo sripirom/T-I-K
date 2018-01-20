@@ -14,7 +14,7 @@ namespace TIK.Persistance.ElasticSearch.Tests.Repositories
         private IList<Eod> _collection;
         public EodRepositoryTest()
         {
-
+            _collection = new List<Eod>();
         }
 
 

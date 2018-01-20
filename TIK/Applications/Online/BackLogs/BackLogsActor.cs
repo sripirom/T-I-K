@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using Akka.Actor;
 using Akka.Event;
-using TIK.Applications.Messaging;
+using TIK.Core.Application.Messaging;
 
 namespace TIK.Applications.Online.BackLogs
 {

@@ -16,7 +16,7 @@ using Newtonsoft.Json;
 using TIK.Applications.Identity.Authentication;
 using TIK.Applications.Identity.Authentication.Routes;
 using TIK.Applications.Identity.JwtSecurity;
-using TIK.Applications.Security;
+using TIK.Core.Application.Security;
 using TIK.Core.Hosting;
 using TIK.Core.ServiceDiscovery;
 using TIK.Domain.UserAccounts;

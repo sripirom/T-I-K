@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace TIK.Applications.Security
+namespace TIK.Core.Application.Security
 {
     
     public static class JwtBearerAuthenticationExtension
