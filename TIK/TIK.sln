@@ -81,13 +81,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Application
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Applications.Crawler.Tests", "UnitTests\Applications\TIK.Applications.Crawler.Tests\TIK.Applications.Crawler.Tests.csproj", "{C5C332D9-8BFD-4F66-A232-F5A1DDA93EB5}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "TIK.Integration.WebApi.Tests", "Integration\WebApi.Tests\TIK.Integration.WebApi.Tests.csproj", "{E87DF8A7-6F20-42A5-A682-E4AEB6C45057}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Integration.WebApi.Tests", "Integration\WebApi.Tests\TIK.Integration.WebApi.Tests.csproj", "{E87DF8A7-6F20-42A5-A682-E4AEB6C45057}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "TIK.Persistance.Redis", "Persistance\Redis\TIK.Persistance.Redis.csproj", "{9D9DC40A-2DCC-4AE8-B67C-3A3C68807453}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Persistance.Redis", "Persistance\Redis\TIK.Persistance.Redis.csproj", "{9D9DC40A-2DCC-4AE8-B67C-3A3C68807453}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "TIK.Persistance.SQLite", "Persistance\SQLite\TIK.Persistance.SQLite.csproj", "{355D8970-6B5E-4380-861D-D4C368C000F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Persistance.SQLite", "Persistance\SQLite\TIK.Persistance.SQLite.csproj", "{355D8970-6B5E-4380-861D-D4C368C000F8}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "TIK.Consumers.Sockets", "Consumers\Sockets\TIK.Consumers.Sockets.csproj", "{54287F22-A629-4D07-A446-78A809E5822F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.Consumers.Sockets", "Consumers\Sockets\TIK.Consumers.Sockets.csproj", "{54287F22-A629-4D07-A446-78A809E5822F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIK.UnitTests", "TIK.UnitTests\TIK.UnitTests.csproj", "{82EC4FD6-F421-46B3-B5CD-DC112552FBE6}"
 EndProject

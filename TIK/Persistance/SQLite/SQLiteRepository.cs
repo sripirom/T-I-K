@@ -114,5 +114,10 @@ namespace TIK.Persistance.SQLite
             */
             return items;
         }
+
+        public IEnumerable<T> List(int skip = 0, int size = 20)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
