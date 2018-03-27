@@ -79,6 +79,3 @@ image: [sripirom/tik.websignalr](https://hub.docker.com/r/sripirom/tik.elasticse
 [Goto sample Application](http://35.194.196.147:5000/)
 
 
-
-  
-jenkinbuild
