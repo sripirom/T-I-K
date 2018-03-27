@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Linq;
 using HtmlAgilityPack;
 using TIK.Core.Application;
+using TIK.Core.Helpers;
 using TIK.Core.Logging;
 using TIK.Domain.Crawler;
 using TIK.Domain.TheSet;
@@ -84,17 +85,9 @@ namespace TIK.Applications.Crawler.Set.Queries
         private decimal ConvertToDecimal(string value)
         {
 
-            decimal result = 0;
-
-            if (string.IsNullOrEmpty(value)) return result;
-
             var tmp = value.Replace("Baht", "").Replace("Shares", "").Replace(",", "").Trim();
-            if (!Decimal.TryParse(tmp, out result))
-            {
 
-            }
-
-            return result;
+            return tmp.ToDecimal(expCode: null, defValue:0);
         }
 
         private DateTime ConvertToDateTime(string value, string format)
