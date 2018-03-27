@@ -80,5 +80,5 @@ image: [sripirom/tik.websignalr](https://hub.docker.com/r/sripirom/tik.elasticse
 
 
 
-  
-jenkinbuild
+
+Test build
