@@ -76,9 +76,7 @@ image: [sripirom/tik.websignalr](https://hub.docker.com/r/sripirom/tik.elasticse
     username: user1
     password: password
 
-[Goto sample Application](http://35.194.196.147:5000/)
+[Goto sample Application](http://bathawk.sripirom.com:1441/)
 
 
-
-
-Test build
+Testbuild 2
