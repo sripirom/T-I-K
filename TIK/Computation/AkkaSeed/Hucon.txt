@@ -27,7 +27,6 @@ akka {
     seed-nodes = ["akka.tcp://OnlineSystem@tik-akkaseed:5301"]
     rules = ["Membership", "commonStrockRoute", "commonStrocks", "eodStocks"]
   }
-
 }      
 
 

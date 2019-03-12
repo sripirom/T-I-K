@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mocks\" />
+    <Compile Remove="Mocks\**" />
+    <EmbeddedResource Remove="Mocks\**" />
+    <None Remove="Mocks\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Authentication\" />
     <Folder Include="Authentication\Routes\" />
     <Folder Include="JwtSecurity\" />

@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Applications\DataTransformation\TIK.Applications.DataTransformation.csproj" />
     <ProjectReference Include="..\Core\TIK.Core\TIK.Core.csproj" />
     <ProjectReference Include="..\Domain\TIK.Domain\TIK.Domain.csproj" />
     <ProjectReference Include="..\Applications\Batch\TIK.Applications.Batch.csproj" />

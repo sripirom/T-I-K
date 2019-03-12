@@ -7,8 +7,12 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DefineConstants>TRACE;LIBLOG_PUBLIC;DEBUG;NETCOREAPP2_0</DefineConstants>
   </PropertyGroup>
+
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="wwwroot\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,7 +37,6 @@
     <ProjectReference Include="..\..\Core\TIK.Integration\TIK.Integration.csproj" />
     <ProjectReference Include="..\..\Integration\WebApi\TIK.Integration.WebApi.csproj" />
     <ProjectReference Include="..\..\Persistance\ElasticSearch\TIK.Persistance.ElasticSearch.csproj" />
-    <ProjectReference Include="..\..\Core\TIK.Computation\TIK.Computation.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Hucon.txt">
